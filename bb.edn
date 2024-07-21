@@ -4,6 +4,7 @@
                 :exec-args {:dir "pictures"
                             :src-suffix ".pptx"
                             :dst-suffixes ["_600.png" "_1200.png" "_2400.png"]
+                            :tracked-only true
                             :check-modified true}}
          pre-commit {:doc "Tasks to run before committing"
                      :depends [check]}

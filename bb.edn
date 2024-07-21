@@ -1,0 +1,11 @@
+{:paths ["./scripts/"]
+ :tasks {check {:doc "Checks that all PowerPoints have been converted to PNGs"
+                :task (exec 'tasks/check)
+                :exec-args {:dir "pictures"
+                            :src-suffix ".pptx"
+                            :dst-suffixes ["_600.png" "_1200.png" "_2400.png"]
+                            :check-modified true}}
+         pre-commit {:doc "Tasks to run before committing"
+                     :depends [check]}
+         install-pre-commit {:doc "Installs pre-commit hooks"
+                             :task (exec 'tasks/install-pre-commit)}}}

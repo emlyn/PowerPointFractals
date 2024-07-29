@@ -1,4 +1,6 @@
 /extra_pictures
 
+.clj-kondo
+.lsp
 .DS_Store
 ~$*

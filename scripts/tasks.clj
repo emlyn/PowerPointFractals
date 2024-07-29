@@ -1,7 +1,8 @@
 (ns tasks
   (:require [babashka.fs :as fs]
             [babashka.process :as proc]
-            [clojure.string :as str]))
+            [clojure.string :as str]
+            [selmer.parser :as selmer]))
 
 #_{:clj-kondo/ignore [:clojure-lsp/unused-public-var]}
 (defn install-pre-commit
@@ -50,7 +51,8 @@
                      (map (partial check-file args))
                      (remove nil?)
                      (vec))]
-    (reduce into results (map #(check-dir (assoc args :dir %)) (sort dirs)))))
+    (reduce into results (map #(check-dir (assoc args :dir %))
+                              (sort dirs)))))
 
 #_{:clj-kondo/ignore [:clojure-lsp/unused-public-var]}
 (defn check
@@ -70,6 +72,46 @@
       (println)
       (throw (ex-info "Errors found" {:errors errors})))))
 
+(defn- image-info
+  [[fname size_str]]
+  (let [size (parse-long size_str)]
+    {:name fname
+     :size size}))
+
+(defn- list-file
+  [& {:keys [dir category stem src-suffix]}]
+  (let [images (fs/glob (str dir "/" category "/") (str stem "_*.png"))
+        images (remove nil? (map #(re-find #".*_([0-9]+)[.]png$" (fs/file-name %)) images))]
+    (when-not (= 3 (count images)) (throw (ex-info "Not 3 images" {:num (count images) :images images})))
+    {:name stem
+     :path (str dir "/" category "/")
+     :source (str stem src-suffix)
+     :images (into {} (map vector
+                       [:small :medium :large]
+                       (sort-by :size (map image-info images))))}))
+
+(defn- list-category
+  [& {:keys [dir category src-suffix] :as args}]
+  (let [files (->> (fs/list-dir (str dir "/" category))
+                   (map fs/file-name)
+                   (filter #(str/ends-with? % src-suffix))
+                   (map #(subs % 0 (- (count %) (count src-suffix))))
+                   (sort)
+                   (vec))]
+    (map #(list-file :stem % args) files)))
+
+(defn- list-categories
+  [& {:keys [dir] :as args}]
+  (->> (fs/list-dir dir)
+       (filter fs/directory?)
+       (map fs/file-name)
+       (sort)
+       (map (fn [c] {:name c
+                     :pictures (list-category :category c args)}))))
+
+#_{:clj-kondo/ignore [:clojure-lsp/unused-public-var]}
 (defn build-site
-  [args]
-  (prn args))
+  [& {:as args}]
+  (println (selmer/render-file "templates/index.html"
+                               {:categories (list-categories args)})))
+

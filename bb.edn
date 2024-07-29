@@ -6,6 +6,11 @@
                             :dst-suffixes ["_600.png" "_1200.png" "_2400.png"]
                             :tracked-only true
                             :check-modified true}}
+         build-site {:doc "Builds the site"
+                     :task (exec 'tasks/build-site)
+                     :extra-paths ["resources"]
+                     :exec-args {:dir "pictures"
+                                 :src-suffix ".pptx"}}
          pre-commit {:doc "Tasks to run before committing"
                      :depends [check]}
          install-pre-commit {:doc "Installs pre-commit hooks"

@@ -9,7 +9,7 @@
             <h2>{{ category.name|title }}</h2>
             <div class="category">
                 {% for picture in category.pictures %}
-                    <img src="{{picture.path}}{{picture.images.small.name}}" width="150">
+                    <img src="{{raw-root}}{{picture.path}}{{picture.images.small.name}}" width="150">
                 {% endfor %}
             </div>
         {% endfor %}

@@ -111,7 +111,22 @@
 
 #_{:clj-kondo/ignore [:clojure-lsp/unused-public-var]}
 (defn build-site
-  [& {:as args}]
-  (println (selmer/render-file "templates/index.html"
-                               {:categories (list-categories args)})))
+  [& {:keys [templates output raw-root] :as args}]
+  (let [template-args
+        {:raw-root raw-root
+         :categories (list-categories args)}]
+    (fs/walk-file-tree templates
+                       {:visit-file
+                        (fn [f _]
+                          ;; Selmer expects a path relative to the resources
+                          (let [rel (str (fs/relativize templates f))
+                                out (str output fs/file-separator rel)]
+                            (println "Processing" (str f) "->" out)
+                            (spit out (selmer/render-file rel template-args))
+                            :continue))})))
+
+#_{:clj-kondo/ignore [:clojure-lsp/unused-public-var]}
+(defn update-readme
+  [& {:keys []}]
+  (println "Not implemented yet"))
 

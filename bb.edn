@@ -8,9 +8,13 @@
                             :check-modified true}}
          build-site {:doc "Builds the site"
                      :task (exec 'tasks/build-site)
-                     :extra-paths ["resources"]
+                     ;; NOTE: :extra-paths must include the :exec-args :templates path
+                     :extra-paths ["resources/templates"]
                      :exec-args {:dir "pictures"
-                                 :src-suffix ".pptx"}}
+                                 :src-suffix ".pptx"
+                                 :templates "resources/templates"
+                                 :raw-root "//raw.githubusercontent.com/emlyn/PowerPointFractals/main/"
+                                 :output "docs"}}
          pre-commit {:doc "Tasks to run before committing"
                      :depends [check]}
          install-pre-commit {:doc "Installs pre-commit hooks"

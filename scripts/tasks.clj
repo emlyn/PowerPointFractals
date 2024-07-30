@@ -84,6 +84,7 @@
         images (remove nil? (map #(re-find #".*_([0-9]+)[.]png$" (fs/file-name %)) images))]
     (when-not (= 3 (count images)) (throw (ex-info "Not 3 images" {:num (count images) :images images})))
     {:name stem
+     :category category
      :path (str dir "/" category "/")
      :source (str stem src-suffix)
      :images (into {} (map vector
@@ -106,8 +107,10 @@
        (filter fs/directory?)
        (map fs/file-name)
        (sort)
-       (map (fn [c] {:name c
-                     :pictures (list-category :category c args)}))))
+       (map (fn [c]
+              (let [[_ name] (str/split c #"-" 2)]
+                {:name name
+                 :pictures (list-category :category c args)})))))
 
 #_{:clj-kondo/ignore [:clojure-lsp/unused-public-var]}
 (defn build-site
@@ -124,9 +127,3 @@
                             (println "Processing" (str f) "->" out)
                             (spit out (selmer/render-file rel template-args))
                             :continue))})))
-
-#_{:clj-kondo/ignore [:clojure-lsp/unused-public-var]}
-(defn update-readme
-  [& {:keys []}]
-  (println "Not implemented yet"))
-

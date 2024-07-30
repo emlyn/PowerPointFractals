@@ -11,6 +11,6 @@ From regular mathematical shapes, to natural objects, to weird abstract images:
 [<img src="pictures/07-plants/4-fern_600.png" height="100" alt="Fern" />](//raw.githubusercontent.com/emlyn/PowerPointFractals/main/pictures/07-plants/4-fern_2400.png)
 [<img src="pictures/09-abstract/3-abstract3_600.png" height="100" alt="Abstract shape" />](//raw.githubusercontent.com/emlyn/PowerPointFractals/main/pictures/09-abstract/3-abstract3_2400.png)
 
-View all the images [here](pictures).
+View all the images [here](//emlyn.github.io/PowerPointFractals).
 
 ## How to make them

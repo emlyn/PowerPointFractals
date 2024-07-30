@@ -4,15 +4,12 @@
         <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
     <body>
-        <h1>PowerPoint Fractals</h1>
-        {% for category in categories %}
-            <h2>{{ category.name|title }}</h2>
-            <div class="category">
-                {% for picture in category.pictures %}
-                    <img src="{{raw-root}}{{picture.path}}{{picture.images.small.name}}" width="150">
-                {% endfor %}
-            </div>
-        {% endfor %}
-        {{ pictures }}
+        <h1>PowerPoint Fractals</h1>{% for category in categories %}
+        <h2>{{ category.name|title }}</h2>
+        <div class="category">{% for picture in category.pictures %}
+            <a href="{{raw-root}}{{picture.path}}{{picture.images.large.name}}">
+                <img src="{{raw-root}}{{picture.path}}{{picture.images.small.name}}" width="100">
+            </a>{% endfor %}
+        </div>{% endfor %}
     </body>
 </html>

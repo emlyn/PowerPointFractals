@@ -115,14 +115,12 @@
 #_{:clj-kondo/ignore [:clojure-lsp/unused-public-var]}
 (defn build-site
   [& {:keys [templates output raw-root show-args] :as args}]
-  (println "Starting:" args)
   (let [template-args
         {:raw-root raw-root
          :categories (list-categories args)}]
     (if show-args
       (do (println "Args:")
-          (pprint/pprint template-args)
-          (println "---"))
+          (pprint/pprint template-args))
       (fs/walk-file-tree templates
                          {:visit-file
                           (fn [f _]

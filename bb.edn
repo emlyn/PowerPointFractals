@@ -13,7 +13,7 @@
                      :exec-args {:dir "docs/assets/images"
                                  :src-suffix ".pptx"
                                  :templates "resources/templates"
-                                 :raw-root "/assets/images"
+                                 :raw-root "assets/images"
                                  :output "docs"}}
          build-site-args {:doc "Show args generated for building the site"
                           :task (exec 'tasks/build-site)
@@ -21,7 +21,7 @@
                                       :dir "docs/assets/images"
                                       :src-suffix ".pptx"
                                       :templates "resources/templates"
-                                      :raw-root "/assets/images"
+                                      :raw-root "assets/images"
                                       :output "docs"}}
          pre-commit {:doc "Tasks to run before committing"
                      :depends [check]}

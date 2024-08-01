@@ -2,6 +2,7 @@
   (:require [babashka.fs :as fs]
             [babashka.process :as proc]
             [clojure.string :as str]
+            [clojure.pprint :as pprint]
             [selmer.parser :as selmer]))
 
 #_{:clj-kondo/ignore [:clojure-lsp/unused-public-var]}
@@ -85,7 +86,6 @@
     (when-not (= 3 (count images)) (throw (ex-info "Not 3 images" {:num (count images) :images images})))
     {:name stem
      :category category
-     :path (str dir "/" category "/")
      :source (str stem src-suffix)
      :images (into {} (map vector
                        [:small :medium :large]
@@ -114,16 +114,21 @@
 
 #_{:clj-kondo/ignore [:clojure-lsp/unused-public-var]}
 (defn build-site
-  [& {:keys [templates output raw-root] :as args}]
+  [& {:keys [templates output raw-root show-args] :as args}]
+  (println "Starting:" args)
   (let [template-args
         {:raw-root raw-root
          :categories (list-categories args)}]
-    (fs/walk-file-tree templates
-                       {:visit-file
-                        (fn [f _]
+    (if show-args
+      (do (println "Args:")
+          (pprint/pprint template-args)
+          (println "---"))
+      (fs/walk-file-tree templates
+                         {:visit-file
+                          (fn [f _]
                           ;; Selmer expects a path relative to the resources
-                          (let [rel (str (fs/relativize templates f))
-                                out (str output fs/file-separator rel)]
-                            (println "Processing" (str f) "->" out)
-                            (spit out (selmer/render-file rel template-args))
-                            :continue))})))
+                            (let [rel (str (fs/relativize templates f))
+                                  out (str output fs/file-separator rel)]
+                              (println "Processing" (str f) "->" out)
+                              (spit out (selmer/render-file rel template-args))
+                              :continue))}))))

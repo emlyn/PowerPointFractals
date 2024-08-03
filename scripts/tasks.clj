@@ -7,19 +7,29 @@
 
 #_{:clj-kondo/ignore [:clojure-lsp/unused-public-var]}
 (defn install-pre-commit
-  [& {}]
+  [& {:keys [overwrite]}]
   (let [src "scripts/pre-commit"
         dst ".git/hooks/pre-commit"]
-    (when-not (fs/exists? src)
-      (throw (ex-info "Pre-commit hook not found" {:location src})))
-    (if (fs/exists? dst)
-      (if (and (= (fs/size src) (fs/size dst))
-               (= (slurp src) (slurp dst)))
-        (println "Pre-commit hook already installed")
-        (throw (ex-info "Pre-commit hook already exists" {:location dst})))
+    (cond
+      (not (fs/exists? src))
+      (throw (ex-info "Pre-commit hook not found" {:location src}))
+
+      (not (fs/exists? dst))
       (do
         (fs/copy src dst)
-        (println "Pre-commit hook installed")))))
+        (println "Pre-commit hook installed"))
+
+      (and (= (fs/size src) (fs/size dst))
+           (= (slurp src) (slurp dst)))
+      (println "Pre-commit hook already installed")
+
+      overwrite
+      (do
+        (fs/copy src dst {:replace-existing true})
+        (println "Pre-commit hook installed over old version"))
+
+      :else
+      (throw (ex-info "Pre-commit hook already exists, use --overwrite to replace it" {:location dst})))))
 
 (defn- check-file
   [{:keys [src-suffix dst-suffixes tracked? check-modified verbose]} src-file]

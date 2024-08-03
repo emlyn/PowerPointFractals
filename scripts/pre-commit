@@ -3,3 +3,23 @@
 set euo pipefail
 
 bb pre-commit
+
+PNGFILES="$(git diff --cached --name-only --diff-filter=ACM '*.png')"
+
+if $(which optipng > /dev/null); then
+    for pngfile in $PNGFILES; do
+        optipng -o4 "$pngfile"
+        git add "$pngfile"
+    done
+elif $(which pngcrush > /dev/null); then
+    echo "Using pngcrush (but you should really install optipng if possible)"
+    for pngfile in $PNGFILES; do
+        pngcrush -ow "$pngfile"
+        git add "$pngfile"
+    done
+else
+    echo "Please install optipng (or failing that, pngcrush)"
+    if [ -n "$PNGFILES" ]; then
+        exit 1
+    fi
+fi

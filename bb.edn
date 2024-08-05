@@ -1,7 +1,7 @@
 {:paths ["./scripts/"]
  :tasks {check {:doc "Checks that all PowerPoints have been converted to PNGs"
                 :task (exec 'tasks/check)
-                :exec-args {:dir "docs/assets/images"
+                :exec-args {:dir "docs/assets/fractals"
                             :src-suffix ".pptx"
                             :dst-suffixes ["_600.png" "_1200.png" "_2400.png"]
                             :tracked-only true
@@ -10,18 +10,18 @@
                      :task (exec 'tasks/build-site)
                      ;; NOTE: :extra-paths must include the :exec-args :templates path
                      :extra-paths ["resources/templates"]
-                     :exec-args {:dir "docs/assets/images"
+                     :exec-args {:dir "docs/assets/fractals"
                                  :src-suffix ".pptx"
                                  :templates "resources/templates"
-                                 :raw-root "assets/images"
+                                 :raw-root "assets/fractals"
                                  :output "docs"}}
          build-site-args {:doc "Show args generated for building the site"
                           :task (exec 'tasks/build-site)
                           :exec-args {:show-args true
-                                      :dir "docs/assets/images"
+                                      :dir "docs/assets/fractals"
                                       :src-suffix ".pptx"
                                       :templates "resources/templates"
-                                      :raw-root "assets/images"
+                                      :raw-root "assets/fractals"
                                       :output "docs"}}
          pre-commit {:doc "Tasks to run before committing"
                      :depends [check]}

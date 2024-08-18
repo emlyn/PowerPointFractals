@@ -1,0 +1,15 @@
+fractals:
+- file: powerlines
+  name: Power Lines
+- file: circles
+  name: Circles
+- file: bubbles
+  name: Bubbles
+- file: shard
+  name: Shard
+- file: jagged
+  name: Jagged
+- file: metal
+  name: Metal
+- file: ukraine
+  name: Slava Ukraini

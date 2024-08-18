@@ -1,0 +1,13 @@
+fractals:
+- file: koch
+  name: Koch Snowflake
+- file: exploding
+  name: Exploding Koch Snowflake
+- file: exploded
+  name: Exploded Koch Snowflake
+- file: snowflake
+  name: Snowflake
+- file: ice
+  name: Ice
+- file: cell
+  name: Hexagonal Cell

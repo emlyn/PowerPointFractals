@@ -1,0 +1,7 @@
+fractals:
+- file: cloud
+  name: Cloud
+- file: centipede
+  name: Centipede
+- file: mountainscape
+  name: Mountainscape

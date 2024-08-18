@@ -1,0 +1,17 @@
+fractals:
+- file: pythagoras-tree
+  name: Pythagoras Tree
+- file: tree
+  name: Tree
+- file: pine
+  name: Pine Tree
+- file: fern
+  name: Fern
+- file: cabbage
+  name: Cabbage Leaf
+- file: bamboo
+  name: Bamboo
+- file: mushrooms1
+  name: Mushrooms (closed)
+- file: mushrooms2
+  name: Mushrooms (open)

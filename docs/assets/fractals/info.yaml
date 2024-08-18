@@ -1,0 +1,35 @@
+categories:
+- name: triangles
+  description: >-
+    Fractals with triangular symmetry,
+    such as the Sierpiński Triangle and variations.
+- name: squares
+  description: >-
+    Fractals with square symmetry,
+    such as the Sierpiński Carpet and variations.
+- name: pentagons
+  description: >-
+    Fractals with pentagonal symmetry.
+- name: hexagons
+  description: >-
+    Fractals with hexagonal symmetry,
+    such as the Koch Snowflake.
+- name: linear
+  description: >-
+    Fractals where all repeats appear on a straight line,
+    with no rotation ("fractalness" is one-dimensional).
+- name: curves
+  description: >-
+    Fractal curves (such as the Koch Curve and the Dragon Curve).
+- name: plants
+  description: >-
+    Fractal plants (such as leaves and trees).
+- name: nature
+  description: >-
+    Other things from nature that are not plants.
+- name: spirals
+  description: >-
+    Spiral fractals.
+- name: abstract
+  description: >-
+    Abstract shapes that don't fit into any of the other categories.

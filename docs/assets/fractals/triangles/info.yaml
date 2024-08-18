@@ -1,0 +1,20 @@
+fractals:
+- file: sierpinski
+  name: Sierpiński Triangle
+  description: >-
+    The classic Sierpiński Gasket (triangle)
+  fractal-dimension: log3/log2
+- file: rectangles
+  name: Sierpiński Triangle with rectangles
+- file: rotated-rectangles
+  name: Sierpiński Triangle with rotated rectangles
+- file: coloured-rectangles
+  name: Sierpiński Triangle with coloured rectangles
+- file: shaded
+  name: Shaded Sierpiński Triangle
+- file: rgb
+  name: Colour shaded Sierpiński Triangle
+- file: circles
+  name: Sierpiński Triangle made of circles
+- file: cmy
+  name: Sierpiński Triangle made of coloured circles

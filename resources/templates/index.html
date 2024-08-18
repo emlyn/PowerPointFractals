@@ -13,8 +13,9 @@
     <body>
         <h1>PowerPoint Fractals</h1>{% for category in categories %}
         <div class="category">
-            <h2>{{ category.name|title }}</h2>{% for picture in category.pictures %}
-            <a href="{{raw-root}}/{{picture.category}}/{{picture.images.large.name}}"><img src="{{raw-root}}/{{picture.category}}/{{picture.images.small.name}}" height="110"></a>{% endfor %}
+            <h2>{{ category.name|title }}</h2>
+            <p>{{ category.description }}</p>{% for fractal in category.fractals %}
+            <a href="{{raw-root}}/{{category.name}}/{{fractal.images.large.file}}"><img src="{{raw-root}}/{{category.name}}/{{fractal.images.small.file}}" height="110"></a>{% endfor %}
         </div>{% endfor %}
     </body>
 </html>

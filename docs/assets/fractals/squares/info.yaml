@@ -1,0 +1,17 @@
+fractals:
+- file: sierpinski
+  name: Sierpiński Carpet
+  description: >-
+    The classic Sierpiński Carpet (square)
+- file: gradient
+  name: Sierpiński Carpet with colour gradient
+- file: outline
+  name: Sierpiński Carpet with outline
+- file: coloured-outline
+  name: Sierpiński Carpet with coloured outline
+- file: diagonals
+  name: Sierpiński Carpet with diagonals
+- file: coloured-diagonals
+  name: Sierpiński Carpet with coloured diagonals
+- file: distorted
+  name: Distorted Sierpiński Carpet

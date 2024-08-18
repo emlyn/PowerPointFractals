@@ -1,0 +1,11 @@
+fractals:
+- file: sierpinski
+  name: Sierpiński Pentagon
+- file: star
+  name: Sierpiński Pentagon star
+- file: twist
+  name: Twisted Sierpiński Pentagon
+- file: flipped
+  name: Flipped Sierpiński Pentagon
+- file: microbe
+  name: Sierpiński Pentagon microbe

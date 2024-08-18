@@ -1,0 +1,7 @@
+fractals:
+- file: rainbow
+  name: Rainbow Spiral
+- file: vortex
+  name: Vortex
+- file: fire
+  name: Fire Spiral

@@ -1,0 +1,13 @@
+fractals:
+- file: abstract1
+  name: Jack-in-the-box
+- file: abstract2
+  name: Ominous Bubbles
+- file: abstract3
+  name: Branching Balls
+- file: abstract4
+  name: Angel
+- file: abstract5
+  name: Flower Spirals
+- file: abstract6
+  name: Fractal Herd

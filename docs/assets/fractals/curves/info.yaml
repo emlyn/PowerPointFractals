@@ -1,0 +1,11 @@
+fractals:
+- file: koch
+  name: Koch Curve
+- file: square
+  name: Square Curve
+- file: dragon
+  name: Dragon Curve
+- file: golden
+  name: Golden Dragon Curve
+- file: pythagoras
+  name: Pythagoras Curve

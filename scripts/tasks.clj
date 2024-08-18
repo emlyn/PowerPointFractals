@@ -1,8 +1,11 @@
 (ns tasks
   (:require [babashka.fs :as fs]
             [babashka.process :as proc]
+            [clj-yaml.core :as yaml]
             [clojure.string :as str]
             [clojure.pprint :as pprint]
+            [malli.core :as m]
+            [malli.error :as me]
             [selmer.parser :as selmer]))
 
 #_{:clj-kondo/ignore [:clojure-lsp/unused-public-var]}
@@ -83,51 +86,71 @@
       (println)
       (throw (ex-info "Errors found" {:errors errors})))))
 
-(defn- image-info
-  [[fname size_str]]
-  (let [size (parse-long size_str)]
-    {:name fname
-     :size size}))
+(def categories-schema
+  (m/schema
+   [:map {:closed true}
+    [:categories [:sequential
+                  [:map {:closed true}
+                   [:name string?]
+                   [:description string?]]]]]))
 
-(defn- list-file
-  [& {:keys [dir category stem src-suffix]}]
-  (let [images (fs/glob (str dir "/" category "/") (str stem "_*.png"))
-        images (remove nil? (map #(re-find #".*_([0-9]+)[.]png$" (fs/file-name %)) images))]
-    (when-not (= 3 (count images)) (throw (ex-info "Not 3 images" {:num (count images) :images images})))
-    {:name stem
-     :category category
-     :source (str stem src-suffix)
-     :images (into {} (map vector
-                       [:small :medium :large]
-                       (sort-by :size (map image-info images))))}))
+(def category-schema
+  (m/schema
+   [:map {:closed true}
+    [:fractals [:sequential
+                [:map {:closed true}
+                 [:file [:string]]
+                 [:name [:string]]
+                 [:description {:optional true} [:string]]
+                 [:fractal-dimension {:optional true} [:string]]]]]]))
 
-(defn- list-category
-  [& {:keys [dir category src-suffix] :as args}]
-  (let [files (->> (fs/list-dir (str dir "/" category))
-                   (map fs/file-name)
-                   (filter #(str/ends-with? % src-suffix))
-                   (map #(subs % 0 (- (count %) (count src-suffix))))
-                   (sort)
-                   (vec))]
-    (map #(list-file :stem % args) files)))
+(defn read-yaml
+  [fname schema]
+  (let [data (slurp fname)
+        info (yaml/parse-string data)]
+    (if (m/validate schema info)
+      info
+      (do
+        (println "Error in" fname)
+        (-> (m/explain schema info)
+            (me/humanize)
+            (pprint/pprint))
+        (System/exit 1)))))
 
-(defn- list-categories
+(defn read-fractal
+  [{:keys [src-suffix dst-suffixes]}
+   {:keys [file] :as info}]
+  (assoc info
+         :source (str file src-suffix)
+         :images (into {} (map (fn [name suffix]
+                                 (let [size (->> suffix
+                                                 (re-find #".*_([0-9]+)[.][a-z]+$")
+                                                 (second)
+                                                 (parse-long))]
+                                   [name {:size size
+                                          :file (str file suffix)}]))
+                               [:small :medium :large]
+                               dst-suffixes))))
+
+(defn read-category
+  [{:keys [dir] :as args}
+   {:keys [name] :as cat}]
+  (let [info (read-yaml (str dir "/" name "/info.yaml") category-schema)
+        info (update info :fractals (partial mapv (partial read-fractal args)))]
+    (merge cat info)))
+
+(defn read-info
   [& {:keys [dir] :as args}]
-  (->> (fs/list-dir dir)
-       (filter fs/directory?)
-       (map fs/file-name)
-       (sort)
-       (map (fn [c]
-              (let [[_ name] (str/split c #"-" 2)]
-                {:name name
-                 :pictures (list-category :category c args)})))))
+  (let [info (read-yaml (str dir "/info.yaml") categories-schema)
+        info (update info :categories (partial mapv (partial read-category args)))]
+    info))
 
 #_{:clj-kondo/ignore [:clojure-lsp/unused-public-var]}
 (defn build-site
-  [& {:keys [templates output raw-root show-args] :as args}]
+  [& {:keys [templates output template-args show-args] :as args}]
   (let [template-args
-        {:raw-root raw-root
-         :categories (list-categories args)}]
+        (merge (read-info args)
+               template-args)]
     (if show-args
       (do (println "Args:")
           (pprint/pprint template-args))

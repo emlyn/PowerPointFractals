@@ -9,10 +9,28 @@ body {
     padding: 0 10px;
 }
 
-img {
-    vertical-align: middle;
+figure {
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    width: 140px;
+    margin-left: 0;
+    margin-top: 0;
     margin-right: 10px;
     margin-bottom: 10px;
+}
+
+figcaption {
+    font-size: 0.8em;
+    color: #666;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+img {
+    vertical-align: middle;
     border: 1px solid #aaa;
     padding: 5px;
     background-color: #fff;

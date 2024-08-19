@@ -2,7 +2,7 @@ fractals:
 - file: koch
   name: Koch Curve
 - file: square
-  name: Square Curve
+  name: Koch Curve (square variation)
 - file: dragon
   name: Dragon Curve
 - file: golden

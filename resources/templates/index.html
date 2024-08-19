@@ -15,7 +15,10 @@
         <div class="category">
             <h2>{{ category.name|title }}</h2>
             <p>{{ category.description }}</p>{% for fractal in category.fractals %}
-            <a href="{{raw-root}}/{{category.name}}/{{fractal.images.large.file}}"><img src="{{raw-root}}/{{category.name}}/{{fractal.images.small.file}}" height="110"></a>{% endfor %}
+            <figure>
+                <a href="{{raw-root}}/{{category.name}}/{{fractal.images.large.file}}"><img src="{{raw-root}}/{{category.name}}/{{fractal.images.small.file}}" height="110"></a>
+                <figcaption>{{ fractal.name }}</figcaption>
+            </figure>{% endfor %}
         </div>{% endfor %}
     </body>
 </html>

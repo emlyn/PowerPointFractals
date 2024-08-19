@@ -29,3 +29,5 @@ fractals:
   name: Flower
 - file: degraded
   name: Degraded Square
+- file: window
+  name: Fractal Window

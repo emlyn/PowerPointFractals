@@ -1,11 +1,17 @@
 fractals:
+- file: pentaflake
+  name: The Pentaflake
 - file: sierpinski
   name: Sierpiński Pentagon
+- file: rotated-pentaflake
+  name: Rotated Pentaflake
+- file: rotated-sierpinski
+  name: Rotated Sierpiński Pentagon
+- file: pentaflake-gap
+  name: Pentaflake with a gap
 - file: star
   name: Sierpiński Pentagon star
 - file: twist
   name: Twisted Sierpiński Pentagon
-- file: flipped
-  name: Flipped Sierpiński Pentagon
 - file: microbe
   name: Sierpiński Pentagon microbe

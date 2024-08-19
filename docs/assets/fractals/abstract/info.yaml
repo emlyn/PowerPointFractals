@@ -7,7 +7,5 @@ fractals:
   name: Branching Balls
 - file: abstract4
   name: Angel
-- file: abstract5
-  name: Flower Spirals
 - file: abstract6
   name: Fractal Herd

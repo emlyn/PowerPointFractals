@@ -5,3 +5,5 @@ fractals:
   name: Vortex
 - file: fire
   name: Fire Spiral
+- file: blossom
+  name: Spiral Blossom

@@ -1,6 +1,8 @@
 fractals:
 - file: powerlines
   name: Power Lines
+- file: dots
+  name: Dots
 - file: circles
   name: Circles
 - file: bubbles

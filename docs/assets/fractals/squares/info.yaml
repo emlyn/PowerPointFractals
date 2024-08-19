@@ -15,3 +15,17 @@ fractals:
   name: Sierpiński Carpet with coloured diagonals
 - file: distorted
   name: Distorted Sierpiński Carpet
+- file: vicsek
+  name: Vicsek fractal
+- file: vicsek-coloured
+  name: Coloured Vicsek Fractal
+- file: vicsek-diagonal
+  name: Diagonal Vicsek Fractal
+- file: forest
+  name: Forest
+- file: dots
+  name: Dots
+- file: flower
+  name: Flower
+- file: degraded
+  name: Degraded Square

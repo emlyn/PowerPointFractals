@@ -1,4 +1,10 @@
 fractals:
+- file: sierpinski
+  name: Sierpiński Hexagon
+- file: sierpinski-shaded
+  name: Shaded Sierpiński Hexagon
+- file: sierpinski-coloured
+  name: Coloured Sierpiński Hexagon
 - file: koch
   name: Koch Snowflake
 - file: exploding
@@ -7,7 +13,19 @@ fractals:
   name: Exploded Koch Snowflake
 - file: snowflake
   name: Snowflake
-- file: ice
-  name: Ice
-- file: cell
+- file: hexaflake
+  name: Hexaflake
+- file: hexaflake-rotated
+  name: Rotated Hexaflake
+- file: hexaflake-shaded
+  name: Shaded Hexaflake Hexagon
+- file: hexaflake-shaded2
+  name: Shaded Hexaflake
+- file: hexaflake-shaded3
+  name: Shaded Rotated Hexaflake
+- file: hexaflake-coloured
+  name: RGB Hexaflake
+- file: hexaflake-coloured2
+  name: Coloured Hexaflake
+- file: hexaflake-cell
   name: Hexagonal Cell

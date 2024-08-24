@@ -9,3 +9,5 @@ fractals:
   name: Angel
 - file: abstract6
   name: Fractal Herd
+- file: heart
+  name: Abstract Heart

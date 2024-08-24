@@ -13,6 +13,10 @@ fractals:
   name: Sierpiński Carpet with diagonals
 - file: coloured-diagonals
   name: Sierpiński Carpet with coloured diagonals
+- file: inverted
+  name: Inverted Sierpiński Carpet
+- file: copper
+  name: Copper Carpet
 - file: distorted
   name: Distorted Sierpiński Carpet
 - file: vicsek

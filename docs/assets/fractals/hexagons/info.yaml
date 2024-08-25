@@ -5,6 +5,10 @@ fractals:
   name: Shaded Sierpiński Hexagon
 - file: sierpinski-coloured
   name: Coloured Sierpiński Hexagon
+- file: sierpinski-rotated
+  name: Rotated Sierpinski Hexagon
+- file: sierpinski-rotated-shaded
+  name: Rotated Shaded Sierpinski Hexagon
 - file: koch
   name: Koch Snowflake
 - file: exploding
@@ -22,7 +26,7 @@ fractals:
 - file: hexaflake-shaded2
   name: Shaded Hexaflake
 - file: hexaflake-shaded3
-  name: Shaded Rotated Hexaflake
+  name: Purple Hexaflake
 - file: hexaflake-coloured
   name: RGB Hexaflake
 - file: hexaflake-coloured2

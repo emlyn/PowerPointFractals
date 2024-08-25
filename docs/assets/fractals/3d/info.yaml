@@ -1,0 +1,9 @@
+fractals:
+- file: menger-fake
+  name: Faked Menger Sponge
+- file: menger-grey
+  name: Menger Sponge (grey)
+- file: menger-rgb
+  name: Menger Sponge (RGB)
+- file: tetrix
+  name: Tetrix (Fractal Tetrahedron)

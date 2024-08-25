@@ -13,10 +13,10 @@
     <body>
         <h1>PowerPoint Fractals</h1>{% for category in categories %}
         <div class="category">
-            <h2>{{ category.name|title }}</h2>
+            <h2>{{ category.name }}</h2>
             <p>{{ category.description }}</p>{% for fractal in category.fractals %}
             <figure>
-                <a href="{{raw-root}}/{{category.name}}/{{fractal.images.large.file}}"><img src="{{raw-root}}/{{category.name}}/{{fractal.images.small.file}}" height="110"></a>
+                <a href="{{raw-root}}/{{category.name|lower}}/{{fractal.images.large.file}}"><img src="{{raw-root}}/{{category.name|lower}}/{{fractal.images.small.file}}" height="110"></a>
                 <figcaption>{{ fractal.name }}</figcaption>
             </figure>{% endfor %}
         </div>{% endfor %}

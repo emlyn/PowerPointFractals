@@ -9,6 +9,8 @@ fractals:
   name: Fern
 - file: cabbage
   name: Cabbage Leaf
+- file: flower
+  name: Flower
 - file: bamboo
   name: Bamboo
 - file: mushrooms1

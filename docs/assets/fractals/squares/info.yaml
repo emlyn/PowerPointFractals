@@ -29,8 +29,6 @@ fractals:
   name: Forest
 - file: dots
   name: Dots
-- file: flower
-  name: Flower
 - file: degraded
   name: Degraded Square
 - file: window

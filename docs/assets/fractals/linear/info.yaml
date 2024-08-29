@@ -1,4 +1,10 @@
 fractals:
+- file: barcode
+  name: Barcode
+- file: french-cantor
+  name: Cantor Set as French flag
+- file: palette
+  name: Fractal Colour Palette
 - file: powerlines
   name: Power Lines
 - file: dots

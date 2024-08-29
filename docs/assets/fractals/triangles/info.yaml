@@ -18,3 +18,11 @@ fractals:
   name: Sierpiński Triangle made of circles
 - file: cmy
   name: Sierpiński Triangle made of coloured circles
+- file: triflake
+  name: Triflake
+- file: triflake-shaded
+  name: Shaded Triflake
+- file: dust
+  name: Fractal Dust
+- file: lightning
+  name: Triangular Lightning

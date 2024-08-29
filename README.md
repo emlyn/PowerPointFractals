@@ -5,12 +5,13 @@ Using the Slide Zoom feature you can generate a wide range of different fractal 
 
 ## See them
 
-From regular mathematical shapes, to natural objects, to weird abstract images:
+From regular mathematical shapes, to natural objects, to weird abstract images and even 3D shapes:
 
 [<img src="docs/assets/fractals/triangles/rgb_600.png" height="100" alt="Coloured Sierpiński triangle" />](//emlyn.github.io/PowerPointFractals/assets/fractals/triangles/rgb_2400.png)
 [<img src="docs/assets/fractals/plants/fern_600.png" height="100" alt="Fern" />](//emlyn.github.io/PowerPointFractals/assets/fractals/plants/fern_2400.png)
 [<img src="docs/assets/fractals/abstract/abstract3_600.png" height="100" alt="Abstract shape" />](//emlyn.github.io/PowerPointFractals/assets/fractals/abstract/abstract3_2400.png)
 [<img src="docs/assets/fractals/spirals/fire_600.png" height="100" alt="Fire Spiral" />](//emlyn.github.io/PowerPointFractals/assets/fractals/spirals/fire_2400.png)
+[<img src="docs/assets/fractals/3d/menger-rgb_600.png" height="100" alt="Menger Sponge" />](//emlyn.github.io/PowerPointFractals/assets/fractals/3d/menger-rgb_2400.png)
 
 View all the images [here](//emlyn.github.io/PowerPointFractals).
 

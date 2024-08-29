@@ -15,21 +15,27 @@ fractals:
   name: Sierpiński Carpet with coloured diagonals
 - file: inverted
   name: Inverted Sierpiński Carpet
-- file: copper
-  name: Copper Carpet
-- file: distorted
-  name: Distorted Sierpiński Carpet
 - file: vicsek
   name: Vicsek fractal
 - file: vicsek-coloured
   name: Coloured Vicsek Fractal
+- file: vicsek-circle
+  name: Vicsek of Circles
 - file: vicsek-diagonal
   name: Diagonal Vicsek Fractal
+- file: cross
+  name: Jerusalem Cross
+- file: swiss
+  name: Swiss Fractal
 - file: forest
   name: Forest
+- file: copper
+  name: Copper Carpet
+- file: distorted
+  name: Distorted Sierpiński Carpet
 - file: dots
   name: Dots
-- file: degraded
-  name: Degraded Square
 - file: window
   name: Fractal Window
+- file: degraded
+  name: Degraded Square

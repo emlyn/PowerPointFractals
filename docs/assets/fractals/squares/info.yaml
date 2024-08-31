@@ -3,6 +3,7 @@ fractals:
   name: Sierpiński Carpet
   description: >-
     The classic Sierpiński Carpet (square)
+  dimension: log(8) / log(3)
 - file: gradient
   name: Sierpiński Carpet with colour gradient
 - file: outline
@@ -17,27 +18,35 @@ fractals:
   name: Inverted Sierpiński Carpet
 - file: vicsek
   name: Vicsek fractal
+  dimension: log(5) / log(3)
 - file: vicsek-coloured
   name: Coloured Vicsek Fractal
 - file: vicsek-circle
   name: Vicsek of Circles
 - file: vicsek-diagonal
   name: Diagonal Vicsek Fractal
+  dimension: log(5) / log(3)
 - file: h
   name: Fractal H-I de Rivera
+  dimension: log(7) / log(3)
 - file: cross
   name: Jerusalem Cross
+  dimension: log(4) / log(sqrt(2) - 1)
 - file: swiss
   name: Swiss Fractal
+  dimension: log(4) / log(110 / 43)
 - file: forest
   name: Forest
+  dimension: log(5) / log(3)
 - file: copper
   name: Copper Carpet
 - file: distorted
-  name: Distorted Sierpiński Carpet
+  name: Distorted Carpet
 - file: dots
   name: Dots
 - file: window
   name: Fractal Window
+  dimension: log(4) / log(24/10)
 - file: degraded
   name: Degraded Square
+  dimension: log(8) / log(3)

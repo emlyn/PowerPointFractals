@@ -1,6 +1,7 @@
 fractals:
 - file: sierpinski
   name: Sierpiński Hexagon
+  dimension: log(6) / log(3)
 - file: sierpinski-shaded
   name: Shaded Sierpiński Hexagon
 - file: sierpinski-coloured
@@ -19,6 +20,7 @@ fractals:
   name: Snowflake
 - file: hexaflake
   name: Hexaflake
+  dimension: log(7) / log(3)
 - file: hexaflake-rotated
   name: Rotated Hexaflake
 - file: hexaflake-shaded

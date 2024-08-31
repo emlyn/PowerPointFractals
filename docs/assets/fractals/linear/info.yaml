@@ -3,6 +3,7 @@ fractals:
   name: Barcode
 - file: french-cantor
   name: Cantor Set as French flag
+  dimension: log(2) / log(3)
 - file: palette
   name: Fractal Colour Palette
 - file: powerlines

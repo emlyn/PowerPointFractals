@@ -102,7 +102,7 @@
                  [:file [:string]]
                  [:name [:string]]
                  [:description {:optional true} [:string]]
-                 [:fractal-dimension {:optional true} [:string]]]]]]))
+                 [:dimension {:optional true} [:or [:string] [:int]]]]]]]))
 
 (defn read-yaml
   [fname schema]

@@ -1,8 +1,10 @@
 fractals:
 - file: pentaflake
   name: The Pentaflake
+  dimension: log(6) / log((3 + sqrt(5)) / 2)
 - file: sierpinski
   name: Sierpiński Pentagon
+  dimension: log(5) / log((3 + sqrt(5)) / 2)
 - file: rotated-pentaflake
   name: Rotated Pentaflake
 - file: rotated-sierpinski

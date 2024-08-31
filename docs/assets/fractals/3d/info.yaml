@@ -3,9 +3,13 @@ fractals:
   name: Faked Menger Sponge
 - file: menger-grey
   name: Menger Sponge (grey)
+  dimension: log(20) / log(3)
 - file: menger-rgb
   name: Menger Sponge (RGB)
+  dimension: log(20) / log(3)
 - file: cross-menger
   name: Jerusalem Cube
+  dimension: log((sqrt(2) - 1) / 2) / log(sqrt(2) - 1)
 - file: tetrix
   name: Tetrix (Fractal Tetrahedron)
+  dimension: 2

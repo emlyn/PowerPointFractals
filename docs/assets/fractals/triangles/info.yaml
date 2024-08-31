@@ -3,7 +3,7 @@ fractals:
   name: Sierpiński Triangle
   description: >-
     The classic Sierpiński Gasket (triangle)
-  fractal-dimension: log3/log2
+  dimension: log(3) / log(2)
 - file: rectangles
   name: Sierpiński Triangle with rectangles
 - file: rotated-rectangles
@@ -20,6 +20,7 @@ fractals:
   name: Sierpiński Triangle made of coloured circles
 - file: triflake
   name: Triflake
+  dimension: log(4) / log(2.5)
 - file: triflake-shaded
   name: Shaded Triflake
 - file: dust

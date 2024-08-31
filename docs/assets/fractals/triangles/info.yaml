@@ -23,6 +23,8 @@ fractals:
   dimension: log(4) / log(2.5)
 - file: triflake-shaded
   name: Shaded Triflake
+- file: triflake-rotated-shaded
+  name: Shaded Rotated Triflake
 - file: dust
   name: Fractal Dust
 - file: lightning

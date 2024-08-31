@@ -5,5 +5,7 @@ fractals:
   name: Menger Sponge (grey)
 - file: menger-rgb
   name: Menger Sponge (RGB)
+- file: cross-menger
+  name: Jerusalem Cube
 - file: tetrix
   name: Tetrix (Fractal Tetrahedron)

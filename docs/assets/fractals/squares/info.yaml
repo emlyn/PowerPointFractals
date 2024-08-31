@@ -23,6 +23,8 @@ fractals:
   name: Vicsek of Circles
 - file: vicsek-diagonal
   name: Diagonal Vicsek Fractal
+- file: h
+  name: Fractal H-I de Rivera
 - file: cross
   name: Jerusalem Cross
 - file: swiss

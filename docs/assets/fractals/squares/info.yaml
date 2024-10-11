@@ -31,7 +31,7 @@ fractals:
   dimension: log(7) / log(3)
 - file: cross
   name: Jerusalem Cross
-  dimension: log(4) / log(sqrt(2) - 1)
+  dimension: log((sqrt(2) - 1) / 2) / log(sqrt(2) - 1)
 - file: swiss
   name: Swiss Fractal
   dimension: log(4) / log(110 / 43)

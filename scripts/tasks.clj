@@ -7,7 +7,13 @@
             [malli.core :as m]
             [malli.error :as me]
             [selmer.parser :as selmer]
+            [selmer.filters :as filters]
             [infix.macros :refer [from-string]]))
+
+(defn- num-str?
+  [s]
+  (and (string? s)
+       (re-matches #"[0-9]+(?:\.[0-9]*)?" s)))
 
 #_{:clj-kondo/ignore [:clojure-lsp/unused-public-var]}
 (defn install-pre-commit
@@ -103,7 +109,11 @@
                  [:file [:string]]
                  [:name [:string]]
                  [:description {:optional true} [:string]]
-                 [:dimension {:optional true} [:or [:string] [:int]]]]]]]))
+                 [:dimension {:optional true} [:or [:string] [:int]]]
+                 [:links {:optional true} [:sequential
+                                           [:map {:closed true}
+                                            [:name [:string]]
+                                            [:url [:string]]]]]]]]]))
 
 (defn read-yaml
   [fname schema]
@@ -146,7 +156,9 @@
                                           :file (str file suffix)}]))
                                [:small :medium :large]
                                dst-suffixes))
-         :dimension-val (when dimension (eval-str dimension))))
+         :dimension_val (when (and (string? dimension)
+                                   (not (num-str? dimension)))
+                          (eval-str dimension))))
 
 (defn read-category
   [{:keys [dir] :as args}
@@ -166,6 +178,8 @@
 #_{:clj-kondo/ignore [:clojure-lsp/unused-public-var]}
 (defn build-site
   [& {:keys [templates output template-args show-args] :as args}]
+  (filters/add-filter! :format-num #(format "%,.3f" %))
+  (filters/add-filter! :isnum #(or (number? %) (num-str? %)))
   (let [template-args
         (merge (read-info args)
                template-args)]

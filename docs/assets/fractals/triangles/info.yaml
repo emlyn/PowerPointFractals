@@ -4,6 +4,9 @@ fractals:
   description: >-
     The classic Sierpiński Gasket (triangle)
   dimension: log(3) / log(2)
+  links:
+  - name: Wikipedia
+    url: https://en.wikipedia.org/wiki/Sierpiński_triangle
 - file: rectangles
   name: Sierpiński Triangle with rectangles
 - file: rotated-rectangles

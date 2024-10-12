@@ -4,6 +4,9 @@ fractals:
   description: >-
     The classic Sierpiński Carpet (square)
   dimension: log(8) / log(3)
+  links:
+  - name: Wikipedia
+    url: https://en.wikipedia.org/wiki/Sierpiński_carpet
 - file: gradient
   name: Sierpiński Carpet with colour gradient
 - file: outline
@@ -19,6 +22,9 @@ fractals:
 - file: vicsek
   name: Vicsek fractal
   dimension: log(5) / log(3)
+  links:
+  - name: Wikipedia
+    url: https://en.wikipedia.org/wiki/Vicsek_fractal
 - file: vicsek-coloured
   name: Coloured Vicsek Fractal
 - file: vicsek-circle
@@ -46,7 +52,7 @@ fractals:
   name: Dots
 - file: window
   name: Fractal Window
-  dimension: log(4) / log(24/10)
+  dimension: log(4) / log(12 / 5)
 - file: degraded
   name: Degraded Square
   dimension: log(8) / log(3)

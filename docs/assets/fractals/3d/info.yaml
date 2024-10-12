@@ -4,12 +4,21 @@ fractals:
 - file: menger-grey
   name: Menger Sponge (grey)
   dimension: log(20) / log(3)
+  links:
+  - name: Wikipedia
+    url: https://en.wikipedia.org/wiki/Menger_sponge
 - file: menger-rgb
   name: Menger Sponge (RGB)
   dimension: log(20) / log(3)
 - file: cross-menger
   name: Jerusalem Cube
   dimension: log(sqrt(7)/6 - 1/3) / log(sqrt(2) - 1)
+  links:
+  - name: Wikipedia
+    url: https://en.wikipedia.org/wiki/Menger_sponge#Jerusalem_cube
 - file: tetrix
   name: Tetrix (Fractal Tetrahedron)
   dimension: 2
+  links:
+  - name: Wikipedia
+    url: https://en.wikipedia.org/wiki/Sierpiński_triangle#Analogues_in_higher_dimensions

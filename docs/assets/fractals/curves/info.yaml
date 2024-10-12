@@ -2,11 +2,17 @@ fractals:
 - file: koch
   name: Koch Curve
   dimension: log(4) / log(3)
+  links:
+  - name: Wikipedia
+    url: https://en.wikipedia.org/wiki/Koch_snowflake
 - file: square
   name: Koch Curve (square variation)
 - file: dragon
   name: Dragon Curve
   dimension: 2
+  links:
+  - name: Wikipedia
+    url: https://en.wikipedia.org/wiki/Dragon_curve
 - file: golden
   name: Golden Dragon Curve
 - file: pythagoras

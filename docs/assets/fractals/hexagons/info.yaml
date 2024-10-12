@@ -2,6 +2,9 @@ fractals:
 - file: sierpinski
   name: Sierpiński Hexagon
   dimension: log(6) / log(3)
+  links:
+  - name: Wikipedia
+    url: https://en.wikipedia.org/wiki/N-flake#Hexaflake
 - file: sierpinski-shaded
   name: Shaded Sierpiński Hexagon
 - file: sierpinski-coloured
@@ -12,6 +15,10 @@ fractals:
   name: Rotated Shaded Sierpinski Hexagon
 - file: koch
   name: Koch Snowflake
+  dimension: 2
+  links:
+  - name: Wikipedia
+    url: https://en.wikipedia.org/wiki/Koch_snowflake
 - file: exploding
   name: Exploding Koch Snowflake
 - file: exploded
@@ -21,6 +28,9 @@ fractals:
 - file: hexaflake
   name: Hexaflake
   dimension: log(7) / log(3)
+  links:
+  - name: Wikipedia
+    url: https://en.wikipedia.org/wiki/N-flake#Hexaflake
 - file: hexaflake-rotated
   name: Rotated Hexaflake
 - file: hexaflake-shaded

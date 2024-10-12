@@ -1,23 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>PowerPoint Fractals</title>
-        <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
-        <link rel="manifest" href="assets/webmanifest.json">
-        <link rel="stylesheet" type="text/css" href="assets/css/default.css">
-    </head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PowerPoint Fractals</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/webmanifest.json">
+    <style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.slides {
+  height: 85vh;
+  display: flex;
+  justify-content: center;
+}
+
+.slide {
+  display: none;
+  flex-direction: row;
+  height: 100%;
+}
+
+.slide img {
+  height: 100%;
+}
+
+.info {
+  padding: 20px;
+}
+
+.thumbnail-container {
+  width: 100%;
+  overflow-x: scroll;
+}
+
+.thumbnails {
+  height: 15vh;
+  width: max-content;
+}
+
+.thumbnails img {
+  height: 100%;
+  opacity: 30%;
+  cursor: pointer;
+}
+
+.thumbnails img.active {
+  border: 1px solid #444;
+}
+
+.thumbnails img:hover {
+  opacity: 100%;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  padding: 16px;
+  color: #444;
+  font-weight: bold;
+  font-size: 32px;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  color: #222;
+}
+      </style>
+      <script>
+        MathJax = {
+          loader: {load: ['input/asciimath', 'output/chtml', 'ui/menu']},
+        };
+    </script>
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/startup.js">
+    </script>
+  </head>
     <body>
-        <h1>PowerPoint Fractals</h1>{% for category in categories %}
-        <div class="category">
-            <h2>{{ category.name }}</h2>
-            <p>{{ category.description }}</p>{% for fractal in category.fractals %}
-            <figure>
-                <a href="{{raw-root}}/{{category.name|lower}}/{{fractal.images.large.file}}"><img src="{{raw-root}}/{{category.name|lower}}/{{fractal.images.small.file}}" height="110"></a>
-                <figcaption>{{ fractal.name }}</figcaption>
-            </figure>{% endfor %}
+      <div class="slides">{% for fractal in fractals %}
+        <div class="slide">
+          <img src="{{raw-root}}/{{fractal.category|lower}}/{{fractal.images.medium.file}}">
+          <div class="info">
+            <h2>{{fractal.name}}</h2>
+            <p>{{fractal.description}}</p>
+            {% if fractal.dimension %}<p>Fractal dimension: `{{fractal.dimension}} = {{fractal.dimension-val}}`</p>{% endif %}
+          </div>
         </div>{% endfor %}
-    </body>
+      </div>
+      <div class="thumbnail-container">
+        <div class="thumbnails">{% for fractal in fractals %}
+          <img src="{{raw-root}}/{{fractal.category|lower}}/{{fractal.images.small.file}}"
+               onclick="currentSlide({{forloop.counter0}})"
+               alt="{{fractal.name}}">{% endfor %}
+          </div>
+        </div>
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+</div>
+
+<script>
+let slideIndex = 0;
+showSlide(slideIndex);
+
+function plusSlides(n) {
+  showSlide(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlide(slideIndex = n);
+}
+
+function showSlide(n) {
+  const slides = document.getElementsByClassName("slide");
+  const thumbs = document.querySelectorAll(".thumbnails img");
+  while (n < 0) {
+    n += slides.length;
+  }
+  n = n % slides.length;
+  for (slide of slides) {
+    slide.style.display = "none";
+  }
+  for (thumb of thumbs) {
+    thumb.classList.remove("active");
+  }
+  slides[n].style.display = "flex";
+  thumbs[n].classList.add("active");
+}
+</script>
+</body>
 </html>

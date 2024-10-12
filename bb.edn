@@ -1,5 +1,6 @@
 {:paths ["./scripts/"]
- :deps {metosin/malli {:mvn/version "0.16.3"}}
+ :deps {metosin/malli {:mvn/version "0.16.3"}
+        rm-hull/infix {:mvn/version "0.4.3"}}
  :tasks {check {:doc "Checks that all PowerPoints have been converted to PNGs"
                 :task (exec 'tasks/check)
                 :exec-args {:dir "docs/assets/fractals"

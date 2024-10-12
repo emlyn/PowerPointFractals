@@ -1,463 +1,1245 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>PowerPoint Fractals</title>
-        <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
-        <link rel="manifest" href="assets/webmanifest.json">
-        <link rel="stylesheet" type="text/css" href="assets/css/default.css">
-    </head>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.slides {
+  height: 85vh;
+  display: flex;
+  justify-content: center;
+}
+
+.slide {
+  display: none;
+  flex-direction: row;
+  height: 100%;
+}
+
+.slide img {
+  height: 100%;
+}
+
+.info {
+  padding: 20px;
+}
+
+.thumbnail-container {
+  width: 100%;
+  overflow-x: scroll;
+}
+
+.thumbnails {
+  height: 15vh;
+  width: max-content;
+}
+
+.thumbnails img {
+  height: 100%;
+  opacity: 30%;
+  cursor: pointer;
+}
+
+.thumbnails img.active {
+  border: 1px solid #444;
+}
+
+.thumbnails img:hover {
+  opacity: 100%;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  padding: 16px;
+  color: #444;
+  font-weight: bold;
+  font-size: 32px;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  color: #222;
+}
+      </style>
+      <script>
+        MathJax = {
+          loader: {load: ['input/asciimath', 'output/chtml', 'ui/menu']},
+        };
+    </script>
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/startup.js">
+    </script>
+  </head>
     <body>
-        <h1>PowerPoint Fractals</h1>
-        <div class="category">
-            <h2>Triangles</h2>
-            <p>Fractals with triangular symmetry, such as the Sierpiński Triangle and variations.</p>
-            <figure>
-                <a href="assets/fractals/triangles/sierpinski_2400.png"><img src="assets/fractals/triangles/sierpinski_600.png" height="110"></a>
-                <figcaption>Sierpiński Triangle</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/fractals/triangles/rectangles_2400.png"><img src="assets/fractals/triangles/rectangles_600.png" height="110"></a>
-                <figcaption>Sierpiński Triangle with rectangles</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/fractals/triangles/rotated-rectangles_2400.png"><img src="assets/fractals/triangles/rotated-rectangles_600.png" height="110"></a>
-                <figcaption>Sierpiński Triangle with rotated rectangles</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/fractals/triangles/coloured-rectangles_2400.png"><img src="assets/fractals/triangles/coloured-rectangles_600.png" height="110"></a>
-                <figcaption>Sierpiński Triangle with coloured rectangles</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/fractals/triangles/shaded_2400.png"><img src="assets/fractals/triangles/shaded_600.png" height="110"></a>
-                <figcaption>Shaded Sierpiński Triangle</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/fractals/triangles/rgb_2400.png"><img src="assets/fractals/triangles/rgb_600.png" height="110"></a>
-                <figcaption>Colour shaded Sierpiński Triangle</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/fractals/triangles/circles_2400.png"><img src="assets/fractals/triangles/circles_600.png" height="110"></a>
-                <figcaption>Sierpiński Triangle made of circles</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/fractals/triangles/cmy_2400.png"><img src="assets/fractals/triangles/cmy_600.png" height="110"></a>
-                <figcaption>Sierpiński Triangle made of coloured circles</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/fractals/triangles/triflake_2400.png"><img src="assets/fractals/triangles/triflake_600.png" height="110"></a>
-                <figcaption>Triflake</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/fractals/triangles/triflake-shaded_2400.png"><img src="assets/fractals/triangles/triflake-shaded_600.png" height="110"></a>
-                <figcaption>Shaded Triflake</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/fractals/triangles/triflake-rotated-shaded_2400.png"><img src="assets/fractals/triangles/triflake-rotated-shaded_600.png" height="110"></a>
-                <figcaption>Shaded Rotated Triflake</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/fractals/triangles/dust_2400.png"><img src="assets/fractals/triangles/dust_600.png" height="110"></a>
-                <figcaption>Fractal Dust</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/fractals/triangles/lightning_2400.png"><img src="assets/fractals/triangles/lightning_600.png" height="110"></a>
-                <figcaption>Triangular Lightning</figcaption>
-            </figure>
+      <div class="slides">
+        <div class="slide">
+          <img src="assets/fractals/triangles/sierpinski_1200.png">
+          <div class="info">
+            <h2>Sierpiński Triangle</h2>
+            <p>The classic Sierpiński Gasket (triangle)</p>
+            <p>Fractal dimension: `log(3) / log(2) = 1.584962500721156`</p>
+          </div>
         </div>
-        <div class="category">
-            <h2>Squares</h2>
-            <p>Fractals with square symmetry, such as the Sierpiński Carpet and variations.</p>
-            <figure>
-                <a href="assets/fractals/squares/sierpinski_2400.png"><img src="assets/fractals/squares/sierpinski_600.png" height="110"></a>
-                <figcaption>Sierpiński Carpet</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/fractals/squares/gradient_2400.png"><img src="assets/fractals/squares/gradient_600.png" height="110"></a>
-                <figcaption>Sierpiński Carpet with colour gradient</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/fractals/squares/outline_2400.png"><img src="assets/fractals/squares/outline_600.png" height="110"></a>
-                <figcaption>Sierpiński Carpet with outline</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/fractals/squares/coloured-outline_2400.png"><img src="assets/fractals/squares/coloured-outline_600.png" height="110"></a>
-                <figcaption>Sierpiński Carpet with coloured outline</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/fractals/squares/diagonals_2400.png"><img src="assets/fractals/squares/diagonals_600.png" height="110"></a>
-                <figcaption>Sierpiński Carpet with diagonals</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/fractals/squares/coloured-diagonals_2400.png"><img src="assets/fractals/squares/coloured-diagonals_600.png" height="110"></a>
-                <figcaption>Sierpiński Carpet with coloured diagonals</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/fractals/squares/inverted_2400.png"><img src="assets/fractals/squares/inverted_600.png" height="110"></a>
-                <figcaption>Inverted Sierpiński Carpet</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/fractals/squares/vicsek_2400.png"><img src="assets/fractals/squares/vicsek_600.png" height="110"></a>
-                <figcaption>Vicsek fractal</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/fractals/squares/vicsek-coloured_2400.png"><img src="assets/fractals/squares/vicsek-coloured_600.png" height="110"></a>
-                <figcaption>Coloured Vicsek Fractal</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/fractals/squares/vicsek-circle_2400.png"><img src="assets/fractals/squares/vicsek-circle_600.png" height="110"></a>
-                <figcaption>Vicsek of Circles</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/fractals/squares/vicsek-diagonal_2400.png"><img src="assets/fractals/squares/vicsek-diagonal_600.png" height="110"></a>
-                <figcaption>Diagonal Vicsek Fractal</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/fractals/squares/h_2400.png"><img src="assets/fractals/squares/h_600.png" height="110"></a>
-                <figcaption>Fractal H-I de Rivera</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/fractals/squares/cross_2400.png"><img src="assets/fractals/squares/cross_600.png" height="110"></a>
-                <figcaption>Jerusalem Cross</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/fractals/squares/swiss_2400.png"><img src="assets/fractals/squares/swiss_600.png" height="110"></a>
-                <figcaption>Swiss Fractal</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/fractals/squares/forest_2400.png"><img src="assets/fractals/squares/forest_600.png" height="110"></a>
-                <figcaption>Forest</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/fractals/squares/copper_2400.png"><img src="assets/fractals/squares/copper_600.png" height="110"></a>
-                <figcaption>Copper Carpet</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/fractals/squares/distorted_2400.png"><img src="assets/fractals/squares/distorted_600.png" height="110"></a>
-                <figcaption>Distorted Carpet</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/fractals/squares/dots_2400.png"><img src="assets/fractals/squares/dots_600.png" height="110"></a>
-                <figcaption>Dots</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/fractals/squares/window_2400.png"><img src="assets/fractals/squares/window_600.png" height="110"></a>
-                <figcaption>Fractal Window</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/fractals/squares/degraded_2400.png"><img src="assets/fractals/squares/degraded_600.png" height="110"></a>
-                <figcaption>Degraded Square</figcaption>
-            </figure>
+        <div class="slide">
+          <img src="assets/fractals/triangles/rectangles_1200.png">
+          <div class="info">
+            <h2>Sierpiński Triangle with rectangles</h2>
+            <p></p>
+            
+          </div>
         </div>
-        <div class="category">
-            <h2>Pentagons</h2>
-            <p>Fractals with pentagonal symmetry.</p>
-            <figure>
-                <a href="assets/fractals/pentagons/pentaflake_2400.png"><img src="assets/fractals/pentagons/pentaflake_600.png" height="110"></a>
-                <figcaption>The Pentaflake</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/fractals/pentagons/sierpinski_2400.png"><img src="assets/fractals/pentagons/sierpinski_600.png" height="110"></a>
-                <figcaption>Sierpiński Pentagon</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/fractals/pentagons/rotated-pentaflake_2400.png"><img src="assets/fractals/pentagons/rotated-pentaflake_600.png" height="110"></a>
-                <figcaption>Rotated Pentaflake</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/fractals/pentagons/rotated-sierpinski_2400.png"><img src="assets/fractals/pentagons/rotated-sierpinski_600.png" height="110"></a>
-                <figcaption>Rotated Sierpiński Pentagon</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/fractals/pentagons/pentaflake-gap_2400.png"><img src="assets/fractals/pentagons/pentaflake-gap_600.png" height="110"></a>
-                <figcaption>Pentaflake with a gap</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/fractals/pentagons/star_2400.png"><img src="assets/fractals/pentagons/star_600.png" height="110"></a>
-                <figcaption>Sierpiński Pentagon star</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/fractals/pentagons/twist_2400.png"><img src="assets/fractals/pentagons/twist_600.png" height="110"></a>
-                <figcaption>Twisted Sierpiński Pentagon</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/fractals/pentagons/microbe_2400.png"><img src="assets/fractals/pentagons/microbe_600.png" height="110"></a>
-                <figcaption>Sierpiński Pentagon microbe</figcaption>
-            </figure>
+        <div class="slide">
+          <img src="assets/fractals/triangles/rotated-rectangles_1200.png">
+          <div class="info">
+            <h2>Sierpiński Triangle with rotated rectangles</h2>
+            <p></p>
+            
+          </div>
         </div>
-        <div class="category">
-            <h2>Hexagons</h2>
-            <p>Fractals with hexagonal symmetry, such as the Koch Snowflake.</p>
-            <figure>
-                <a href="assets/fractals/hexagons/sierpinski_2400.png"><img src="assets/fractals/hexagons/sierpinski_600.png" height="110"></a>
-                <figcaption>Sierpiński Hexagon</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/fractals/hexagons/sierpinski-shaded_2400.png"><img src="assets/fractals/hexagons/sierpinski-shaded_600.png" height="110"></a>
-                <figcaption>Shaded Sierpiński Hexagon</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/fractals/hexagons/sierpinski-coloured_2400.png"><img src="assets/fractals/hexagons/sierpinski-coloured_600.png" height="110"></a>
-                <figcaption>Coloured Sierpiński Hexagon</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/fractals/hexagons/sierpinski-rotated_2400.png"><img src="assets/fractals/hexagons/sierpinski-rotated_600.png" height="110"></a>
-                <figcaption>Rotated Sierpinski Hexagon</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/fractals/hexagons/sierpinski-rotated-shaded_2400.png"><img src="assets/fractals/hexagons/sierpinski-rotated-shaded_600.png" height="110"></a>
-                <figcaption>Rotated Shaded Sierpinski Hexagon</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/fractals/hexagons/koch_2400.png"><img src="assets/fractals/hexagons/koch_600.png" height="110"></a>
-                <figcaption>Koch Snowflake</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/fractals/hexagons/exploding_2400.png"><img src="assets/fractals/hexagons/exploding_600.png" height="110"></a>
-                <figcaption>Exploding Koch Snowflake</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/fractals/hexagons/exploded_2400.png"><img src="assets/fractals/hexagons/exploded_600.png" height="110"></a>
-                <figcaption>Exploded Koch Snowflake</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/fractals/hexagons/snowflake_2400.png"><img src="assets/fractals/hexagons/snowflake_600.png" height="110"></a>
-                <figcaption>Snowflake</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/fractals/hexagons/hexaflake_2400.png"><img src="assets/fractals/hexagons/hexaflake_600.png" height="110"></a>
-                <figcaption>Hexaflake</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/fractals/hexagons/hexaflake-rotated_2400.png"><img src="assets/fractals/hexagons/hexaflake-rotated_600.png" height="110"></a>
-                <figcaption>Rotated Hexaflake</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/fractals/hexagons/hexaflake-shaded_2400.png"><img src="assets/fractals/hexagons/hexaflake-shaded_600.png" height="110"></a>
-                <figcaption>Shaded Hexaflake Hexagon</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/fractals/hexagons/hexaflake-shaded2_2400.png"><img src="assets/fractals/hexagons/hexaflake-shaded2_600.png" height="110"></a>
-                <figcaption>Shaded Hexaflake</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/fractals/hexagons/hexaflake-shaded3_2400.png"><img src="assets/fractals/hexagons/hexaflake-shaded3_600.png" height="110"></a>
-                <figcaption>Purple Hexaflake</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/fractals/hexagons/hexaflake-coloured_2400.png"><img src="assets/fractals/hexagons/hexaflake-coloured_600.png" height="110"></a>
-                <figcaption>RGB Hexaflake</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/fractals/hexagons/hexaflake-coloured2_2400.png"><img src="assets/fractals/hexagons/hexaflake-coloured2_600.png" height="110"></a>
-                <figcaption>Coloured Hexaflake</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/fractals/hexagons/hexaflake-cell_2400.png"><img src="assets/fractals/hexagons/hexaflake-cell_600.png" height="110"></a>
-                <figcaption>Hexagonal Cell</figcaption>
-            </figure>
+        <div class="slide">
+          <img src="assets/fractals/triangles/coloured-rectangles_1200.png">
+          <div class="info">
+            <h2>Sierpiński Triangle with coloured rectangles</h2>
+            <p></p>
+            
+          </div>
         </div>
-        <div class="category">
-            <h2>Linear</h2>
-            <p>Fractals where all repeats appear on a straight line, with no rotation (&quot;fractalness&quot; is one-dimensional).</p>
-            <figure>
-                <a href="assets/fractals/linear/barcode_2400.png"><img src="assets/fractals/linear/barcode_600.png" height="110"></a>
-                <figcaption>Barcode</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/fractals/linear/french-cantor_2400.png"><img src="assets/fractals/linear/french-cantor_600.png" height="110"></a>
-                <figcaption>Cantor Set as French flag</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/fractals/linear/palette_2400.png"><img src="assets/fractals/linear/palette_600.png" height="110"></a>
-                <figcaption>Fractal Colour Palette</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/fractals/linear/powerlines_2400.png"><img src="assets/fractals/linear/powerlines_600.png" height="110"></a>
-                <figcaption>Power Lines</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/fractals/linear/dots_2400.png"><img src="assets/fractals/linear/dots_600.png" height="110"></a>
-                <figcaption>Dots</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/fractals/linear/circles_2400.png"><img src="assets/fractals/linear/circles_600.png" height="110"></a>
-                <figcaption>Circles</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/fractals/linear/bubbles_2400.png"><img src="assets/fractals/linear/bubbles_600.png" height="110"></a>
-                <figcaption>Bubbles</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/fractals/linear/shard_2400.png"><img src="assets/fractals/linear/shard_600.png" height="110"></a>
-                <figcaption>Shard</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/fractals/linear/jagged_2400.png"><img src="assets/fractals/linear/jagged_600.png" height="110"></a>
-                <figcaption>Jagged</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/fractals/linear/metal_2400.png"><img src="assets/fractals/linear/metal_600.png" height="110"></a>
-                <figcaption>Metal</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/fractals/linear/ukraine_2400.png"><img src="assets/fractals/linear/ukraine_600.png" height="110"></a>
-                <figcaption>Slava Ukraini</figcaption>
-            </figure>
+        <div class="slide">
+          <img src="assets/fractals/triangles/shaded_1200.png">
+          <div class="info">
+            <h2>Shaded Sierpiński Triangle</h2>
+            <p></p>
+            
+          </div>
         </div>
-        <div class="category">
-            <h2>Curves</h2>
-            <p>Fractal curves (such as the Koch Curve and the Dragon Curve).</p>
-            <figure>
-                <a href="assets/fractals/curves/koch_2400.png"><img src="assets/fractals/curves/koch_600.png" height="110"></a>
-                <figcaption>Koch Curve</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/fractals/curves/square_2400.png"><img src="assets/fractals/curves/square_600.png" height="110"></a>
-                <figcaption>Koch Curve (square variation)</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/fractals/curves/dragon_2400.png"><img src="assets/fractals/curves/dragon_600.png" height="110"></a>
-                <figcaption>Dragon Curve</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/fractals/curves/golden_2400.png"><img src="assets/fractals/curves/golden_600.png" height="110"></a>
-                <figcaption>Golden Dragon Curve</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/fractals/curves/pythagoras_2400.png"><img src="assets/fractals/curves/pythagoras_600.png" height="110"></a>
-                <figcaption>Pythagoras Curve</figcaption>
-            </figure>
+        <div class="slide">
+          <img src="assets/fractals/triangles/rgb_1200.png">
+          <div class="info">
+            <h2>Colour shaded Sierpiński Triangle</h2>
+            <p></p>
+            
+          </div>
         </div>
-        <div class="category">
-            <h2>Plants</h2>
-            <p>Fractal plants (such as leaves and trees).</p>
-            <figure>
-                <a href="assets/fractals/plants/pythagoras-tree_2400.png"><img src="assets/fractals/plants/pythagoras-tree_600.png" height="110"></a>
-                <figcaption>Pythagoras Tree</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/fractals/plants/tree_2400.png"><img src="assets/fractals/plants/tree_600.png" height="110"></a>
-                <figcaption>Tree</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/fractals/plants/pine_2400.png"><img src="assets/fractals/plants/pine_600.png" height="110"></a>
-                <figcaption>Pine Tree</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/fractals/plants/fern_2400.png"><img src="assets/fractals/plants/fern_600.png" height="110"></a>
-                <figcaption>Fern</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/fractals/plants/cabbage_2400.png"><img src="assets/fractals/plants/cabbage_600.png" height="110"></a>
-                <figcaption>Cabbage Leaf</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/fractals/plants/flower_2400.png"><img src="assets/fractals/plants/flower_600.png" height="110"></a>
-                <figcaption>Flower</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/fractals/plants/bamboo_2400.png"><img src="assets/fractals/plants/bamboo_600.png" height="110"></a>
-                <figcaption>Bamboo</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/fractals/plants/mushrooms1_2400.png"><img src="assets/fractals/plants/mushrooms1_600.png" height="110"></a>
-                <figcaption>Mushrooms (closed)</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/fractals/plants/mushrooms2_2400.png"><img src="assets/fractals/plants/mushrooms2_600.png" height="110"></a>
-                <figcaption>Mushrooms (open)</figcaption>
-            </figure>
+        <div class="slide">
+          <img src="assets/fractals/triangles/circles_1200.png">
+          <div class="info">
+            <h2>Sierpiński Triangle made of circles</h2>
+            <p></p>
+            
+          </div>
         </div>
-        <div class="category">
-            <h2>Nature</h2>
-            <p>Other things from nature that are not plants.</p>
-            <figure>
-                <a href="assets/fractals/nature/cloud_2400.png"><img src="assets/fractals/nature/cloud_600.png" height="110"></a>
-                <figcaption>Cloud</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/fractals/nature/centipede_2400.png"><img src="assets/fractals/nature/centipede_600.png" height="110"></a>
-                <figcaption>Centipede</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/fractals/nature/mountainscape_2400.png"><img src="assets/fractals/nature/mountainscape_600.png" height="110"></a>
-                <figcaption>Mountainscape</figcaption>
-            </figure>
+        <div class="slide">
+          <img src="assets/fractals/triangles/cmy_1200.png">
+          <div class="info">
+            <h2>Sierpiński Triangle made of coloured circles</h2>
+            <p></p>
+            
+          </div>
         </div>
-        <div class="category">
-            <h2>Spirals</h2>
-            <p>Spiral fractals.</p>
-            <figure>
-                <a href="assets/fractals/spirals/rainbow_2400.png"><img src="assets/fractals/spirals/rainbow_600.png" height="110"></a>
-                <figcaption>Rainbow Spiral</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/fractals/spirals/vortex_2400.png"><img src="assets/fractals/spirals/vortex_600.png" height="110"></a>
-                <figcaption>Vortex</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/fractals/spirals/fire_2400.png"><img src="assets/fractals/spirals/fire_600.png" height="110"></a>
-                <figcaption>Fire Spiral</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/fractals/spirals/blossom_2400.png"><img src="assets/fractals/spirals/blossom_600.png" height="110"></a>
-                <figcaption>Spiral Blossom</figcaption>
-            </figure>
+        <div class="slide">
+          <img src="assets/fractals/triangles/triflake_1200.png">
+          <div class="info">
+            <h2>Triflake</h2>
+            <p></p>
+            <p>Fractal dimension: `log(4) / log(2.5) = 1.51294159473206`</p>
+          </div>
         </div>
-        <div class="category">
-            <h2>Abstract</h2>
-            <p>Abstract shapes that don&#39;t fit into any of the other categories.</p>
-            <figure>
-                <a href="assets/fractals/abstract/abstract1_2400.png"><img src="assets/fractals/abstract/abstract1_600.png" height="110"></a>
-                <figcaption>Jack-in-the-box</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/fractals/abstract/abstract2_2400.png"><img src="assets/fractals/abstract/abstract2_600.png" height="110"></a>
-                <figcaption>Ominous Bubbles</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/fractals/abstract/abstract3_2400.png"><img src="assets/fractals/abstract/abstract3_600.png" height="110"></a>
-                <figcaption>Branching Balls</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/fractals/abstract/abstract4_2400.png"><img src="assets/fractals/abstract/abstract4_600.png" height="110"></a>
-                <figcaption>Angel</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/fractals/abstract/abstract6_2400.png"><img src="assets/fractals/abstract/abstract6_600.png" height="110"></a>
-                <figcaption>Fractal Herd</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/fractals/abstract/heart_2400.png"><img src="assets/fractals/abstract/heart_600.png" height="110"></a>
-                <figcaption>Abstract Heart</figcaption>
-            </figure>
+        <div class="slide">
+          <img src="assets/fractals/triangles/triflake-shaded_1200.png">
+          <div class="info">
+            <h2>Shaded Triflake</h2>
+            <p></p>
+            
+          </div>
         </div>
-        <div class="category">
-            <h2>3D</h2>
-            <p>Three dimensional fractals</p>
-            <figure>
-                <a href="assets/fractals/3d/menger-fake_2400.png"><img src="assets/fractals/3d/menger-fake_600.png" height="110"></a>
-                <figcaption>Faked Menger Sponge</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/fractals/3d/menger-grey_2400.png"><img src="assets/fractals/3d/menger-grey_600.png" height="110"></a>
-                <figcaption>Menger Sponge (grey)</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/fractals/3d/menger-rgb_2400.png"><img src="assets/fractals/3d/menger-rgb_600.png" height="110"></a>
-                <figcaption>Menger Sponge (RGB)</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/fractals/3d/cross-menger_2400.png"><img src="assets/fractals/3d/cross-menger_600.png" height="110"></a>
-                <figcaption>Jerusalem Cube</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/fractals/3d/tetrix_2400.png"><img src="assets/fractals/3d/tetrix_600.png" height="110"></a>
-                <figcaption>Tetrix (Fractal Tetrahedron)</figcaption>
-            </figure>
+        <div class="slide">
+          <img src="assets/fractals/triangles/triflake-rotated-shaded_1200.png">
+          <div class="info">
+            <h2>Shaded Rotated Triflake</h2>
+            <p></p>
+            
+          </div>
         </div>
-    </body>
+        <div class="slide">
+          <img src="assets/fractals/triangles/dust_1200.png">
+          <div class="info">
+            <h2>Fractal Dust</h2>
+            <p></p>
+            
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/fractals/triangles/lightning_1200.png">
+          <div class="info">
+            <h2>Triangular Lightning</h2>
+            <p></p>
+            
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/fractals/squares/sierpinski_1200.png">
+          <div class="info">
+            <h2>Sierpiński Carpet</h2>
+            <p>The classic Sierpiński Carpet (square)</p>
+            <p>Fractal dimension: `log(8) / log(3) = 1.8927892607143724`</p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/fractals/squares/gradient_1200.png">
+          <div class="info">
+            <h2>Sierpiński Carpet with colour gradient</h2>
+            <p></p>
+            
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/fractals/squares/outline_1200.png">
+          <div class="info">
+            <h2>Sierpiński Carpet with outline</h2>
+            <p></p>
+            
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/fractals/squares/coloured-outline_1200.png">
+          <div class="info">
+            <h2>Sierpiński Carpet with coloured outline</h2>
+            <p></p>
+            
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/fractals/squares/diagonals_1200.png">
+          <div class="info">
+            <h2>Sierpiński Carpet with diagonals</h2>
+            <p></p>
+            
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/fractals/squares/coloured-diagonals_1200.png">
+          <div class="info">
+            <h2>Sierpiński Carpet with coloured diagonals</h2>
+            <p></p>
+            
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/fractals/squares/inverted_1200.png">
+          <div class="info">
+            <h2>Inverted Sierpiński Carpet</h2>
+            <p></p>
+            
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/fractals/squares/vicsek_1200.png">
+          <div class="info">
+            <h2>Vicsek fractal</h2>
+            <p></p>
+            <p>Fractal dimension: `log(5) / log(3) = 1.4649735207179273`</p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/fractals/squares/vicsek-coloured_1200.png">
+          <div class="info">
+            <h2>Coloured Vicsek Fractal</h2>
+            <p></p>
+            
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/fractals/squares/vicsek-circle_1200.png">
+          <div class="info">
+            <h2>Vicsek of Circles</h2>
+            <p></p>
+            
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/fractals/squares/vicsek-diagonal_1200.png">
+          <div class="info">
+            <h2>Diagonal Vicsek Fractal</h2>
+            <p></p>
+            <p>Fractal dimension: `log(5) / log(3) = 1.4649735207179273`</p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/fractals/squares/h_1200.png">
+          <div class="info">
+            <h2>Fractal H-I de Rivera</h2>
+            <p></p>
+            <p>Fractal dimension: `log(7) / log(3) = 1.7712437491614224`</p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/fractals/squares/cross_1200.png">
+          <div class="info">
+            <h2>Jerusalem Cross</h2>
+            <p></p>
+            <p>Fractal dimension: `log((sqrt(2) - 1) / 2) / log(sqrt(2) - 1) = 1.786439701357395`</p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/fractals/squares/swiss_1200.png">
+          <div class="info">
+            <h2>Swiss Fractal</h2>
+            <p></p>
+            <p>Fractal dimension: `log(4) / log(110 / 43) = 1.4759113278214793`</p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/fractals/squares/forest_1200.png">
+          <div class="info">
+            <h2>Forest</h2>
+            <p></p>
+            <p>Fractal dimension: `log(5) / log(3) = 1.4649735207179273`</p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/fractals/squares/copper_1200.png">
+          <div class="info">
+            <h2>Copper Carpet</h2>
+            <p></p>
+            
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/fractals/squares/distorted_1200.png">
+          <div class="info">
+            <h2>Distorted Carpet</h2>
+            <p></p>
+            
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/fractals/squares/dots_1200.png">
+          <div class="info">
+            <h2>Dots</h2>
+            <p></p>
+            
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/fractals/squares/window_1200.png">
+          <div class="info">
+            <h2>Fractal Window</h2>
+            <p></p>
+            <p>Fractal dimension: `log(4) / log(24/10) = 1.5834881383771153`</p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/fractals/squares/degraded_1200.png">
+          <div class="info">
+            <h2>Degraded Square</h2>
+            <p></p>
+            <p>Fractal dimension: `log(8) / log(3) = 1.8927892607143724`</p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/fractals/pentagons/pentaflake_1200.png">
+          <div class="info">
+            <h2>The Pentaflake</h2>
+            <p></p>
+            <p>Fractal dimension: `log(6) / log((3 + sqrt(5)) / 2) = 1.8617159595009178`</p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/fractals/pentagons/sierpinski_1200.png">
+          <div class="info">
+            <h2>Sierpiński Pentagon</h2>
+            <p></p>
+            <p>Fractal dimension: `log(5) / log((3 + sqrt(5)) / 2) = 1.6722759381845547`</p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/fractals/pentagons/rotated-pentaflake_1200.png">
+          <div class="info">
+            <h2>Rotated Pentaflake</h2>
+            <p></p>
+            
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/fractals/pentagons/rotated-sierpinski_1200.png">
+          <div class="info">
+            <h2>Rotated Sierpiński Pentagon</h2>
+            <p></p>
+            
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/fractals/pentagons/pentaflake-gap_1200.png">
+          <div class="info">
+            <h2>Pentaflake with a gap</h2>
+            <p></p>
+            
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/fractals/pentagons/star_1200.png">
+          <div class="info">
+            <h2>Sierpiński Pentagon star</h2>
+            <p></p>
+            
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/fractals/pentagons/twist_1200.png">
+          <div class="info">
+            <h2>Twisted Sierpiński Pentagon</h2>
+            <p></p>
+            
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/fractals/pentagons/microbe_1200.png">
+          <div class="info">
+            <h2>Sierpiński Pentagon microbe</h2>
+            <p></p>
+            
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/fractals/hexagons/sierpinski_1200.png">
+          <div class="info">
+            <h2>Sierpiński Hexagon</h2>
+            <p></p>
+            <p>Fractal dimension: `log(6) / log(3) = 1.6309297535714575`</p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/fractals/hexagons/sierpinski-shaded_1200.png">
+          <div class="info">
+            <h2>Shaded Sierpiński Hexagon</h2>
+            <p></p>
+            
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/fractals/hexagons/sierpinski-coloured_1200.png">
+          <div class="info">
+            <h2>Coloured Sierpiński Hexagon</h2>
+            <p></p>
+            
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/fractals/hexagons/sierpinski-rotated_1200.png">
+          <div class="info">
+            <h2>Rotated Sierpinski Hexagon</h2>
+            <p></p>
+            
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/fractals/hexagons/sierpinski-rotated-shaded_1200.png">
+          <div class="info">
+            <h2>Rotated Shaded Sierpinski Hexagon</h2>
+            <p></p>
+            
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/fractals/hexagons/koch_1200.png">
+          <div class="info">
+            <h2>Koch Snowflake</h2>
+            <p></p>
+            
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/fractals/hexagons/exploding_1200.png">
+          <div class="info">
+            <h2>Exploding Koch Snowflake</h2>
+            <p></p>
+            
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/fractals/hexagons/exploded_1200.png">
+          <div class="info">
+            <h2>Exploded Koch Snowflake</h2>
+            <p></p>
+            
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/fractals/hexagons/snowflake_1200.png">
+          <div class="info">
+            <h2>Snowflake</h2>
+            <p></p>
+            
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/fractals/hexagons/hexaflake_1200.png">
+          <div class="info">
+            <h2>Hexaflake</h2>
+            <p></p>
+            <p>Fractal dimension: `log(7) / log(3) = 1.7712437491614224`</p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/fractals/hexagons/hexaflake-rotated_1200.png">
+          <div class="info">
+            <h2>Rotated Hexaflake</h2>
+            <p></p>
+            
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/fractals/hexagons/hexaflake-shaded_1200.png">
+          <div class="info">
+            <h2>Shaded Hexaflake Hexagon</h2>
+            <p></p>
+            
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/fractals/hexagons/hexaflake-shaded2_1200.png">
+          <div class="info">
+            <h2>Shaded Hexaflake</h2>
+            <p></p>
+            
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/fractals/hexagons/hexaflake-shaded3_1200.png">
+          <div class="info">
+            <h2>Purple Hexaflake</h2>
+            <p></p>
+            
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/fractals/hexagons/hexaflake-coloured_1200.png">
+          <div class="info">
+            <h2>RGB Hexaflake</h2>
+            <p></p>
+            
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/fractals/hexagons/hexaflake-coloured2_1200.png">
+          <div class="info">
+            <h2>Coloured Hexaflake</h2>
+            <p></p>
+            
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/fractals/hexagons/hexaflake-cell_1200.png">
+          <div class="info">
+            <h2>Hexagonal Cell</h2>
+            <p></p>
+            
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/fractals/linear/barcode_1200.png">
+          <div class="info">
+            <h2>Barcode</h2>
+            <p></p>
+            
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/fractals/linear/french-cantor_1200.png">
+          <div class="info">
+            <h2>Cantor Set as French flag</h2>
+            <p></p>
+            <p>Fractal dimension: `log(2) / log(3) = 0.6309297535714575`</p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/fractals/linear/palette_1200.png">
+          <div class="info">
+            <h2>Fractal Colour Palette</h2>
+            <p></p>
+            
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/fractals/linear/powerlines_1200.png">
+          <div class="info">
+            <h2>Power Lines</h2>
+            <p></p>
+            
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/fractals/linear/dots_1200.png">
+          <div class="info">
+            <h2>Dots</h2>
+            <p></p>
+            
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/fractals/linear/circles_1200.png">
+          <div class="info">
+            <h2>Circles</h2>
+            <p></p>
+            
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/fractals/linear/bubbles_1200.png">
+          <div class="info">
+            <h2>Bubbles</h2>
+            <p></p>
+            
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/fractals/linear/shard_1200.png">
+          <div class="info">
+            <h2>Shard</h2>
+            <p></p>
+            
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/fractals/linear/jagged_1200.png">
+          <div class="info">
+            <h2>Jagged</h2>
+            <p></p>
+            
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/fractals/linear/metal_1200.png">
+          <div class="info">
+            <h2>Metal</h2>
+            <p></p>
+            
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/fractals/linear/ukraine_1200.png">
+          <div class="info">
+            <h2>Slava Ukraini</h2>
+            <p></p>
+            
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/fractals/curves/koch_1200.png">
+          <div class="info">
+            <h2>Koch Curve</h2>
+            <p></p>
+            <p>Fractal dimension: `log(4) / log(3) = 1.261859507142915`</p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/fractals/curves/square_1200.png">
+          <div class="info">
+            <h2>Koch Curve (square variation)</h2>
+            <p></p>
+            
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/fractals/curves/dragon_1200.png">
+          <div class="info">
+            <h2>Dragon Curve</h2>
+            <p></p>
+            <p>Fractal dimension: `2 = 2`</p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/fractals/curves/golden_1200.png">
+          <div class="info">
+            <h2>Golden Dragon Curve</h2>
+            <p></p>
+            
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/fractals/curves/pythagoras_1200.png">
+          <div class="info">
+            <h2>Pythagoras Curve</h2>
+            <p></p>
+            
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/fractals/plants/pythagoras-tree_1200.png">
+          <div class="info">
+            <h2>Pythagoras Tree</h2>
+            <p></p>
+            
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/fractals/plants/tree_1200.png">
+          <div class="info">
+            <h2>Tree</h2>
+            <p></p>
+            
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/fractals/plants/pine_1200.png">
+          <div class="info">
+            <h2>Pine Tree</h2>
+            <p></p>
+            
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/fractals/plants/fern_1200.png">
+          <div class="info">
+            <h2>Fern</h2>
+            <p></p>
+            
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/fractals/plants/cabbage_1200.png">
+          <div class="info">
+            <h2>Cabbage Leaf</h2>
+            <p></p>
+            
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/fractals/plants/flower_1200.png">
+          <div class="info">
+            <h2>Flower</h2>
+            <p></p>
+            
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/fractals/plants/bamboo_1200.png">
+          <div class="info">
+            <h2>Bamboo</h2>
+            <p></p>
+            
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/fractals/plants/mushrooms1_1200.png">
+          <div class="info">
+            <h2>Mushrooms (closed)</h2>
+            <p></p>
+            
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/fractals/plants/mushrooms2_1200.png">
+          <div class="info">
+            <h2>Mushrooms (open)</h2>
+            <p></p>
+            
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/fractals/nature/cloud_1200.png">
+          <div class="info">
+            <h2>Cloud</h2>
+            <p></p>
+            
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/fractals/nature/centipede_1200.png">
+          <div class="info">
+            <h2>Centipede</h2>
+            <p></p>
+            
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/fractals/nature/mountainscape_1200.png">
+          <div class="info">
+            <h2>Mountainscape</h2>
+            <p></p>
+            
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/fractals/spirals/rainbow_1200.png">
+          <div class="info">
+            <h2>Rainbow Spiral</h2>
+            <p></p>
+            
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/fractals/spirals/vortex_1200.png">
+          <div class="info">
+            <h2>Vortex</h2>
+            <p></p>
+            
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/fractals/spirals/fire_1200.png">
+          <div class="info">
+            <h2>Fire Spiral</h2>
+            <p></p>
+            
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/fractals/spirals/blossom_1200.png">
+          <div class="info">
+            <h2>Spiral Blossom</h2>
+            <p></p>
+            
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/fractals/abstract/abstract1_1200.png">
+          <div class="info">
+            <h2>Jack-in-the-box</h2>
+            <p></p>
+            
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/fractals/abstract/abstract2_1200.png">
+          <div class="info">
+            <h2>Ominous Bubbles</h2>
+            <p></p>
+            
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/fractals/abstract/abstract3_1200.png">
+          <div class="info">
+            <h2>Branching Balls</h2>
+            <p></p>
+            
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/fractals/abstract/abstract4_1200.png">
+          <div class="info">
+            <h2>Angel</h2>
+            <p></p>
+            
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/fractals/abstract/abstract6_1200.png">
+          <div class="info">
+            <h2>Fractal Herd</h2>
+            <p></p>
+            
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/fractals/abstract/heart_1200.png">
+          <div class="info">
+            <h2>Abstract Heart</h2>
+            <p></p>
+            
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/fractals/3d/menger-fake_1200.png">
+          <div class="info">
+            <h2>Faked Menger Sponge</h2>
+            <p></p>
+            
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/fractals/3d/menger-grey_1200.png">
+          <div class="info">
+            <h2>Menger Sponge (grey)</h2>
+            <p></p>
+            <p>Fractal dimension: `log(20) / log(3) = 2.726833027860842`</p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/fractals/3d/menger-rgb_1200.png">
+          <div class="info">
+            <h2>Menger Sponge (RGB)</h2>
+            <p></p>
+            <p>Fractal dimension: `log(20) / log(3) = 2.726833027860842`</p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/fractals/3d/cross-menger_1200.png">
+          <div class="info">
+            <h2>Jerusalem Cube</h2>
+            <p></p>
+            <p>Fractal dimension: `log(sqrt(7)/6 - 1/3) / log(sqrt(2) - 1) = 2.529120816380226`</p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/fractals/3d/tetrix_1200.png">
+          <div class="info">
+            <h2>Tetrix (Fractal Tetrahedron)</h2>
+            <p></p>
+            <p>Fractal dimension: `2 = 2`</p>
+          </div>
+        </div>
+      </div>
+      <div class="thumbnail-container">
+        <div class="thumbnails">
+          <img src="assets/fractals/triangles/sierpinski_600.png"
+               onclick="currentSlide(0)"
+               alt="Sierpiński Triangle">
+          <img src="assets/fractals/triangles/rectangles_600.png"
+               onclick="currentSlide(1)"
+               alt="Sierpiński Triangle with rectangles">
+          <img src="assets/fractals/triangles/rotated-rectangles_600.png"
+               onclick="currentSlide(2)"
+               alt="Sierpiński Triangle with rotated rectangles">
+          <img src="assets/fractals/triangles/coloured-rectangles_600.png"
+               onclick="currentSlide(3)"
+               alt="Sierpiński Triangle with coloured rectangles">
+          <img src="assets/fractals/triangles/shaded_600.png"
+               onclick="currentSlide(4)"
+               alt="Shaded Sierpiński Triangle">
+          <img src="assets/fractals/triangles/rgb_600.png"
+               onclick="currentSlide(5)"
+               alt="Colour shaded Sierpiński Triangle">
+          <img src="assets/fractals/triangles/circles_600.png"
+               onclick="currentSlide(6)"
+               alt="Sierpiński Triangle made of circles">
+          <img src="assets/fractals/triangles/cmy_600.png"
+               onclick="currentSlide(7)"
+               alt="Sierpiński Triangle made of coloured circles">
+          <img src="assets/fractals/triangles/triflake_600.png"
+               onclick="currentSlide(8)"
+               alt="Triflake">
+          <img src="assets/fractals/triangles/triflake-shaded_600.png"
+               onclick="currentSlide(9)"
+               alt="Shaded Triflake">
+          <img src="assets/fractals/triangles/triflake-rotated-shaded_600.png"
+               onclick="currentSlide(10)"
+               alt="Shaded Rotated Triflake">
+          <img src="assets/fractals/triangles/dust_600.png"
+               onclick="currentSlide(11)"
+               alt="Fractal Dust">
+          <img src="assets/fractals/triangles/lightning_600.png"
+               onclick="currentSlide(12)"
+               alt="Triangular Lightning">
+          <img src="assets/fractals/squares/sierpinski_600.png"
+               onclick="currentSlide(13)"
+               alt="Sierpiński Carpet">
+          <img src="assets/fractals/squares/gradient_600.png"
+               onclick="currentSlide(14)"
+               alt="Sierpiński Carpet with colour gradient">
+          <img src="assets/fractals/squares/outline_600.png"
+               onclick="currentSlide(15)"
+               alt="Sierpiński Carpet with outline">
+          <img src="assets/fractals/squares/coloured-outline_600.png"
+               onclick="currentSlide(16)"
+               alt="Sierpiński Carpet with coloured outline">
+          <img src="assets/fractals/squares/diagonals_600.png"
+               onclick="currentSlide(17)"
+               alt="Sierpiński Carpet with diagonals">
+          <img src="assets/fractals/squares/coloured-diagonals_600.png"
+               onclick="currentSlide(18)"
+               alt="Sierpiński Carpet with coloured diagonals">
+          <img src="assets/fractals/squares/inverted_600.png"
+               onclick="currentSlide(19)"
+               alt="Inverted Sierpiński Carpet">
+          <img src="assets/fractals/squares/vicsek_600.png"
+               onclick="currentSlide(20)"
+               alt="Vicsek fractal">
+          <img src="assets/fractals/squares/vicsek-coloured_600.png"
+               onclick="currentSlide(21)"
+               alt="Coloured Vicsek Fractal">
+          <img src="assets/fractals/squares/vicsek-circle_600.png"
+               onclick="currentSlide(22)"
+               alt="Vicsek of Circles">
+          <img src="assets/fractals/squares/vicsek-diagonal_600.png"
+               onclick="currentSlide(23)"
+               alt="Diagonal Vicsek Fractal">
+          <img src="assets/fractals/squares/h_600.png"
+               onclick="currentSlide(24)"
+               alt="Fractal H-I de Rivera">
+          <img src="assets/fractals/squares/cross_600.png"
+               onclick="currentSlide(25)"
+               alt="Jerusalem Cross">
+          <img src="assets/fractals/squares/swiss_600.png"
+               onclick="currentSlide(26)"
+               alt="Swiss Fractal">
+          <img src="assets/fractals/squares/forest_600.png"
+               onclick="currentSlide(27)"
+               alt="Forest">
+          <img src="assets/fractals/squares/copper_600.png"
+               onclick="currentSlide(28)"
+               alt="Copper Carpet">
+          <img src="assets/fractals/squares/distorted_600.png"
+               onclick="currentSlide(29)"
+               alt="Distorted Carpet">
+          <img src="assets/fractals/squares/dots_600.png"
+               onclick="currentSlide(30)"
+               alt="Dots">
+          <img src="assets/fractals/squares/window_600.png"
+               onclick="currentSlide(31)"
+               alt="Fractal Window">
+          <img src="assets/fractals/squares/degraded_600.png"
+               onclick="currentSlide(32)"
+               alt="Degraded Square">
+          <img src="assets/fractals/pentagons/pentaflake_600.png"
+               onclick="currentSlide(33)"
+               alt="The Pentaflake">
+          <img src="assets/fractals/pentagons/sierpinski_600.png"
+               onclick="currentSlide(34)"
+               alt="Sierpiński Pentagon">
+          <img src="assets/fractals/pentagons/rotated-pentaflake_600.png"
+               onclick="currentSlide(35)"
+               alt="Rotated Pentaflake">
+          <img src="assets/fractals/pentagons/rotated-sierpinski_600.png"
+               onclick="currentSlide(36)"
+               alt="Rotated Sierpiński Pentagon">
+          <img src="assets/fractals/pentagons/pentaflake-gap_600.png"
+               onclick="currentSlide(37)"
+               alt="Pentaflake with a gap">
+          <img src="assets/fractals/pentagons/star_600.png"
+               onclick="currentSlide(38)"
+               alt="Sierpiński Pentagon star">
+          <img src="assets/fractals/pentagons/twist_600.png"
+               onclick="currentSlide(39)"
+               alt="Twisted Sierpiński Pentagon">
+          <img src="assets/fractals/pentagons/microbe_600.png"
+               onclick="currentSlide(40)"
+               alt="Sierpiński Pentagon microbe">
+          <img src="assets/fractals/hexagons/sierpinski_600.png"
+               onclick="currentSlide(41)"
+               alt="Sierpiński Hexagon">
+          <img src="assets/fractals/hexagons/sierpinski-shaded_600.png"
+               onclick="currentSlide(42)"
+               alt="Shaded Sierpiński Hexagon">
+          <img src="assets/fractals/hexagons/sierpinski-coloured_600.png"
+               onclick="currentSlide(43)"
+               alt="Coloured Sierpiński Hexagon">
+          <img src="assets/fractals/hexagons/sierpinski-rotated_600.png"
+               onclick="currentSlide(44)"
+               alt="Rotated Sierpinski Hexagon">
+          <img src="assets/fractals/hexagons/sierpinski-rotated-shaded_600.png"
+               onclick="currentSlide(45)"
+               alt="Rotated Shaded Sierpinski Hexagon">
+          <img src="assets/fractals/hexagons/koch_600.png"
+               onclick="currentSlide(46)"
+               alt="Koch Snowflake">
+          <img src="assets/fractals/hexagons/exploding_600.png"
+               onclick="currentSlide(47)"
+               alt="Exploding Koch Snowflake">
+          <img src="assets/fractals/hexagons/exploded_600.png"
+               onclick="currentSlide(48)"
+               alt="Exploded Koch Snowflake">
+          <img src="assets/fractals/hexagons/snowflake_600.png"
+               onclick="currentSlide(49)"
+               alt="Snowflake">
+          <img src="assets/fractals/hexagons/hexaflake_600.png"
+               onclick="currentSlide(50)"
+               alt="Hexaflake">
+          <img src="assets/fractals/hexagons/hexaflake-rotated_600.png"
+               onclick="currentSlide(51)"
+               alt="Rotated Hexaflake">
+          <img src="assets/fractals/hexagons/hexaflake-shaded_600.png"
+               onclick="currentSlide(52)"
+               alt="Shaded Hexaflake Hexagon">
+          <img src="assets/fractals/hexagons/hexaflake-shaded2_600.png"
+               onclick="currentSlide(53)"
+               alt="Shaded Hexaflake">
+          <img src="assets/fractals/hexagons/hexaflake-shaded3_600.png"
+               onclick="currentSlide(54)"
+               alt="Purple Hexaflake">
+          <img src="assets/fractals/hexagons/hexaflake-coloured_600.png"
+               onclick="currentSlide(55)"
+               alt="RGB Hexaflake">
+          <img src="assets/fractals/hexagons/hexaflake-coloured2_600.png"
+               onclick="currentSlide(56)"
+               alt="Coloured Hexaflake">
+          <img src="assets/fractals/hexagons/hexaflake-cell_600.png"
+               onclick="currentSlide(57)"
+               alt="Hexagonal Cell">
+          <img src="assets/fractals/linear/barcode_600.png"
+               onclick="currentSlide(58)"
+               alt="Barcode">
+          <img src="assets/fractals/linear/french-cantor_600.png"
+               onclick="currentSlide(59)"
+               alt="Cantor Set as French flag">
+          <img src="assets/fractals/linear/palette_600.png"
+               onclick="currentSlide(60)"
+               alt="Fractal Colour Palette">
+          <img src="assets/fractals/linear/powerlines_600.png"
+               onclick="currentSlide(61)"
+               alt="Power Lines">
+          <img src="assets/fractals/linear/dots_600.png"
+               onclick="currentSlide(62)"
+               alt="Dots">
+          <img src="assets/fractals/linear/circles_600.png"
+               onclick="currentSlide(63)"
+               alt="Circles">
+          <img src="assets/fractals/linear/bubbles_600.png"
+               onclick="currentSlide(64)"
+               alt="Bubbles">
+          <img src="assets/fractals/linear/shard_600.png"
+               onclick="currentSlide(65)"
+               alt="Shard">
+          <img src="assets/fractals/linear/jagged_600.png"
+               onclick="currentSlide(66)"
+               alt="Jagged">
+          <img src="assets/fractals/linear/metal_600.png"
+               onclick="currentSlide(67)"
+               alt="Metal">
+          <img src="assets/fractals/linear/ukraine_600.png"
+               onclick="currentSlide(68)"
+               alt="Slava Ukraini">
+          <img src="assets/fractals/curves/koch_600.png"
+               onclick="currentSlide(69)"
+               alt="Koch Curve">
+          <img src="assets/fractals/curves/square_600.png"
+               onclick="currentSlide(70)"
+               alt="Koch Curve (square variation)">
+          <img src="assets/fractals/curves/dragon_600.png"
+               onclick="currentSlide(71)"
+               alt="Dragon Curve">
+          <img src="assets/fractals/curves/golden_600.png"
+               onclick="currentSlide(72)"
+               alt="Golden Dragon Curve">
+          <img src="assets/fractals/curves/pythagoras_600.png"
+               onclick="currentSlide(73)"
+               alt="Pythagoras Curve">
+          <img src="assets/fractals/plants/pythagoras-tree_600.png"
+               onclick="currentSlide(74)"
+               alt="Pythagoras Tree">
+          <img src="assets/fractals/plants/tree_600.png"
+               onclick="currentSlide(75)"
+               alt="Tree">
+          <img src="assets/fractals/plants/pine_600.png"
+               onclick="currentSlide(76)"
+               alt="Pine Tree">
+          <img src="assets/fractals/plants/fern_600.png"
+               onclick="currentSlide(77)"
+               alt="Fern">
+          <img src="assets/fractals/plants/cabbage_600.png"
+               onclick="currentSlide(78)"
+               alt="Cabbage Leaf">
+          <img src="assets/fractals/plants/flower_600.png"
+               onclick="currentSlide(79)"
+               alt="Flower">
+          <img src="assets/fractals/plants/bamboo_600.png"
+               onclick="currentSlide(80)"
+               alt="Bamboo">
+          <img src="assets/fractals/plants/mushrooms1_600.png"
+               onclick="currentSlide(81)"
+               alt="Mushrooms (closed)">
+          <img src="assets/fractals/plants/mushrooms2_600.png"
+               onclick="currentSlide(82)"
+               alt="Mushrooms (open)">
+          <img src="assets/fractals/nature/cloud_600.png"
+               onclick="currentSlide(83)"
+               alt="Cloud">
+          <img src="assets/fractals/nature/centipede_600.png"
+               onclick="currentSlide(84)"
+               alt="Centipede">
+          <img src="assets/fractals/nature/mountainscape_600.png"
+               onclick="currentSlide(85)"
+               alt="Mountainscape">
+          <img src="assets/fractals/spirals/rainbow_600.png"
+               onclick="currentSlide(86)"
+               alt="Rainbow Spiral">
+          <img src="assets/fractals/spirals/vortex_600.png"
+               onclick="currentSlide(87)"
+               alt="Vortex">
+          <img src="assets/fractals/spirals/fire_600.png"
+               onclick="currentSlide(88)"
+               alt="Fire Spiral">
+          <img src="assets/fractals/spirals/blossom_600.png"
+               onclick="currentSlide(89)"
+               alt="Spiral Blossom">
+          <img src="assets/fractals/abstract/abstract1_600.png"
+               onclick="currentSlide(90)"
+               alt="Jack-in-the-box">
+          <img src="assets/fractals/abstract/abstract2_600.png"
+               onclick="currentSlide(91)"
+               alt="Ominous Bubbles">
+          <img src="assets/fractals/abstract/abstract3_600.png"
+               onclick="currentSlide(92)"
+               alt="Branching Balls">
+          <img src="assets/fractals/abstract/abstract4_600.png"
+               onclick="currentSlide(93)"
+               alt="Angel">
+          <img src="assets/fractals/abstract/abstract6_600.png"
+               onclick="currentSlide(94)"
+               alt="Fractal Herd">
+          <img src="assets/fractals/abstract/heart_600.png"
+               onclick="currentSlide(95)"
+               alt="Abstract Heart">
+          <img src="assets/fractals/3d/menger-fake_600.png"
+               onclick="currentSlide(96)"
+               alt="Faked Menger Sponge">
+          <img src="assets/fractals/3d/menger-grey_600.png"
+               onclick="currentSlide(97)"
+               alt="Menger Sponge (grey)">
+          <img src="assets/fractals/3d/menger-rgb_600.png"
+               onclick="currentSlide(98)"
+               alt="Menger Sponge (RGB)">
+          <img src="assets/fractals/3d/cross-menger_600.png"
+               onclick="currentSlide(99)"
+               alt="Jerusalem Cube">
+          <img src="assets/fractals/3d/tetrix_600.png"
+               onclick="currentSlide(100)"
+               alt="Tetrix (Fractal Tetrahedron)">
+          </div>
+        </div>
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+</div>
+
+<script>
+let slideIndex = 0;
+showSlide(slideIndex);
+
+function plusSlides(n) {
+  showSlide(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlide(slideIndex = n);
+}
+
+function showSlide(n) {
+  const slides = document.getElementsByClassName("slide");
+  const thumbs = document.querySelectorAll(".thumbnails img");
+  while (n < 0) {
+    n += slides.length;
+  }
+  n = n % slides.length;
+  for (slide of slides) {
+    slide.style.display = "none";
+  }
+  for (thumb of thumbs) {
+    thumb.classList.remove("active");
+  }
+  slides[n].style.display = "flex";
+  thumbs[n].classList.add("active");
+}
+</script>
+</body>
 </html>

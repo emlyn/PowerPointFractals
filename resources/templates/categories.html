@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>PowerPoint Fractals</title>
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+        <link rel="manifest" href="assets/webmanifest.json">
+        <link rel="stylesheet" type="text/css" href="assets/css/default.css">
+    </head>
+    <body>
+        <h1>PowerPoint Fractals</h1>{% for category in categories %}
+        <div class="category">
+            <h2>{{ category.name }}</h2>
+            <p>{{ category.description }}</p>{% for fractal in category.fractals %}
+            <figure>
+                <a href="{{raw-root}}/{{category.name|lower}}/{{fractal.images.large.file}}"><img src="{{raw-root}}/{{category.name|lower}}/{{fractal.images.small.file}}" height="110"></a>
+                <figcaption>{{ fractal.name }}</figcaption>
+            </figure>{% endfor %}
+        </div>{% endfor %}
+    </body>
+</html>

@@ -6,7 +6,8 @@
             [clojure.pprint :as pprint]
             [malli.core :as m]
             [malli.error :as me]
-            [selmer.parser :as selmer]))
+            [selmer.parser :as selmer]
+            [infix.macros :refer [from-string]]))
 
 #_{:clj-kondo/ignore [:clojure-lsp/unused-public-var]}
 (defn install-pre-commit
@@ -119,7 +120,7 @@
 
 (defn read-fractal
   [{:keys [src-suffix dst-suffixes]}
-   {:keys [file] :as info}]
+   {:keys [file dimension] :as info}]
   (assoc info
          :source (str file src-suffix)
          :images (into {} (map (fn [name suffix]
@@ -130,19 +131,22 @@
                                    [name {:size size
                                           :file (str file suffix)}]))
                                [:small :medium :large]
-                               dst-suffixes))))
+                               dst-suffixes))
+         :dimension-val (when dimension (eval-str dimension))))
 
 (defn read-category
   [{:keys [dir] :as args}
    {:keys [name] :as cat}]
   (let [info (read-yaml (str dir "/" name "/info.yaml") category-schema)
-        info (update info :fractals (partial mapv (partial read-fractal args)))]
+        info (update info :fractals (partial mapv #(merge {:category name} (read-fractal args %))))]
     (merge cat info)))
 
 (defn read-info
   [& {:keys [dir] :as args}]
   (let [info (read-yaml (str dir "/info.yaml") categories-schema)
-        info (update info :categories (partial mapv (partial read-category args)))]
+        info (update info :categories (partial mapv (partial read-category args)))
+        info (assoc info :fractals (mapcat :fractals (:categories info)))
+        info (update info :categories (partial mapv #(dissoc % :fractals)) )]
     info))
 
 #_{:clj-kondo/ignore [:clojure-lsp/unused-public-var]}

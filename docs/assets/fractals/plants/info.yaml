@@ -1,6 +1,9 @@
 fractals:
 - file: pythagoras-tree
-  name: Pythagoras Tree
+  name: 3-4-5 Pythagoras Tree
+  links:
+  - name: Wikipedia
+    url: https://en.wikipedia.org/wiki/Pythagoras_tree_(fractal)
 - file: tree
   name: Tree
 - file: pine

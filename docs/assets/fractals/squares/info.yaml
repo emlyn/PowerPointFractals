@@ -35,6 +35,9 @@ fractals:
 - file: h
   name: Fractal H-I de Rivera
   dimension: log(7) / log(3)
+- file: castle
+  name: Fractal Castle
+  dimension: log(8) / log(3)
 - file: cross
   name: Jerusalem Cross
   dimension: log((sqrt(2) - 1) / 2) / log(sqrt(2) - 1)

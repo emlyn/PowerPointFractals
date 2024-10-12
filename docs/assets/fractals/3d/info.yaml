@@ -22,3 +22,15 @@ fractals:
   links:
   - name: Wikipedia
     url: https://en.wikipedia.org/wiki/Sierpiński_triangle#Analogues_in_higher_dimensions
+- file: mosely-snowflake
+  name: Mosely Snowflake
+  dimension: log(18) / log(3)
+  links:
+  - name: Wikipedia
+    url: https://en.wikipedia.org/wiki/Mosely_snowflake
+- file: sm-snowflake
+  name: Sierpiński-Menger Snowflake
+  dimension: log(9) / log(3)
+  links:
+  - name: Wikipedia
+    url: https://en.wikipedia.org/wiki/Menger_sponge#Others

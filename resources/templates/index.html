@@ -129,10 +129,9 @@ a {
           </div>
           <div class="info">
             <h2 class="name">{{fractal.name}}</h2>
-            <p class="description">{{fractal.description}}</p>
-            {% if fractal.dimension %}<p class="dimension">Fractal <a href="https://en.wikipedia.org/wiki/Fractal_dimension">dimension</a>: `{{fractal.dimension}}{% if fractal.dimension_val %} = {{fractal.dimension_val|format-num}}{% endif %}`</p>{% endif %}
-            <p class="download">Download <a href="{{raw-root}}/{{fractal.category|lower}}/{{fractal.source}}">PowerPoint</a>.</p>
-            {% if fractal.links %}
+            <p class="description">{{fractal.description}}</p>{% if fractal.dimension %}
+            <p class="dimension">Fractal <a href="https://en.wikipedia.org/wiki/Fractal_dimension">dimension</a>: `{{fractal.dimension}}{% if fractal.dimension_val %} = {{fractal.dimension_val|format-num}}{% endif %}`</p>{% endif %}
+            <p class="download">Download <a href="{{raw-root}}/{{fractal.category|lower}}/{{fractal.source}}">PowerPoint</a>.</p>{% if fractal.links %}
             <p class="links">Links:{% for link in fractal.links %}<br/><a href="{{link.url}}" target="_blank">{{link.name}}</a>{% endfor %}
             </p>{% endif %}
         </div>

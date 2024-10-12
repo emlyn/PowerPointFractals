@@ -18,6 +18,14 @@
                                  :templates "resources/templates"
                                  :template-args {:raw-root "assets/fractals"}
                                  :output "docs"}}
+         eval {:doc "Evaluate a mathematical expression"
+               :task (exec 'tasks/eval-string)}
+         repl {:doc "Start a repl in the tasks namespace"
+               :override-builtin true
+               :task (do
+                       (require 'tasks)
+                       (in-ns 'tasks)
+                       (clojure.main/repl))}
          pre-commit {:doc "Tasks to run before committing"
                      :depends [check]}
          install-pre-commit {:doc "Installs pre-commit hooks"

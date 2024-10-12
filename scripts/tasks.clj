@@ -118,6 +118,20 @@
             (pprint/pprint))
         (System/exit 1)))))
 
+(defn eval-str
+  [s]
+  (if (number? s)
+    s
+    (let [f (from-string [] s)]
+      (f))))
+
+#_{:clj-kondo/ignore [:clojure-lsp/unused-public-var]}
+(defn eval-string
+  [& {}]
+  (let [expr (str/join " " *command-line-args*)]
+    (println "Evaluating:" expr)
+    (println "Result:" (eval-str expr))))
+
 (defn read-fractal
   [{:keys [src-suffix dst-suffixes]}
    {:keys [file dimension] :as info}]

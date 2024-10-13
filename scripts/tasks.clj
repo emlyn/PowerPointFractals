@@ -1,3 +1,7 @@
+;; Copyright (c) 2024 Emlyn Corrin.
+;; This work is licensed under the terms of the MIT license.
+;; For a copy, see <https://opensource.org/license/MIT>.
+
 (ns tasks
   (:require [babashka.fs :as fs]
             [babashka.process :as proc]

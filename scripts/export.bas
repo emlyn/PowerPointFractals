@@ -1,3 +1,7 @@
+' Copyright (c) 2024 Emlyn Corrin.
+' This work is licensed under the terms of the MIT license.
+' For a copy, see <https://opensource.org/license/MIT>.
+
 Attribute VB_Name = "Export"
 Function BaseName(fName As String) As String
   Dim i, pos As Integer

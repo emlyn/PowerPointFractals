@@ -175,14 +175,18 @@
   [& {:keys [dir] :as args}]
   (let [info (read-yaml (str dir "/info.yaml") categories-schema)
         info (update info :categories (partial mapv (partial read-category args)))
-        info (assoc info :fractals (mapcat :fractals (:categories info)))
-        info (update info :categories (partial mapv #(dissoc % :fractals)) )]
+        info (assoc info :fractals (mapv (fn [fract id]
+                                           (assoc fract :id id))
+                                         (mapcat :fractals (:categories info))
+                                         (range)))
+        info (update info :categories (partial mapv #(assoc % :fractals
+                                                            (filter (comp (partial = (:name %)) :category)
+                                                                    (:fractals info)))))]
     info))
 
 #_{:clj-kondo/ignore [:clojure-lsp/unused-public-var]}
 (defn build-site
   [& {:keys [templates output template-args show-args] :as args}]
-  (filters/add-filter! :format-num #(format "%,.3f" %))
   (filters/add-filter! :isnum #(or (number? %) (num-str? %)))
   (let [template-args
         (merge (read-info args)

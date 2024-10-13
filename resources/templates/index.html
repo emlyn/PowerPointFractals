@@ -34,6 +34,7 @@ a {
   height: 100%;
   /* padding: 10vh; */
   background: #888;
+  overflow-y: scroll;
 }
 
 .modal .content {
@@ -168,7 +169,12 @@ a {
             By controlling the position, size and rotation of the Slide Zoom elements,
             a wide range of fractal images can be created, from regular mathematical shapes,
             to natural objects, to weird abstract images and even representations of 3D shapes.
-          </p>
+          </p>{% for category in categories %}
+          <div class="category">
+              <h2>{{ category.name }}</h2>
+              <p>{{ category.description }}</p>{% for fractal in category.fractals %}
+                <img src="{{raw-root}}/{{category.name|lower}}/{{fractal.images.small.file}}" height="80" onclick="gotoSlide({{fractal.id}})">{% endfor %}
+          </div>{% endfor %}
         </div>
       </div>
       <div class="slides">{% for fractal in fractals %}
@@ -179,7 +185,7 @@ a {
           <div class="info">
             <h2 class="name">{{fractal.name}}</h2>
             <p class="description">{{fractal.description}}</p>{% if fractal.dimension %}
-            <p class="dimension">Fractal <a href="https://en.wikipedia.org/wiki/Fractal_dimension">dimension</a>: `{{fractal.dimension}}{% if fractal.dimension_val %} = {{fractal.dimension_val|format-num}}{% endif %}`</p>{% endif %}
+            <p class="dimension">Fractal <a href="https://en.wikipedia.org/wiki/Fractal_dimension">dimension</a>: `{{fractal.dimension}}{% if fractal.dimension_val %} = {{fractal.dimension_val|double-format:3}}{% endif %}`</p>{% endif %}
             <p class="download">Download <a href="{{raw-root}}/{{fractal.category|lower}}/{{fractal.source}}">PowerPoint</a>.</p>{% if fractal.links %}
             <p class="links">Links:{% for link in fractal.links %}<br/><a href="{{link.url}}" target="_blank">{{link.name}}</a>{% endfor %}
             </p>{% endif %}
@@ -193,8 +199,8 @@ a {
                alt="{{fractal.name}}" title="{{fractal.name}}">{% endfor %}
         </div>
       </div>
-      <a class="prev" onclick="nextSlide()" title="Previous fractal (←)">❮</a>
-      <a class="next" onclick="prevSlide()" title="Next fractal (→)">❯</a>
+      <a class="prev" onclick="prevSlide()" title="Previous fractal (←)">❮</a>
+      <a class="next" onclick="nextSlide()" title="Next fractal (→)">❯</a>
 </div>
 
 <script>
@@ -205,7 +211,7 @@ let thumbs;
 
 const nextSlide = () => showSlide(++slideIndex);
 const prevSlide = () => showSlide(--slideIndex);
-const gotoSlide = n => showSlide(slideIndex = n);
+const gotoSlide = n => { closeModal(); showSlide(slideIndex = n) };
 
 function init() {
     slides = document.getElementsByClassName("slide");
@@ -236,7 +242,7 @@ function showSlide(n) {
 
 function handleKey(e) {
     e ||= window.event;
-    console.log(event);
+    console.log(e);
     switch (e.key) {
         case "ArrowLeft":
             if (state !== 'intro') {

@@ -25,6 +25,39 @@ a {
     text-decoration-style: dotted;
 }
 
+.modal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  /* padding: 10vh; */
+  background: #888;
+}
+
+.modal .content {
+  background-color: #ddd;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 .slides {
   height: 85vh;
   display: flex;
@@ -122,6 +155,22 @@ a {
       </script>
     </head>
     <body>
+      <div class="modal" id="intro">
+        <div class="content">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <h1>PowerPoint Fractal Art</h1>
+          <p>
+            All of these images were created by Emlyn Corrin using Microsoft PowerPoint&trade;.
+          </p>
+          <p>
+            They use a feature called Slide Zoom, which allows an image of the whole slide
+            to be embedded within the slide itself, creating a recursive effect.
+            By controlling the position, size and rotation of the Slide Zoom elements,
+            a wide range of fractal images can be created, from regular mathematical shapes,
+            to natural objects, to weird abstract images and even representations of 3D shapes.
+          </p>
+        </div>
+      </div>
       <div class="slides">
         <div class="slide" id="slide0">
           <div class="img">
@@ -1248,344 +1297,351 @@ a {
       <div class="thumbnail-container">
         <div class="thumbnails">
           <img src="assets/fractals/triangles/sierpinski_600.png"
-               onclick="currentSlide(0)"
+               onclick="gotoSlide(0)"
                alt="Sierpiński Triangle" title="Sierpiński Triangle">
           <img src="assets/fractals/triangles/rectangles_600.png"
-               onclick="currentSlide(1)"
+               onclick="gotoSlide(1)"
                alt="Sierpiński Triangle with rectangles" title="Sierpiński Triangle with rectangles">
           <img src="assets/fractals/triangles/rotated-rectangles_600.png"
-               onclick="currentSlide(2)"
+               onclick="gotoSlide(2)"
                alt="Sierpiński Triangle with rotated rectangles" title="Sierpiński Triangle with rotated rectangles">
           <img src="assets/fractals/triangles/coloured-rectangles_600.png"
-               onclick="currentSlide(3)"
+               onclick="gotoSlide(3)"
                alt="Sierpiński Triangle with coloured rectangles" title="Sierpiński Triangle with coloured rectangles">
           <img src="assets/fractals/triangles/shaded_600.png"
-               onclick="currentSlide(4)"
+               onclick="gotoSlide(4)"
                alt="Shaded Sierpiński Triangle" title="Shaded Sierpiński Triangle">
           <img src="assets/fractals/triangles/rgb_600.png"
-               onclick="currentSlide(5)"
+               onclick="gotoSlide(5)"
                alt="Colour shaded Sierpiński Triangle" title="Colour shaded Sierpiński Triangle">
           <img src="assets/fractals/triangles/circles_600.png"
-               onclick="currentSlide(6)"
+               onclick="gotoSlide(6)"
                alt="Sierpiński Triangle made of circles" title="Sierpiński Triangle made of circles">
           <img src="assets/fractals/triangles/cmy_600.png"
-               onclick="currentSlide(7)"
+               onclick="gotoSlide(7)"
                alt="Sierpiński Triangle made of coloured circles" title="Sierpiński Triangle made of coloured circles">
           <img src="assets/fractals/triangles/triflake_600.png"
-               onclick="currentSlide(8)"
+               onclick="gotoSlide(8)"
                alt="Triflake" title="Triflake">
           <img src="assets/fractals/triangles/triflake-shaded_600.png"
-               onclick="currentSlide(9)"
+               onclick="gotoSlide(9)"
                alt="Shaded Triflake" title="Shaded Triflake">
           <img src="assets/fractals/triangles/triflake-rotated-shaded_600.png"
-               onclick="currentSlide(10)"
+               onclick="gotoSlide(10)"
                alt="Shaded Rotated Triflake" title="Shaded Rotated Triflake">
           <img src="assets/fractals/triangles/dust_600.png"
-               onclick="currentSlide(11)"
+               onclick="gotoSlide(11)"
                alt="Fractal Dust" title="Fractal Dust">
           <img src="assets/fractals/triangles/lightning_600.png"
-               onclick="currentSlide(12)"
+               onclick="gotoSlide(12)"
                alt="Triangular Lightning" title="Triangular Lightning">
           <img src="assets/fractals/squares/sierpinski_600.png"
-               onclick="currentSlide(13)"
+               onclick="gotoSlide(13)"
                alt="Sierpiński Carpet" title="Sierpiński Carpet">
           <img src="assets/fractals/squares/gradient_600.png"
-               onclick="currentSlide(14)"
+               onclick="gotoSlide(14)"
                alt="Sierpiński Carpet with colour gradient" title="Sierpiński Carpet with colour gradient">
           <img src="assets/fractals/squares/outline_600.png"
-               onclick="currentSlide(15)"
+               onclick="gotoSlide(15)"
                alt="Sierpiński Carpet with outline" title="Sierpiński Carpet with outline">
           <img src="assets/fractals/squares/coloured-outline_600.png"
-               onclick="currentSlide(16)"
+               onclick="gotoSlide(16)"
                alt="Sierpiński Carpet with coloured outline" title="Sierpiński Carpet with coloured outline">
           <img src="assets/fractals/squares/diagonals_600.png"
-               onclick="currentSlide(17)"
+               onclick="gotoSlide(17)"
                alt="Sierpiński Carpet with diagonals" title="Sierpiński Carpet with diagonals">
           <img src="assets/fractals/squares/coloured-diagonals_600.png"
-               onclick="currentSlide(18)"
+               onclick="gotoSlide(18)"
                alt="Sierpiński Carpet with coloured diagonals" title="Sierpiński Carpet with coloured diagonals">
           <img src="assets/fractals/squares/inverted_600.png"
-               onclick="currentSlide(19)"
+               onclick="gotoSlide(19)"
                alt="Inverted Sierpiński Carpet" title="Inverted Sierpiński Carpet">
           <img src="assets/fractals/squares/vicsek_600.png"
-               onclick="currentSlide(20)"
+               onclick="gotoSlide(20)"
                alt="Vicsek fractal" title="Vicsek fractal">
           <img src="assets/fractals/squares/vicsek-coloured_600.png"
-               onclick="currentSlide(21)"
+               onclick="gotoSlide(21)"
                alt="Coloured Vicsek Fractal" title="Coloured Vicsek Fractal">
           <img src="assets/fractals/squares/vicsek-circle_600.png"
-               onclick="currentSlide(22)"
+               onclick="gotoSlide(22)"
                alt="Vicsek of Circles" title="Vicsek of Circles">
           <img src="assets/fractals/squares/vicsek-diagonal_600.png"
-               onclick="currentSlide(23)"
+               onclick="gotoSlide(23)"
                alt="Diagonal Vicsek Fractal" title="Diagonal Vicsek Fractal">
           <img src="assets/fractals/squares/h_600.png"
-               onclick="currentSlide(24)"
+               onclick="gotoSlide(24)"
                alt="Fractal H-I de Rivera" title="Fractal H-I de Rivera">
           <img src="assets/fractals/squares/castle_600.png"
-               onclick="currentSlide(25)"
+               onclick="gotoSlide(25)"
                alt="Fractal Castle" title="Fractal Castle">
           <img src="assets/fractals/squares/cross_600.png"
-               onclick="currentSlide(26)"
+               onclick="gotoSlide(26)"
                alt="Jerusalem Cross" title="Jerusalem Cross">
           <img src="assets/fractals/squares/swiss_600.png"
-               onclick="currentSlide(27)"
+               onclick="gotoSlide(27)"
                alt="Swiss Fractal" title="Swiss Fractal">
           <img src="assets/fractals/squares/forest_600.png"
-               onclick="currentSlide(28)"
+               onclick="gotoSlide(28)"
                alt="Forest" title="Forest">
           <img src="assets/fractals/squares/copper_600.png"
-               onclick="currentSlide(29)"
+               onclick="gotoSlide(29)"
                alt="Copper Carpet" title="Copper Carpet">
           <img src="assets/fractals/squares/distorted_600.png"
-               onclick="currentSlide(30)"
+               onclick="gotoSlide(30)"
                alt="Distorted Carpet" title="Distorted Carpet">
           <img src="assets/fractals/squares/dots_600.png"
-               onclick="currentSlide(31)"
+               onclick="gotoSlide(31)"
                alt="Dots" title="Dots">
           <img src="assets/fractals/squares/window_600.png"
-               onclick="currentSlide(32)"
+               onclick="gotoSlide(32)"
                alt="Fractal Window" title="Fractal Window">
           <img src="assets/fractals/squares/degraded_600.png"
-               onclick="currentSlide(33)"
+               onclick="gotoSlide(33)"
                alt="Degraded Square" title="Degraded Square">
           <img src="assets/fractals/pentagons/pentaflake_600.png"
-               onclick="currentSlide(34)"
+               onclick="gotoSlide(34)"
                alt="The Pentaflake" title="The Pentaflake">
           <img src="assets/fractals/pentagons/sierpinski_600.png"
-               onclick="currentSlide(35)"
+               onclick="gotoSlide(35)"
                alt="Sierpiński Pentagon" title="Sierpiński Pentagon">
           <img src="assets/fractals/pentagons/rotated-pentaflake_600.png"
-               onclick="currentSlide(36)"
+               onclick="gotoSlide(36)"
                alt="Rotated Pentaflake" title="Rotated Pentaflake">
           <img src="assets/fractals/pentagons/rotated-sierpinski_600.png"
-               onclick="currentSlide(37)"
+               onclick="gotoSlide(37)"
                alt="Rotated Sierpiński Pentagon" title="Rotated Sierpiński Pentagon">
           <img src="assets/fractals/pentagons/pentaflake-gap_600.png"
-               onclick="currentSlide(38)"
+               onclick="gotoSlide(38)"
                alt="Pentaflake with a gap" title="Pentaflake with a gap">
           <img src="assets/fractals/pentagons/star_600.png"
-               onclick="currentSlide(39)"
+               onclick="gotoSlide(39)"
                alt="Sierpiński Pentagon star" title="Sierpiński Pentagon star">
           <img src="assets/fractals/pentagons/twist_600.png"
-               onclick="currentSlide(40)"
+               onclick="gotoSlide(40)"
                alt="Twisted Sierpiński Pentagon" title="Twisted Sierpiński Pentagon">
           <img src="assets/fractals/pentagons/microbe_600.png"
-               onclick="currentSlide(41)"
+               onclick="gotoSlide(41)"
                alt="Sierpiński Pentagon microbe" title="Sierpiński Pentagon microbe">
           <img src="assets/fractals/hexagons/sierpinski_600.png"
-               onclick="currentSlide(42)"
+               onclick="gotoSlide(42)"
                alt="Sierpiński Hexagon" title="Sierpiński Hexagon">
           <img src="assets/fractals/hexagons/sierpinski-shaded_600.png"
-               onclick="currentSlide(43)"
+               onclick="gotoSlide(43)"
                alt="Shaded Sierpiński Hexagon" title="Shaded Sierpiński Hexagon">
           <img src="assets/fractals/hexagons/sierpinski-coloured_600.png"
-               onclick="currentSlide(44)"
+               onclick="gotoSlide(44)"
                alt="Coloured Sierpiński Hexagon" title="Coloured Sierpiński Hexagon">
           <img src="assets/fractals/hexagons/sierpinski-rotated_600.png"
-               onclick="currentSlide(45)"
+               onclick="gotoSlide(45)"
                alt="Rotated Sierpinski Hexagon" title="Rotated Sierpinski Hexagon">
           <img src="assets/fractals/hexagons/sierpinski-rotated-shaded_600.png"
-               onclick="currentSlide(46)"
+               onclick="gotoSlide(46)"
                alt="Rotated Shaded Sierpinski Hexagon" title="Rotated Shaded Sierpinski Hexagon">
           <img src="assets/fractals/hexagons/koch_600.png"
-               onclick="currentSlide(47)"
+               onclick="gotoSlide(47)"
                alt="Koch Snowflake" title="Koch Snowflake">
           <img src="assets/fractals/hexagons/exploding_600.png"
-               onclick="currentSlide(48)"
+               onclick="gotoSlide(48)"
                alt="Exploding Koch Snowflake" title="Exploding Koch Snowflake">
           <img src="assets/fractals/hexagons/exploded_600.png"
-               onclick="currentSlide(49)"
+               onclick="gotoSlide(49)"
                alt="Exploded Koch Snowflake" title="Exploded Koch Snowflake">
           <img src="assets/fractals/hexagons/snowflake_600.png"
-               onclick="currentSlide(50)"
+               onclick="gotoSlide(50)"
                alt="Snowflake" title="Snowflake">
           <img src="assets/fractals/hexagons/hexaflake_600.png"
-               onclick="currentSlide(51)"
+               onclick="gotoSlide(51)"
                alt="Hexaflake" title="Hexaflake">
           <img src="assets/fractals/hexagons/hexaflake-rotated_600.png"
-               onclick="currentSlide(52)"
+               onclick="gotoSlide(52)"
                alt="Rotated Hexaflake" title="Rotated Hexaflake">
           <img src="assets/fractals/hexagons/hexaflake-shaded_600.png"
-               onclick="currentSlide(53)"
+               onclick="gotoSlide(53)"
                alt="Shaded Hexaflake Hexagon" title="Shaded Hexaflake Hexagon">
           <img src="assets/fractals/hexagons/hexaflake-shaded2_600.png"
-               onclick="currentSlide(54)"
+               onclick="gotoSlide(54)"
                alt="Shaded Hexaflake" title="Shaded Hexaflake">
           <img src="assets/fractals/hexagons/hexaflake-shaded3_600.png"
-               onclick="currentSlide(55)"
+               onclick="gotoSlide(55)"
                alt="Purple Hexaflake" title="Purple Hexaflake">
           <img src="assets/fractals/hexagons/hexaflake-coloured_600.png"
-               onclick="currentSlide(56)"
+               onclick="gotoSlide(56)"
                alt="RGB Hexaflake" title="RGB Hexaflake">
           <img src="assets/fractals/hexagons/hexaflake-coloured2_600.png"
-               onclick="currentSlide(57)"
+               onclick="gotoSlide(57)"
                alt="Coloured Hexaflake" title="Coloured Hexaflake">
           <img src="assets/fractals/hexagons/hexaflake-cell_600.png"
-               onclick="currentSlide(58)"
+               onclick="gotoSlide(58)"
                alt="Hexagonal Cell" title="Hexagonal Cell">
           <img src="assets/fractals/linear/barcode_600.png"
-               onclick="currentSlide(59)"
+               onclick="gotoSlide(59)"
                alt="Barcode" title="Barcode">
           <img src="assets/fractals/linear/french-cantor_600.png"
-               onclick="currentSlide(60)"
+               onclick="gotoSlide(60)"
                alt="Cantor Set as French flag" title="Cantor Set as French flag">
           <img src="assets/fractals/linear/palette_600.png"
-               onclick="currentSlide(61)"
+               onclick="gotoSlide(61)"
                alt="Fractal Colour Palette" title="Fractal Colour Palette">
           <img src="assets/fractals/linear/powerlines_600.png"
-               onclick="currentSlide(62)"
+               onclick="gotoSlide(62)"
                alt="Power Lines" title="Power Lines">
           <img src="assets/fractals/linear/dots_600.png"
-               onclick="currentSlide(63)"
+               onclick="gotoSlide(63)"
                alt="Dots" title="Dots">
           <img src="assets/fractals/linear/circles_600.png"
-               onclick="currentSlide(64)"
+               onclick="gotoSlide(64)"
                alt="Circles" title="Circles">
           <img src="assets/fractals/linear/bubbles_600.png"
-               onclick="currentSlide(65)"
+               onclick="gotoSlide(65)"
                alt="Bubbles" title="Bubbles">
           <img src="assets/fractals/linear/shard_600.png"
-               onclick="currentSlide(66)"
+               onclick="gotoSlide(66)"
                alt="Shard" title="Shard">
           <img src="assets/fractals/linear/jagged_600.png"
-               onclick="currentSlide(67)"
+               onclick="gotoSlide(67)"
                alt="Jagged" title="Jagged">
           <img src="assets/fractals/linear/metal_600.png"
-               onclick="currentSlide(68)"
+               onclick="gotoSlide(68)"
                alt="Metal" title="Metal">
           <img src="assets/fractals/linear/ukraine_600.png"
-               onclick="currentSlide(69)"
+               onclick="gotoSlide(69)"
                alt="Slava Ukraini" title="Slava Ukraini">
           <img src="assets/fractals/curves/koch_600.png"
-               onclick="currentSlide(70)"
+               onclick="gotoSlide(70)"
                alt="Koch Curve" title="Koch Curve">
           <img src="assets/fractals/curves/square_600.png"
-               onclick="currentSlide(71)"
+               onclick="gotoSlide(71)"
                alt="Koch Curve (square variation)" title="Koch Curve (square variation)">
           <img src="assets/fractals/curves/dragon_600.png"
-               onclick="currentSlide(72)"
+               onclick="gotoSlide(72)"
                alt="Heighway Dragon" title="Heighway Dragon">
           <img src="assets/fractals/curves/golden_600.png"
-               onclick="currentSlide(73)"
+               onclick="gotoSlide(73)"
                alt="Golden Dragon Curve" title="Golden Dragon Curve">
           <img src="assets/fractals/curves/pythagoras_600.png"
-               onclick="currentSlide(74)"
+               onclick="gotoSlide(74)"
                alt="Pythagoras Curve" title="Pythagoras Curve">
           <img src="assets/fractals/curves/levy-c_600.png"
-               onclick="currentSlide(75)"
+               onclick="gotoSlide(75)"
                alt="Lévy C curve" title="Lévy C curve">
           <img src="assets/fractals/curves/levy-c-coloured_600.png"
-               onclick="currentSlide(76)"
+               onclick="gotoSlide(76)"
                alt="Coloured Lévy C curve" title="Coloured Lévy C curve">
           <img src="assets/fractals/plants/pythagoras-tree_600.png"
-               onclick="currentSlide(77)"
+               onclick="gotoSlide(77)"
                alt="3-4-5 Pythagoras Tree" title="3-4-5 Pythagoras Tree">
           <img src="assets/fractals/plants/tree_600.png"
-               onclick="currentSlide(78)"
+               onclick="gotoSlide(78)"
                alt="Tree" title="Tree">
           <img src="assets/fractals/plants/pine_600.png"
-               onclick="currentSlide(79)"
+               onclick="gotoSlide(79)"
                alt="Pine Tree" title="Pine Tree">
           <img src="assets/fractals/plants/fern_600.png"
-               onclick="currentSlide(80)"
+               onclick="gotoSlide(80)"
                alt="Fern" title="Fern">
           <img src="assets/fractals/plants/cabbage_600.png"
-               onclick="currentSlide(81)"
+               onclick="gotoSlide(81)"
                alt="Cabbage Leaf" title="Cabbage Leaf">
           <img src="assets/fractals/plants/flower_600.png"
-               onclick="currentSlide(82)"
+               onclick="gotoSlide(82)"
                alt="Flower" title="Flower">
           <img src="assets/fractals/plants/bamboo_600.png"
-               onclick="currentSlide(83)"
+               onclick="gotoSlide(83)"
                alt="Bamboo" title="Bamboo">
           <img src="assets/fractals/plants/mushrooms1_600.png"
-               onclick="currentSlide(84)"
+               onclick="gotoSlide(84)"
                alt="Mushrooms (closed)" title="Mushrooms (closed)">
           <img src="assets/fractals/plants/mushrooms2_600.png"
-               onclick="currentSlide(85)"
+               onclick="gotoSlide(85)"
                alt="Mushrooms (open)" title="Mushrooms (open)">
           <img src="assets/fractals/nature/cloud_600.png"
-               onclick="currentSlide(86)"
+               onclick="gotoSlide(86)"
                alt="Cloud" title="Cloud">
           <img src="assets/fractals/nature/centipede_600.png"
-               onclick="currentSlide(87)"
+               onclick="gotoSlide(87)"
                alt="Centipede" title="Centipede">
           <img src="assets/fractals/nature/mountainscape_600.png"
-               onclick="currentSlide(88)"
+               onclick="gotoSlide(88)"
                alt="Mountainscape" title="Mountainscape">
           <img src="assets/fractals/spirals/rainbow_600.png"
-               onclick="currentSlide(89)"
+               onclick="gotoSlide(89)"
                alt="Rainbow Spiral" title="Rainbow Spiral">
           <img src="assets/fractals/spirals/vortex_600.png"
-               onclick="currentSlide(90)"
+               onclick="gotoSlide(90)"
                alt="Vortex" title="Vortex">
           <img src="assets/fractals/spirals/fire_600.png"
-               onclick="currentSlide(91)"
+               onclick="gotoSlide(91)"
                alt="Fire Spiral" title="Fire Spiral">
           <img src="assets/fractals/spirals/blossom_600.png"
-               onclick="currentSlide(92)"
+               onclick="gotoSlide(92)"
                alt="Spiral Blossom" title="Spiral Blossom">
           <img src="assets/fractals/abstract/abstract1_600.png"
-               onclick="currentSlide(93)"
+               onclick="gotoSlide(93)"
                alt="Jack-in-the-box" title="Jack-in-the-box">
           <img src="assets/fractals/abstract/abstract2_600.png"
-               onclick="currentSlide(94)"
+               onclick="gotoSlide(94)"
                alt="Ominous Bubbles" title="Ominous Bubbles">
           <img src="assets/fractals/abstract/abstract3_600.png"
-               onclick="currentSlide(95)"
+               onclick="gotoSlide(95)"
                alt="Branching Balls" title="Branching Balls">
           <img src="assets/fractals/abstract/abstract4_600.png"
-               onclick="currentSlide(96)"
+               onclick="gotoSlide(96)"
                alt="Angel" title="Angel">
           <img src="assets/fractals/abstract/abstract6_600.png"
-               onclick="currentSlide(97)"
+               onclick="gotoSlide(97)"
                alt="Fractal Herd" title="Fractal Herd">
           <img src="assets/fractals/abstract/heart_600.png"
-               onclick="currentSlide(98)"
+               onclick="gotoSlide(98)"
                alt="Abstract Heart" title="Abstract Heart">
           <img src="assets/fractals/3d/menger-fake_600.png"
-               onclick="currentSlide(99)"
+               onclick="gotoSlide(99)"
                alt="Faked Menger Sponge" title="Faked Menger Sponge">
           <img src="assets/fractals/3d/menger-grey_600.png"
-               onclick="currentSlide(100)"
+               onclick="gotoSlide(100)"
                alt="Menger Sponge (grey)" title="Menger Sponge (grey)">
           <img src="assets/fractals/3d/menger-rgb_600.png"
-               onclick="currentSlide(101)"
+               onclick="gotoSlide(101)"
                alt="Menger Sponge (RGB)" title="Menger Sponge (RGB)">
           <img src="assets/fractals/3d/cross-menger_600.png"
-               onclick="currentSlide(102)"
+               onclick="gotoSlide(102)"
                alt="Jerusalem Cube" title="Jerusalem Cube">
           <img src="assets/fractals/3d/tetrix_600.png"
-               onclick="currentSlide(103)"
+               onclick="gotoSlide(103)"
                alt="Tetrix (Fractal Tetrahedron)" title="Tetrix (Fractal Tetrahedron)">
           <img src="assets/fractals/3d/mosely-snowflake_600.png"
-               onclick="currentSlide(104)"
+               onclick="gotoSlide(104)"
                alt="Mosely Snowflake" title="Mosely Snowflake">
           <img src="assets/fractals/3d/sm-snowflake_600.png"
-               onclick="currentSlide(105)"
+               onclick="gotoSlide(105)"
                alt="Sierpiński-Menger Snowflake" title="Sierpiński-Menger Snowflake">
         </div>
       </div>
-      <a class="prev" onclick="plusSlides(-1)" title="Previous fractal (←)">❮</a>
-      <a class="next" onclick="plusSlides(1)" title="Next fractal (→)">❯</a>
+      <a class="prev" onclick="nextSlide()" title="Previous fractal (←)">❮</a>
+      <a class="next" onclick="prevSlide()" title="Next fractal (→)">❯</a>
 </div>
 
 <script>
+let state = 'intro';
 let slideIndex = 0;
-showSlide(slideIndex);
+let slides;
+let thumbs;
 
-function plusSlides(n) {
-  showSlide(slideIndex += n);
+const nextSlide = () => showSlide(++slideIndex);
+const prevSlide = () => showSlide(--slideIndex);
+const gotoSlide = n => showSlide(slideIndex = n);
+
+function init() {
+    slides = document.getElementsByClassName("slide");
+    thumbs = document.querySelectorAll(".thumbnails img");
+    showSlide(slideIndex);
 }
 
-function currentSlide(n) {
-  showSlide(slideIndex = n);
+function closeModal() {
+    document.getElementById('intro').style.display = 'none';
+    state = 'slides';
 }
 
 function showSlide(n) {
-  const slides = document.getElementsByClassName("slide");
-  const thumbs = document.querySelectorAll(".thumbnails img");
   while (n < 0) {
     n += slides.length;
   }
@@ -1606,10 +1662,22 @@ function handleKey(e) {
     console.log(event);
     switch (e.key) {
         case "ArrowLeft":
-            plusSlides(-1);
+            if (state !== 'intro') {
+                prevSlide();
+            }
             break;
         case "ArrowRight":
-            plusSlides(1);
+            if (state !== 'intro') {
+                nextSlide();
+            }
+            break;
+        case "Escape":
+            if (state === 'slides') {
+                state = 'intro';
+                document.getElementById('intro').style.display = 'block';
+            } else {
+                closeModal();
+            }
             break;
         case " ":
             // Zoom in
@@ -1617,7 +1685,13 @@ function handleKey(e) {
     }
 }
 
-document.addEventListener("keydown", handleKey, {passive: true});
+function handleResize() {
+    thumbs[slideIndex].scrollIntoView({inline: "center"});
+}
+
+addEventListener("keydown", handleKey, {passive: true});
+addEventListener("resize", handleResize, {passive: true});
+addEventListener("DOMContentLoaded", init, {passive: true});
 </script>
 </body>
 </html>

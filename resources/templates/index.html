@@ -25,6 +25,39 @@ a {
     text-decoration-style: dotted;
 }
 
+.modal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  /* padding: 10vh; */
+  background: #888;
+}
+
+.modal .content {
+  background-color: #ddd;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 .slides {
   height: 85vh;
   display: flex;
@@ -122,6 +155,22 @@ a {
       </script>
     </head>
     <body>
+      <div class="modal" id="intro">
+        <div class="content">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <h1>PowerPoint Fractal Art</h1>
+          <p>
+            All of these images were created by Emlyn Corrin using Microsoft PowerPoint&trade;.
+          </p>
+          <p>
+            They use a feature called Slide Zoom, which allows an image of the whole slide
+            to be embedded within the slide itself, creating a recursive effect.
+            By controlling the position, size and rotation of the Slide Zoom elements,
+            a wide range of fractal images can be created, from regular mathematical shapes,
+            to natural objects, to weird abstract images and even representations of 3D shapes.
+          </p>
+        </div>
+      </div>
       <div class="slides">{% for fractal in fractals %}
         <div class="slide" id="slide{{forloop.counter0}}">
           <div class="img">
@@ -140,29 +189,36 @@ a {
       <div class="thumbnail-container">
         <div class="thumbnails">{% for fractal in fractals %}
           <img src="{{raw-root}}/{{fractal.category|lower}}/{{fractal.images.small.file}}"
-               onclick="currentSlide({{forloop.counter0}})"
+               onclick="gotoSlide({{forloop.counter0}})"
                alt="{{fractal.name}}" title="{{fractal.name}}">{% endfor %}
         </div>
       </div>
-      <a class="prev" onclick="plusSlides(-1)" title="Previous fractal (←)">❮</a>
-      <a class="next" onclick="plusSlides(1)" title="Next fractal (→)">❯</a>
+      <a class="prev" onclick="nextSlide()" title="Previous fractal (←)">❮</a>
+      <a class="next" onclick="prevSlide()" title="Next fractal (→)">❯</a>
 </div>
 
 <script>
+let state = 'intro';
 let slideIndex = 0;
-showSlide(slideIndex);
+let slides;
+let thumbs;
 
-function plusSlides(n) {
-  showSlide(slideIndex += n);
+const nextSlide = () => showSlide(++slideIndex);
+const prevSlide = () => showSlide(--slideIndex);
+const gotoSlide = n => showSlide(slideIndex = n);
+
+function init() {
+    slides = document.getElementsByClassName("slide");
+    thumbs = document.querySelectorAll(".thumbnails img");
+    showSlide(slideIndex);
 }
 
-function currentSlide(n) {
-  showSlide(slideIndex = n);
+function closeModal() {
+    document.getElementById('intro').style.display = 'none';
+    state = 'slides';
 }
 
 function showSlide(n) {
-  const slides = document.getElementsByClassName("slide");
-  const thumbs = document.querySelectorAll(".thumbnails img");
   while (n < 0) {
     n += slides.length;
   }
@@ -183,10 +239,22 @@ function handleKey(e) {
     console.log(event);
     switch (e.key) {
         case "ArrowLeft":
-            plusSlides(-1);
+            if (state !== 'intro') {
+                prevSlide();
+            }
             break;
         case "ArrowRight":
-            plusSlides(1);
+            if (state !== 'intro') {
+                nextSlide();
+            }
+            break;
+        case "Escape":
+            if (state === 'slides') {
+                state = 'intro';
+                document.getElementById('intro').style.display = 'block';
+            } else {
+                closeModal();
+            }
             break;
         case " ":
             // Zoom in
@@ -194,7 +262,13 @@ function handleKey(e) {
     }
 }
 
-document.addEventListener("keydown", handleKey, {passive: true});
+function handleResize() {
+    thumbs[slideIndex].scrollIntoView({inline: "center"});
+}
+
+addEventListener("keydown", handleKey, {passive: true});
+addEventListener("resize", handleResize, {passive: true});
+addEventListener("DOMContentLoaded", init, {passive: true});
 </script>
 </body>
 </html>

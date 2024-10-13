@@ -17,8 +17,14 @@ fractals:
   - name: Wikipedia
     url: https://en.wikipedia.org/wiki/Menger_sponge#Jerusalem_cube
 - file: tetrix
-  name: Tetrix (Fractal Tetrahedron)
-  dimension: 2
+  name: Sierpiński Tetrahedron (or Tetrix)
+  dimension: log(4) / log(2)
+  links:
+  - name: Wikipedia
+    url: https://en.wikipedia.org/wiki/Sierpiński_triangle#Analogues_in_higher_dimensions
+- file: pyramid
+  name: Sierpiński Pyramid
+  dimension: log(5) / log(2)
   links:
   - name: Wikipedia
     url: https://en.wikipedia.org/wiki/Sierpiński_triangle#Analogues_in_higher_dimensions

@@ -229,7 +229,7 @@ a {
       </div>
       <div class="focus-container">{% for fractal in fractals %}
         <div class="focus" id="focus{{forloop.counter0}}">
-          <img src="{{raw-root}}/{{fractal.category|lower}}/{{fractal.images.large.file}}">
+          <img loading="lazy" src="{{raw-root}}/{{fractal.category|lower}}/{{fractal.images.large.file}}">
         </div>{% endfor %}
       </div>
     </div>

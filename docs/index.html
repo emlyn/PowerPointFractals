@@ -39,8 +39,8 @@ a {
 
 .modal .content {
   background-color: #ddd;
-  margin: 10% auto;
-  padding: 20px;
+  margin: 5% auto;
+  padding: 10px 20px;
   border: 1px solid #888;
   width: 80%;
 }
@@ -147,27 +147,29 @@ a {
 }
 
 .focus {
-width: 100%;
-height: 100%;
-position: absolute;
-margin: 0;
-top: 0;
-bottom: 0;
-left: 0;
-right: 0;
-background-color: #aaa;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  margin: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #aaa;
 }
 
 .focus img {
-max-width: 100%;
-max-height: 100%;
-position: absolute;
-margin:auto;
-top:0;
-bottom:0;
-left:0;
-right:0;
-object-fit: contain;
+  max-width: 100%;
+  max-height: 100%;
+  position: absolute;
+  margin:auto;
+  padding: 10px;
+  background-color: #888;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  object-fit: contain;
 }
       </style>
       <script>
@@ -182,7 +184,7 @@ object-fit: contain;
     <body>
       <div class="modal" id="intro">
         <div class="content">
-          <span class="close" onclick="closeModal()">&times;</span>
+          <span class="close" onclick="setMode('slides')">&times;</span>
           <h1>PowerPoint Fractal Art</h1>
           <p>
             All of these images were created by Emlyn Corrin using Microsoft PowerPoint.
@@ -197,160 +199,160 @@ object-fit: contain;
           <div class="category">
               <h2>Triangles</h2>
               <p>Fractals with triangular symmetry, such as the Sierpiński Triangle and variations.</p>
-                <img src="assets/fractals/triangles/sierpinski_600.png" height="80" onclick="gotoSlide(0)">
-                <img src="assets/fractals/triangles/rectangles_600.png" height="80" onclick="gotoSlide(1)">
-                <img src="assets/fractals/triangles/rotated-rectangles_600.png" height="80" onclick="gotoSlide(2)">
-                <img src="assets/fractals/triangles/coloured-rectangles_600.png" height="80" onclick="gotoSlide(3)">
-                <img src="assets/fractals/triangles/shaded_600.png" height="80" onclick="gotoSlide(4)">
-                <img src="assets/fractals/triangles/rgb_600.png" height="80" onclick="gotoSlide(5)">
-                <img src="assets/fractals/triangles/circles_600.png" height="80" onclick="gotoSlide(6)">
-                <img src="assets/fractals/triangles/cmy_600.png" height="80" onclick="gotoSlide(7)">
-                <img src="assets/fractals/triangles/triflake_600.png" height="80" onclick="gotoSlide(8)">
-                <img src="assets/fractals/triangles/triflake-shaded_600.png" height="80" onclick="gotoSlide(9)">
-                <img src="assets/fractals/triangles/triflake-rotated-shaded_600.png" height="80" onclick="gotoSlide(10)">
-                <img src="assets/fractals/triangles/dust_600.png" height="80" onclick="gotoSlide(11)">
-                <img src="assets/fractals/triangles/lightning_600.png" height="80" onclick="gotoSlide(12)">
+                <img src="assets/fractals/triangles/sierpinski_600.png" height="80" onclick="setMode('slides'); gotoSlide(0)">
+                <img src="assets/fractals/triangles/rectangles_600.png" height="80" onclick="setMode('slides'); gotoSlide(1)">
+                <img src="assets/fractals/triangles/rotated-rectangles_600.png" height="80" onclick="setMode('slides'); gotoSlide(2)">
+                <img src="assets/fractals/triangles/coloured-rectangles_600.png" height="80" onclick="setMode('slides'); gotoSlide(3)">
+                <img src="assets/fractals/triangles/shaded_600.png" height="80" onclick="setMode('slides'); gotoSlide(4)">
+                <img src="assets/fractals/triangles/rgb_600.png" height="80" onclick="setMode('slides'); gotoSlide(5)">
+                <img src="assets/fractals/triangles/circles_600.png" height="80" onclick="setMode('slides'); gotoSlide(6)">
+                <img src="assets/fractals/triangles/cmy_600.png" height="80" onclick="setMode('slides'); gotoSlide(7)">
+                <img src="assets/fractals/triangles/triflake_600.png" height="80" onclick="setMode('slides'); gotoSlide(8)">
+                <img src="assets/fractals/triangles/triflake-shaded_600.png" height="80" onclick="setMode('slides'); gotoSlide(9)">
+                <img src="assets/fractals/triangles/triflake-rotated-shaded_600.png" height="80" onclick="setMode('slides'); gotoSlide(10)">
+                <img src="assets/fractals/triangles/dust_600.png" height="80" onclick="setMode('slides'); gotoSlide(11)">
+                <img src="assets/fractals/triangles/lightning_600.png" height="80" onclick="setMode('slides'); gotoSlide(12)">
           </div>
           <div class="category">
               <h2>Squares</h2>
               <p>Fractals with square symmetry, such as the Sierpiński Carpet and variations.</p>
-                <img src="assets/fractals/squares/sierpinski_600.png" height="80" onclick="gotoSlide(13)">
-                <img src="assets/fractals/squares/gradient_600.png" height="80" onclick="gotoSlide(14)">
-                <img src="assets/fractals/squares/outline_600.png" height="80" onclick="gotoSlide(15)">
-                <img src="assets/fractals/squares/coloured-outline_600.png" height="80" onclick="gotoSlide(16)">
-                <img src="assets/fractals/squares/diagonals_600.png" height="80" onclick="gotoSlide(17)">
-                <img src="assets/fractals/squares/coloured-diagonals_600.png" height="80" onclick="gotoSlide(18)">
-                <img src="assets/fractals/squares/inverted_600.png" height="80" onclick="gotoSlide(19)">
-                <img src="assets/fractals/squares/vicsek_600.png" height="80" onclick="gotoSlide(20)">
-                <img src="assets/fractals/squares/vicsek-coloured_600.png" height="80" onclick="gotoSlide(21)">
-                <img src="assets/fractals/squares/vicsek-circle_600.png" height="80" onclick="gotoSlide(22)">
-                <img src="assets/fractals/squares/vicsek-diagonal_600.png" height="80" onclick="gotoSlide(23)">
-                <img src="assets/fractals/squares/h_600.png" height="80" onclick="gotoSlide(24)">
-                <img src="assets/fractals/squares/castle_600.png" height="80" onclick="gotoSlide(25)">
-                <img src="assets/fractals/squares/cross_600.png" height="80" onclick="gotoSlide(26)">
-                <img src="assets/fractals/squares/swiss_600.png" height="80" onclick="gotoSlide(27)">
-                <img src="assets/fractals/squares/forest_600.png" height="80" onclick="gotoSlide(28)">
-                <img src="assets/fractals/squares/copper_600.png" height="80" onclick="gotoSlide(29)">
-                <img src="assets/fractals/squares/distorted_600.png" height="80" onclick="gotoSlide(30)">
-                <img src="assets/fractals/squares/dots_600.png" height="80" onclick="gotoSlide(31)">
-                <img src="assets/fractals/squares/window_600.png" height="80" onclick="gotoSlide(32)">
-                <img src="assets/fractals/squares/degraded_600.png" height="80" onclick="gotoSlide(33)">
+                <img src="assets/fractals/squares/sierpinski_600.png" height="80" onclick="setMode('slides'); gotoSlide(13)">
+                <img src="assets/fractals/squares/gradient_600.png" height="80" onclick="setMode('slides'); gotoSlide(14)">
+                <img src="assets/fractals/squares/outline_600.png" height="80" onclick="setMode('slides'); gotoSlide(15)">
+                <img src="assets/fractals/squares/coloured-outline_600.png" height="80" onclick="setMode('slides'); gotoSlide(16)">
+                <img src="assets/fractals/squares/diagonals_600.png" height="80" onclick="setMode('slides'); gotoSlide(17)">
+                <img src="assets/fractals/squares/coloured-diagonals_600.png" height="80" onclick="setMode('slides'); gotoSlide(18)">
+                <img src="assets/fractals/squares/inverted_600.png" height="80" onclick="setMode('slides'); gotoSlide(19)">
+                <img src="assets/fractals/squares/vicsek_600.png" height="80" onclick="setMode('slides'); gotoSlide(20)">
+                <img src="assets/fractals/squares/vicsek-coloured_600.png" height="80" onclick="setMode('slides'); gotoSlide(21)">
+                <img src="assets/fractals/squares/vicsek-circle_600.png" height="80" onclick="setMode('slides'); gotoSlide(22)">
+                <img src="assets/fractals/squares/vicsek-diagonal_600.png" height="80" onclick="setMode('slides'); gotoSlide(23)">
+                <img src="assets/fractals/squares/h_600.png" height="80" onclick="setMode('slides'); gotoSlide(24)">
+                <img src="assets/fractals/squares/castle_600.png" height="80" onclick="setMode('slides'); gotoSlide(25)">
+                <img src="assets/fractals/squares/cross_600.png" height="80" onclick="setMode('slides'); gotoSlide(26)">
+                <img src="assets/fractals/squares/swiss_600.png" height="80" onclick="setMode('slides'); gotoSlide(27)">
+                <img src="assets/fractals/squares/forest_600.png" height="80" onclick="setMode('slides'); gotoSlide(28)">
+                <img src="assets/fractals/squares/copper_600.png" height="80" onclick="setMode('slides'); gotoSlide(29)">
+                <img src="assets/fractals/squares/distorted_600.png" height="80" onclick="setMode('slides'); gotoSlide(30)">
+                <img src="assets/fractals/squares/dots_600.png" height="80" onclick="setMode('slides'); gotoSlide(31)">
+                <img src="assets/fractals/squares/window_600.png" height="80" onclick="setMode('slides'); gotoSlide(32)">
+                <img src="assets/fractals/squares/degraded_600.png" height="80" onclick="setMode('slides'); gotoSlide(33)">
           </div>
           <div class="category">
               <h2>Pentagons</h2>
               <p>Fractals with pentagonal symmetry.</p>
-                <img src="assets/fractals/pentagons/pentaflake_600.png" height="80" onclick="gotoSlide(34)">
-                <img src="assets/fractals/pentagons/sierpinski_600.png" height="80" onclick="gotoSlide(35)">
-                <img src="assets/fractals/pentagons/rotated-pentaflake_600.png" height="80" onclick="gotoSlide(36)">
-                <img src="assets/fractals/pentagons/rotated-sierpinski_600.png" height="80" onclick="gotoSlide(37)">
-                <img src="assets/fractals/pentagons/pentaflake-gap_600.png" height="80" onclick="gotoSlide(38)">
-                <img src="assets/fractals/pentagons/star_600.png" height="80" onclick="gotoSlide(39)">
-                <img src="assets/fractals/pentagons/twist_600.png" height="80" onclick="gotoSlide(40)">
-                <img src="assets/fractals/pentagons/microbe_600.png" height="80" onclick="gotoSlide(41)">
+                <img src="assets/fractals/pentagons/pentaflake_600.png" height="80" onclick="setMode('slides'); gotoSlide(34)">
+                <img src="assets/fractals/pentagons/sierpinski_600.png" height="80" onclick="setMode('slides'); gotoSlide(35)">
+                <img src="assets/fractals/pentagons/rotated-pentaflake_600.png" height="80" onclick="setMode('slides'); gotoSlide(36)">
+                <img src="assets/fractals/pentagons/rotated-sierpinski_600.png" height="80" onclick="setMode('slides'); gotoSlide(37)">
+                <img src="assets/fractals/pentagons/pentaflake-gap_600.png" height="80" onclick="setMode('slides'); gotoSlide(38)">
+                <img src="assets/fractals/pentagons/star_600.png" height="80" onclick="setMode('slides'); gotoSlide(39)">
+                <img src="assets/fractals/pentagons/twist_600.png" height="80" onclick="setMode('slides'); gotoSlide(40)">
+                <img src="assets/fractals/pentagons/microbe_600.png" height="80" onclick="setMode('slides'); gotoSlide(41)">
           </div>
           <div class="category">
               <h2>Hexagons</h2>
               <p>Fractals with hexagonal symmetry, such as the Koch Snowflake.</p>
-                <img src="assets/fractals/hexagons/sierpinski_600.png" height="80" onclick="gotoSlide(42)">
-                <img src="assets/fractals/hexagons/sierpinski-shaded_600.png" height="80" onclick="gotoSlide(43)">
-                <img src="assets/fractals/hexagons/sierpinski-coloured_600.png" height="80" onclick="gotoSlide(44)">
-                <img src="assets/fractals/hexagons/sierpinski-rotated_600.png" height="80" onclick="gotoSlide(45)">
-                <img src="assets/fractals/hexagons/sierpinski-rotated-shaded_600.png" height="80" onclick="gotoSlide(46)">
-                <img src="assets/fractals/hexagons/koch_600.png" height="80" onclick="gotoSlide(47)">
-                <img src="assets/fractals/hexagons/exploding_600.png" height="80" onclick="gotoSlide(48)">
-                <img src="assets/fractals/hexagons/exploded_600.png" height="80" onclick="gotoSlide(49)">
-                <img src="assets/fractals/hexagons/snowflake_600.png" height="80" onclick="gotoSlide(50)">
-                <img src="assets/fractals/hexagons/hexaflake_600.png" height="80" onclick="gotoSlide(51)">
-                <img src="assets/fractals/hexagons/hexaflake-rotated_600.png" height="80" onclick="gotoSlide(52)">
-                <img src="assets/fractals/hexagons/hexaflake-shaded_600.png" height="80" onclick="gotoSlide(53)">
-                <img src="assets/fractals/hexagons/hexaflake-shaded2_600.png" height="80" onclick="gotoSlide(54)">
-                <img src="assets/fractals/hexagons/hexaflake-shaded3_600.png" height="80" onclick="gotoSlide(55)">
-                <img src="assets/fractals/hexagons/hexaflake-coloured_600.png" height="80" onclick="gotoSlide(56)">
-                <img src="assets/fractals/hexagons/hexaflake-coloured2_600.png" height="80" onclick="gotoSlide(57)">
-                <img src="assets/fractals/hexagons/hexaflake-cell_600.png" height="80" onclick="gotoSlide(58)">
+                <img src="assets/fractals/hexagons/sierpinski_600.png" height="80" onclick="setMode('slides'); gotoSlide(42)">
+                <img src="assets/fractals/hexagons/sierpinski-shaded_600.png" height="80" onclick="setMode('slides'); gotoSlide(43)">
+                <img src="assets/fractals/hexagons/sierpinski-coloured_600.png" height="80" onclick="setMode('slides'); gotoSlide(44)">
+                <img src="assets/fractals/hexagons/sierpinski-rotated_600.png" height="80" onclick="setMode('slides'); gotoSlide(45)">
+                <img src="assets/fractals/hexagons/sierpinski-rotated-shaded_600.png" height="80" onclick="setMode('slides'); gotoSlide(46)">
+                <img src="assets/fractals/hexagons/koch_600.png" height="80" onclick="setMode('slides'); gotoSlide(47)">
+                <img src="assets/fractals/hexagons/exploding_600.png" height="80" onclick="setMode('slides'); gotoSlide(48)">
+                <img src="assets/fractals/hexagons/exploded_600.png" height="80" onclick="setMode('slides'); gotoSlide(49)">
+                <img src="assets/fractals/hexagons/snowflake_600.png" height="80" onclick="setMode('slides'); gotoSlide(50)">
+                <img src="assets/fractals/hexagons/hexaflake_600.png" height="80" onclick="setMode('slides'); gotoSlide(51)">
+                <img src="assets/fractals/hexagons/hexaflake-rotated_600.png" height="80" onclick="setMode('slides'); gotoSlide(52)">
+                <img src="assets/fractals/hexagons/hexaflake-shaded_600.png" height="80" onclick="setMode('slides'); gotoSlide(53)">
+                <img src="assets/fractals/hexagons/hexaflake-shaded2_600.png" height="80" onclick="setMode('slides'); gotoSlide(54)">
+                <img src="assets/fractals/hexagons/hexaflake-shaded3_600.png" height="80" onclick="setMode('slides'); gotoSlide(55)">
+                <img src="assets/fractals/hexagons/hexaflake-coloured_600.png" height="80" onclick="setMode('slides'); gotoSlide(56)">
+                <img src="assets/fractals/hexagons/hexaflake-coloured2_600.png" height="80" onclick="setMode('slides'); gotoSlide(57)">
+                <img src="assets/fractals/hexagons/hexaflake-cell_600.png" height="80" onclick="setMode('slides'); gotoSlide(58)">
           </div>
           <div class="category">
               <h2>Linear</h2>
               <p>Fractals where all repeats appear on a straight line, with no rotation (&quot;fractalness&quot; is one-dimensional).</p>
-                <img src="assets/fractals/linear/barcode_600.png" height="80" onclick="gotoSlide(59)">
-                <img src="assets/fractals/linear/french-cantor_600.png" height="80" onclick="gotoSlide(60)">
-                <img src="assets/fractals/linear/palette_600.png" height="80" onclick="gotoSlide(61)">
-                <img src="assets/fractals/linear/powerlines_600.png" height="80" onclick="gotoSlide(62)">
-                <img src="assets/fractals/linear/dots_600.png" height="80" onclick="gotoSlide(63)">
-                <img src="assets/fractals/linear/circles_600.png" height="80" onclick="gotoSlide(64)">
-                <img src="assets/fractals/linear/bubbles_600.png" height="80" onclick="gotoSlide(65)">
-                <img src="assets/fractals/linear/shard_600.png" height="80" onclick="gotoSlide(66)">
-                <img src="assets/fractals/linear/jagged_600.png" height="80" onclick="gotoSlide(67)">
-                <img src="assets/fractals/linear/metal_600.png" height="80" onclick="gotoSlide(68)">
-                <img src="assets/fractals/linear/ukraine_600.png" height="80" onclick="gotoSlide(69)">
+                <img src="assets/fractals/linear/barcode_600.png" height="80" onclick="setMode('slides'); gotoSlide(59)">
+                <img src="assets/fractals/linear/french-cantor_600.png" height="80" onclick="setMode('slides'); gotoSlide(60)">
+                <img src="assets/fractals/linear/palette_600.png" height="80" onclick="setMode('slides'); gotoSlide(61)">
+                <img src="assets/fractals/linear/powerlines_600.png" height="80" onclick="setMode('slides'); gotoSlide(62)">
+                <img src="assets/fractals/linear/dots_600.png" height="80" onclick="setMode('slides'); gotoSlide(63)">
+                <img src="assets/fractals/linear/circles_600.png" height="80" onclick="setMode('slides'); gotoSlide(64)">
+                <img src="assets/fractals/linear/bubbles_600.png" height="80" onclick="setMode('slides'); gotoSlide(65)">
+                <img src="assets/fractals/linear/shard_600.png" height="80" onclick="setMode('slides'); gotoSlide(66)">
+                <img src="assets/fractals/linear/jagged_600.png" height="80" onclick="setMode('slides'); gotoSlide(67)">
+                <img src="assets/fractals/linear/metal_600.png" height="80" onclick="setMode('slides'); gotoSlide(68)">
+                <img src="assets/fractals/linear/ukraine_600.png" height="80" onclick="setMode('slides'); gotoSlide(69)">
           </div>
           <div class="category">
               <h2>Curves</h2>
               <p>Fractal curves (such as the Koch Curve and the Dragon Curve).</p>
-                <img src="assets/fractals/curves/koch_600.png" height="80" onclick="gotoSlide(70)">
-                <img src="assets/fractals/curves/square_600.png" height="80" onclick="gotoSlide(71)">
-                <img src="assets/fractals/curves/dragon_600.png" height="80" onclick="gotoSlide(72)">
-                <img src="assets/fractals/curves/golden_600.png" height="80" onclick="gotoSlide(73)">
-                <img src="assets/fractals/curves/pythagoras_600.png" height="80" onclick="gotoSlide(74)">
-                <img src="assets/fractals/curves/levy-c_600.png" height="80" onclick="gotoSlide(75)">
-                <img src="assets/fractals/curves/levy-c-coloured_600.png" height="80" onclick="gotoSlide(76)">
+                <img src="assets/fractals/curves/koch_600.png" height="80" onclick="setMode('slides'); gotoSlide(70)">
+                <img src="assets/fractals/curves/square_600.png" height="80" onclick="setMode('slides'); gotoSlide(71)">
+                <img src="assets/fractals/curves/dragon_600.png" height="80" onclick="setMode('slides'); gotoSlide(72)">
+                <img src="assets/fractals/curves/golden_600.png" height="80" onclick="setMode('slides'); gotoSlide(73)">
+                <img src="assets/fractals/curves/levy-c_600.png" height="80" onclick="setMode('slides'); gotoSlide(74)">
+                <img src="assets/fractals/curves/levy-c-coloured_600.png" height="80" onclick="setMode('slides'); gotoSlide(75)">
+                <img src="assets/fractals/curves/pythagoras_600.png" height="80" onclick="setMode('slides'); gotoSlide(76)">
           </div>
           <div class="category">
               <h2>Plants</h2>
               <p>Fractal plants (such as leaves and trees).</p>
-                <img src="assets/fractals/plants/pythagoras-tree_600.png" height="80" onclick="gotoSlide(77)">
-                <img src="assets/fractals/plants/tree_600.png" height="80" onclick="gotoSlide(78)">
-                <img src="assets/fractals/plants/pine_600.png" height="80" onclick="gotoSlide(79)">
-                <img src="assets/fractals/plants/fern_600.png" height="80" onclick="gotoSlide(80)">
-                <img src="assets/fractals/plants/cabbage_600.png" height="80" onclick="gotoSlide(81)">
-                <img src="assets/fractals/plants/flower_600.png" height="80" onclick="gotoSlide(82)">
-                <img src="assets/fractals/plants/bamboo_600.png" height="80" onclick="gotoSlide(83)">
-                <img src="assets/fractals/plants/mushrooms1_600.png" height="80" onclick="gotoSlide(84)">
-                <img src="assets/fractals/plants/mushrooms2_600.png" height="80" onclick="gotoSlide(85)">
+                <img src="assets/fractals/plants/pythagoras-tree_600.png" height="80" onclick="setMode('slides'); gotoSlide(77)">
+                <img src="assets/fractals/plants/tree_600.png" height="80" onclick="setMode('slides'); gotoSlide(78)">
+                <img src="assets/fractals/plants/pine_600.png" height="80" onclick="setMode('slides'); gotoSlide(79)">
+                <img src="assets/fractals/plants/fern_600.png" height="80" onclick="setMode('slides'); gotoSlide(80)">
+                <img src="assets/fractals/plants/cabbage_600.png" height="80" onclick="setMode('slides'); gotoSlide(81)">
+                <img src="assets/fractals/plants/flower_600.png" height="80" onclick="setMode('slides'); gotoSlide(82)">
+                <img src="assets/fractals/plants/bamboo_600.png" height="80" onclick="setMode('slides'); gotoSlide(83)">
+                <img src="assets/fractals/plants/mushrooms1_600.png" height="80" onclick="setMode('slides'); gotoSlide(84)">
+                <img src="assets/fractals/plants/mushrooms2_600.png" height="80" onclick="setMode('slides'); gotoSlide(85)">
           </div>
           <div class="category">
               <h2>Nature</h2>
               <p>Other things from nature that are not plants.</p>
-                <img src="assets/fractals/nature/cloud_600.png" height="80" onclick="gotoSlide(86)">
-                <img src="assets/fractals/nature/centipede_600.png" height="80" onclick="gotoSlide(87)">
-                <img src="assets/fractals/nature/mountainscape_600.png" height="80" onclick="gotoSlide(88)">
+                <img src="assets/fractals/nature/cloud_600.png" height="80" onclick="setMode('slides'); gotoSlide(86)">
+                <img src="assets/fractals/nature/centipede_600.png" height="80" onclick="setMode('slides'); gotoSlide(87)">
+                <img src="assets/fractals/nature/mountainscape_600.png" height="80" onclick="setMode('slides'); gotoSlide(88)">
           </div>
           <div class="category">
               <h2>Spirals</h2>
               <p>Spiral fractals.</p>
-                <img src="assets/fractals/spirals/rainbow_600.png" height="80" onclick="gotoSlide(89)">
-                <img src="assets/fractals/spirals/vortex_600.png" height="80" onclick="gotoSlide(90)">
-                <img src="assets/fractals/spirals/fire_600.png" height="80" onclick="gotoSlide(91)">
-                <img src="assets/fractals/spirals/blossom_600.png" height="80" onclick="gotoSlide(92)">
+                <img src="assets/fractals/spirals/rainbow_600.png" height="80" onclick="setMode('slides'); gotoSlide(89)">
+                <img src="assets/fractals/spirals/vortex_600.png" height="80" onclick="setMode('slides'); gotoSlide(90)">
+                <img src="assets/fractals/spirals/fire_600.png" height="80" onclick="setMode('slides'); gotoSlide(91)">
+                <img src="assets/fractals/spirals/blossom_600.png" height="80" onclick="setMode('slides'); gotoSlide(92)">
           </div>
           <div class="category">
               <h2>Abstract</h2>
               <p>Abstract shapes that don&#39;t fit into any of the other categories.</p>
-                <img src="assets/fractals/abstract/abstract1_600.png" height="80" onclick="gotoSlide(93)">
-                <img src="assets/fractals/abstract/abstract2_600.png" height="80" onclick="gotoSlide(94)">
-                <img src="assets/fractals/abstract/abstract3_600.png" height="80" onclick="gotoSlide(95)">
-                <img src="assets/fractals/abstract/abstract4_600.png" height="80" onclick="gotoSlide(96)">
-                <img src="assets/fractals/abstract/abstract6_600.png" height="80" onclick="gotoSlide(97)">
-                <img src="assets/fractals/abstract/heart_600.png" height="80" onclick="gotoSlide(98)">
+                <img src="assets/fractals/abstract/abstract1_600.png" height="80" onclick="setMode('slides'); gotoSlide(93)">
+                <img src="assets/fractals/abstract/abstract2_600.png" height="80" onclick="setMode('slides'); gotoSlide(94)">
+                <img src="assets/fractals/abstract/abstract3_600.png" height="80" onclick="setMode('slides'); gotoSlide(95)">
+                <img src="assets/fractals/abstract/abstract4_600.png" height="80" onclick="setMode('slides'); gotoSlide(96)">
+                <img src="assets/fractals/abstract/abstract6_600.png" height="80" onclick="setMode('slides'); gotoSlide(97)">
+                <img src="assets/fractals/abstract/heart_600.png" height="80" onclick="setMode('slides'); gotoSlide(98)">
           </div>
           <div class="category">
               <h2>3D</h2>
               <p>Three dimensional fractals</p>
-                <img src="assets/fractals/3d/menger-fake_600.png" height="80" onclick="gotoSlide(99)">
-                <img src="assets/fractals/3d/menger-grey_600.png" height="80" onclick="gotoSlide(100)">
-                <img src="assets/fractals/3d/menger-rgb_600.png" height="80" onclick="gotoSlide(101)">
-                <img src="assets/fractals/3d/cross-menger_600.png" height="80" onclick="gotoSlide(102)">
-                <img src="assets/fractals/3d/tetrix_600.png" height="80" onclick="gotoSlide(103)">
-                <img src="assets/fractals/3d/pyramid_600.png" height="80" onclick="gotoSlide(104)">
-                <img src="assets/fractals/3d/mosely-snowflake_600.png" height="80" onclick="gotoSlide(105)">
-                <img src="assets/fractals/3d/sm-snowflake_600.png" height="80" onclick="gotoSlide(106)">
+                <img src="assets/fractals/3d/menger-fake_600.png" height="80" onclick="setMode('slides'); gotoSlide(99)">
+                <img src="assets/fractals/3d/menger-grey_600.png" height="80" onclick="setMode('slides'); gotoSlide(100)">
+                <img src="assets/fractals/3d/menger-rgb_600.png" height="80" onclick="setMode('slides'); gotoSlide(101)">
+                <img src="assets/fractals/3d/cross-menger_600.png" height="80" onclick="setMode('slides'); gotoSlide(102)">
+                <img src="assets/fractals/3d/tetrix_600.png" height="80" onclick="setMode('slides'); gotoSlide(103)">
+                <img src="assets/fractals/3d/pyramid_600.png" height="80" onclick="setMode('slides'); gotoSlide(104)">
+                <img src="assets/fractals/3d/mosely-snowflake_600.png" height="80" onclick="setMode('slides'); gotoSlide(105)">
+                <img src="assets/fractals/3d/sm-snowflake_600.png" height="80" onclick="setMode('slides'); gotoSlide(106)">
           </div>
         </div>
       </div>
       <div class="slides">
         <div class="slide" id="slide0">
           <div class="img">
-            <img src="assets/fractals/triangles/sierpinski_1200.png">
+            <img src="assets/fractals/triangles/sierpinski_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Sierpiński Triangle</h2>
@@ -363,7 +365,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide1">
           <div class="img">
-            <img src="assets/fractals/triangles/rectangles_1200.png">
+            <img src="assets/fractals/triangles/rectangles_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Sierpiński Triangle with rectangles</h2>
@@ -373,7 +375,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide2">
           <div class="img">
-            <img src="assets/fractals/triangles/rotated-rectangles_1200.png">
+            <img src="assets/fractals/triangles/rotated-rectangles_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Sierpiński Triangle with rotated rectangles</h2>
@@ -383,7 +385,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide3">
           <div class="img">
-            <img src="assets/fractals/triangles/coloured-rectangles_1200.png">
+            <img src="assets/fractals/triangles/coloured-rectangles_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Sierpiński Triangle with coloured rectangles</h2>
@@ -393,7 +395,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide4">
           <div class="img">
-            <img src="assets/fractals/triangles/shaded_1200.png">
+            <img src="assets/fractals/triangles/shaded_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Shaded Sierpiński Triangle</h2>
@@ -403,7 +405,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide5">
           <div class="img">
-            <img src="assets/fractals/triangles/rgb_1200.png">
+            <img src="assets/fractals/triangles/rgb_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Colour shaded Sierpiński Triangle</h2>
@@ -413,7 +415,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide6">
           <div class="img">
-            <img src="assets/fractals/triangles/circles_1200.png">
+            <img src="assets/fractals/triangles/circles_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Sierpiński Triangle made of circles</h2>
@@ -423,7 +425,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide7">
           <div class="img">
-            <img src="assets/fractals/triangles/cmy_1200.png">
+            <img src="assets/fractals/triangles/cmy_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Sierpiński Triangle made of coloured circles</h2>
@@ -433,7 +435,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide8">
           <div class="img">
-            <img src="assets/fractals/triangles/triflake_1200.png">
+            <img src="assets/fractals/triangles/triflake_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Triflake</h2>
@@ -444,7 +446,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide9">
           <div class="img">
-            <img src="assets/fractals/triangles/triflake-shaded_1200.png">
+            <img src="assets/fractals/triangles/triflake-shaded_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Shaded Triflake</h2>
@@ -454,7 +456,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide10">
           <div class="img">
-            <img src="assets/fractals/triangles/triflake-rotated-shaded_1200.png">
+            <img src="assets/fractals/triangles/triflake-rotated-shaded_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Shaded Rotated Triflake</h2>
@@ -464,7 +466,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide11">
           <div class="img">
-            <img src="assets/fractals/triangles/dust_1200.png">
+            <img src="assets/fractals/triangles/dust_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Fractal Dust</h2>
@@ -474,7 +476,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide12">
           <div class="img">
-            <img src="assets/fractals/triangles/lightning_1200.png">
+            <img src="assets/fractals/triangles/lightning_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Triangular Lightning</h2>
@@ -484,7 +486,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide13">
           <div class="img">
-            <img src="assets/fractals/squares/sierpinski_1200.png">
+            <img src="assets/fractals/squares/sierpinski_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Sierpiński Carpet</h2>
@@ -497,7 +499,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide14">
           <div class="img">
-            <img src="assets/fractals/squares/gradient_1200.png">
+            <img src="assets/fractals/squares/gradient_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Sierpiński Carpet with colour gradient</h2>
@@ -507,7 +509,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide15">
           <div class="img">
-            <img src="assets/fractals/squares/outline_1200.png">
+            <img src="assets/fractals/squares/outline_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Sierpiński Carpet with outline</h2>
@@ -517,7 +519,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide16">
           <div class="img">
-            <img src="assets/fractals/squares/coloured-outline_1200.png">
+            <img src="assets/fractals/squares/coloured-outline_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Sierpiński Carpet with coloured outline</h2>
@@ -527,7 +529,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide17">
           <div class="img">
-            <img src="assets/fractals/squares/diagonals_1200.png">
+            <img src="assets/fractals/squares/diagonals_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Sierpiński Carpet with diagonals</h2>
@@ -537,7 +539,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide18">
           <div class="img">
-            <img src="assets/fractals/squares/coloured-diagonals_1200.png">
+            <img src="assets/fractals/squares/coloured-diagonals_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Sierpiński Carpet with coloured diagonals</h2>
@@ -547,7 +549,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide19">
           <div class="img">
-            <img src="assets/fractals/squares/inverted_1200.png">
+            <img src="assets/fractals/squares/inverted_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Inverted Sierpiński Carpet</h2>
@@ -557,7 +559,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide20">
           <div class="img">
-            <img src="assets/fractals/squares/vicsek_1200.png">
+            <img src="assets/fractals/squares/vicsek_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Vicsek fractal</h2>
@@ -570,7 +572,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide21">
           <div class="img">
-            <img src="assets/fractals/squares/vicsek-coloured_1200.png">
+            <img src="assets/fractals/squares/vicsek-coloured_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Coloured Vicsek Fractal</h2>
@@ -580,7 +582,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide22">
           <div class="img">
-            <img src="assets/fractals/squares/vicsek-circle_1200.png">
+            <img src="assets/fractals/squares/vicsek-circle_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Vicsek of Circles</h2>
@@ -590,7 +592,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide23">
           <div class="img">
-            <img src="assets/fractals/squares/vicsek-diagonal_1200.png">
+            <img src="assets/fractals/squares/vicsek-diagonal_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Diagonal Vicsek Fractal</h2>
@@ -601,7 +603,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide24">
           <div class="img">
-            <img src="assets/fractals/squares/h_1200.png">
+            <img src="assets/fractals/squares/h_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Fractal H-I de Rivera</h2>
@@ -612,7 +614,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide25">
           <div class="img">
-            <img src="assets/fractals/squares/castle_1200.png">
+            <img src="assets/fractals/squares/castle_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Fractal Castle</h2>
@@ -623,7 +625,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide26">
           <div class="img">
-            <img src="assets/fractals/squares/cross_1200.png">
+            <img src="assets/fractals/squares/cross_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Jerusalem Cross</h2>
@@ -634,7 +636,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide27">
           <div class="img">
-            <img src="assets/fractals/squares/swiss_1200.png">
+            <img src="assets/fractals/squares/swiss_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Swiss Fractal</h2>
@@ -645,7 +647,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide28">
           <div class="img">
-            <img src="assets/fractals/squares/forest_1200.png">
+            <img src="assets/fractals/squares/forest_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Forest</h2>
@@ -656,7 +658,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide29">
           <div class="img">
-            <img src="assets/fractals/squares/copper_1200.png">
+            <img src="assets/fractals/squares/copper_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Copper Carpet</h2>
@@ -666,7 +668,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide30">
           <div class="img">
-            <img src="assets/fractals/squares/distorted_1200.png">
+            <img src="assets/fractals/squares/distorted_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Distorted Carpet</h2>
@@ -676,7 +678,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide31">
           <div class="img">
-            <img src="assets/fractals/squares/dots_1200.png">
+            <img src="assets/fractals/squares/dots_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Dots</h2>
@@ -686,7 +688,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide32">
           <div class="img">
-            <img src="assets/fractals/squares/window_1200.png">
+            <img src="assets/fractals/squares/window_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Fractal Window</h2>
@@ -697,7 +699,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide33">
           <div class="img">
-            <img src="assets/fractals/squares/degraded_1200.png">
+            <img src="assets/fractals/squares/degraded_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Degraded Square</h2>
@@ -708,7 +710,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide34">
           <div class="img">
-            <img src="assets/fractals/pentagons/pentaflake_1200.png">
+            <img src="assets/fractals/pentagons/pentaflake_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">The Pentaflake</h2>
@@ -721,7 +723,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide35">
           <div class="img">
-            <img src="assets/fractals/pentagons/sierpinski_1200.png">
+            <img src="assets/fractals/pentagons/sierpinski_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Sierpiński Pentagon</h2>
@@ -734,7 +736,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide36">
           <div class="img">
-            <img src="assets/fractals/pentagons/rotated-pentaflake_1200.png">
+            <img src="assets/fractals/pentagons/rotated-pentaflake_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Rotated Pentaflake</h2>
@@ -744,7 +746,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide37">
           <div class="img">
-            <img src="assets/fractals/pentagons/rotated-sierpinski_1200.png">
+            <img src="assets/fractals/pentagons/rotated-sierpinski_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Rotated Sierpiński Pentagon</h2>
@@ -754,7 +756,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide38">
           <div class="img">
-            <img src="assets/fractals/pentagons/pentaflake-gap_1200.png">
+            <img src="assets/fractals/pentagons/pentaflake-gap_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Pentaflake with a gap</h2>
@@ -764,7 +766,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide39">
           <div class="img">
-            <img src="assets/fractals/pentagons/star_1200.png">
+            <img src="assets/fractals/pentagons/star_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Sierpiński Pentagon star</h2>
@@ -774,7 +776,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide40">
           <div class="img">
-            <img src="assets/fractals/pentagons/twist_1200.png">
+            <img src="assets/fractals/pentagons/twist_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Twisted Sierpiński Pentagon</h2>
@@ -784,7 +786,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide41">
           <div class="img">
-            <img src="assets/fractals/pentagons/microbe_1200.png">
+            <img src="assets/fractals/pentagons/microbe_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Sierpiński Pentagon microbe</h2>
@@ -794,7 +796,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide42">
           <div class="img">
-            <img src="assets/fractals/hexagons/sierpinski_1200.png">
+            <img src="assets/fractals/hexagons/sierpinski_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Sierpiński Hexagon</h2>
@@ -807,7 +809,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide43">
           <div class="img">
-            <img src="assets/fractals/hexagons/sierpinski-shaded_1200.png">
+            <img src="assets/fractals/hexagons/sierpinski-shaded_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Shaded Sierpiński Hexagon</h2>
@@ -817,7 +819,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide44">
           <div class="img">
-            <img src="assets/fractals/hexagons/sierpinski-coloured_1200.png">
+            <img src="assets/fractals/hexagons/sierpinski-coloured_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Coloured Sierpiński Hexagon</h2>
@@ -827,7 +829,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide45">
           <div class="img">
-            <img src="assets/fractals/hexagons/sierpinski-rotated_1200.png">
+            <img src="assets/fractals/hexagons/sierpinski-rotated_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Rotated Sierpinski Hexagon</h2>
@@ -837,7 +839,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide46">
           <div class="img">
-            <img src="assets/fractals/hexagons/sierpinski-rotated-shaded_1200.png">
+            <img src="assets/fractals/hexagons/sierpinski-rotated-shaded_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Rotated Shaded Sierpinski Hexagon</h2>
@@ -847,7 +849,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide47">
           <div class="img">
-            <img src="assets/fractals/hexagons/koch_1200.png">
+            <img src="assets/fractals/hexagons/koch_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Koch Snowflake</h2>
@@ -860,7 +862,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide48">
           <div class="img">
-            <img src="assets/fractals/hexagons/exploding_1200.png">
+            <img src="assets/fractals/hexagons/exploding_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Exploding Koch Snowflake</h2>
@@ -870,7 +872,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide49">
           <div class="img">
-            <img src="assets/fractals/hexagons/exploded_1200.png">
+            <img src="assets/fractals/hexagons/exploded_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Exploded Koch Snowflake</h2>
@@ -880,7 +882,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide50">
           <div class="img">
-            <img src="assets/fractals/hexagons/snowflake_1200.png">
+            <img src="assets/fractals/hexagons/snowflake_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Snowflake</h2>
@@ -890,7 +892,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide51">
           <div class="img">
-            <img src="assets/fractals/hexagons/hexaflake_1200.png">
+            <img src="assets/fractals/hexagons/hexaflake_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Hexaflake</h2>
@@ -903,7 +905,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide52">
           <div class="img">
-            <img src="assets/fractals/hexagons/hexaflake-rotated_1200.png">
+            <img src="assets/fractals/hexagons/hexaflake-rotated_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Rotated Hexaflake</h2>
@@ -913,7 +915,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide53">
           <div class="img">
-            <img src="assets/fractals/hexagons/hexaflake-shaded_1200.png">
+            <img src="assets/fractals/hexagons/hexaflake-shaded_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Shaded Hexaflake Hexagon</h2>
@@ -923,7 +925,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide54">
           <div class="img">
-            <img src="assets/fractals/hexagons/hexaflake-shaded2_1200.png">
+            <img src="assets/fractals/hexagons/hexaflake-shaded2_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Shaded Hexaflake</h2>
@@ -933,7 +935,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide55">
           <div class="img">
-            <img src="assets/fractals/hexagons/hexaflake-shaded3_1200.png">
+            <img src="assets/fractals/hexagons/hexaflake-shaded3_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Purple Hexaflake</h2>
@@ -943,7 +945,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide56">
           <div class="img">
-            <img src="assets/fractals/hexagons/hexaflake-coloured_1200.png">
+            <img src="assets/fractals/hexagons/hexaflake-coloured_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">RGB Hexaflake</h2>
@@ -953,7 +955,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide57">
           <div class="img">
-            <img src="assets/fractals/hexagons/hexaflake-coloured2_1200.png">
+            <img src="assets/fractals/hexagons/hexaflake-coloured2_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Coloured Hexaflake</h2>
@@ -963,7 +965,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide58">
           <div class="img">
-            <img src="assets/fractals/hexagons/hexaflake-cell_1200.png">
+            <img src="assets/fractals/hexagons/hexaflake-cell_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Hexagonal Cell</h2>
@@ -973,7 +975,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide59">
           <div class="img">
-            <img src="assets/fractals/linear/barcode_1200.png">
+            <img src="assets/fractals/linear/barcode_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Barcode</h2>
@@ -983,7 +985,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide60">
           <div class="img">
-            <img src="assets/fractals/linear/french-cantor_1200.png">
+            <img src="assets/fractals/linear/french-cantor_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Cantor Set as French flag</h2>
@@ -994,7 +996,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide61">
           <div class="img">
-            <img src="assets/fractals/linear/palette_1200.png">
+            <img src="assets/fractals/linear/palette_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Fractal Colour Palette</h2>
@@ -1004,7 +1006,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide62">
           <div class="img">
-            <img src="assets/fractals/linear/powerlines_1200.png">
+            <img src="assets/fractals/linear/powerlines_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Power Lines</h2>
@@ -1014,7 +1016,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide63">
           <div class="img">
-            <img src="assets/fractals/linear/dots_1200.png">
+            <img src="assets/fractals/linear/dots_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Dots</h2>
@@ -1024,7 +1026,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide64">
           <div class="img">
-            <img src="assets/fractals/linear/circles_1200.png">
+            <img src="assets/fractals/linear/circles_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Circles</h2>
@@ -1034,7 +1036,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide65">
           <div class="img">
-            <img src="assets/fractals/linear/bubbles_1200.png">
+            <img src="assets/fractals/linear/bubbles_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Bubbles</h2>
@@ -1044,7 +1046,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide66">
           <div class="img">
-            <img src="assets/fractals/linear/shard_1200.png">
+            <img src="assets/fractals/linear/shard_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Shard</h2>
@@ -1054,7 +1056,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide67">
           <div class="img">
-            <img src="assets/fractals/linear/jagged_1200.png">
+            <img src="assets/fractals/linear/jagged_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Jagged</h2>
@@ -1064,7 +1066,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide68">
           <div class="img">
-            <img src="assets/fractals/linear/metal_1200.png">
+            <img src="assets/fractals/linear/metal_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Metal</h2>
@@ -1074,7 +1076,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide69">
           <div class="img">
-            <img src="assets/fractals/linear/ukraine_1200.png">
+            <img src="assets/fractals/linear/ukraine_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Slava Ukraini</h2>
@@ -1084,7 +1086,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide70">
           <div class="img">
-            <img src="assets/fractals/curves/koch_1200.png">
+            <img src="assets/fractals/curves/koch_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Koch Curve</h2>
@@ -1097,7 +1099,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide71">
           <div class="img">
-            <img src="assets/fractals/curves/square_1200.png">
+            <img src="assets/fractals/curves/square_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Koch Curve (square variation)</h2>
@@ -1107,7 +1109,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide72">
           <div class="img">
-            <img src="assets/fractals/curves/dragon_1200.png">
+            <img src="assets/fractals/curves/dragon_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Heighway Dragon</h2>
@@ -1120,7 +1122,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide73">
           <div class="img">
-            <img src="assets/fractals/curves/golden_1200.png">
+            <img src="assets/fractals/curves/golden_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Golden Dragon Curve</h2>
@@ -1130,17 +1132,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide74">
           <div class="img">
-            <img src="assets/fractals/curves/pythagoras_1200.png">
-          </div>
-          <div class="info">
-            <h2 class="name">Pythagoras Curve</h2>
-            <p class="description"></p>
-            <p class="download">Download <a href="assets/fractals/curves/pythagoras.pptx">PowerPoint</a>.</p>
-        </div>
-        </div>
-        <div class="slide" id="slide75">
-          <div class="img">
-            <img src="assets/fractals/curves/levy-c_1200.png">
+            <img src="assets/fractals/curves/levy-c_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Lévy C curve</h2>
@@ -1151,9 +1143,9 @@ object-fit: contain;
             </p>
         </div>
         </div>
-        <div class="slide" id="slide76">
+        <div class="slide" id="slide75">
           <div class="img">
-            <img src="assets/fractals/curves/levy-c-coloured_1200.png">
+            <img src="assets/fractals/curves/levy-c-coloured_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Coloured Lévy C curve</h2>
@@ -1161,9 +1153,19 @@ object-fit: contain;
             <p class="download">Download <a href="assets/fractals/curves/levy-c-coloured.pptx">PowerPoint</a>.</p>
         </div>
         </div>
+        <div class="slide" id="slide76">
+          <div class="img">
+            <img src="assets/fractals/curves/pythagoras_1200.png" onclick="setMode('focus')">
+          </div>
+          <div class="info">
+            <h2 class="name">Pythagoras Curve</h2>
+            <p class="description"></p>
+            <p class="download">Download <a href="assets/fractals/curves/pythagoras.pptx">PowerPoint</a>.</p>
+        </div>
+        </div>
         <div class="slide" id="slide77">
           <div class="img">
-            <img src="assets/fractals/plants/pythagoras-tree_1200.png">
+            <img src="assets/fractals/plants/pythagoras-tree_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">3-4-5 Pythagoras Tree</h2>
@@ -1175,7 +1177,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide78">
           <div class="img">
-            <img src="assets/fractals/plants/tree_1200.png">
+            <img src="assets/fractals/plants/tree_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Tree</h2>
@@ -1185,7 +1187,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide79">
           <div class="img">
-            <img src="assets/fractals/plants/pine_1200.png">
+            <img src="assets/fractals/plants/pine_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Pine Tree</h2>
@@ -1195,7 +1197,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide80">
           <div class="img">
-            <img src="assets/fractals/plants/fern_1200.png">
+            <img src="assets/fractals/plants/fern_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Fern</h2>
@@ -1205,7 +1207,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide81">
           <div class="img">
-            <img src="assets/fractals/plants/cabbage_1200.png">
+            <img src="assets/fractals/plants/cabbage_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Cabbage Leaf</h2>
@@ -1215,17 +1217,17 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide82">
           <div class="img">
-            <img src="assets/fractals/plants/flower_1200.png">
+            <img src="assets/fractals/plants/flower_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
-            <h2 class="name">Flower</h2>
+            <h2 class="name">Flowers</h2>
             <p class="description"></p>
             <p class="download">Download <a href="assets/fractals/plants/flower.pptx">PowerPoint</a>.</p>
         </div>
         </div>
         <div class="slide" id="slide83">
           <div class="img">
-            <img src="assets/fractals/plants/bamboo_1200.png">
+            <img src="assets/fractals/plants/bamboo_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Bamboo</h2>
@@ -1235,7 +1237,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide84">
           <div class="img">
-            <img src="assets/fractals/plants/mushrooms1_1200.png">
+            <img src="assets/fractals/plants/mushrooms1_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Mushrooms (closed)</h2>
@@ -1245,7 +1247,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide85">
           <div class="img">
-            <img src="assets/fractals/plants/mushrooms2_1200.png">
+            <img src="assets/fractals/plants/mushrooms2_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Mushrooms (open)</h2>
@@ -1255,7 +1257,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide86">
           <div class="img">
-            <img src="assets/fractals/nature/cloud_1200.png">
+            <img src="assets/fractals/nature/cloud_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Cloud</h2>
@@ -1265,7 +1267,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide87">
           <div class="img">
-            <img src="assets/fractals/nature/centipede_1200.png">
+            <img src="assets/fractals/nature/centipede_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Centipede</h2>
@@ -1275,7 +1277,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide88">
           <div class="img">
-            <img src="assets/fractals/nature/mountainscape_1200.png">
+            <img src="assets/fractals/nature/mountainscape_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Mountainscape</h2>
@@ -1285,7 +1287,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide89">
           <div class="img">
-            <img src="assets/fractals/spirals/rainbow_1200.png">
+            <img src="assets/fractals/spirals/rainbow_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Rainbow Spiral</h2>
@@ -1295,7 +1297,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide90">
           <div class="img">
-            <img src="assets/fractals/spirals/vortex_1200.png">
+            <img src="assets/fractals/spirals/vortex_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Vortex</h2>
@@ -1305,7 +1307,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide91">
           <div class="img">
-            <img src="assets/fractals/spirals/fire_1200.png">
+            <img src="assets/fractals/spirals/fire_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Fire Spiral</h2>
@@ -1315,7 +1317,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide92">
           <div class="img">
-            <img src="assets/fractals/spirals/blossom_1200.png">
+            <img src="assets/fractals/spirals/blossom_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Spiral Blossom</h2>
@@ -1325,7 +1327,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide93">
           <div class="img">
-            <img src="assets/fractals/abstract/abstract1_1200.png">
+            <img src="assets/fractals/abstract/abstract1_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Jack-in-the-box</h2>
@@ -1335,7 +1337,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide94">
           <div class="img">
-            <img src="assets/fractals/abstract/abstract2_1200.png">
+            <img src="assets/fractals/abstract/abstract2_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Ominous Bubbles</h2>
@@ -1345,7 +1347,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide95">
           <div class="img">
-            <img src="assets/fractals/abstract/abstract3_1200.png">
+            <img src="assets/fractals/abstract/abstract3_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Branching Balls</h2>
@@ -1355,7 +1357,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide96">
           <div class="img">
-            <img src="assets/fractals/abstract/abstract4_1200.png">
+            <img src="assets/fractals/abstract/abstract4_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Angel</h2>
@@ -1365,7 +1367,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide97">
           <div class="img">
-            <img src="assets/fractals/abstract/abstract6_1200.png">
+            <img src="assets/fractals/abstract/abstract6_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Fractal Herd</h2>
@@ -1375,7 +1377,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide98">
           <div class="img">
-            <img src="assets/fractals/abstract/heart_1200.png">
+            <img src="assets/fractals/abstract/heart_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Abstract Heart</h2>
@@ -1385,7 +1387,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide99">
           <div class="img">
-            <img src="assets/fractals/3d/menger-fake_1200.png">
+            <img src="assets/fractals/3d/menger-fake_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Faked Menger Sponge</h2>
@@ -1395,7 +1397,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide100">
           <div class="img">
-            <img src="assets/fractals/3d/menger-grey_1200.png">
+            <img src="assets/fractals/3d/menger-grey_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Menger Sponge (grey)</h2>
@@ -1408,7 +1410,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide101">
           <div class="img">
-            <img src="assets/fractals/3d/menger-rgb_1200.png">
+            <img src="assets/fractals/3d/menger-rgb_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Menger Sponge (RGB)</h2>
@@ -1419,7 +1421,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide102">
           <div class="img">
-            <img src="assets/fractals/3d/cross-menger_1200.png">
+            <img src="assets/fractals/3d/cross-menger_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Jerusalem Cube</h2>
@@ -1432,7 +1434,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide103">
           <div class="img">
-            <img src="assets/fractals/3d/tetrix_1200.png">
+            <img src="assets/fractals/3d/tetrix_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Sierpiński Tetrahedron (or Tetrix)</h2>
@@ -1445,7 +1447,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide104">
           <div class="img">
-            <img src="assets/fractals/3d/pyramid_1200.png">
+            <img src="assets/fractals/3d/pyramid_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Sierpiński Pyramid</h2>
@@ -1458,7 +1460,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide105">
           <div class="img">
-            <img src="assets/fractals/3d/mosely-snowflake_1200.png">
+            <img src="assets/fractals/3d/mosely-snowflake_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Mosely Snowflake</h2>
@@ -1471,7 +1473,7 @@ object-fit: contain;
         </div>
         <div class="slide" id="slide106">
           <div class="img">
-            <img src="assets/fractals/3d/sm-snowflake_1200.png">
+            <img src="assets/fractals/3d/sm-snowflake_1200.png" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">Sierpiński-Menger Snowflake</h2>
@@ -1709,15 +1711,15 @@ object-fit: contain;
           <img src="assets/fractals/curves/golden_600.png"
                onclick="gotoSlide(73)"
                alt="Golden Dragon Curve" title="Golden Dragon Curve">
-          <img src="assets/fractals/curves/pythagoras_600.png"
-               onclick="gotoSlide(74)"
-               alt="Pythagoras Curve" title="Pythagoras Curve">
           <img src="assets/fractals/curves/levy-c_600.png"
-               onclick="gotoSlide(75)"
+               onclick="gotoSlide(74)"
                alt="Lévy C curve" title="Lévy C curve">
           <img src="assets/fractals/curves/levy-c-coloured_600.png"
-               onclick="gotoSlide(76)"
+               onclick="gotoSlide(75)"
                alt="Coloured Lévy C curve" title="Coloured Lévy C curve">
+          <img src="assets/fractals/curves/pythagoras_600.png"
+               onclick="gotoSlide(76)"
+               alt="Pythagoras Curve" title="Pythagoras Curve">
           <img src="assets/fractals/plants/pythagoras-tree_600.png"
                onclick="gotoSlide(77)"
                alt="3-4-5 Pythagoras Tree" title="3-4-5 Pythagoras Tree">
@@ -1735,7 +1737,7 @@ object-fit: contain;
                alt="Cabbage Leaf" title="Cabbage Leaf">
           <img src="assets/fractals/plants/flower_600.png"
                onclick="gotoSlide(82)"
-               alt="Flower" title="Flower">
+               alt="Flowers" title="Flowers">
           <img src="assets/fractals/plants/bamboo_600.png"
                onclick="gotoSlide(83)"
                alt="Bamboo" title="Bamboo">
@@ -2034,13 +2036,13 @@ object-fit: contain;
           <img src="assets/fractals/curves/golden_2400.png">
         </div>
         <div class="focus" id="focus74">
-          <img src="assets/fractals/curves/pythagoras_2400.png">
-        </div>
-        <div class="focus" id="focus75">
           <img src="assets/fractals/curves/levy-c_2400.png">
         </div>
-        <div class="focus" id="focus76">
+        <div class="focus" id="focus75">
           <img src="assets/fractals/curves/levy-c-coloured_2400.png">
+        </div>
+        <div class="focus" id="focus76">
+          <img src="assets/fractals/curves/pythagoras_2400.png">
         </div>
         <div class="focus" id="focus77">
           <img src="assets/fractals/plants/pythagoras-tree_2400.png">
@@ -2136,7 +2138,7 @@ object-fit: contain;
     </div>
 
 <script>
-let state = 'intro';
+let mode = 'intro';
 let slideIndex = 0;
 let slides;
 let thumbs;
@@ -2144,7 +2146,7 @@ let foci;
 
 const nextSlide = () => setSlide(slideIndex + 1);
 const prevSlide = () => setSlide(slideIndex - 1);
-const gotoSlide = n => { closeModal(); setSlide(n) };
+const gotoSlide = n => setSlide(n);
 
 function setSlide(n) {
     while (n < 0) {
@@ -2162,10 +2164,23 @@ function init() {
     showSlide();
 }
 
-function closeModal() {
-    document.getElementById('intro').style.display = 'none';
-    foci[slideIndex].style.display = "none";
-    state = 'slides';
+function setMode(m) {
+    switch (m) {
+        case 'intro':
+            document.getElementById('intro').style.display = 'block';
+            break;
+        case 'slides':
+            document.getElementById('intro').style.display = 'none';
+            foci[slideIndex].style.display = "none";
+            break;
+        case 'focus':
+            foci[slideIndex].style.display = "block";
+            break;
+        default:
+            console.error(`Unknown mode: ${m}`);
+            return;
+    }
+    mode = m;
 }
 
 function showSlide() {
@@ -2178,7 +2193,7 @@ function showSlide() {
   for (focus of foci) {
     focus.style.display = "none";
   }
-  if (state === 'focus') {
+  if (mode === 'focus') {
     foci[slideIndex].style.display = "block";
   }
   slides[slideIndex].style.display = "flex";
@@ -2191,30 +2206,21 @@ function handleKey(e) {
     console.log(e);
     switch (e.key) {
         case "ArrowLeft":
-            if (state !== 'intro') {
+            if (mode !== 'intro') {
                 prevSlide();
             }
             break;
         case "ArrowRight":
-            if (state !== 'intro') {
+            if (mode !== 'intro') {
                 nextSlide();
             }
             break;
         case "Escape":
-            if (state === 'slides') {
-                state = 'intro';
-                document.getElementById('intro').style.display = 'block';
-            } else {
-                closeModal();
-            }
+            setMode(mode === 'slides' ? 'intro' : 'slides');
             break;
         case " ":
-            if (state == 'slides') {
-                state = 'focus';
-                foci[slideIndex].style.display = "block";
-            } else {
-                closeModal();
-            }
+        case "Enter":
+            setMode(mode === 'slides' ? 'focus' : 'slides');
             break;
     }
 }

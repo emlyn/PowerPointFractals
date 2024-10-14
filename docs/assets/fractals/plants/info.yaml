@@ -13,7 +13,7 @@ fractals:
 - file: cabbage
   name: Cabbage Leaf
 - file: flower
-  name: Flower
+  name: Flowers
 - file: bamboo
   name: Bamboo
 - file: mushrooms1

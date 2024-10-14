@@ -39,8 +39,8 @@ a {
 
 .modal .content {
   background-color: #ddd;
-  margin: 10% auto;
-  padding: 20px;
+  margin: 5% auto;
+  padding: 10px 20px;
   border: 1px solid #888;
   width: 80%;
 }
@@ -147,27 +147,29 @@ a {
 }
 
 .focus {
-width: 100%;
-height: 100%;
-position: absolute;
-margin: 0;
-top: 0;
-bottom: 0;
-left: 0;
-right: 0;
-background-color: #aaa;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  margin: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #aaa;
 }
 
 .focus img {
-max-width: 100%;
-max-height: 100%;
-position: absolute;
-margin:auto;
-top:0;
-bottom:0;
-left:0;
-right:0;
-object-fit: contain;
+  max-width: 100%;
+  max-height: 100%;
+  position: absolute;
+  margin:auto;
+  padding: 10px;
+  background-color: #888;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  object-fit: contain;
 }
       </style>
       <script>
@@ -182,7 +184,7 @@ object-fit: contain;
     <body>
       <div class="modal" id="intro">
         <div class="content">
-          <span class="close" onclick="closeModal()">&times;</span>
+          <span class="close" onclick="setMode('slides')">&times;</span>
           <h1>PowerPoint Fractal Art</h1>
           <p>
             All of these images were created by Emlyn Corrin using Microsoft PowerPoint.
@@ -197,14 +199,14 @@ object-fit: contain;
           <div class="category">
               <h2>{{ category.name }}</h2>
               <p>{{ category.description }}</p>{% for fractal in category.fractals %}
-                <img src="{{raw-root}}/{{category.name|lower}}/{{fractal.images.small.file}}" height="80" onclick="gotoSlide({{fractal.id}})">{% endfor %}
+                <img src="{{raw-root}}/{{category.name|lower}}/{{fractal.images.small.file}}" height="80" onclick="setMode('slides'); gotoSlide({{fractal.id}})">{% endfor %}
           </div>{% endfor %}
         </div>
       </div>
       <div class="slides">{% for fractal in fractals %}
         <div class="slide" id="slide{{forloop.counter0}}">
           <div class="img">
-            <img src="{{raw-root}}/{{fractal.category|lower}}/{{fractal.images.medium.file}}">
+            <img src="{{raw-root}}/{{fractal.category|lower}}/{{fractal.images.medium.file}}" onclick="setMode('focus')">
           </div>
           <div class="info">
             <h2 class="name">{{fractal.name}}</h2>
@@ -233,7 +235,7 @@ object-fit: contain;
     </div>
 
 <script>
-let state = 'intro';
+let mode = 'intro';
 let slideIndex = 0;
 let slides;
 let thumbs;
@@ -241,7 +243,7 @@ let foci;
 
 const nextSlide = () => setSlide(slideIndex + 1);
 const prevSlide = () => setSlide(slideIndex - 1);
-const gotoSlide = n => { closeModal(); setSlide(n) };
+const gotoSlide = n => setSlide(n);
 
 function setSlide(n) {
     while (n < 0) {
@@ -259,10 +261,23 @@ function init() {
     showSlide();
 }
 
-function closeModal() {
-    document.getElementById('intro').style.display = 'none';
-    foci[slideIndex].style.display = "none";
-    state = 'slides';
+function setMode(m) {
+    switch (m) {
+        case 'intro':
+            document.getElementById('intro').style.display = 'block';
+            break;
+        case 'slides':
+            document.getElementById('intro').style.display = 'none';
+            foci[slideIndex].style.display = "none";
+            break;
+        case 'focus':
+            foci[slideIndex].style.display = "block";
+            break;
+        default:
+            console.error(`Unknown mode: ${m}`);
+            return;
+    }
+    mode = m;
 }
 
 function showSlide() {
@@ -275,7 +290,7 @@ function showSlide() {
   for (focus of foci) {
     focus.style.display = "none";
   }
-  if (state === 'focus') {
+  if (mode === 'focus') {
     foci[slideIndex].style.display = "block";
   }
   slides[slideIndex].style.display = "flex";
@@ -288,30 +303,21 @@ function handleKey(e) {
     console.log(e);
     switch (e.key) {
         case "ArrowLeft":
-            if (state !== 'intro') {
+            if (mode !== 'intro') {
                 prevSlide();
             }
             break;
         case "ArrowRight":
-            if (state !== 'intro') {
+            if (mode !== 'intro') {
                 nextSlide();
             }
             break;
         case "Escape":
-            if (state === 'slides') {
-                state = 'intro';
-                document.getElementById('intro').style.display = 'block';
-            } else {
-                closeModal();
-            }
+            setMode(mode === 'slides' ? 'intro' : 'slides');
             break;
         case " ":
-            if (state == 'slides') {
-                state = 'focus';
-                foci[slideIndex].style.display = "block";
-            } else {
-                closeModal();
-            }
+        case "Enter":
+            setMode(mode === 'slides' ? 'focus' : 'slides');
             break;
     }
 }

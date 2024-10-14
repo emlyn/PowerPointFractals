@@ -15,8 +15,6 @@ fractals:
     url: https://en.wikipedia.org/wiki/Dragon_curve#Heighway_dragon
 - file: golden
   name: Golden Dragon Curve
-- file: pythagoras
-  name: Pythagoras Curve
 - file: levy-c
   name: Lévy C curve
   dimension: 2
@@ -25,3 +23,5 @@ fractals:
     url: https://en.wikipedia.org/wiki/Lévy_C_curve
 - file: levy-c-coloured
   name: Coloured Lévy C curve
+- file: pythagoras
+  name: Pythagoras Curve

@@ -146,6 +146,13 @@
     (println "Evaluating:" expr)
     (println "Result:" (eval-str expr))))
 
+(defn- fixup-expression
+  "Take an expression valid for infix/from-string and make it valid for MathJax.
+   Currently this will replace:
+   - 'root(a, b)' with 'root(a)(b)'."
+  [expr]
+  (str/replace (str expr) #"\broot\(([0-9.]+),\s*" "root($1)("))
+
 (defn read-fractal
   [{:keys [src-suffix dst-suffixes]}
    {:keys [file dimension] :as info}]
@@ -160,6 +167,7 @@
                                           :file (str file suffix)}]))
                                [:small :medium :large]
                                dst-suffixes))
+         :dimension (fixup-expression dimension)
          :dimension_val (when (and (string? dimension)
                                    (not (num-str? dimension)))
                           (eval-str dimension))))

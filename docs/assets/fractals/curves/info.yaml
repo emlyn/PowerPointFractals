@@ -15,6 +15,28 @@ fractals:
     url: https://en.wikipedia.org/wiki/Dragon_curve#Heighway_dragon
 - file: golden
   name: Golden Dragon Curve
+- file: cesaro
+  name: Cesàro Fractal
+  links:
+  - name: Wikipedia > Koch snowflake > Variants of the Koch curve
+    url: https://en.wikipedia.org/wiki/Koch_snowflake#Variants_of_the_Koch_curve
+- file: htree
+  name: H Tree
+  links:
+  - name: Wikipedia > H Tree
+    url: https://en.wikipedia.org/wiki/H_tree
+- file: coloured-htree
+  name: Coloured H Tree
+- file: mandelbrot-tree
+  name: Mandelbrot Tree
+  links:
+  - name: Wikipedia > H Tree > Related sets
+    url: https://en.wikipedia.org/wiki/H_tree#Related_sets
+- file: fibonacci
+  name: Fibonacci word fractal
+  links:
+  - name: Wikipedia > Fibonacci word fractal
+    url: https://en.wikipedia.org/wiki/Fibonacci_word_fractal
 - file: levy-c
   name: Lévy C curve
   dimension: 2
@@ -25,3 +47,7 @@ fractals:
   name: Coloured Lévy C curve
 - file: pythagoras
   name: Pythagoras Curve
+- file: tree3-90
+  name: 3-branched Tree (90 degrees)
+- file: tree3-60
+  name: 3-branched Tree (60 degrees)

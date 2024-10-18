@@ -9,5 +9,14 @@ fractals:
   name: Angel
 - file: abstract6
   name: Fractal Herd
+- file: cross
+  name: Cross
+  links:
+  - name: Wikipedia > Minkowski Sausage
+    url: https://en.wikipedia.org/wiki/Minkowski_sausage
 - file: heart
-  name: Abstract Heart
+  name: Shattered Heart
+- file: transmission
+  name: Transmission
+- file: curved-htree
+  name: Curved H Tree

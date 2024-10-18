@@ -21,6 +21,8 @@ fractals:
   name: Sierpiński Triangle made of circles
 - file: cmy
   name: Sierpiński Triangle made of coloured circles
+- file: rotated-sierpinski
+  name: Rotated Sierpiński
 - file: triflake
   name: Triflake
   dimension: log(4) / log(2.5)
@@ -28,6 +30,10 @@ fractals:
   name: Shaded Triflake
 - file: triflake-rotated-shaded
   name: Shaded Rotated Triflake
+- file: hourglass
+  name: Hourglass
+- file: lace
+  name: Lace
 - file: dust
   name: Fractal Dust
 - file: lightning

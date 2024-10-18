@@ -1,4 +1,9 @@
 fractals:
+- file: canopy
+  name: Fractal Canopy
+  links:
+  - name: Wikipedia > Fractal canopy
+    url: https://en.wikipedia.org/wiki/Fractal_canopy
 - file: pythagoras-tree
   name: 3-4-5 Pythagoras Tree
   links:
@@ -6,6 +11,10 @@ fractals:
     url: https://en.wikipedia.org/wiki/Pythagoras_tree_(fractal)
 - file: tree
   name: Tree
+- file: tree2
+  name: Tree 2
+- file: tree4
+  name: 4-branch Tree
 - file: pine
   name: Pine Tree
 - file: fern

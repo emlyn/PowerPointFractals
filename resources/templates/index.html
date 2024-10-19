@@ -1,334 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>PowerPoint Fractals</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
-    <link rel="manifest" href="assets/webmanifest.json">
-    <style>
-body {
-  font-family: Arial, sans-serif;
-  background-color: #ccc;
-  margin: 0;
-}
 
-* {
-  box-sizing: border-box;
-}
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PowerPoint Fractals</title>
+  <link rel="stylesheet" href="assets/css/index.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="assets/favicon/webmanifest.json">
+  <script src="assets/js/index.js"></script>
+  <script>
+    MathJax = {
+      loader: { load: ['input/asciimath', 'output/chtml', 'ui/menu'] },
+    };
+  </script>
+  <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/startup.js">
+  </script>
+</head>
 
-a {
-    color: black;
-    text-decoration: underline;
-    text-decoration-style: dotted;
-}
-
-.modal {
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  /* padding: 10vh; */
-  background: #888;
-  overflow-y: scroll;
-}
-
-.modal .content {
-  background-color: #ddd;
-  margin: 5% auto;
-  padding: 10px 20px;
-  border: 1px solid #888;
-  width: 80%;
-}
-
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.slides {
-  height: 85vh;
-  display: flex;
-  justify-content: center;
-}
-
-.slide {
-  display: none;
-  flex-direction: row;
-  padding: 2vh;
-}
-
-.img {
-  height: 80vh;
-  width: 80vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.img img {
-  max-height: 100%;
-  max-width: 100%;
-  padding: 10px;
-  background-color: #888;
-}
-
-.info {
-  width: 50vh;
-  height: 80vh;
-  padding: 10vh 0 0 5vh;
-}
-
-.thumbnail-container {
-  height: 15vh;
-  width: 100%;
-  padding: 1vh;
-  overflow-x: scroll;
-  border-top: 2px solid #888;
-}
-
-.thumbnails {
-  width: max-content;
-  height: 100%;
-}
-
-.thumbnails img {
-  height: 100%;
-  opacity: 30%;
-  cursor: pointer;
-  margin: 0 2px;
-}
-
-.thumbnails img.active {
-  border: 2px solid #444;
-  border-radius: 5px;
-  opacity: 60%;
-}
-
-.thumbnails img:hover {
-  opacity: 100%;
-}
-
-.prev,
-.next {
-  cursor: pointer;
-  position: absolute;
-  top: 40%;
-  padding: 16px;
-  color: #444;
-  font-weight: bold;
-  font-size: 32px;
-  text-decoration: none;
-  user-select: none;
-  -webkit-user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-}
-
-.prev:hover,
-.next:hover {
-  color: #222;
-}
-
-.focus {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  margin: 0;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: #aaa;
-}
-
-.focus img {
-  max-width: 100%;
-  max-height: 100%;
-  position: absolute;
-  margin:auto;
-  padding: 10px;
-  background-color: #888;
-  top:0;
-  bottom:0;
-  left:0;
-  right:0;
-  object-fit: contain;
-}
-      </style>
-      <script>
-        MathJax = {
-          loader: {load: ['input/asciimath', 'output/chtml', 'ui/menu']},
-        };
-      </script>
-      <script type="text/javascript" id="MathJax-script" async
-              src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/startup.js">
-      </script>
-    </head>
-    <body>
-      <div class="modal" id="intro">
-        <div class="content">
-          <span class="close" onclick="setMode('slides')">&times;</span>
-          <h1>PowerPoint Fractal Art</h1>
-          <p>
-            All of these images were created by Emlyn Corrin using Microsoft PowerPoint.
-          </p>
-          <p>
-            They use a feature called Slide Zoom, which allows an image of the whole slide
-            to be embedded within the slide itself, creating a recursive effect.
-            By controlling the position, size and rotation of the Slide Zoom elements,
-            a wide range of fractal images can be created, from regular mathematical shapes,
-            to natural objects, to weird abstract images and even representations of 3D shapes.
-          </p>{% for category in categories %}
-          <div class="category">
-              <h2>{{ category.name }}</h2>
-              <p>{{ category.description }}</p>{% for fractal in category.fractals %}
-                <img src="{{raw-root}}/{{category.name|lower}}/{{fractal.images.small.file}}" height="80" onclick="setMode('slides'); gotoSlide({{fractal.id}})">{% endfor %}
-          </div>{% endfor %}
-        </div>
-      </div>
-      <div class="slides">{% for fractal in fractals %}
-        <div class="slide" id="slide{{forloop.counter0}}">
-          <div class="img">
-            <img src="{{raw-root}}/{{fractal.category|lower}}/{{fractal.images.medium.file}}" onclick="setMode('focus')">
-          </div>
-          <div class="info">
-            <h2 class="name">{{fractal.name}}</h2>
-            <p class="description">{{fractal.description}}</p>{% if fractal.dimension %}
-            <p class="dimension">Fractal <a href="https://en.wikipedia.org/wiki/Fractal_dimension">dimension</a>: `{{fractal.dimension}}{% if fractal.dimension_val %} = {{fractal.dimension_val|double-format:3}}{% endif %}`</p>{% endif %}
-            <p class="download">Download <a href="{{raw-root}}/{{fractal.category|lower}}/{{fractal.source}}">PowerPoint</a>.</p>{% if fractal.links %}
-            <p class="links">Links:{% for link in fractal.links %}<br/><a href="{{link.url}}" target="_blank">{{link.name}}</a>{% endfor %}
-            </p>{% endif %}
-        </div>
-        </div>{% endfor %}
-      </div>
-      <a class="prev" onclick="prevSlide()" title="Previous fractal (←)">❮</a>
-      <a class="next" onclick="nextSlide()" title="Next fractal (→)">❯</a>
-      <div class="thumbnail-container">
-        <div class="thumbnails">{% for fractal in fractals %}
-          <img src="{{raw-root}}/{{fractal.category|lower}}/{{fractal.images.small.file}}"
-               onclick="gotoSlide({{forloop.counter0}})"
-               alt="{{fractal.name}}" title="{{fractal.name}}">{% endfor %}
-        </div>
-      </div>
-      <div class="focus-container">{% for fractal in fractals %}
-        <div class="focus" id="focus{{forloop.counter0}}">
-          <img loading="lazy" src="{{raw-root}}/{{fractal.category|lower}}/{{fractal.images.large.file}}">
-        </div>{% endfor %}
-      </div>
+<body>
+  <div class="modal" id="intro">
+    <div class="content">
+      <span class="close" onclick="setMode('slides')">&times;</span>
+      <h1>PowerPoint Fractal Art</h1>
+      <p>
+        All of these images were created by Emlyn Corrin using Microsoft PowerPoint.
+      </p>
+      <p>
+        They use a feature called Slide Zoom, which allows an image of the whole slide
+        to be embedded within the slide itself, creating a recursive effect.
+        By controlling the position, size and rotation of the Slide Zoom elements,
+        a wide range of fractal images can be created, from regular mathematical shapes,
+        to natural objects, to weird abstract images and even representations of 3D shapes.
+      </p>{% for category in categories %}
+      <div class="category">
+        <h2>{{ category.name }}</h2>
+        <p>{{ category.description }}</p>{% for fractal in category.fractals %}
+        <img src="{{raw-root}}/{{category.name|lower}}/{{fractal.images.small.file}}" height="80"
+          onclick="setMode('slides'); gotoSlide({{fractal.id}})">{% endfor %}
+      </div>{% endfor %}
     </div>
-
-<script>
-let mode = 'intro';
-let slideIndex = 0;
-let slides;
-let thumbs;
-let foci;
-
-const nextSlide = () => setSlide(slideIndex + 1);
-const prevSlide = () => setSlide(slideIndex - 1);
-const gotoSlide = n => setSlide(n);
-
-function setSlide(n) {
-    while (n < 0) {
-    n += slides.length;
-  }
-  n = n % slides.length;
-  slideIndex = n;
-  showSlide();
-}
-
-function init() {
-    slides = document.getElementsByClassName("slide");
-    thumbs = document.querySelectorAll(".thumbnails img");
-    foci = document.getElementsByClassName("focus");
-    showSlide();
-}
-
-function setMode(m) {
-    switch (m) {
-        case 'intro':
-            document.getElementById('intro').style.display = 'block';
-            break;
-        case 'slides':
-            document.getElementById('intro').style.display = 'none';
-            foci[slideIndex].style.display = "none";
-            break;
-        case 'focus':
-            foci[slideIndex].style.display = "block";
-            break;
-        default:
-            console.error(`Unknown mode: ${m}`);
-            return;
-    }
-    mode = m;
-}
-
-function showSlide() {
-  for (slide of slides) {
-    slide.style.display = "none";
-  }
-  for (thumb of thumbs) {
-    thumb.classList.remove("active");
-  }
-  for (focus of foci) {
-    focus.style.display = "none";
-  }
-  if (mode === 'focus') {
-    foci[slideIndex].style.display = "block";
-  }
-  slides[slideIndex].style.display = "flex";
-  thumbs[slideIndex].classList.add("active");
-  thumbs[slideIndex].scrollIntoView({behavior: "smooth", inline: "center"});
-}
-
-function handleKey(e) {
-    e ||= window.event;
-    console.log(e);
-    switch (e.key) {
-        case "ArrowLeft":
-            if (mode !== 'intro') {
-                prevSlide();
-            }
-            break;
-        case "ArrowRight":
-            if (mode !== 'intro') {
-                nextSlide();
-            }
-            break;
-        case "Escape":
-            setMode(mode === 'slides' ? 'intro' : 'slides');
-            break;
-        case " ":
-        case "Enter":
-            setMode(mode === 'slides' ? 'focus' : 'slides');
-            break;
-    }
-}
-
-function handleResize() {
-    thumbs[slideIndex].scrollIntoView({inline: "center"});
-}
-
-addEventListener("keydown", handleKey, {passive: true});
-addEventListener("resize", handleResize, {passive: true});
-addEventListener("DOMContentLoaded", init, {passive: true});
-</script>
+  </div>
+  <div class="slides">{% for fractal in fractals %}
+    <div class="slide" id="slide{{forloop.counter0}}">
+      <div class="img">
+        <img src="{{raw-root}}/{{fractal.category|lower}}/{{fractal.images.medium.file}}" onclick="setMode('focus')">
+      </div>
+      <div class="info">
+        <h2 class="name">{{fractal.name}}</h2>
+        <p class="description">{{fractal.description}}</p>{% if fractal.dimension %}
+        <p class="dimension">Fractal <a href="https://en.wikipedia.org/wiki/Fractal_dimension">dimension</a>:
+          `{{fractal.dimension}}{% if fractal.dimension_val %} = {{fractal.dimension_val|double-format:3}}{% endif %}`
+        </p>{% endif %}
+        <p class="download">Download <a
+            href="{{raw-root}}/{{fractal.category|lower}}/{{fractal.source}}">PowerPoint</a>.</p>{% if fractal.links %}
+        <p class="links">Links:{% for link in fractal.links %}<br /><a href="{{link.url}}"
+            target="_blank">{{link.name}}</a>{% endfor %}
+        </p>{% endif %}
+      </div>
+    </div>{% endfor %}
+  </div>
+  <a class="prev" onclick="prevSlide()" title="Previous fractal (←)">❮</a>
+  <a class="next" onclick="nextSlide()" title="Next fractal (→)">❯</a>
+  <div class="thumbnail-container">
+    <div class="thumbnails">{% for fractal in fractals %}
+      <img src="{{raw-root}}/{{fractal.category|lower}}/{{fractal.images.small.file}}"
+        onclick="gotoSlide({{forloop.counter0}})" alt="{{fractal.name}}" title="{{fractal.name}}">{% endfor %}
+    </div>
+  </div>
+  <div class="focus-container">{% for fractal in fractals %}
+    <div class="focus" id="focus{{forloop.counter0}}">
+      <img loading="lazy" src="{{raw-root}}/{{fractal.category|lower}}/{{fractal.images.large.file}}">
+    </div>{% endfor %}
+  </div>
+  </div>
 </body>
+
 </html>

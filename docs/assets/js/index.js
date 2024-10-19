@@ -4,11 +4,10 @@ let slides;
 let thumbs;
 let foci;
 
-const nextSlide = () => setSlide(slideIndex + 1);
-const prevSlide = () => setSlide(slideIndex - 1);
-const gotoSlide = n => setSlide(n);
-
-function setSlide(n) {
+function gotoSlide(n, m=false) {
+    if (m) {
+        setMode("slides");
+    }
     while (n < 0) {
         n += slides.length;
     }
@@ -16,6 +15,9 @@ function setSlide(n) {
     slideIndex = n;
     showSlide();
 }
+
+const nextSlide = () => gotoSlide(slideIndex + 1);
+const prevSlide = () => gotoSlide(slideIndex - 1);
 
 function init() {
     slides = document.getElementsByClassName("slide");
@@ -44,13 +46,13 @@ function setMode(m) {
 }
 
 function showSlide() {
-    for (slide of slides) {
+    for (const slide of slides) {
         slide.style.display = "none";
     }
-    for (thumb of thumbs) {
+    for (const thumb of thumbs) {
         thumb.classList.remove("active");
     }
-    for (focus of foci) {
+    for (const focus of foci) {
         focus.style.display = "none";
     }
     if (mode === 'focus') {

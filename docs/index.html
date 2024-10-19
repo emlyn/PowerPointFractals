@@ -24,13 +24,14 @@
   <div class="modal" id="intro">
     <div class="content">
       <span class="close" onclick="setMode('slides')">&times;</span>
-      <a href="https://github.com/emlyn/PowerPointFractals" class="github-corner" aria-label="View source on GitHub">
-        <svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
+      <svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true" focusable="false">
+        <a href="https://github.com/emlyn/PowerPointFractals" class="github-corner" alt="GitHub" target="_blank">
+          <title>View source on GitHub</title>
           <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z" />
-          <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm" />
-          <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body" />
-        </svg>
-      </a>
+          <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="white" style="transform-origin: 130px 106px;" class="octo-arm" />
+          <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="white" class="octo-body" />
+        </a>
+      </svg>
       <h1>PowerPoint Fractal Art</h1>
       <p>
         All of these images were created by Emlyn Corrin using only Microsoft PowerPoint.
@@ -38,302 +39,302 @@
       <p>
         You can download the PowerPoint files to see how they were made,
         or to modify them and create your own fractal images,
-        by clicking the <img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"> icon in the description of each fractal.
+        by clicking the <img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"> icon in the description of each fractal.
         You are free to use or modify them as you like for your own personal use,
         as long as you credit the author and make any derivative works available under the same license
-        (they are licensed under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons
-          Attribution-NonCommercial-ShareAlike 4.0 International License</a>).
+        (they are licensed under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">Creative Commons
+          BY-NC-SA</a> license).
         If you would like to use them for commercial purposes, please contact the author.
       </p>
       <div class="category">
         <h2>Triangles</h2>
         <p>Fractals with triangular symmetry, such as the Sierpiński Triangle and variations.</p>
         <img src="assets/fractals/triangles/sierpinski_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(0)">
+          onclick="gotoSlide(0, true)">
         <img src="assets/fractals/triangles/rectangles_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(1)">
+          onclick="gotoSlide(1, true)">
         <img src="assets/fractals/triangles/rotated-rectangles_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(2)">
+          onclick="gotoSlide(2, true)">
         <img src="assets/fractals/triangles/coloured-rectangles_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(3)">
+          onclick="gotoSlide(3, true)">
         <img src="assets/fractals/triangles/shaded_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(4)">
+          onclick="gotoSlide(4, true)">
         <img src="assets/fractals/triangles/rgb_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(5)">
+          onclick="gotoSlide(5, true)">
         <img src="assets/fractals/triangles/circles_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(6)">
+          onclick="gotoSlide(6, true)">
         <img src="assets/fractals/triangles/cmy_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(7)">
+          onclick="gotoSlide(7, true)">
         <img src="assets/fractals/triangles/rotated-sierpinski_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(8)">
+          onclick="gotoSlide(8, true)">
         <img src="assets/fractals/triangles/triflake_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(9)">
+          onclick="gotoSlide(9, true)">
         <img src="assets/fractals/triangles/triflake-shaded_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(10)">
+          onclick="gotoSlide(10, true)">
         <img src="assets/fractals/triangles/triflake-rotated-shaded_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(11)">
+          onclick="gotoSlide(11, true)">
         <img src="assets/fractals/triangles/hourglass_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(12)">
+          onclick="gotoSlide(12, true)">
         <img src="assets/fractals/triangles/lace_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(13)">
+          onclick="gotoSlide(13, true)">
         <img src="assets/fractals/triangles/dust_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(14)">
+          onclick="gotoSlide(14, true)">
         <img src="assets/fractals/triangles/lightning_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(15)">
+          onclick="gotoSlide(15, true)">
       </div>
       <div class="category">
         <h2>Squares</h2>
         <p>Fractals with square symmetry, such as the Sierpiński Carpet and variations.</p>
         <img src="assets/fractals/squares/sierpinski_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(16)">
+          onclick="gotoSlide(16, true)">
         <img src="assets/fractals/squares/gradient_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(17)">
+          onclick="gotoSlide(17, true)">
         <img src="assets/fractals/squares/outline_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(18)">
+          onclick="gotoSlide(18, true)">
         <img src="assets/fractals/squares/coloured-outline_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(19)">
+          onclick="gotoSlide(19, true)">
         <img src="assets/fractals/squares/diagonals_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(20)">
+          onclick="gotoSlide(20, true)">
         <img src="assets/fractals/squares/coloured-diagonals_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(21)">
+          onclick="gotoSlide(21, true)">
         <img src="assets/fractals/squares/inverted_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(22)">
+          onclick="gotoSlide(22, true)">
         <img src="assets/fractals/squares/vicsek_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(23)">
+          onclick="gotoSlide(23, true)">
         <img src="assets/fractals/squares/vicsek-coloured_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(24)">
+          onclick="gotoSlide(24, true)">
         <img src="assets/fractals/squares/vicsek-circle_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(25)">
+          onclick="gotoSlide(25, true)">
         <img src="assets/fractals/squares/vicsek-diagonal_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(26)">
+          onclick="gotoSlide(26, true)">
         <img src="assets/fractals/squares/h_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(27)">
+          onclick="gotoSlide(27, true)">
         <img src="assets/fractals/squares/castle_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(28)">
+          onclick="gotoSlide(28, true)">
         <img src="assets/fractals/squares/cross_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(29)">
+          onclick="gotoSlide(29, true)">
         <img src="assets/fractals/squares/swiss_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(30)">
+          onclick="gotoSlide(30, true)">
         <img src="assets/fractals/squares/forest_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(31)">
+          onclick="gotoSlide(31, true)">
         <img src="assets/fractals/squares/copper_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(32)">
+          onclick="gotoSlide(32, true)">
         <img src="assets/fractals/squares/distorted_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(33)">
+          onclick="gotoSlide(33, true)">
         <img src="assets/fractals/squares/dots_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(34)">
+          onclick="gotoSlide(34, true)">
         <img src="assets/fractals/squares/window_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(35)">
+          onclick="gotoSlide(35, true)">
         <img src="assets/fractals/squares/degraded_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(36)">
+          onclick="gotoSlide(36, true)">
       </div>
       <div class="category">
         <h2>Pentagons</h2>
         <p>Fractals with pentagonal symmetry.</p>
         <img src="assets/fractals/pentagons/pentaflake_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(37)">
+          onclick="gotoSlide(37, true)">
         <img src="assets/fractals/pentagons/sierpinski_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(38)">
+          onclick="gotoSlide(38, true)">
         <img src="assets/fractals/pentagons/rotated-pentaflake_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(39)">
+          onclick="gotoSlide(39, true)">
         <img src="assets/fractals/pentagons/rotated-sierpinski_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(40)">
+          onclick="gotoSlide(40, true)">
         <img src="assets/fractals/pentagons/pentaflake-gap_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(41)">
+          onclick="gotoSlide(41, true)">
         <img src="assets/fractals/pentagons/star_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(42)">
+          onclick="gotoSlide(42, true)">
         <img src="assets/fractals/pentagons/twist_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(43)">
+          onclick="gotoSlide(43, true)">
         <img src="assets/fractals/pentagons/microbe_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(44)">
+          onclick="gotoSlide(44, true)">
       </div>
       <div class="category">
         <h2>Hexagons</h2>
         <p>Fractals with hexagonal symmetry, such as the Koch Snowflake.</p>
         <img src="assets/fractals/hexagons/sierpinski_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(45)">
+          onclick="gotoSlide(45, true)">
         <img src="assets/fractals/hexagons/sierpinski-shaded_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(46)">
+          onclick="gotoSlide(46, true)">
         <img src="assets/fractals/hexagons/sierpinski-coloured_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(47)">
+          onclick="gotoSlide(47, true)">
         <img src="assets/fractals/hexagons/sierpinski-rotated_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(48)">
+          onclick="gotoSlide(48, true)">
         <img src="assets/fractals/hexagons/sierpinski-rotated-shaded_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(49)">
+          onclick="gotoSlide(49, true)">
         <img src="assets/fractals/hexagons/koch_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(50)">
+          onclick="gotoSlide(50, true)">
         <img src="assets/fractals/hexagons/exploding_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(51)">
+          onclick="gotoSlide(51, true)">
         <img src="assets/fractals/hexagons/exploded_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(52)">
+          onclick="gotoSlide(52, true)">
         <img src="assets/fractals/hexagons/snowflake_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(53)">
+          onclick="gotoSlide(53, true)">
         <img src="assets/fractals/hexagons/hexaflake_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(54)">
+          onclick="gotoSlide(54, true)">
         <img src="assets/fractals/hexagons/hexaflake-rotated_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(55)">
+          onclick="gotoSlide(55, true)">
         <img src="assets/fractals/hexagons/hexaflake-shaded_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(56)">
+          onclick="gotoSlide(56, true)">
         <img src="assets/fractals/hexagons/hexaflake-shaded2_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(57)">
+          onclick="gotoSlide(57, true)">
         <img src="assets/fractals/hexagons/hexaflake-shaded3_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(58)">
+          onclick="gotoSlide(58, true)">
         <img src="assets/fractals/hexagons/hexaflake-coloured_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(59)">
+          onclick="gotoSlide(59, true)">
         <img src="assets/fractals/hexagons/hexaflake-coloured2_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(60)">
+          onclick="gotoSlide(60, true)">
         <img src="assets/fractals/hexagons/hexaflake-cell_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(61)">
+          onclick="gotoSlide(61, true)">
       </div>
       <div class="category">
         <h2>Linear</h2>
         <p>Fractals where all repeats appear on a straight line, with no rotation (&quot;fractalness&quot; is one-dimensional).</p>
         <img src="assets/fractals/linear/barcode_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(62)">
+          onclick="gotoSlide(62, true)">
         <img src="assets/fractals/linear/french-cantor_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(63)">
+          onclick="gotoSlide(63, true)">
         <img src="assets/fractals/linear/palette_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(64)">
+          onclick="gotoSlide(64, true)">
         <img src="assets/fractals/linear/powerlines_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(65)">
+          onclick="gotoSlide(65, true)">
         <img src="assets/fractals/linear/dots_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(66)">
+          onclick="gotoSlide(66, true)">
         <img src="assets/fractals/linear/circles_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(67)">
+          onclick="gotoSlide(67, true)">
         <img src="assets/fractals/linear/bubbles_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(68)">
+          onclick="gotoSlide(68, true)">
         <img src="assets/fractals/linear/shard_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(69)">
+          onclick="gotoSlide(69, true)">
         <img src="assets/fractals/linear/jagged_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(70)">
+          onclick="gotoSlide(70, true)">
         <img src="assets/fractals/linear/metal_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(71)">
+          onclick="gotoSlide(71, true)">
         <img src="assets/fractals/linear/ukraine_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(72)">
+          onclick="gotoSlide(72, true)">
       </div>
       <div class="category">
         <h2>Curves</h2>
         <p>Fractal curves (such as the Koch Curve and the Dragon Curve).</p>
         <img src="assets/fractals/curves/koch_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(73)">
+          onclick="gotoSlide(73, true)">
         <img src="assets/fractals/curves/square_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(74)">
+          onclick="gotoSlide(74, true)">
         <img src="assets/fractals/curves/dragon_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(75)">
+          onclick="gotoSlide(75, true)">
         <img src="assets/fractals/curves/golden_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(76)">
+          onclick="gotoSlide(76, true)">
         <img src="assets/fractals/curves/cesaro_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(77)">
+          onclick="gotoSlide(77, true)">
         <img src="assets/fractals/curves/htree_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(78)">
+          onclick="gotoSlide(78, true)">
         <img src="assets/fractals/curves/coloured-htree_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(79)">
+          onclick="gotoSlide(79, true)">
         <img src="assets/fractals/curves/mandelbrot-tree_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(80)">
+          onclick="gotoSlide(80, true)">
         <img src="assets/fractals/curves/fibonacci_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(81)">
+          onclick="gotoSlide(81, true)">
         <img src="assets/fractals/curves/levy-c_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(82)">
+          onclick="gotoSlide(82, true)">
         <img src="assets/fractals/curves/levy-c-coloured_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(83)">
+          onclick="gotoSlide(83, true)">
         <img src="assets/fractals/curves/pythagoras_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(84)">
+          onclick="gotoSlide(84, true)">
         <img src="assets/fractals/curves/tree3-90_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(85)">
+          onclick="gotoSlide(85, true)">
         <img src="assets/fractals/curves/tree3-60_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(86)">
+          onclick="gotoSlide(86, true)">
       </div>
       <div class="category">
         <h2>Plants</h2>
         <p>Fractal plants (such as leaves and trees).</p>
         <img src="assets/fractals/plants/canopy_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(87)">
+          onclick="gotoSlide(87, true)">
         <img src="assets/fractals/plants/pythagoras-tree_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(88)">
+          onclick="gotoSlide(88, true)">
         <img src="assets/fractals/plants/tree_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(89)">
+          onclick="gotoSlide(89, true)">
         <img src="assets/fractals/plants/tree2_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(90)">
+          onclick="gotoSlide(90, true)">
         <img src="assets/fractals/plants/tree4_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(91)">
+          onclick="gotoSlide(91, true)">
         <img src="assets/fractals/plants/pine_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(92)">
+          onclick="gotoSlide(92, true)">
         <img src="assets/fractals/plants/fern_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(93)">
+          onclick="gotoSlide(93, true)">
         <img src="assets/fractals/plants/cabbage_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(94)">
+          onclick="gotoSlide(94, true)">
         <img src="assets/fractals/plants/flower_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(95)">
+          onclick="gotoSlide(95, true)">
         <img src="assets/fractals/plants/bamboo_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(96)">
+          onclick="gotoSlide(96, true)">
         <img src="assets/fractals/plants/mushrooms1_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(97)">
+          onclick="gotoSlide(97, true)">
         <img src="assets/fractals/plants/mushrooms2_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(98)">
+          onclick="gotoSlide(98, true)">
       </div>
       <div class="category">
         <h2>Nature</h2>
         <p>Other things from nature that are not plants.</p>
         <img src="assets/fractals/nature/cloud_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(99)">
+          onclick="gotoSlide(99, true)">
         <img src="assets/fractals/nature/centipede_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(100)">
+          onclick="gotoSlide(100, true)">
         <img src="assets/fractals/nature/mountainscape_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(101)">
+          onclick="gotoSlide(101, true)">
       </div>
       <div class="category">
         <h2>Spirals</h2>
         <p>Spiral fractals.</p>
         <img src="assets/fractals/spirals/rainbow_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(102)">
+          onclick="gotoSlide(102, true)">
         <img src="assets/fractals/spirals/vortex_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(103)">
+          onclick="gotoSlide(103, true)">
         <img src="assets/fractals/spirals/fire_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(104)">
+          onclick="gotoSlide(104, true)">
         <img src="assets/fractals/spirals/blossom_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(105)">
+          onclick="gotoSlide(105, true)">
       </div>
       <div class="category">
         <h2>Abstract</h2>
         <p>Abstract shapes that don&#39;t fit into any of the other categories.</p>
         <img src="assets/fractals/abstract/abstract1_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(106)">
+          onclick="gotoSlide(106, true)">
         <img src="assets/fractals/abstract/abstract2_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(107)">
+          onclick="gotoSlide(107, true)">
         <img src="assets/fractals/abstract/abstract3_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(108)">
+          onclick="gotoSlide(108, true)">
         <img src="assets/fractals/abstract/abstract4_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(109)">
+          onclick="gotoSlide(109, true)">
         <img src="assets/fractals/abstract/abstract6_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(110)">
+          onclick="gotoSlide(110, true)">
         <img src="assets/fractals/abstract/cross_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(111)">
+          onclick="gotoSlide(111, true)">
         <img src="assets/fractals/abstract/heart_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(112)">
+          onclick="gotoSlide(112, true)">
         <img src="assets/fractals/abstract/transmission_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(113)">
+          onclick="gotoSlide(113, true)">
         <img src="assets/fractals/abstract/curved-htree_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(114)">
+          onclick="gotoSlide(114, true)">
       </div>
       <div class="category">
         <h2>3D</h2>
         <p>Three dimensional fractals</p>
         <img src="assets/fractals/3d/menger-fake_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(115)">
+          onclick="gotoSlide(115, true)">
         <img src="assets/fractals/3d/menger-grey_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(116)">
+          onclick="gotoSlide(116, true)">
         <img src="assets/fractals/3d/menger-rgb_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(117)">
+          onclick="gotoSlide(117, true)">
         <img src="assets/fractals/3d/cross-menger_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(118)">
+          onclick="gotoSlide(118, true)">
         <img src="assets/fractals/3d/tetrix_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(119)">
+          onclick="gotoSlide(119, true)">
         <img src="assets/fractals/3d/pyramid_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(120)">
+          onclick="gotoSlide(120, true)">
         <img src="assets/fractals/3d/mosely-snowflake_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(121)">
+          onclick="gotoSlide(121, true)">
         <img src="assets/fractals/3d/sm-snowflake_600.png" height="80"
-          onclick="setMode('slides'); gotoSlide(122)">
+          onclick="gotoSlide(122, true)">
       </div>
     </div>
   </div>
@@ -346,17 +347,17 @@
         <h2 class="name">Sierpiński Triangle</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description">The classic Sierpiński Gasket (triangle)</p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2079 pixels (1.154:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2079 pixels (1.154:1)
         </p>
-        <p class="fracdimension">Fractal <a href="https://en.wikipedia.org/wiki/Fractal_dimension">dimension</a>:
+        <p class="dimension">Fractal <a href="https://en.wikipedia.org/wiki/Fractal_dimension">dimension</a>:
           `log(3) / log(2) = 1.585`
         </p>
         <p class="links">References:<br /><a href="https://en.wikipedia.org/wiki/Sierpiński_triangle"
             target="_blank">Wikipedia &gt; Sierpiński triangle</a>
         </p>
         <p class="download">
-          <a href="assets/fractals/triangles/sierpinski.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/triangles/sierpinski.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -369,11 +370,11 @@
         <h2 class="name">Sierpiński Triangle with rectangles</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2079 pixels (1.154:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2079 pixels (1.154:1)
         </p>
         <p class="download">
-          <a href="assets/fractals/triangles/rectangles.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/triangles/rectangles.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -386,11 +387,11 @@
         <h2 class="name">Sierpiński Triangle with rotated rectangles</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2079 pixels (1.154:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2079 pixels (1.154:1)
         </p>
         <p class="download">
-          <a href="assets/fractals/triangles/rotated-rectangles.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/triangles/rotated-rectangles.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -403,11 +404,11 @@
         <h2 class="name">Sierpiński Triangle with coloured rectangles</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2079 pixels (1.154:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2079 pixels (1.154:1)
         </p>
         <p class="download">
-          <a href="assets/fractals/triangles/coloured-rectangles.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/triangles/coloured-rectangles.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -420,11 +421,11 @@
         <h2 class="name">Shaded Sierpiński Triangle</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2079 pixels (1.154:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2079 pixels (1.154:1)
         </p>
         <p class="download">
-          <a href="assets/fractals/triangles/shaded.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/triangles/shaded.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -437,11 +438,11 @@
         <h2 class="name">Colour shaded Sierpiński Triangle</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2079 pixels (1.154:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2079 pixels (1.154:1)
         </p>
         <p class="download">
-          <a href="assets/fractals/triangles/rgb.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/triangles/rgb.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -454,11 +455,11 @@
         <h2 class="name">Sierpiński Triangle made of circles</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2079 pixels (1.154:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2079 pixels (1.154:1)
         </p>
         <p class="download">
-          <a href="assets/fractals/triangles/circles.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/triangles/circles.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -471,11 +472,11 @@
         <h2 class="name">Sierpiński Triangle made of coloured circles</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2079 pixels (1.154:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2079 pixels (1.154:1)
         </p>
         <p class="download">
-          <a href="assets/fractals/triangles/cmy.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/triangles/cmy.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -488,11 +489,11 @@
         <h2 class="name">Rotated Sierpiński</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2079 pixels (1.154:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2079 pixels (1.154:1)
         </p>
         <p class="download">
-          <a href="assets/fractals/triangles/rotated-sierpinski.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/triangles/rotated-sierpinski.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -505,14 +506,14 @@
         <h2 class="name">Triflake</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2079 pixels (1.154:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2079 pixels (1.154:1)
         </p>
-        <p class="fracdimension">Fractal <a href="https://en.wikipedia.org/wiki/Fractal_dimension">dimension</a>:
+        <p class="dimension">Fractal <a href="https://en.wikipedia.org/wiki/Fractal_dimension">dimension</a>:
           `log(4) / log(2.5) = 1.513`
         </p>
         <p class="download">
-          <a href="assets/fractals/triangles/triflake.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/triangles/triflake.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -525,11 +526,11 @@
         <h2 class="name">Shaded Triflake</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2079 pixels (1.154:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2079 pixels (1.154:1)
         </p>
         <p class="download">
-          <a href="assets/fractals/triangles/triflake-shaded.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/triangles/triflake-shaded.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -542,11 +543,11 @@
         <h2 class="name">Shaded Rotated Triflake</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2079 pixels (1.154:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2079 pixels (1.154:1)
         </p>
         <p class="download">
-          <a href="assets/fractals/triangles/triflake-rotated-shaded.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/triangles/triflake-rotated-shaded.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -559,11 +560,11 @@
         <h2 class="name">Hourglass</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2079 pixels (1.154:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2079 pixels (1.154:1)
         </p>
         <p class="download">
-          <a href="assets/fractals/triangles/hourglass.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/triangles/hourglass.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -576,11 +577,11 @@
         <h2 class="name">Lace</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2079 pixels (1.154:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2079 pixels (1.154:1)
         </p>
         <p class="download">
-          <a href="assets/fractals/triangles/lace.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/triangles/lace.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -593,11 +594,11 @@
         <h2 class="name">Fractal Dust</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2400 pixels (1:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2400 pixels (1:1)
         </p>
         <p class="download">
-          <a href="assets/fractals/triangles/dust.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/triangles/dust.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -610,11 +611,11 @@
         <h2 class="name">Triangular Lightning</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2400 pixels (1:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2400 pixels (1:1)
         </p>
         <p class="download">
-          <a href="assets/fractals/triangles/lightning.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/triangles/lightning.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -627,17 +628,17 @@
         <h2 class="name">Sierpiński Carpet</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description">The classic Sierpiński Carpet (square)</p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2400 pixels (1:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2400 pixels (1:1)
         </p>
-        <p class="fracdimension">Fractal <a href="https://en.wikipedia.org/wiki/Fractal_dimension">dimension</a>:
+        <p class="dimension">Fractal <a href="https://en.wikipedia.org/wiki/Fractal_dimension">dimension</a>:
           `log(8) / log(3) = 1.893`
         </p>
         <p class="links">References:<br /><a href="https://en.wikipedia.org/wiki/Sierpiński_carpet"
             target="_blank">Wikipedia &gt; Sierpiński carpet</a>
         </p>
         <p class="download">
-          <a href="assets/fractals/squares/sierpinski.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/squares/sierpinski.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -650,11 +651,11 @@
         <h2 class="name">Sierpiński Carpet with colour gradient</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2400 pixels (1:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2400 pixels (1:1)
         </p>
         <p class="download">
-          <a href="assets/fractals/squares/gradient.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/squares/gradient.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -667,11 +668,11 @@
         <h2 class="name">Sierpiński Carpet with outline</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2400 pixels (1:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2400 pixels (1:1)
         </p>
         <p class="download">
-          <a href="assets/fractals/squares/outline.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/squares/outline.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -684,11 +685,11 @@
         <h2 class="name">Sierpiński Carpet with coloured outline</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2400 pixels (1:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2400 pixels (1:1)
         </p>
         <p class="download">
-          <a href="assets/fractals/squares/coloured-outline.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/squares/coloured-outline.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -701,11 +702,11 @@
         <h2 class="name">Sierpiński Carpet with diagonals</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2400 pixels (1:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2400 pixels (1:1)
         </p>
         <p class="download">
-          <a href="assets/fractals/squares/diagonals.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/squares/diagonals.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -718,11 +719,11 @@
         <h2 class="name">Sierpiński Carpet with coloured diagonals</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2400 pixels (1:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2400 pixels (1:1)
         </p>
         <p class="download">
-          <a href="assets/fractals/squares/coloured-diagonals.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/squares/coloured-diagonals.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -735,11 +736,11 @@
         <h2 class="name">Inverted Sierpiński Carpet</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2400 pixels (1:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2400 pixels (1:1)
         </p>
         <p class="download">
-          <a href="assets/fractals/squares/inverted.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/squares/inverted.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -752,17 +753,17 @@
         <h2 class="name">Vicsek fractal</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2400 pixels (1:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2400 pixels (1:1)
         </p>
-        <p class="fracdimension">Fractal <a href="https://en.wikipedia.org/wiki/Fractal_dimension">dimension</a>:
+        <p class="dimension">Fractal <a href="https://en.wikipedia.org/wiki/Fractal_dimension">dimension</a>:
           `log(5) / log(3) = 1.465`
         </p>
         <p class="links">References:<br /><a href="https://en.wikipedia.org/wiki/Vicsek_fractal"
             target="_blank">Wikipedia &gt; Vicsek fractal</a>
         </p>
         <p class="download">
-          <a href="assets/fractals/squares/vicsek.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/squares/vicsek.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -775,11 +776,11 @@
         <h2 class="name">Coloured Vicsek Fractal</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2400 pixels (1:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2400 pixels (1:1)
         </p>
         <p class="download">
-          <a href="assets/fractals/squares/vicsek-coloured.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/squares/vicsek-coloured.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -792,11 +793,11 @@
         <h2 class="name">Vicsek of Circles</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2400 pixels (1:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2400 pixels (1:1)
         </p>
         <p class="download">
-          <a href="assets/fractals/squares/vicsek-circle.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/squares/vicsek-circle.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -809,14 +810,14 @@
         <h2 class="name">Diagonal Vicsek Fractal</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2400 pixels (1:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2400 pixels (1:1)
         </p>
-        <p class="fracdimension">Fractal <a href="https://en.wikipedia.org/wiki/Fractal_dimension">dimension</a>:
+        <p class="dimension">Fractal <a href="https://en.wikipedia.org/wiki/Fractal_dimension">dimension</a>:
           `log(5) / log(3) = 1.465`
         </p>
         <p class="download">
-          <a href="assets/fractals/squares/vicsek-diagonal.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/squares/vicsek-diagonal.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -829,14 +830,14 @@
         <h2 class="name">Fractal H-I de Rivera</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2400 pixels (1:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2400 pixels (1:1)
         </p>
-        <p class="fracdimension">Fractal <a href="https://en.wikipedia.org/wiki/Fractal_dimension">dimension</a>:
+        <p class="dimension">Fractal <a href="https://en.wikipedia.org/wiki/Fractal_dimension">dimension</a>:
           `log(7) / log(3) = 1.771`
         </p>
         <p class="download">
-          <a href="assets/fractals/squares/h.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/squares/h.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -849,14 +850,14 @@
         <h2 class="name">Fractal Castle</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2400 pixels (1:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2400 pixels (1:1)
         </p>
-        <p class="fracdimension">Fractal <a href="https://en.wikipedia.org/wiki/Fractal_dimension">dimension</a>:
+        <p class="dimension">Fractal <a href="https://en.wikipedia.org/wiki/Fractal_dimension">dimension</a>:
           `log(8) / log(3) = 1.893`
         </p>
         <p class="download">
-          <a href="assets/fractals/squares/castle.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/squares/castle.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -869,14 +870,14 @@
         <h2 class="name">Jerusalem Cross</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2400 pixels (1:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2400 pixels (1:1)
         </p>
-        <p class="fracdimension">Fractal <a href="https://en.wikipedia.org/wiki/Fractal_dimension">dimension</a>:
+        <p class="dimension">Fractal <a href="https://en.wikipedia.org/wiki/Fractal_dimension">dimension</a>:
           `log((sqrt(2) - 1) / 2) / log(sqrt(2) - 1) = 1.786`
         </p>
         <p class="download">
-          <a href="assets/fractals/squares/cross.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/squares/cross.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -889,14 +890,14 @@
         <h2 class="name">Swiss Fractal</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2400 pixels (1:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2400 pixels (1:1)
         </p>
-        <p class="fracdimension">Fractal <a href="https://en.wikipedia.org/wiki/Fractal_dimension">dimension</a>:
+        <p class="dimension">Fractal <a href="https://en.wikipedia.org/wiki/Fractal_dimension">dimension</a>:
           `log(4) / log(110 / 43) = 1.476`
         </p>
         <p class="download">
-          <a href="assets/fractals/squares/swiss.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/squares/swiss.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -909,14 +910,14 @@
         <h2 class="name">Forest</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2400 pixels (1:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2400 pixels (1:1)
         </p>
-        <p class="fracdimension">Fractal <a href="https://en.wikipedia.org/wiki/Fractal_dimension">dimension</a>:
+        <p class="dimension">Fractal <a href="https://en.wikipedia.org/wiki/Fractal_dimension">dimension</a>:
           `log(5) / log(3) = 1.465`
         </p>
         <p class="download">
-          <a href="assets/fractals/squares/forest.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/squares/forest.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -929,11 +930,11 @@
         <h2 class="name">Copper Carpet</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2400 pixels (1:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2400 pixels (1:1)
         </p>
         <p class="download">
-          <a href="assets/fractals/squares/copper.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/squares/copper.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -946,11 +947,11 @@
         <h2 class="name">Distorted Carpet</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2400 pixels (1:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2400 pixels (1:1)
         </p>
         <p class="download">
-          <a href="assets/fractals/squares/distorted.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/squares/distorted.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -963,11 +964,11 @@
         <h2 class="name">Dots</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2400 pixels (1:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2400 pixels (1:1)
         </p>
         <p class="download">
-          <a href="assets/fractals/squares/dots.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/squares/dots.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -980,14 +981,14 @@
         <h2 class="name">Fractal Window</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2400 pixels (1:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2400 pixels (1:1)
         </p>
-        <p class="fracdimension">Fractal <a href="https://en.wikipedia.org/wiki/Fractal_dimension">dimension</a>:
+        <p class="dimension">Fractal <a href="https://en.wikipedia.org/wiki/Fractal_dimension">dimension</a>:
           `log(4) / log(12 / 5) = 1.583`
         </p>
         <p class="download">
-          <a href="assets/fractals/squares/window.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/squares/window.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -1000,14 +1001,14 @@
         <h2 class="name">Degraded Square</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2400 pixels (1:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2400 pixels (1:1)
         </p>
-        <p class="fracdimension">Fractal <a href="https://en.wikipedia.org/wiki/Fractal_dimension">dimension</a>:
+        <p class="dimension">Fractal <a href="https://en.wikipedia.org/wiki/Fractal_dimension">dimension</a>:
           `log(8) / log(3) = 1.893`
         </p>
         <p class="download">
-          <a href="assets/fractals/squares/degraded.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/squares/degraded.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -1020,17 +1021,17 @@
         <h2 class="name">The Pentaflake</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2318 pixels (1.035:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2318 pixels (1.035:1)
         </p>
-        <p class="fracdimension">Fractal <a href="https://en.wikipedia.org/wiki/Fractal_dimension">dimension</a>:
+        <p class="dimension">Fractal <a href="https://en.wikipedia.org/wiki/Fractal_dimension">dimension</a>:
           `log(6) / log((3 + sqrt(5)) / 2) = 1.862`
         </p>
         <p class="links">References:<br /><a href="https://en.wikipedia.org/wiki/N-flake#Pentaflake"
             target="_blank">Wikipedia &gt; N-flake &gt; Pentaflake</a>
         </p>
         <p class="download">
-          <a href="assets/fractals/pentagons/pentaflake.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/pentagons/pentaflake.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -1043,17 +1044,17 @@
         <h2 class="name">Sierpiński Pentagon</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2318 pixels (1.035:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2318 pixels (1.035:1)
         </p>
-        <p class="fracdimension">Fractal <a href="https://en.wikipedia.org/wiki/Fractal_dimension">dimension</a>:
+        <p class="dimension">Fractal <a href="https://en.wikipedia.org/wiki/Fractal_dimension">dimension</a>:
           `log(5) / log((3 + sqrt(5)) / 2) = 1.672`
         </p>
         <p class="links">References:<br /><a href="https://en.wikipedia.org/wiki/N-flake#Pentaflake"
             target="_blank">Wikipedia &gt; N-flake &gt; Pentaflake</a>
         </p>
         <p class="download">
-          <a href="assets/fractals/pentagons/sierpinski.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/pentagons/sierpinski.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -1066,11 +1067,11 @@
         <h2 class="name">Rotated Pentaflake</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2318 pixels (1.035:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2318 pixels (1.035:1)
         </p>
         <p class="download">
-          <a href="assets/fractals/pentagons/rotated-pentaflake.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/pentagons/rotated-pentaflake.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -1083,11 +1084,11 @@
         <h2 class="name">Rotated Sierpiński Pentagon</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2318 pixels (1.035:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2318 pixels (1.035:1)
         </p>
         <p class="download">
-          <a href="assets/fractals/pentagons/rotated-sierpinski.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/pentagons/rotated-sierpinski.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -1100,11 +1101,11 @@
         <h2 class="name">Pentaflake with a gap</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2318 pixels (1.035:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2318 pixels (1.035:1)
         </p>
         <p class="download">
-          <a href="assets/fractals/pentagons/pentaflake-gap.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/pentagons/pentaflake-gap.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -1117,11 +1118,11 @@
         <h2 class="name">Sierpiński Pentagon star</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2400 pixels (1:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2400 pixels (1:1)
         </p>
         <p class="download">
-          <a href="assets/fractals/pentagons/star.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/pentagons/star.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -1134,11 +1135,11 @@
         <h2 class="name">Twisted Sierpiński Pentagon</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2400 pixels (1:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2400 pixels (1:1)
         </p>
         <p class="download">
-          <a href="assets/fractals/pentagons/twist.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/pentagons/twist.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -1151,11 +1152,11 @@
         <h2 class="name">Sierpiński Pentagon microbe</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2318 pixels (1.035:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2318 pixels (1.035:1)
         </p>
         <p class="download">
-          <a href="assets/fractals/pentagons/microbe.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/pentagons/microbe.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -1168,17 +1169,17 @@
         <h2 class="name">Sierpiński Hexagon</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2771 pixels (0.866:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2771 pixels (0.866:1)
         </p>
-        <p class="fracdimension">Fractal <a href="https://en.wikipedia.org/wiki/Fractal_dimension">dimension</a>:
+        <p class="dimension">Fractal <a href="https://en.wikipedia.org/wiki/Fractal_dimension">dimension</a>:
           `log(6) / log(3) = 1.631`
         </p>
         <p class="links">References:<br /><a href="https://en.wikipedia.org/wiki/N-flake#Hexaflake"
             target="_blank">Wikipedia &gt; N-flake &gt; Hexaflake</a>
         </p>
         <p class="download">
-          <a href="assets/fractals/hexagons/sierpinski.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/hexagons/sierpinski.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -1191,11 +1192,11 @@
         <h2 class="name">Shaded Sierpiński Hexagon</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2771 pixels (0.866:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2771 pixels (0.866:1)
         </p>
         <p class="download">
-          <a href="assets/fractals/hexagons/sierpinski-shaded.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/hexagons/sierpinski-shaded.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -1208,11 +1209,11 @@
         <h2 class="name">Coloured Sierpiński Hexagon</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2771 pixels (0.866:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2771 pixels (0.866:1)
         </p>
         <p class="download">
-          <a href="assets/fractals/hexagons/sierpinski-coloured.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/hexagons/sierpinski-coloured.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -1225,11 +1226,11 @@
         <h2 class="name">Rotated Sierpinski Hexagon</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2400 pixels (1:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2400 pixels (1:1)
         </p>
         <p class="download">
-          <a href="assets/fractals/hexagons/sierpinski-rotated.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/hexagons/sierpinski-rotated.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -1242,11 +1243,11 @@
         <h2 class="name">Rotated Shaded Sierpinski Hexagon</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2400 pixels (1:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2400 pixels (1:1)
         </p>
         <p class="download">
-          <a href="assets/fractals/hexagons/sierpinski-rotated-shaded.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/hexagons/sierpinski-rotated-shaded.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -1259,17 +1260,17 @@
         <h2 class="name">Koch Snowflake</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2771 pixels (0.866:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2771 pixels (0.866:1)
         </p>
-        <p class="fracdimension">Fractal <a href="https://en.wikipedia.org/wiki/Fractal_dimension">dimension</a>:
+        <p class="dimension">Fractal <a href="https://en.wikipedia.org/wiki/Fractal_dimension">dimension</a>:
           `2`
         </p>
         <p class="links">References:<br /><a href="https://en.wikipedia.org/wiki/Koch_snowflake"
             target="_blank">Wikipedia &gt; Koch snowflake</a>
         </p>
         <p class="download">
-          <a href="assets/fractals/hexagons/koch.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/hexagons/koch.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -1282,11 +1283,11 @@
         <h2 class="name">Exploding Koch Snowflake</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2771 pixels (0.866:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2771 pixels (0.866:1)
         </p>
         <p class="download">
-          <a href="assets/fractals/hexagons/exploding.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/hexagons/exploding.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -1299,11 +1300,11 @@
         <h2 class="name">Exploded Koch Snowflake</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2771 pixels (0.866:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2771 pixels (0.866:1)
         </p>
         <p class="download">
-          <a href="assets/fractals/hexagons/exploded.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/hexagons/exploded.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -1316,11 +1317,11 @@
         <h2 class="name">Snowflake</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2400 pixels (1:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2400 pixels (1:1)
         </p>
         <p class="download">
-          <a href="assets/fractals/hexagons/snowflake.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/hexagons/snowflake.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -1333,17 +1334,17 @@
         <h2 class="name">Hexaflake</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2771 pixels (0.866:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2771 pixels (0.866:1)
         </p>
-        <p class="fracdimension">Fractal <a href="https://en.wikipedia.org/wiki/Fractal_dimension">dimension</a>:
+        <p class="dimension">Fractal <a href="https://en.wikipedia.org/wiki/Fractal_dimension">dimension</a>:
           `log(7) / log(3) = 1.771`
         </p>
         <p class="links">References:<br /><a href="https://en.wikipedia.org/wiki/N-flake#Hexaflake"
             target="_blank">Wikipedia &gt; N-flake &gt; Hexaflake</a>
         </p>
         <p class="download">
-          <a href="assets/fractals/hexagons/hexaflake.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/hexagons/hexaflake.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -1356,11 +1357,11 @@
         <h2 class="name">Rotated Hexaflake</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2400 pixels (1:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2400 pixels (1:1)
         </p>
         <p class="download">
-          <a href="assets/fractals/hexagons/hexaflake-rotated.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/hexagons/hexaflake-rotated.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -1373,11 +1374,11 @@
         <h2 class="name">Shaded Hexaflake Hexagon</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2771 pixels (0.866:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2771 pixels (0.866:1)
         </p>
         <p class="download">
-          <a href="assets/fractals/hexagons/hexaflake-shaded.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/hexagons/hexaflake-shaded.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -1390,11 +1391,11 @@
         <h2 class="name">Shaded Hexaflake</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2771 pixels (0.866:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2771 pixels (0.866:1)
         </p>
         <p class="download">
-          <a href="assets/fractals/hexagons/hexaflake-shaded2.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/hexagons/hexaflake-shaded2.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -1407,11 +1408,11 @@
         <h2 class="name">Purple Hexaflake</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2771 pixels (0.866:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2771 pixels (0.866:1)
         </p>
         <p class="download">
-          <a href="assets/fractals/hexagons/hexaflake-shaded3.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/hexagons/hexaflake-shaded3.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -1424,11 +1425,11 @@
         <h2 class="name">RGB Hexaflake</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2771 pixels (0.866:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2771 pixels (0.866:1)
         </p>
         <p class="download">
-          <a href="assets/fractals/hexagons/hexaflake-coloured.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/hexagons/hexaflake-coloured.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -1441,11 +1442,11 @@
         <h2 class="name">Coloured Hexaflake</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2771 pixels (0.866:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2771 pixels (0.866:1)
         </p>
         <p class="download">
-          <a href="assets/fractals/hexagons/hexaflake-coloured2.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/hexagons/hexaflake-coloured2.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -1458,11 +1459,11 @@
         <h2 class="name">Hexagonal Cell</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2771 pixels (0.866:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2771 pixels (0.866:1)
         </p>
         <p class="download">
-          <a href="assets/fractals/hexagons/hexaflake-cell.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/hexagons/hexaflake-cell.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -1475,11 +1476,11 @@
         <h2 class="name">Barcode</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 1600 pixels (1.5:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;1600 pixels (1.5:1)
         </p>
         <p class="download">
-          <a href="assets/fractals/linear/barcode.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/linear/barcode.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -1492,14 +1493,14 @@
         <h2 class="name">Cantor Set as French flag</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 1600 pixels (1.5:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;1600 pixels (1.5:1)
         </p>
-        <p class="fracdimension">Fractal <a href="https://en.wikipedia.org/wiki/Fractal_dimension">dimension</a>:
+        <p class="dimension">Fractal <a href="https://en.wikipedia.org/wiki/Fractal_dimension">dimension</a>:
           `log(2) / log(3) = 0.631`
         </p>
         <p class="download">
-          <a href="assets/fractals/linear/french-cantor.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/linear/french-cantor.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -1512,11 +1513,11 @@
         <h2 class="name">Fractal Colour Palette</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 1600 pixels (1.5:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;1600 pixels (1.5:1)
         </p>
         <p class="download">
-          <a href="assets/fractals/linear/palette.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/linear/palette.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -1529,11 +1530,11 @@
         <h2 class="name">Power Lines</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2000 pixels (1.2:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2000 pixels (1.2:1)
         </p>
         <p class="download">
-          <a href="assets/fractals/linear/powerlines.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/linear/powerlines.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -1546,11 +1547,11 @@
         <h2 class="name">Dots</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2400 pixels (1:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2400 pixels (1:1)
         </p>
         <p class="download">
-          <a href="assets/fractals/linear/dots.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/linear/dots.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -1563,11 +1564,11 @@
         <h2 class="name">Circles</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2000 pixels (1.2:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2000 pixels (1.2:1)
         </p>
         <p class="download">
-          <a href="assets/fractals/linear/circles.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/linear/circles.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -1580,11 +1581,11 @@
         <h2 class="name">Bubbles</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2000 pixels (1.2:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2000 pixels (1.2:1)
         </p>
         <p class="download">
-          <a href="assets/fractals/linear/bubbles.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/linear/bubbles.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -1597,11 +1598,11 @@
         <h2 class="name">Shard</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2400 pixels (1:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2400 pixels (1:1)
         </p>
         <p class="download">
-          <a href="assets/fractals/linear/shard.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/linear/shard.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -1614,11 +1615,11 @@
         <h2 class="name">Jagged</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2400 pixels (1:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2400 pixels (1:1)
         </p>
         <p class="download">
-          <a href="assets/fractals/linear/jagged.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/linear/jagged.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -1631,11 +1632,11 @@
         <h2 class="name">Metal</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2000 pixels (1.2:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2000 pixels (1.2:1)
         </p>
         <p class="download">
-          <a href="assets/fractals/linear/metal.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/linear/metal.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -1648,11 +1649,11 @@
         <h2 class="name">Slava Ukraini</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2000 pixels (1.2:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2000 pixels (1.2:1)
         </p>
         <p class="download">
-          <a href="assets/fractals/linear/ukraine.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/linear/ukraine.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -1665,17 +1666,17 @@
         <h2 class="name">Koch Curve</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2000 pixels (1.2:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2000 pixels (1.2:1)
         </p>
-        <p class="fracdimension">Fractal <a href="https://en.wikipedia.org/wiki/Fractal_dimension">dimension</a>:
+        <p class="dimension">Fractal <a href="https://en.wikipedia.org/wiki/Fractal_dimension">dimension</a>:
           `log(4) / log(3) = 1.262`
         </p>
         <p class="links">References:<br /><a href="https://en.wikipedia.org/wiki/Koch_snowflake"
             target="_blank">Wikipedia &gt; Koch snowflake</a>
         </p>
         <p class="download">
-          <a href="assets/fractals/curves/koch.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/curves/koch.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -1688,11 +1689,11 @@
         <h2 class="name">Koch Curve (square variation)</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2000 pixels (1.2:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2000 pixels (1.2:1)
         </p>
         <p class="download">
-          <a href="assets/fractals/curves/square.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/curves/square.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -1705,17 +1706,17 @@
         <h2 class="name">Heighway Dragon</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2000 pixels (1.2:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2000 pixels (1.2:1)
         </p>
-        <p class="fracdimension">Fractal <a href="https://en.wikipedia.org/wiki/Fractal_dimension">dimension</a>:
+        <p class="dimension">Fractal <a href="https://en.wikipedia.org/wiki/Fractal_dimension">dimension</a>:
           `2`
         </p>
         <p class="links">References:<br /><a href="https://en.wikipedia.org/wiki/Dragon_curve#Heighway_dragon"
             target="_blank">Wikipedia &gt; Heighway dragon</a>
         </p>
         <p class="download">
-          <a href="assets/fractals/curves/dragon.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/curves/dragon.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -1728,11 +1729,11 @@
         <h2 class="name">Golden Dragon Curve</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2000 pixels (1.2:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2000 pixels (1.2:1)
         </p>
         <p class="download">
-          <a href="assets/fractals/curves/golden.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/curves/golden.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -1745,14 +1746,14 @@
         <h2 class="name">Cesàro Fractal</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2000 pixels (1.2:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2000 pixels (1.2:1)
         </p>
         <p class="links">References:<br /><a href="https://en.wikipedia.org/wiki/Koch_snowflake#Variants_of_the_Koch_curve"
             target="_blank">Wikipedia &gt; Koch snowflake &gt; Variants of the Koch curve</a>
         </p>
         <p class="download">
-          <a href="assets/fractals/curves/cesaro.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/curves/cesaro.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -1765,14 +1766,14 @@
         <h2 class="name">H Tree</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 1697 pixels (1.414:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;1697 pixels (1.414:1)
         </p>
         <p class="links">References:<br /><a href="https://en.wikipedia.org/wiki/H_tree"
             target="_blank">Wikipedia &gt; H Tree</a>
         </p>
         <p class="download">
-          <a href="assets/fractals/curves/htree.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/curves/htree.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -1785,11 +1786,11 @@
         <h2 class="name">Coloured H Tree</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 1697 pixels (1.414:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;1697 pixels (1.414:1)
         </p>
         <p class="download">
-          <a href="assets/fractals/curves/coloured-htree.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/curves/coloured-htree.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -1802,14 +1803,14 @@
         <h2 class="name">Mandelbrot Tree</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 1697 pixels (1.414:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;1697 pixels (1.414:1)
         </p>
         <p class="links">References:<br /><a href="https://en.wikipedia.org/wiki/H_tree#Related_sets"
             target="_blank">Wikipedia &gt; H Tree &gt; Related sets</a>
         </p>
         <p class="download">
-          <a href="assets/fractals/curves/mandelbrot-tree.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/curves/mandelbrot-tree.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -1822,14 +1823,14 @@
         <h2 class="name">Fibonacci word fractal</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 1697 pixels (1.414:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;1697 pixels (1.414:1)
         </p>
         <p class="links">References:<br /><a href="https://en.wikipedia.org/wiki/Fibonacci_word_fractal"
             target="_blank">Wikipedia &gt; Fibonacci word fractal</a>
         </p>
         <p class="download">
-          <a href="assets/fractals/curves/fibonacci.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/curves/fibonacci.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -1842,17 +1843,17 @@
         <h2 class="name">Lévy C curve</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2400 pixels (1:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2400 pixels (1:1)
         </p>
-        <p class="fracdimension">Fractal <a href="https://en.wikipedia.org/wiki/Fractal_dimension">dimension</a>:
+        <p class="dimension">Fractal <a href="https://en.wikipedia.org/wiki/Fractal_dimension">dimension</a>:
           `2`
         </p>
         <p class="links">References:<br /><a href="https://en.wikipedia.org/wiki/Lévy_C_curve"
             target="_blank">Wikipedia &gt; Lévy C curve</a>
         </p>
         <p class="download">
-          <a href="assets/fractals/curves/levy-c.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/curves/levy-c.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -1865,11 +1866,11 @@
         <h2 class="name">Coloured Lévy C curve</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2400 pixels (1:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2400 pixels (1:1)
         </p>
         <p class="download">
-          <a href="assets/fractals/curves/levy-c-coloured.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/curves/levy-c-coloured.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -1882,11 +1883,11 @@
         <h2 class="name">Pythagoras Curve</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2000 pixels (1.2:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2000 pixels (1.2:1)
         </p>
         <p class="download">
-          <a href="assets/fractals/curves/pythagoras.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/curves/pythagoras.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -1899,11 +1900,11 @@
         <h2 class="name">3-branched Tree (90 degrees)</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2400 pixels (1:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2400 pixels (1:1)
         </p>
         <p class="download">
-          <a href="assets/fractals/curves/tree3-90.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/curves/tree3-90.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -1916,11 +1917,11 @@
         <h2 class="name">3-branched Tree (60 degrees)</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2400 pixels (1:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2400 pixels (1:1)
         </p>
         <p class="download">
-          <a href="assets/fractals/curves/tree3-60.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/curves/tree3-60.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -1933,14 +1934,14 @@
         <h2 class="name">Fractal Canopy</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2400 pixels (1:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2400 pixels (1:1)
         </p>
         <p class="links">References:<br /><a href="https://en.wikipedia.org/wiki/Fractal_canopy"
             target="_blank">Wikipedia &gt; Fractal canopy</a>
         </p>
         <p class="download">
-          <a href="assets/fractals/plants/canopy.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/plants/canopy.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -1953,14 +1954,14 @@
         <h2 class="name">3-4-5 Pythagoras Tree</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2000 pixels (1.2:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2000 pixels (1.2:1)
         </p>
         <p class="links">References:<br /><a href="https://en.wikipedia.org/wiki/Pythagoras_tree_(fractal)"
             target="_blank">Wikipedia &gt; Pythagoras tree (fractal)</a>
         </p>
         <p class="download">
-          <a href="assets/fractals/plants/pythagoras-tree.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/plants/pythagoras-tree.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -1973,11 +1974,11 @@
         <h2 class="name">Tree</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2000 pixels (1.2:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2000 pixels (1.2:1)
         </p>
         <p class="download">
-          <a href="assets/fractals/plants/tree.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/plants/tree.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -1990,11 +1991,11 @@
         <h2 class="name">Tree 2</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2400 pixels (1:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2400 pixels (1:1)
         </p>
         <p class="download">
-          <a href="assets/fractals/plants/tree2.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/plants/tree2.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -2007,11 +2008,11 @@
         <h2 class="name">4-branch Tree</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2400 pixels (1:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2400 pixels (1:1)
         </p>
         <p class="download">
-          <a href="assets/fractals/plants/tree4.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/plants/tree4.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -2024,11 +2025,11 @@
         <h2 class="name">Pine Tree</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2000 pixels (1.2:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2000 pixels (1.2:1)
         </p>
         <p class="download">
-          <a href="assets/fractals/plants/pine.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/plants/pine.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -2041,11 +2042,11 @@
         <h2 class="name">Fern</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2000 pixels (1.2:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2000 pixels (1.2:1)
         </p>
         <p class="download">
-          <a href="assets/fractals/plants/fern.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/plants/fern.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -2058,11 +2059,11 @@
         <h2 class="name">Cabbage Leaf</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2000 pixels (1.2:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2000 pixels (1.2:1)
         </p>
         <p class="download">
-          <a href="assets/fractals/plants/cabbage.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/plants/cabbage.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -2075,11 +2076,11 @@
         <h2 class="name">Flowers</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2400 pixels (1:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2400 pixels (1:1)
         </p>
         <p class="download">
-          <a href="assets/fractals/plants/flower.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/plants/flower.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -2092,11 +2093,11 @@
         <h2 class="name">Bamboo</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2400 pixels (1:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2400 pixels (1:1)
         </p>
         <p class="download">
-          <a href="assets/fractals/plants/bamboo.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/plants/bamboo.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -2109,11 +2110,11 @@
         <h2 class="name">Mushrooms (closed)</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2400 pixels (1:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2400 pixels (1:1)
         </p>
         <p class="download">
-          <a href="assets/fractals/plants/mushrooms1.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/plants/mushrooms1.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -2126,11 +2127,11 @@
         <h2 class="name">Mushrooms (open)</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2400 pixels (1:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2400 pixels (1:1)
         </p>
         <p class="download">
-          <a href="assets/fractals/plants/mushrooms2.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/plants/mushrooms2.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -2143,11 +2144,11 @@
         <h2 class="name">Cloud</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2000 pixels (1.2:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2000 pixels (1.2:1)
         </p>
         <p class="download">
-          <a href="assets/fractals/nature/cloud.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/nature/cloud.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -2160,11 +2161,11 @@
         <h2 class="name">Centipede</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2400 pixels (1:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2400 pixels (1:1)
         </p>
         <p class="download">
-          <a href="assets/fractals/nature/centipede.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/nature/centipede.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -2177,11 +2178,11 @@
         <h2 class="name">Mountainscape</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2000 pixels (1.2:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2000 pixels (1.2:1)
         </p>
         <p class="download">
-          <a href="assets/fractals/nature/mountainscape.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/nature/mountainscape.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -2194,11 +2195,11 @@
         <h2 class="name">Rainbow Spiral</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2400 pixels (1:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2400 pixels (1:1)
         </p>
         <p class="download">
-          <a href="assets/fractals/spirals/rainbow.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/spirals/rainbow.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -2211,11 +2212,11 @@
         <h2 class="name">Vortex</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2400 pixels (1:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2400 pixels (1:1)
         </p>
         <p class="download">
-          <a href="assets/fractals/spirals/vortex.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/spirals/vortex.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -2228,11 +2229,11 @@
         <h2 class="name">Fire Spiral</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2400 pixels (1:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2400 pixels (1:1)
         </p>
         <p class="download">
-          <a href="assets/fractals/spirals/fire.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/spirals/fire.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -2245,11 +2246,11 @@
         <h2 class="name">Spiral Blossom</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2000 pixels (1.2:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2000 pixels (1.2:1)
         </p>
         <p class="download">
-          <a href="assets/fractals/spirals/blossom.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/spirals/blossom.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -2262,11 +2263,11 @@
         <h2 class="name">Jack-in-the-box</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2000 pixels (1.2:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2000 pixels (1.2:1)
         </p>
         <p class="download">
-          <a href="assets/fractals/abstract/abstract1.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/abstract/abstract1.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -2279,11 +2280,11 @@
         <h2 class="name">Ominous Bubbles</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2000 pixels (1.2:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2000 pixels (1.2:1)
         </p>
         <p class="download">
-          <a href="assets/fractals/abstract/abstract2.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/abstract/abstract2.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -2296,11 +2297,11 @@
         <h2 class="name">Branching Balls</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2000 pixels (1.2:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2000 pixels (1.2:1)
         </p>
         <p class="download">
-          <a href="assets/fractals/abstract/abstract3.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/abstract/abstract3.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -2313,11 +2314,11 @@
         <h2 class="name">Angel</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2000 pixels (1.2:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2000 pixels (1.2:1)
         </p>
         <p class="download">
-          <a href="assets/fractals/abstract/abstract4.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/abstract/abstract4.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -2330,11 +2331,11 @@
         <h2 class="name">Fractal Herd</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2400 pixels (1:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2400 pixels (1:1)
         </p>
         <p class="download">
-          <a href="assets/fractals/abstract/abstract6.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/abstract/abstract6.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -2347,14 +2348,14 @@
         <h2 class="name">Cross</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2400 pixels (1:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2400 pixels (1:1)
         </p>
         <p class="links">References:<br /><a href="https://en.wikipedia.org/wiki/Minkowski_sausage"
             target="_blank">Wikipedia &gt; Minkowski Sausage</a>
         </p>
         <p class="download">
-          <a href="assets/fractals/abstract/cross.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/abstract/cross.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -2367,11 +2368,11 @@
         <h2 class="name">Shattered Heart</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2771 pixels (0.866:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2771 pixels (0.866:1)
         </p>
         <p class="download">
-          <a href="assets/fractals/abstract/heart.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/abstract/heart.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -2384,11 +2385,11 @@
         <h2 class="name">Transmission</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2079 pixels (1.154:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2079 pixels (1.154:1)
         </p>
         <p class="download">
-          <a href="assets/fractals/abstract/transmission.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/abstract/transmission.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -2401,11 +2402,11 @@
         <h2 class="name">Curved H Tree</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 1697 pixels (1.414:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;1697 pixels (1.414:1)
         </p>
         <p class="download">
-          <a href="assets/fractals/abstract/curved-htree.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/abstract/curved-htree.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -2418,11 +2419,11 @@
         <h2 class="name">Faked Menger Sponge</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2400 pixels (1:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2400 pixels (1:1)
         </p>
         <p class="download">
-          <a href="assets/fractals/3d/menger-fake.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/3d/menger-fake.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -2435,17 +2436,17 @@
         <h2 class="name">Menger Sponge (grey)</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2400 pixels (1:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2400 pixels (1:1)
         </p>
-        <p class="fracdimension">Fractal <a href="https://en.wikipedia.org/wiki/Fractal_dimension">dimension</a>:
+        <p class="dimension">Fractal <a href="https://en.wikipedia.org/wiki/Fractal_dimension">dimension</a>:
           `log(20) / log(3) = 2.727`
         </p>
         <p class="links">References:<br /><a href="https://en.wikipedia.org/wiki/Menger_sponge"
             target="_blank">Wikipedia &gt; Menger sponge</a>
         </p>
         <p class="download">
-          <a href="assets/fractals/3d/menger-grey.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/3d/menger-grey.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -2458,14 +2459,14 @@
         <h2 class="name">Menger Sponge (RGB)</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2400 pixels (1:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2400 pixels (1:1)
         </p>
-        <p class="fracdimension">Fractal <a href="https://en.wikipedia.org/wiki/Fractal_dimension">dimension</a>:
+        <p class="dimension">Fractal <a href="https://en.wikipedia.org/wiki/Fractal_dimension">dimension</a>:
           `log(20) / log(3) = 2.727`
         </p>
         <p class="download">
-          <a href="assets/fractals/3d/menger-rgb.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/3d/menger-rgb.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -2478,17 +2479,17 @@
         <h2 class="name">Jerusalem Cube</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2400 pixels (1:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2400 pixels (1:1)
         </p>
-        <p class="fracdimension">Fractal <a href="https://en.wikipedia.org/wiki/Fractal_dimension">dimension</a>:
+        <p class="dimension">Fractal <a href="https://en.wikipedia.org/wiki/Fractal_dimension">dimension</a>:
           `log(sqrt(7)/6 - 1/3) / log(sqrt(2) - 1) = 2.529`
         </p>
         <p class="links">References:<br /><a href="https://en.wikipedia.org/wiki/Menger_sponge#Jerusalem_cube"
             target="_blank">Wikipedia &gt; Menger sponge &gt; Jerusalem cube</a>
         </p>
         <p class="download">
-          <a href="assets/fractals/3d/cross-menger.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/3d/cross-menger.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -2501,17 +2502,17 @@
         <h2 class="name">Sierpiński Tetrahedron (or Tetrix)</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2400 pixels (1:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2400 pixels (1:1)
         </p>
-        <p class="fracdimension">Fractal <a href="https://en.wikipedia.org/wiki/Fractal_dimension">dimension</a>:
+        <p class="dimension">Fractal <a href="https://en.wikipedia.org/wiki/Fractal_dimension">dimension</a>:
           `log(4) / log(2) = 2`
         </p>
         <p class="links">References:<br /><a href="https://en.wikipedia.org/wiki/Sierpiński_triangle#Analogues_in_higher_dimensions"
             target="_blank">Wikipedia &gt; Sierpiński triangle &gt; Analogues in higher dimensions</a>
         </p>
         <p class="download">
-          <a href="assets/fractals/3d/tetrix.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/3d/tetrix.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -2524,17 +2525,17 @@
         <h2 class="name">Sierpiński Pyramid</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2400 pixels (1:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2400 pixels (1:1)
         </p>
-        <p class="fracdimension">Fractal <a href="https://en.wikipedia.org/wiki/Fractal_dimension">dimension</a>:
+        <p class="dimension">Fractal <a href="https://en.wikipedia.org/wiki/Fractal_dimension">dimension</a>:
           `log(5) / log(2) = 2.322`
         </p>
         <p class="links">References:<br /><a href="https://en.wikipedia.org/wiki/Sierpiński_triangle#Analogues_in_higher_dimensions"
             target="_blank">Wikipedia &gt; Sierpiński triangle &gt; Analogues in higher dimensions</a>
         </p>
         <p class="download">
-          <a href="assets/fractals/3d/pyramid.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/3d/pyramid.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -2547,17 +2548,17 @@
         <h2 class="name">Mosely Snowflake</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2400 pixels (1:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2400 pixels (1:1)
         </p>
-        <p class="fracdimension">Fractal <a href="https://en.wikipedia.org/wiki/Fractal_dimension">dimension</a>:
+        <p class="dimension">Fractal <a href="https://en.wikipedia.org/wiki/Fractal_dimension">dimension</a>:
           `log(18) / log(3) = 2.631`
         </p>
         <p class="links">References:<br /><a href="https://en.wikipedia.org/wiki/Mosely_snowflake"
             target="_blank">Wikipedia &gt; Mosely snowflake</a>
         </p>
         <p class="download">
-          <a href="assets/fractals/3d/mosely-snowflake.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/3d/mosely-snowflake.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>
@@ -2570,17 +2571,17 @@
         <h2 class="name">Sierpiński-Menger Snowflake</h2>
         <p class="author">Emlyn Corrin, 2024</p>
         <p class="description"></p>
-        <p class="imdimension">
-          Dimensions: 2400 x 2400 pixels (1:1)
+        <p class="media">
+          Digital image, Microsoft PowerPoint, 2400&times;2400 pixels (1:1)
         </p>
-        <p class="fracdimension">Fractal <a href="https://en.wikipedia.org/wiki/Fractal_dimension">dimension</a>:
+        <p class="dimension">Fractal <a href="https://en.wikipedia.org/wiki/Fractal_dimension">dimension</a>:
           `log(9) / log(3) = 2`
         </p>
         <p class="links">References:<br /><a href="https://en.wikipedia.org/wiki/Menger_sponge#Others"
             target="_blank">Wikipedia &gt; Menger sponge &gt; Others</a>
         </p>
         <p class="download">
-          <a href="assets/fractals/3d/sm-snowflake.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" style="vertical-align: middle;"></a>
+          <a href="assets/fractals/3d/sm-snowflake.pptx"><img src="assets/images/ppt.png" height="32" alt="PPT" class="inline-icon"></a>
           Download PowerPoint file.
         </p>
       </div>

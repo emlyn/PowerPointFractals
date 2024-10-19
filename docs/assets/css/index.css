@@ -31,6 +31,14 @@ a {
     text-decoration-style: dotted;
 }
 
+p {
+    line-height: 125%;
+}
+
+.inline-icon {
+    vertical-align: bottom;
+}
+
 .modal {
     position: fixed;
     z-index: 1;
@@ -90,6 +98,10 @@ a {
     max-width: 100%;
     padding: 10px;
     background-color: #888;
+}
+
+img[onclick] {
+    cursor: pointer;
 }
 
 .info {

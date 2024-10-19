@@ -9,7 +9,9 @@
                 :task (exec 'tasks/check)
                 :exec-args {:dir "docs/assets/fractals"
                             :src-suffix ".pptx"
-                            :dst-suffixes ["_600.png" "_1200.png" "_2400.png"]
+                            :dst-suffixes {:small "_600.png"
+                                           :medium "_1200.png"
+                                           :large"_2400.png"}
                             :tracked-only true
                             :check-modified true}}
          build-site {:doc "Builds the site (use --show-args to see args passed to template)"
@@ -18,7 +20,9 @@
                      :extra-paths ["resources/templates"]
                      :exec-args {:dir "docs/assets/fractals"
                                  :src-suffix ".pptx"
-                                 :dst-suffixes ["_600.png" "_1200.png" "_2400.png"]
+                                 :dst-suffixes {:small "_600.png"
+                                                :medium "_1200.png"
+                                                :large "_2400.png"}
                                  :templates "resources/templates"
                                  :template-args {:raw-root "assets/fractals"}
                                  :output "docs"}}

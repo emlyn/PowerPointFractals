@@ -52,7 +52,7 @@
     (do (when verbose (println "Checking" src-file))
         (let [stem (subs src-file 0 (- (count src-file) (count src-suffix)))
               modified (fs/last-modified-time src-file)
-              dst-files (map #(str stem %) dst-suffixes)
+              dst-files (map #(str stem %) (vals dst-suffixes))
               missing (not-empty (filter (complement fs/exists?) dst-files))
               outdated (when check-modified
                          (not-empty (filter #(and (fs/exists? %)
@@ -81,15 +81,14 @@
 
 #_{:clj-kondo/ignore [:clojure-lsp/unused-public-var]}
 (defn check
-  {:org.babashka/cli {:coerce {:dst-suffixes [:str]
-                               :check-modified :boolean
+  {:org.babashka/cli {:coerce {:check-modified :boolean
                                :tracked-only :boolean
                                :verbose :boolean}
                       :validate {:dir fs/directory?}}}
   [& {:keys [dir tracked-only verbose] :as args}]
   (when verbose (println "Running check with" (pr-str args)))
   (let [tracked (if tracked-only
-                  (-> (proc/sh "git" "ls-files" dir) :out str/split-lines set)
+                  (-> (proc/sh "git" "ls-files" dir) proc/check :out str/split-lines set)
                   (constantly true))]
     (when-let [errors (not-empty (check-dir :tracked? tracked args))]
       (doseq [err errors]
@@ -153,20 +152,31 @@
   [expr]
   (str/replace (str expr) #"\broot\(([0-9.]+),\s*" "root($1)("))
 
+(defn- img-dimensions
+  [fname]
+  (let [o (-> (proc/sh "file" "-b" fname)
+              proc/check
+              :out)
+        m (re-find #", ([0-9]+) ?x ?([0-9]+)," o)]
+    (if m
+      (mapv parse-long (next m))
+      (throw (ex-info "Failed to get image dimensions" {:file fname
+                                                        :out o})))))
+
+
 (defn read-fractal
-  [{:keys [src-suffix dst-suffixes]}
+  [{:keys [dir category src-suffix dst-suffixes]}
    {:keys [file dimension] :as info}]
   (assoc info
          :source (str file src-suffix)
-         :images (into {} (map (fn [name suffix]
-                                 (let [size (->> suffix
-                                                 (re-find #".*_([0-9]+)[.][a-z]+$")
-                                                 (second)
-                                                 (parse-long))]
-                                   [name {:size size
-                                          :file (str file suffix)}]))
-                               [:small :medium :large]
-                               dst-suffixes))
+         :images (reduce-kv (fn [m name suffix]
+                              (let [[w h] (img-dimensions (str dir "/" category "/" file suffix))]
+                                (assoc m name {:width w
+                                               :height h
+                                               :file (str file suffix)})))
+                             {}
+                             dst-suffixes)
+         :category category
          :dimension (fixup-expression dimension)
          :dimension_val (when (and (string? dimension)
                                    (not (num-str? dimension)))
@@ -176,7 +186,7 @@
   [{:keys [dir] :as args}
    {:keys [name] :as cat}]
   (let [info (read-yaml (str dir "/" name "/info.yaml") category-schema)
-        info (update info :fractals (partial mapv #(merge {:category name} (read-fractal args %))))]
+        info (update info :fractals (partial mapv (partial read-fractal (assoc args :category name))))]
     (merge cat info)))
 
 (defn read-info

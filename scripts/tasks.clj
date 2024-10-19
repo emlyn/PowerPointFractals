@@ -166,21 +166,26 @@
 
 (defn read-fractal
   [{:keys [dir category src-suffix dst-suffixes]}
-   {:keys [file dimension] :as info}]
-  (assoc info
-         :source (str file src-suffix)
-         :images (reduce-kv (fn [m name suffix]
-                              (let [[w h] (img-dimensions (str dir "/" category "/" file suffix))]
-                                (assoc m name {:width w
-                                               :height h
-                                               :file (str file suffix)})))
-                             {}
-                             dst-suffixes)
-         :category category
-         :dimension (fixup-expression dimension)
-         :dimension_val (when (and (string? dimension)
-                                   (not (num-str? dimension)))
-                          (eval-str dimension))))
+   {:keys [file dimension author year] :as info}]
+  (let [imgs (reduce-kv (fn [m name suffix]
+                          (let [[w h] (img-dimensions (str dir "/" category "/" file suffix))]
+                            (assoc m name {:width w
+                                           :height h
+                                           :file (str file suffix)})))
+                        {}
+                        dst-suffixes)]
+    (assoc info
+           :source (str file src-suffix)
+           :images imgs
+           :aspect (let [{:keys [width height]} (->> imgs vals (sort-by :width) last)]
+                     (/ width height))
+           :category category
+           :author (or author "Emlyn Corrin")
+           :year (or year 2024)
+           :dimension (fixup-expression dimension)
+           :dimension_val (when (and (string? dimension)
+                                     (not (num-str? dimension)))
+                            (eval-str dimension)))))
 
 (defn read-category
   [{:keys [dir] :as args}
@@ -206,6 +211,11 @@
 (defn build-site
   [& {:keys [templates output template-args show-args] :as args}]
   (filters/add-filter! :isnum #(or (number? %) (num-str? %)))
+  (filters/add-filter! :trimnum (fn [val & [places]]
+                                  (str/replace (format (format "%%.%df" (if places (parse-long places) 0))
+                                                       (double val))
+                                               #"\.?0*$" "")))
+  (println "Building template args")
   (let [template-args
         (merge (read-info args)
                template-args)]

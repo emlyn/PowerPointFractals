@@ -3,13 +3,13 @@ fractals:
   name: The Pentaflake
   dimension: log(6) / log((3 + sqrt(5)) / 2)
   links:
-  - name: Wikipedia
+  - name: Wikipedia > N-flake > Pentaflake
     url: https://en.wikipedia.org/wiki/N-flake#Pentaflake
 - file: sierpinski
   name: Sierpiński Pentagon
   dimension: log(5) / log((3 + sqrt(5)) / 2)
   links:
-  - name: Wikipedia
+  - name: Wikipedia > N-flake > Pentaflake
     url: https://en.wikipedia.org/wiki/N-flake#Pentaflake
 - file: rotated-pentaflake
   name: Rotated Pentaflake

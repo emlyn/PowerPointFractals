@@ -3,7 +3,7 @@ fractals:
   name: Koch Curve
   dimension: log(4) / log(3)
   links:
-  - name: Wikipedia
+  - name: Wikipedia > Koch snowflake
     url: https://en.wikipedia.org/wiki/Koch_snowflake
 - file: square
   name: Koch Curve (square variation)
@@ -11,7 +11,7 @@ fractals:
   name: Heighway Dragon
   dimension: 2
   links:
-  - name: Wikipedia
+  - name: Wikipedia > Heighway dragon
     url: https://en.wikipedia.org/wiki/Dragon_curve#Heighway_dragon
 - file: golden
   name: Golden Dragon Curve
@@ -41,7 +41,7 @@ fractals:
   name: Lévy C curve
   dimension: 2
   links:
-  - name: Wikipedia
+  - name: Wikipedia > Lévy C curve
     url: https://en.wikipedia.org/wiki/Lévy_C_curve
 - file: levy-c-coloured
   name: Coloured Lévy C curve

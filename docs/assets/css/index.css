@@ -96,8 +96,9 @@ p {
 .img img {
     max-height: 100%;
     max-width: 100%;
-    padding: 10px;
-    background-color: #888;
+    padding: 0;
+    border: 10px solid #888;
+    border-radius: 2px;
 }
 
 img[onclick] {
@@ -105,9 +106,42 @@ img[onclick] {
 }
 
 .info {
-    width: 50vh;
-    height: 80vh;
-    padding: 10vh 0 0 5vh;
+    /* width: 50vh; */
+    /* height: 80vh; */
+    /* padding: 10vh 0 0 5vh; */
+    display: flex;
+    font-size: 80%;
+    background-color: white;
+    padding: 1em;
+    margin: auto;
+    height: auto;
+    margin-left: 4em;
+    border: 2px solid #888;
+    border-radius: 1px;
+    width: 40%;
+}
+
+.info-container {
+    width: 100%;
+
+}
+
+.info h2 {
+    margin: 0 0 0.5em 0;
+}
+
+.info p {
+    margin: 0.5em 0;
+}
+
+.download {
+    float: right;
+    display: flex;
+    /* padding-bottom: 0.5em; */
+    height: 100%;
+    align-items: flex-end;
+    /* 32px is the height of the download icon: */
+    shape-outside: inset(calc(100% - 32px) 0 0);
 }
 
 .thumbnail-container {

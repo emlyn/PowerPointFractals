@@ -166,7 +166,7 @@
 
 (defn read-fractal
   [{:keys [dir category src-suffix dst-suffixes]}
-   {:keys [file dimension author year] :as info}]
+   {:keys [file dimension author year media] :as info}]
   (let [imgs (reduce-kv (fn [m name suffix]
                           (let [[w h] (img-dimensions (str dir "/" category "/" file suffix))]
                             (assoc m name {:width w
@@ -182,6 +182,7 @@
            :category category
            :author (or author "Emlyn Corrin")
            :year (or year 2024)
+           :media (or media "Digital media (Microsoft PowerPoint)")
            :dimension (fixup-expression dimension)
            :dimension_val (when (and (string? dimension)
                                      (not (num-str? dimension)))

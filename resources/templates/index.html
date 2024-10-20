@@ -60,22 +60,24 @@
         <img src="{{raw-root}}/{{fractal.category|lower}}/{{fractal.images.medium.file}}" onclick="setMode('focus')" alt="Fractal: {{fractal.name}}">
       </div>
       <div class="info">
-        <h2 class="name">{{fractal.name}}</h2>
-        <p class="author">{{fractal.author}}, {{fractal.year}}</p>
-        <p class="description">{{fractal.description}}</p>
-        <p class="media">
-          Digital image, Microsoft PowerPoint, {{fractal.images.large.width}}&times;{{fractal.images.large.height}} pixels ({{fractal.aspect|trimnum:3}}:1)
-        </p>{% if fractal.dimension %}
-        <p class="dimension">Fractal <a href="https://en.wikipedia.org/wiki/Fractal_dimension">dimension</a>:
-          `{{fractal.dimension}}{% if fractal.dimension_val %} = {{fractal.dimension_val|trimnum:3}}{% endif %}`
-        </p>{% endif %}{% if fractal.links %}
-        <p class="links">References:{% for link in fractal.links %}<br><a href="{{link.url}}"
-            target="_blank">{{link.name}}</a>{% endfor %}
-        </p>{% endif %}
-        <p class="download">
-          <a href="{{raw-root}}/{{fractal.category|lower}}/{{fractal.source}}"><img src="assets/images/ppt.png" height="32" alt="PPT" title="Download PowerPoint file" class="inline-icon"></a>
-          Download PowerPoint file.
-        </p>
+        <div class="info-container">
+          <div class="download">
+            <a href="{{raw-root}}/{{fractal.category|lower}}/{{fractal.source}}"><img src="assets/images/ppt.png" height="32" alt="PPT" title="Download PowerPoint file" class="inline-icon"></a>
+          </div>
+          <h2 class="name">{{fractal.name}}</h2>
+          <p class="author">{{fractal.author}}, {{fractal.year}}</p>
+          <p class="description">{{fractal.description}}</p>
+          <p class="media">
+            {{fractal.media}}, {{fractal.images.large.width}}&times;{{fractal.images.large.height}} pixels ({{fractal.aspect|trimnum:3}}:1)
+          </p>{% if fractal.dimension %}
+          <p class="dimension">Fractal <a href="https://en.wikipedia.org/wiki/Fractal_dimension">dimension</a>:
+            `{{fractal.dimension}}{% if fractal.dimension_val %} = {{fractal.dimension_val|trimnum:3}}{% endif %}`
+          </p>{% endif %}{% if fractal.links %}
+          <p class="links">References:{% for link in fractal.links %}<br><a href="{{link.url}}"
+              target="_blank">{{link.name}}</a>{% endfor %}
+          </p>{% endif %}
+          <p class="clear">&nbsp;</p>
+        </div>
       </div>
     </div>{% endfor %}
   </div>

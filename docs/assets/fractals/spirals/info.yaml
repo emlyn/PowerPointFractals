@@ -1,6 +1,7 @@
 fractals:
 - file: rainbow
   name: Rainbow Spiral
+  year: 2021
 - file: vortex
   name: Vortex
 - file: fire

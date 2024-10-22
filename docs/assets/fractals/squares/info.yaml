@@ -1,6 +1,7 @@
 fractals:
 - file: sierpinski
   name: Sierpiński Carpet
+  year: 2021
   description: >-
     The classic Sierpiński Carpet (square)
   dimension: log(8) / log(3)

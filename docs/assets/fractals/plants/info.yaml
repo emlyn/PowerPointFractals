@@ -6,11 +6,13 @@ fractals:
     url: https://en.wikipedia.org/wiki/Fractal_canopy
 - file: pythagoras-tree
   name: 3-4-5 Pythagoras Tree
+  year: 2021
   links:
   - name: Wikipedia > Pythagoras tree (fractal)
     url: https://en.wikipedia.org/wiki/Pythagoras_tree_(fractal)
 - file: tree
   name: Tree
+  year: 2021
 - file: tree2
   name: Tree 2
 - file: tree4
@@ -19,8 +21,10 @@ fractals:
   name: Pine Tree
 - file: fern
   name: Fern
+  year: 2021
 - file: cabbage
   name: Cabbage Leaf
+  year: 2021
 - file: flower
   name: Flowers
 - file: bamboo

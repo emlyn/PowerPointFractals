@@ -1,20 +1,24 @@
 fractals:
 - file: koch
   name: Koch Curve
+  year: 2021
   dimension: log(4) / log(3)
   links:
   - name: Wikipedia > Koch snowflake
     url: https://en.wikipedia.org/wiki/Koch_snowflake
 - file: square
   name: Koch Curve (square variation)
+  year: 2023
 - file: dragon
   name: Heighway Dragon
+  year: 2021
   dimension: 2
   links:
   - name: Wikipedia > Heighway dragon
     url: https://en.wikipedia.org/wiki/Dragon_curve#Heighway_dragon
 - file: golden
   name: Golden Dragon Curve
+  year: 2021
 - file: cesaro
   name: Cesàro Fractal
   links:
@@ -47,6 +51,7 @@ fractals:
   name: Coloured Lévy C curve
 - file: pythagoras
   name: Pythagoras Curve
+  year: 2021
 - file: tree3-90
   name: 3-branched Tree (90 degrees)
 - file: tree3-60

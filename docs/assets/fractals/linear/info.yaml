@@ -12,10 +12,12 @@ fractals:
   name: Dots
 - file: circles
   name: Circles
+  year: 2021
 - file: bubbles
   name: Bubbles
 - file: shard
   name: Shard
+  year: 2021
 - file: jagged
   name: Jagged
 - file: metal

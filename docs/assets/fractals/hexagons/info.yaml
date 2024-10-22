@@ -15,6 +15,7 @@ fractals:
   name: Rotated Shaded Sierpinski Hexagon
 - file: koch
   name: Koch Snowflake
+  year: 2021
   dimension: 2
   links:
   - name: Wikipedia > Koch snowflake
@@ -25,6 +26,7 @@ fractals:
   name: Exploded Koch Snowflake
 - file: snowflake
   name: Snowflake
+  year: 2021
 - file: hexaflake
   name: Hexaflake
   dimension: log(7) / log(3)

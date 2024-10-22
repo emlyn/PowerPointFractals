@@ -111,6 +111,9 @@
                 [:map {:closed true}
                  [:file [:string]]
                  [:name [:string]]
+                 [:author {:optional true} [:string]]
+                 [:year {:optional true} [:int]]
+                 [:media {:optional true} [:string]]
                  [:description {:optional true} [:string]]
                  [:dimension {:optional true} [:or [:string] [:int]]]
                  [:links {:optional true} [:sequential

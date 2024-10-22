@@ -7,6 +7,7 @@ fractals:
     url: https://en.wikipedia.org/wiki/N-flake#Pentaflake
 - file: sierpinski
   name: Sierpiński Pentagon
+  year: 2021
   dimension: log(5) / log((3 + sqrt(5)) / 2)
   links:
   - name: Wikipedia > N-flake > Pentaflake

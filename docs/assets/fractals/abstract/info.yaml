@@ -1,12 +1,16 @@
 fractals:
 - file: abstract1
   name: Jack-in-the-box
+  year: 2021
 - file: abstract2
   name: Ominous Bubbles
+  year: 2021
 - file: abstract3
   name: Branching Balls
+  year: 2021
 - file: abstract4
   name: Angel
+  year: 2021
 - file: abstract6
   name: Fractal Herd
 - file: cross

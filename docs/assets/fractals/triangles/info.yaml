@@ -1,6 +1,7 @@
 fractals:
 - file: sierpinski
   name: Sierpiński Triangle
+  year: 2021
   description: >-
     The classic Sierpiński Gasket (triangle)
   dimension: log(3) / log(2)
@@ -21,6 +22,7 @@ fractals:
   name: Sierpiński Triangle made of circles
 - file: cmy
   name: Sierpiński Triangle made of coloured circles
+  year: 2021
 - file: rotated-sierpinski
   name: Rotated Sierpiński
 - file: triflake

@@ -23,6 +23,19 @@ fractals:
 - file: cmy
   name: Sierpiński Triangle made of coloured circles
   year: 2021
+- file: sierpinski3
+  name: Triple Triangle
+  description: >-
+    Variation on the Sierpiński Triangle,
+    dividing it into one-third sized instead of half sized triangles.
+  dimension: log(6) / log(3)
+- file: sierpinski-overlap
+  name: Variation on the Sierpiński Triangle
+- file: sierpinski-asymmetric
+  name: Asymmetric variation on the Sierpiński Triangle
+- file: sierpinski4
+  name: Another variation on the Sierpiński Triangle
+  dimension: log(13) / log(4)
 - file: rotated-sierpinski
   name: Rotated Sierpiński
 - file: triflake
@@ -32,6 +45,11 @@ fractals:
   name: Shaded Triflake
 - file: triflake-rotated-shaded
   name: Shaded Rotated Triflake
+- file: kochanti
+  name: Koch antisnowflake
+  links:
+  - name: Wikipedia > Koch snowflake
+    url: https://en.wikipedia.org/wiki/Koch_snowflake
 - file: hourglass
   name: Hourglass
 - file: lace

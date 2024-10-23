@@ -8,3 +8,6 @@ fractals:
   name: Fire Spiral
 - file: blossom
   name: Spiral Blossom
+- file: jack
+  name: Jack-in-the-box
+  year: 2021

@@ -20,6 +20,12 @@ fractals:
   name: Sierpiński Carpet with coloured diagonals
 - file: inverted
   name: Inverted Sierpiński Carpet
+- file: carpet2
+  name: Variation on the Sierpiński Carpet
+  dimension: log(12) / log(4)
+- file: carpet3
+  name: Another variation on the Sierpiński Carpet
+  dimension: log(13) / log(4)
 - file: vicsek
   name: Vicsek fractal
   dimension: log(5) / log(3)
@@ -36,6 +42,9 @@ fractals:
 - file: h
   name: Fractal H-I de Rivera
   dimension: log(7) / log(3)
+- file: hcarpet
+  name: H / Carpet
+  dimension: log(8) / log(3)
 - file: castle
   name: Fractal Castle
   dimension: log(8) / log(3)
@@ -49,7 +58,7 @@ fractals:
   name: Forest
   dimension: log(5) / log(3)
 - file: copper
-  name: Copper Carpet
+  name: Copper Sheet
 - file: distorted
   name: Distorted Carpet
 - file: dots
@@ -57,6 +66,22 @@ fractals:
 - file: window
   name: Fractal Window
   dimension: log(4) / log(12 / 5)
+- file: windows
+  name: Fractal Windows
+- file: track
+  name: Track
+  dimension: log(12) / log(4)
 - file: degraded
   name: Degraded Square
   dimension: log(8) / log(3)
+- file: corner
+  name: Corner
+- file: footprint
+  name: Footprint
+  dimension: log(10) / log(4)
+- file: porcelain
+  name: Porcelain Tile
+  dimension: log(12) / log(4)
+- file: intricate-cross
+  name: Intricate Cross
+  dimension: log(10) / log(4)

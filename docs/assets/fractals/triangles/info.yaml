@@ -36,6 +36,8 @@ fractals:
 - file: sierpinski4
   name: Another variation on the Sierpiński Triangle
   dimension: log(13) / log(4)
+- file: alternating-sierpinski
+  name: Alternating Sierpinski Triangle
 - file: rotated-sierpinski
   name: Rotated Sierpiński
 - file: triflake

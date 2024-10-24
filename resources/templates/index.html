@@ -71,7 +71,7 @@
             {{fractal.media}}, {{fractal.images.large.width}}&times;{{fractal.images.large.height}} pixels ({{fractal.aspect|trimnum:3}}:1)
           </p>{% if fractal.dimension %}
           <p class="dimension">Fractal <a href="https://en.wikipedia.org/wiki/Fractal_dimension">dimension</a>:
-            `{{fractal.dimension}}{% if fractal.dimension_val %} = {{fractal.dimension_val|trimnum:3}}{% endif %}`
+            `{{fractal.dimension|trimnum:3}}{% if fractal.dimension_val %} = {{fractal.dimension_val|trimnum:3}}{% endif %}`
           </p>{% endif %}{% if fractal.links %}
           <p class="links">References:{% for link in fractal.links %}<br><a href="{{link.url}}"
               target="_blank">{{link.name}}</a>{% endfor %}

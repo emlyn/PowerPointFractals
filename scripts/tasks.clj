@@ -115,7 +115,7 @@
                  [:year {:optional true} [:int]]
                  [:media {:optional true} [:string]]
                  [:description {:optional true} [:string]]
-                 [:dimension {:optional true} [:or [:string] [:int]]]
+                 [:dimension {:optional true} [:or [:string] [:int] [:double]]]
                  [:links {:optional true} [:sequential
                                            [:map {:closed true}
                                             [:name [:string]]
@@ -211,14 +211,22 @@
                                                                     (:fractals info)))))]
     info))
 
+(defn num?
+  [v]
+  (or (number? v) (num-str? v)))
+
 #_{:clj-kondo/ignore [:clojure-lsp/unused-public-var]}
 (defn build-site
   [& {:keys [templates output template-args show-args] :as args}]
-  (filters/add-filter! :isnum #(or (number? %) (num-str? %)))
+  (filters/add-filter! :isnum num?)
   (filters/add-filter! :trimnum (fn [val & [places]]
-                                  (str/replace (format (format "%%.%df" (if places (parse-long places) 0))
-                                                       (double val))
-                                               #"\.?0*$" "")))
+                                  (if (num? val)
+                                    (str/replace (format (format "%%.%df" (if places (parse-long places) 0))
+                                                         (if (string? val)
+                                                           (parse-double val)
+                                                           (double val)))
+                                                 #"\.?0*$" "")
+                                    val)))
   (println "Building template args")
   (let [template-args
         (merge (read-info args)

@@ -52,6 +52,7 @@ fractals:
     url: https://en.wikipedia.org/wiki/Koch_snowflake
 - file: hourglass
   name: Hourglass
+  dimension: 1.76665598
 - file: lace
   name: Lace
 - file: dust

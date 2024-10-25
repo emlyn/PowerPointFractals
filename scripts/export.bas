@@ -1,8 +1,8 @@
+Attribute VB_Name = "Export"
 ' Copyright (c) 2024 Emlyn Corrin.
 ' This work is licensed under the terms of the MIT license.
 ' For a copy, see <https://opensource.org/license/MIT>.
 
-Attribute VB_Name = "Export"
 Function BaseName(fName As String) As String
   Dim i, pos As Integer
   
@@ -20,14 +20,21 @@ Function BaseName(fName As String) As String
   End If
 End Function
 
+Sub Access(path As String)
+    Dim n As Integer
+    Dim paths
+    n = InStr(path, "/fractals/")
+    paths = Array(Left(path, n + Len("fractals")))
+    GrantAccessToMultipleFiles (paths)
+End Sub
 
 Public Sub Export(pres As Presentation, width As Integer)
   Dim Name As String
   Dim r As Double
   
-  Debug.Print "Starting"
   Name = BaseName(pres.FullName)
-  Debug.Print (Name)
+  Access (Name)
+  Debug.Print (pres.FullName & " : " & width)
   
   r = pres.PageSetup.SlideWidth / pres.PageSetup.SlideHeight
   

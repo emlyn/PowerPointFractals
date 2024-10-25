@@ -91,7 +91,10 @@
   </div>
   <div class="focus-container">{% for fractal in fractals %}
     <div class="focus" id="focus{{forloop.counter0}}">
-      <img loading="lazy" src="{{raw-root}}/{{fractal.category|lower}}/{{fractal.images.large.file}}" alt="Fractal: {{fractal.name}}">
+      <img loading="lazy" src="{{raw-root}}/{{fractal.category|lower}}/{{fractal.images.large.file}}" alt="Fractal: {{fractal.name}}" title="{{fractal.name}}">
+      <div class="focusleft" onclick="prevSlide()"></div>
+      <div class="focusmid" onclick="setMode('slides')"></div>
+      <div class="focusright" onclick="nextSlide()"></div>
     </div>{% endfor %}
   </div>
 </body>

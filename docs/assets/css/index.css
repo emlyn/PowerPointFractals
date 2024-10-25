@@ -199,6 +199,7 @@ img[onclick] {
 }
 
 .focus {
+    user-select: none;
     width: 100%;
     height: 100%;
     position: absolute;
@@ -222,4 +223,27 @@ img[onclick] {
     left: 0;
     right: 0;
     object-fit: contain;
+}
+
+.focusleft, .focusmid, .focusright {
+    background: rgba(0, 0, 0, 0);
+    position: fixed;
+    top: 0;
+    width: 20%;
+    height: 100%;
+}
+
+.focusleft {
+    left: 0;
+    cursor: w-resize;
+}
+
+.focusmid {
+    left: 35%;
+    cursor: pointer;
+}
+
+.focusright {
+    right: 0;
+    cursor: e-resize;
 }

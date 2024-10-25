@@ -231,6 +231,7 @@ img[onclick] {
     top: 0;
     width: 20%;
     height: 100%;
+    margin: 0;
 }
 
 .focusleft {
@@ -239,7 +240,9 @@ img[onclick] {
 }
 
 .focusmid {
-    left: 35%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
     cursor: pointer;
 }
 

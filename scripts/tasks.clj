@@ -243,3 +243,55 @@
                               (println "Processing" (str f) "->" out)
                               (spit out (selmer/render-file rel template-args))
                               :continue))}))))
+
+(defn parse-sizes
+  [sizes]
+  (reduce (fn [m s]
+            (if-let [[_ n v] (re-find #"(?:([\d]+)x)?([\d.]+)" s)]
+              (update m (parse-double v)
+                      #(+ (or % 0) (if n (parse-long n) 1)))
+              (throw (ex-info "Invalid size" {:size s}))))
+          {}
+          sizes))
+
+(defn solve
+  [func xmin xmax]
+  (loop [xmin xmin
+         xmax xmax
+         fmin (func xmin)
+         fmax (func xmax)]
+    (let [x (/ (+ xmin xmax) 2.0)
+          f (func x)]
+      (cond
+        (or (zero? f) (= x xmin) (= x xmax))   [x f]
+        (= (Math/signum f) (Math/signum fmin)) (recur x xmax f fmax)
+        (= (Math/signum f) (Math/signum fmax)) (recur xmin x fmin f)
+        :else
+        (throw (ex-info "Failed to find root" {:xmin xmin :fmin fmin
+                                               :xmax xmax :fmax fmax
+                                               :x x :f f}))))))
+
+#_{:clj-kondo/ignore [:clojure-lsp/unused-public-var]}
+(defn calc-dimension
+  {:org.babashka/cli {:coerce {:size :double
+                               :sizes [:string]}
+                      :alias {:s :sizes}}}
+  [& {:keys [size sizes dmin dmax]}]
+  (let [intify (fn [v] (if (== v (int v)) (int v) v))
+        smap (parse-sizes sizes)]
+    (println (format "Full size: %s" (intify size)))
+    (doseq [[v n] (reverse (sort smap))]
+      (println (format "Zoom size: %s (scale 1/%s), count: %s" (intify v) (intify (/ size v)) n)))
+    (println)
+    (if (= 1 (count smap))
+      (let [[v n] (first smap)
+            r (intify (/ size v))
+            d (/ (Math/log n) (Math/log r))]
+        (println (format "Dimension: log(%s) / log(%s) = %s" n r d)))
+      (let [func (fn [d]
+                   (reduce-kv (fn [acc v n]
+                                (+ acc (* n (Math/pow (/ v size) d))))
+                              -1
+                              smap))
+            [d res] (solve func dmin dmax)]
+        (println (format "Dimension: %s (residual %s)" d res))))))

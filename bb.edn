@@ -14,18 +14,23 @@
                                            :large"_2400.png"}
                             :tracked-only true
                             :check-modified true}}
-         build-site {:doc "Builds the site (use --show-args to see args passed to template)"
-                     :task (exec 'tasks/build-site)
-                     ;; NOTE: :extra-paths must include the :exec-args :templates path
-                     :extra-paths ["resources/templates"]
-                     :exec-args {:dir "docs/assets/fractals"
-                                 :src-suffix ".pptx"
-                                 :dst-suffixes {:small "_600.png"
-                                                :medium "_1200.png"
-                                                :large "_2400.png"}
-                                 :templates "resources/templates"
-                                 :template-args {:raw-root "assets/fractals"}
-                                 :output "docs"}}
+         build {:doc "Builds the site (use --show-args to see args passed to template)"
+                :task (exec 'tasks/build-site)
+                ;; NOTE: :extra-paths must include the :exec-args :templates path
+                :extra-paths ["resources/templates"]
+                :exec-args {:dir "docs/assets/fractals"
+                            :src-suffix ".pptx"
+                            :dst-suffixes {:small "_600.png"
+                                           :medium "_1200.png"
+                                           :large "_2400.png"}
+                            :templates "resources/templates"
+                            :template-args {:raw-root "assets/fractals"}
+                            :output "docs"}}
+         dim {:doc "Calculate the fractal dimension of an image"
+              :task (exec 'tasks/calc-dimension)
+              :exec-args {:size 1
+                          :dmin 0
+                          :dmax 4}}
          eval {:doc "Evaluate a mathematical expression"
                :task (exec 'tasks/eval-string)}
          repl {:doc "Start a repl in the tasks namespace"

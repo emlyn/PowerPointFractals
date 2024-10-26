@@ -12,6 +12,7 @@
             [malli.error :as me]
             [selmer.parser :as selmer]
             [selmer.filters :as filters]
+            [infix.core :as infix]
             [infix.macros :refer [from-string]]))
 
 (defn- num-str?
@@ -138,7 +139,10 @@
   [s]
   (if (number? s)
     s
-    (let [f (from-string [] s)]
+    (let [f (from-string []
+                         (merge infix/base-env
+                                {:phi (/ (inc (Math/sqrt 5)) 2)})
+                         s)]
       (f))))
 
 #_{:clj-kondo/ignore [:clojure-lsp/unused-public-var]}

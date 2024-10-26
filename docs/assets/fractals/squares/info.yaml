@@ -82,6 +82,11 @@ fractals:
 - file: porcelain
   name: Porcelain Tile
   dimension: log(12) / log(4)
+- file: porcelain2
+  name: Porcelain Tile 2
+  dimension: 1.663665848
 - file: intricate-cross
   name: Intricate Cross
-  dimension: log(10) / log(4)
+  dimension: log(8) / log(4)
+- file: rings
+  name: Rings

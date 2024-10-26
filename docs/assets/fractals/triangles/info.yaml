@@ -31,13 +31,16 @@ fractals:
   dimension: log(6) / log(3)
 - file: sierpinski-overlap
   name: Variation on the Sierpiński Triangle
+  dimension: 1.587989545
 - file: sierpinski-asymmetric
   name: Asymmetric variation on the Sierpiński Triangle
+  dimension: 1.626475240
 - file: sierpinski4
   name: Another variation on the Sierpiński Triangle
   dimension: log(13) / log(4)
 - file: alternating-sierpinski
   name: Alternating Sierpinski Triangle
+  dimension: 2
 - file: rotated-sierpinski
   name: Rotated Sierpiński
 - file: triflake
@@ -49,6 +52,7 @@ fractals:
   name: Shaded Rotated Triflake
 - file: kochanti
   name: Koch antisnowflake
+  dimension: log(6) / log(3)
   links:
   - name: Wikipedia > Koch snowflake
     url: https://en.wikipedia.org/wiki/Koch_snowflake
@@ -57,6 +61,7 @@ fractals:
   dimension: 1.76665598
 - file: lace
   name: Lace
+  dimension: log(3) / log(2)
 - file: dust
   name: Fractal Dust
 - file: lightning

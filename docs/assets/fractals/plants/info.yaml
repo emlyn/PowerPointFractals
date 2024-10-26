@@ -1,6 +1,7 @@
 fractals:
 - file: canopy
   name: Fractal Canopy
+  dimension: log(2) / log(4/3)
   links:
   - name: Wikipedia > Fractal canopy
     url: https://en.wikipedia.org/wiki/Fractal_canopy

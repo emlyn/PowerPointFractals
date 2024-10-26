@@ -9,6 +9,7 @@ fractals:
 - file: square
   name: Koch Curve (square variation)
   year: 2023
+  dimension: log(4) / log(2.82842)
 - file: dragon
   name: Heighway Dragon
   year: 2021
@@ -19,13 +20,16 @@ fractals:
 - file: golden
   name: Golden Dragon Curve
   year: 2021
+  dimension: 1.618602153
 - file: cesaro
   name: Cesàro Fractal
+  dimension: log(4) / log(2.1838)
   links:
   - name: Wikipedia > Koch snowflake > Variants of the Koch curve
     url: https://en.wikipedia.org/wiki/Koch_snowflake#Variants_of_the_Koch_curve
 - file: htree
   name: H Tree
+  dimension: 2
   links:
   - name: Wikipedia > H Tree
     url: https://en.wikipedia.org/wiki/H_tree
@@ -35,11 +39,13 @@ fractals:
   name: Red-Black H Tree
 - file: mandelbrot-tree
   name: Mandelbrot Tree
+  dimension: 1.783102820
   links:
   - name: Wikipedia > H Tree > Related sets
     url: https://en.wikipedia.org/wiki/H_tree#Related_sets
 - file: fibonacci
   name: Fibonacci word fractal
+  dimension: 3 * log(phi) / log(1 + sqrt(2))
   links:
   - name: Wikipedia > Fibonacci word fractal
     url: https://en.wikipedia.org/wiki/Fibonacci_word_fractal
@@ -52,9 +58,12 @@ fractals:
 - file: levy-c-coloured
   name: Coloured Lévy C curve
 - file: pythagoras
-  name: Pythagoras Curve
+  name: 3-4-5 Pythagoras Curve
   year: 2021
+  dimension: 2
 - file: tree3-90
   name: 3-branched Tree (90 degrees)
+  dimension: log(3) / log(2)
 - file: tree3-60
   name: 3-branched Tree (60 degrees)
+  dimension: log(3) / log(2)

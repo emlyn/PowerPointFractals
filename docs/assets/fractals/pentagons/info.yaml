@@ -1,14 +1,14 @@
 fractals:
 - file: pentaflake
   name: The Pentaflake
-  dimension: log(6) / log((3 + sqrt(5)) / 2)
+  dimension: log(6) / log(1 + phi)
   links:
   - name: Wikipedia > N-flake > Pentaflake
     url: https://en.wikipedia.org/wiki/N-flake#Pentaflake
 - file: sierpinski
   name: Sierpiński Pentagon
   year: 2021
-  dimension: log(5) / log((3 + sqrt(5)) / 2)
+  dimension: log(5) / log(1 + phi)
   links:
   - name: Wikipedia > N-flake > Pentaflake
     url: https://en.wikipedia.org/wiki/N-flake#Pentaflake
@@ -16,8 +16,10 @@ fractals:
   name: Rotated Pentaflake
 - file: rotated-sierpinski
   name: Rotated Sierpiński Pentagon
+  dimension: log(5) / log(1 + phi)
 - file: pentaflake-gap
   name: Pentaflake with a gap
+  dimension: 1.766692098
 - file: star
   name: Sierpiński Pentagon star
 - file: twist

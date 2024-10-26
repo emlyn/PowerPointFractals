@@ -17,7 +17,9 @@ fractals:
     url: https://en.wikipedia.org/wiki/Minkowski_sausage
 - file: heart
   name: Shattered Heart
+  dimension: log(6) / log(3)
 - file: transmission
   name: Transmission
+  dimension: 1.766655985
 - file: curved-htree
   name: Curved H Tree

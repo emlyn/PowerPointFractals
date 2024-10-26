@@ -11,6 +11,7 @@ fractals:
   name: Coloured Sierpiński Hexagon
 - file: sierpinski-rotated
   name: Rotated Sierpinski Hexagon
+  dimension: log(6) / log(3.077)
 - file: sierpinski-rotated-shaded
   name: Rotated Shaded Sierpinski Hexagon
 - file: koch
@@ -35,6 +36,7 @@ fractals:
     url: https://en.wikipedia.org/wiki/N-flake#Hexaflake
 - file: hexaflake-rotated
   name: Rotated Hexaflake
+  dimension: log(7) / log(3)
 - file: hexaflake-shaded
   name: Shaded Hexaflake Hexagon
 - file: hexaflake-shaded2

@@ -90,3 +90,4 @@ fractals:
   dimension: log(8) / log(4)
 - file: rings
   name: Rings
+  dimension: 1.496840082

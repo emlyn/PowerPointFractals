@@ -22,6 +22,16 @@ fractals:
 - file: fern
   name: Fern
   year: 2021
+- file: barnsley-fern
+  name: Barnsley Fern
+  links:
+  - name: Wikipedia > Barnsley fern
+    url: https://en.wikipedia.org/wiki/Barnsley_fern
+- file: thelypteridaceae-fern
+  name: Thelypteridaceae Fern
+  links:
+  - name: Wikipedia > Barnsley fern > Mutant varieties
+    url: https://en.wikipedia.org/wiki/Barnsley_fern#Mutant_varieties
 - file: cabbage
   name: Cabbage Leaf
   year: 2021

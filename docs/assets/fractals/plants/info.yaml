@@ -32,6 +32,8 @@ fractals:
   links:
   - name: Wikipedia > Barnsley fern > Mutant varieties
     url: https://en.wikipedia.org/wiki/Barnsley_fern#Mutant_varieties
+- file: leaf-skeleton
+  name: Leaf Skeleton
 - file: cabbage
   name: Cabbage Leaf
   year: 2021

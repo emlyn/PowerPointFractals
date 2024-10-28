@@ -23,3 +23,11 @@ fractals:
   dimension: 1.766655985
 - file: curved-htree
   name: Curved H Tree
+- file: pinwheel
+  name: Pinwheel Fractal
+  dimension: log(4) / log(sqrt(5))
+  links:
+  - name: Wikipedia > Pinwheel Tiling > Generalizations
+    url: https://en.wikipedia.org/wiki/Pinwheel_tiling#Generalizations
+- file: pinwheel-shaded
+  name: Shaded Pinwheel Fractal

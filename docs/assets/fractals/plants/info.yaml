@@ -1,10 +1,4 @@
 fractals:
-- file: pythagoras-tree
-  name: 3-4-5 Pythagoras Tree
-  year: 2021
-  links:
-  - name: Wikipedia > Pythagoras tree (fractal)
-    url: https://en.wikipedia.org/wiki/Pythagoras_tree_(fractal)
 - file: canopy
   name: Fractal Canopy
   links:

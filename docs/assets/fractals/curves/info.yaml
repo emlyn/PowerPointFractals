@@ -49,6 +49,12 @@ fractals:
   links:
   - name: Wikipedia > Fibonacci word fractal
     url: https://en.wikipedia.org/wiki/Fibonacci_word_fractal
+- file: pythagoras-tree-345
+  name: 3-4-5 Pythagoras Tree
+  year: 2021
+  links:
+  - name: Wikipedia > Pythagoras tree (fractal)
+    url: https://en.wikipedia.org/wiki/Pythagoras_tree_(fractal)
 - file: levy-c
   name: Lévy C curve
   dimension: 2
@@ -57,8 +63,8 @@ fractals:
     url: https://en.wikipedia.org/wiki/Lévy_C_curve
 - file: levy-c-coloured
   name: Coloured Lévy C curve
-- file: pythagoras
-  name: 3-4-5 Pythagoras Curve
+- file: levy-c-345
+  name: Lévy C 3-4-5 curve
   year: 2021
   dimension: 2
 - file: tree3-90

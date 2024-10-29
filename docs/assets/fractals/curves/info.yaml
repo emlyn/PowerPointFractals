@@ -49,6 +49,11 @@ fractals:
   links:
   - name: Wikipedia > Fibonacci word fractal
     url: https://en.wikipedia.org/wiki/Fibonacci_word_fractal
+- file: pythagoras-tree
+  name: Pythagoras Tree
+  links:
+  - name: Wikipedia > Pythagoras tree (fractal)
+    url: https://en.wikipedia.org/wiki/Pythagoras_tree_(fractal)
 - file: pythagoras-tree-345
   name: 3-4-5 Pythagoras Tree
   year: 2021

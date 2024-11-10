@@ -198,13 +198,13 @@
 (defn read-category
   [{:keys [dir] :as args}
    {:keys [name] :as cat}]
-  (let [info (read-yaml (str dir "/" name "/info.yaml") category-schema)
+  (let [info (read-yaml (str dir "/" name "/_info.yaml") category-schema)
         info (update info :fractals (partial mapv (partial read-fractal (assoc args :category name))))]
     (merge cat info)))
 
 (defn read-info
   [& {:keys [dir] :as args}]
-  (let [info (read-yaml (str dir "/info.yaml") categories-schema)
+  (let [info (read-yaml (str dir "/_info.yaml") categories-schema)
         info (update info :categories (partial mapv (partial read-category args)))
         info (assoc info :fractals (mapv (fn [fract id]
                                            (assoc fract :id id))

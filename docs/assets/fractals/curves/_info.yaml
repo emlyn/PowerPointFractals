@@ -17,10 +17,15 @@ fractals:
   links:
   - name: Wikipedia > Heighway dragon
     url: https://en.wikipedia.org/wiki/Dragon_curve#Heighway_dragon
+  - name: Larry Scott > Heighway Dragon
+    url: https://larryriddle.agnesscott.org/ifs/heighway/heighway.htm
 - file: golden
   name: Golden Dragon Curve
   year: 2021
-  dimension: 1.618602153
+  dimension: phi
+  links:
+  - name: Larry Riddle > Golden Dragon
+    url: https://larryriddle.agnesscott.org/ifs/heighway/goldenDragon.htm
 - file: cesaro
   name: Cesàro Fractal
   dimension: log(4) / log(2.1838)

@@ -26,6 +26,10 @@ fractals:
 - file: carpet3
   name: Another variation on the Sierpiński Carpet
   dimension: log(13) / log(4)
+- file: carpet4
+  name: Grey carpet
+- file: carpet4-coloured
+  name: Coloured carpet
 - file: vicsek
   name: Vicsek fractal
   dimension: log(5) / log(3)
@@ -73,6 +77,9 @@ fractals:
   dimension: log(12) / log(4)
 - file: degraded
   name: Degraded Square
+  dimension: log(8) / log(3)
+- file: mould
+  name: Fractal mould
   dimension: log(8) / log(3)
 - file: corner
   name: Corner

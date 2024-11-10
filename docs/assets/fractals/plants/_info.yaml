@@ -32,6 +32,9 @@ fractals:
   name: Cabbage Leaf
   year: 2021
 - file: flower
+  name: Flower
+  dimension: 1.75372489
+- file: flowers
   name: Flowers
 - file: bamboo
   name: Bamboo

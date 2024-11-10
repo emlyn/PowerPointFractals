@@ -31,3 +31,5 @@ fractals:
     url: https://en.wikipedia.org/wiki/Pinwheel_tiling#Generalizations
 - file: pinwheel-shaded
   name: Shaded Pinwheel Fractal
+- file: temple
+  name: Fractal Temple

@@ -1,18 +1,18 @@
 categories:
 - name: Triangles
   description: >-
-    Fractals with triangular symmetry,
+    Fractals based on a triangular layout,
     such as the Sierpiński Triangle and variations.
 - name: Squares
   description: >-
-    Fractals with square symmetry,
+    Fractals wbased on a square grid layout,
     such as the Sierpiński Carpet and variations.
 - name: Pentagons
   description: >-
-    Fractals with pentagonal symmetry.
+    Fractals based on a pentagonal layout.
 - name: Hexagons
   description: >-
-    Fractals with hexagonal symmetry,
+    Fractals based on a hexagonal layout,
     such as the Koch Snowflake.
 - name: Linear
   description: >-

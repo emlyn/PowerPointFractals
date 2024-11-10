@@ -69,3 +69,37 @@ Public Sub PreciseRotation()
         End If
     End With
 End Sub
+
+Public Sub PreciseSize()
+    Dim shape As shape
+    Dim message As String
+    Dim i As Integer
+    Dim w, h As String
+    Dim answer
+
+    With ActiveWindow.Selection
+        If ActiveWindow.Selection.Type <> ppSelectionShapes Then
+            answer = MsgBox("Please select one or more shapes and try again", , "Precise Width")
+            Exit Sub
+        End If
+        With ActivePresentation.PageSetup
+            message = "Page size: " & .SlideWidth & " x " & .SlideHeight & vbNewLine & vbNewLine
+        End With
+        message = message & "You have selected " & .ShapeRange.Count & " shape(s):" & vbNewLine
+        For Each shape In .ShapeRange
+            message = message & "- " & shape.Name & ": " & shape.width & " x " & shape.Height & vbNewLine
+        Next
+        answer = InputBox(message, "Pecise Width", .ShapeRange(1).width & " x " & .ShapeRange(1).Height)
+        If answer <> "" Then
+            i = InStr(answer, "x")
+            w = Trim(Left(answer, i - 1))
+            h = Trim(Mid(answer, i + 1))
+            Debug.Print ("Using width='" & w & "' and height='" & h & "'")
+            For Each shape In .ShapeRange
+              shape.width = w
+              shape.Height = h
+            Next
+        End If
+    End With
+End Sub
+

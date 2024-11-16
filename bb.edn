@@ -13,7 +13,7 @@
                                            :medium "_1200.png"
                                            :large"_2400.png"}
                             :tracked-only true
-                            :check-modified true}}
+                            :check-modified false}}
          build {:doc "Builds the site (use --show-args to see args passed to template)"
                 :task (exec 'tasks/build-site)
                 ;; NOTE: :extra-paths must include the :exec-args :templates path

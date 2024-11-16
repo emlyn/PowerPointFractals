@@ -1,28 +1,14 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #ccc;
-    margin: 0;
-}
-
+ /* General styles */
 * {
     box-sizing: border-box;
 }
-
-.github-corner:hover .octo-arm {
-    animation:octocat-wave 560ms ease-in-out
-}
-@keyframes octocat-wave {
-    0%,100% {transform:rotate(0)}
-    20%,60% {transform:rotate(-25deg)}
-    40%,80% {transform:rotate(10deg)}
-}
-@media (max-width:500px){
-    .github-corner:hover .octo-arm {
-        animation:none
-    }
-    .github-corner .octo-arm {
-        animation:octocat-wave 560ms ease-in-out
-    }
+body, html {
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #888;
 }
 
 a {
@@ -31,74 +17,104 @@ a {
     text-decoration-style: dotted;
 }
 
-p {
-    line-height: 125%;
-}
-
-.inline-icon {
-    vertical-align: bottom;
-}
-
-.modal {
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    /* padding: 10vh; */
-    background: #888;
-    overflow-y: scroll;
-}
-
-.modal .content {
-    background-color: #ddd;
-    margin: 5% auto;
-    padding: 10px 20px;
-    border: 1px solid #888;
-    width: 80%;
-}
-
-.close {
-    color: #aaa;
+.right {
     float: right;
-    font-size: 28px;
+    margin: 0 1em 0.5em 0.5em;
+}
+
+/* Styles for the tab bar */
+.tabbar {
+    overflow: hidden;
+    border-bottom: 1px solid #666;
+    background-color: #eee;
+    height: 35px;
+}
+button.tab {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 8px 12px;
+    transition: 0.5s;
+    font-size: 100%;
     font-weight: bold;
 }
+button.tab:hover {
+    background-color: #ddd;
+}
+button.tab.active {
+    background-color: #ccc;
+}
 
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
+/* And the tabs */
+div.tab {
+    display: none;
+    padding: 0;
+    border-top: none;
+    height: calc(100% - 35px);
+    position: relative;
+    background-color: #888;
+}
+div.tab.active {
+    display: block;
+}
+
+.scrollable {
+    overflow-y: scroll;
+    height: 100%;
+}
+
+/*  */
+.content {
+    background-color: #ddd;
+    margin: 5% 10% 0 10%;
+    padding: 20px;
+    border: 3px solid #888;
+}
+
+/* Octocat (link to GitHub) */
+.github-corner:hover .octo-arm {
+    animation:octocat-wave 560ms ease-in-out
+}
+@keyframes octocat-wave {
+    0%,100% {transform:rotate(0)}
+    20%,60% {transform:rotate(-25deg)}
+    40%,80% {transform:rotate(10deg)}
 }
 
 .slides {
-    height: 85vh;
+    height: 90%;
     display: flex;
     justify-content: center;
+    background-color: #ddd;
 }
 
 .slide {
     display: none;
     flex-direction: row;
-    padding: 2vh;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 40px;
+}
+
+.slide.active {
+    display: flex;
 }
 
 .img {
-    height: 80vh;
-    width: 80vh;
+    height: 100%;
+    width: 100%;
     display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .img img {
+    margin: auto;
     max-height: 100%;
     max-width: 100%;
     padding: 0;
-    border: 10px solid #888;
-    border-radius: 2px;
+    border: 8px solid #888;
+    border-radius: 4px;
 }
 
 img[onclick] {
@@ -106,9 +122,6 @@ img[onclick] {
 }
 
 .info {
-    /* width: 50vh; */
-    /* height: 80vh; */
-    /* padding: 10vh 0 0 5vh; */
     display: flex;
     font-size: 80%;
     background-color: white;
@@ -121,9 +134,24 @@ img[onclick] {
     width: 40%;
 }
 
+@media all and (orientation:portrait) {
+    .slide {
+        flex-direction: column;
+    }
+    .img img {
+        max-width: 90%;
+        max-height: 80%;
+    }
+    .info {
+        width: auto;
+        height: 40%;
+        margin: auto;
+        overflow-y: scroll;
+    }
+}
+
 .info-container {
     width: 100%;
-
 }
 
 .info h2 {
@@ -145,11 +173,12 @@ img[onclick] {
 }
 
 .thumbnail-container {
-    height: 15vh;
+    height: 10%;
     width: 100%;
-    padding: 1vh;
+    padding: 4px;
     overflow-x: scroll;
     border-top: 2px solid #888;
+    background-color: #ccc;
 }
 
 .thumbnails {
@@ -179,7 +208,7 @@ img[onclick] {
     cursor: pointer;
     position: absolute;
     top: 40%;
-    padding: 16px;
+    padding: 12px;
     color: #444;
     font-weight: bold;
     font-size: 32px;
@@ -199,16 +228,21 @@ img[onclick] {
 }
 
 .focus {
+    display: none;
     user-select: none;
     width: 100%;
     height: 100%;
-    position: absolute;
+    position: fixed;
     margin: 0;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
     background-color: #aaa;
+}
+
+.focus.active {
+    display: block;
 }
 
 .focus img {
@@ -250,3 +284,12 @@ img[onclick] {
     right: 0;
     cursor: e-resize;
 }
+
+dt {
+    font-weight: bold;
+    font-size: 110%;
+}
+
+dd {
+    margin: 0.25em 1em 1em;
+ }

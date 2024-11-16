@@ -1,94 +1,119 @@
-let mode = 'intro';
-let slideIndex = 0;
+let currentTab;
+let currentSlide = 0;
+let focusMode = false;
 let slides;
 let thumbs;
 let foci;
 
-function gotoSlide(n, m=false) {
-    if (m) {
-        setMode("slides");
-    }
-    while (n < 0) {
-        n += slides.length;
-    }
-    n = n % slides.length;
-    slideIndex = n;
-    showSlide();
-}
-
-const nextSlide = () => gotoSlide(slideIndex + 1);
-const prevSlide = () => gotoSlide(slideIndex - 1);
-
 function init() {
-    slides = document.getElementsByClassName("slide");
-    thumbs = document.querySelectorAll(".thumbnails img");
-    foci = document.getElementsByClassName("focus");
-    showSlide();
+  slides = document.getElementsByClassName("slide");
+  foci = document.getElementsByClassName("focus");
+  thumbs = document.querySelectorAll(".thumbnails img");
+  showSlide();
 }
 
-function setMode(m) {
-    switch (m) {
-        case 'intro':
-            document.getElementById('intro').style.display = 'block';
-            break;
-        case 'slides':
-            document.getElementById('intro').style.display = 'none';
-            foci[slideIndex].style.display = "none";
-            break;
-        case 'focus':
-            foci[slideIndex].style.display = "block";
-            break;
-        default:
-            console.error(`Unknown mode: ${m}`);
-            return;
-    }
-    mode = m;
+function gettab(arg) {
+  if (typeof arg == 'string') {
+    return [arg, document.getElementById(arg + '-button'), document.getElementById(arg + '-tab')];
+  } else if (typeof arg == 'object') {
+    return [arg.id.replace(/-button$/, ''), arg, document.getElementById(arg.id.replace(/-button$/, '-tab'))];
+  }
+}
+
+function tab(arg) {
+  const [name, button, tab] = gettab(arg);
+  console.log('Tab', name, button, tab);
+
+  for (const el of document.querySelectorAll("div.tab")) {
+    el.classList.remove("active");
+  }
+  tab.classList.add("active");
+
+  for (const el of document.querySelectorAll("button.tab")) {
+    el.classList.remove("active");
+  }
+  button.classList.add("active");
+
+  currentTab = name;
+}
+
+function slide(n, force=false) {
+  if (force && currentTab != 'gallery') {
+    tab('gallery');
+  }
+  while (n < 0) {
+    n += slides.length;
+  }
+  n = n % slides.length;
+  currentSlide = n;
+  showSlide();
+}
+
+function nextSlide() {
+  slide(currentSlide + 1);
+}
+
+function prevSlide() {
+  slide(currentSlide - 1);
 }
 
 function showSlide() {
-    for (const slide of slides) {
-        slide.style.display = "none";
-    }
-    for (const thumb of thumbs) {
-        thumb.classList.remove("active");
-    }
-    for (const focus of foci) {
-        focus.style.display = "none";
-    }
-    if (mode === 'focus') {
-        foci[slideIndex].style.display = "block";
-    }
-    slides[slideIndex].style.display = "flex";
-    thumbs[slideIndex].classList.add("active");
-    thumbs[slideIndex].scrollIntoView({ behavior: "smooth", inline: "center" });
+  for (const slide of slides) {
+    slide.classList.remove("active");
+  }
+  for (const thumb of thumbs) {
+    thumb.classList.remove("active");
+  }
+  for (const focus of foci) {
+    focus.classList.remove("active");
+  }
+  if (focusMode) {
+    foci[currentSlide].classList.add("active");
+  }
+  slides[currentSlide].classList.add("active");
+  thumbs[currentSlide].classList.add("active");
+  thumbs[currentSlide].scrollIntoView({ behavior: "smooth", inline: "center" });
+}
+
+function focusImage(active) {
+  focusMode = active;
+  for (const focus of foci) {
+    focus.classList.remove("active");
+  }
+  if (focusMode) {
+    foci[currentSlide].classList.add("active");
+  }
 }
 
 function handleKey(e) {
-    e ||= window.event;
-    console.log(e);
-    switch (e.key) {
-        case "ArrowLeft":
-            if (mode !== 'intro') {
-                prevSlide();
-            }
-            break;
-        case "ArrowRight":
-            if (mode !== 'intro') {
-                nextSlide();
-            }
-            break;
-        case "Escape":
-            setMode(mode === 'slides' ? 'intro' : 'slides');
-            break;
-        case " ":
-        case "Enter":
-            setMode(mode === 'slides' ? 'focus' : 'slides');
-            break;
-    }
+  // console.log(e);
+  switch (e.key) {
+    case "ArrowLeft":
+      if (currentTab == 'gallery') {
+        prevSlide();
+      }
+      break;
+    case "ArrowRight":
+      if (currentTab == 'gallery') {
+        nextSlide();
+      }
+      break;
+    case "Escape":
+      tab(currentTab == 'index' ? 'gallery' : 'index');
+      break;
+    case " ":
+    case "Enter":
+      if (currentTab == 'gallery') {
+        focusImage(!focusMode);
+      }
+      break;
+  }
 }
 
 function handleResize() {
-    thumbs[slideIndex].scrollIntoView({ inline: "center" });
+  if (thumbs) {
+    thumbs[currentSlide].scrollIntoView({ inline: "center" });
+  }
 }
 
 addEventListener("keydown", handleKey, { passive: true });

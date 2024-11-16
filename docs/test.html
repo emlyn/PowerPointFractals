@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Test</title>
+  <script>
+    function init() {
+        function logevent(t, e) {
+            console.log("Event:", t, e);
+            let s = "Event: " + t + "\n";
+            for (k in e) {
+                s += k + ": " + e[k] + "\n";
+            }
+            document.getElementById('para').innerText = s;
+        }
+        document.getElementById('frac').addEventListener('swipe', e => logevent('Swipe', e));
+        document.getElementById('frac').addEventListener('click', e => logevent('Click', e));
+    }
+  </script>
+</head>
+
+<body onload="init()">
+    <h1>Test page</h1>
+    <img id="frac" src="assets/fractals/triangles/sierpinski_1200.png" width="200" alt="Sierpiński Triangle">
+    <p id="para">Lorem ipsum etc.</p>
+</body>
+</html>

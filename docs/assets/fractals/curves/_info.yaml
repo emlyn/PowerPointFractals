@@ -26,12 +26,45 @@ fractals:
   links:
   - name: Larry Riddle > Golden Dragon
     url: https://larryriddle.agnesscott.org/ifs/heighway/goldenDragon.htm
+- file: terdragon
+  name: Terdragon
+  dimension: 2
+  links:
+  - name: Wikipedia > Dragon curve > Terdragon
+    url: https://en.wikipedia.org/wiki/Dragon_curve#Terdragon
+  - name: Larry Scott > Terdragon
+    url: https://larryriddle.agnesscott.org/ifs/heighway/terdragon.htm
+- file: terdragon-island
+  name: Terdragon Island
+- file: terdragon-nebula
+  name: Terdragon Nebula
 - file: cesaro
   name: Cesàro Fractal
   dimension: log(4) / log(2.1838)
   links:
   - name: Wikipedia > Koch snowflake > Variants of the Koch curve
     url: https://en.wikipedia.org/wiki/Koch_snowflake#Variants_of_the_Koch_curve
+- file: pentigree
+  name: McWorter's Pentigree
+  dimension: log(6) / log(2 / (3 - sqrt(5)))
+  links:
+  - name: Larry Scott > McWorter's Pentigree
+    url: https://larryriddle.agnesscott.org/ifs/pentigre/pentigre2.htm
+- file: purple-pentigree
+  name: Purple Pentigree
+- file: pentadendrite
+  name: Pentadendrite
+  dimension: log(6) / log(sqrt(31 / (6 - sqrt(5))))
+  links:
+  - name: Larry Scott > Pentadendrite
+    url: https://larryriddle.agnesscott.org/ifs/pentaden/penta.htm
+- file: pentadendrites
+  name: 5 Pentadendrites
+  links:
+  - name: Larry Scott > Pentadendrite
+    url: https://larryriddle.agnesscott.org/ifs/pentaden/penta.htm
+- file: pentadendrites2
+  name: 5 Pentadendrites (expanded)
 - file: htree
   name: H Tree
   dimension: 2

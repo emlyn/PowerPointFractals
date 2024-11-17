@@ -10,6 +10,12 @@ fractals:
 - file: menger-rgb
   name: Menger Sponge (RGB)
   dimension: log(20) / log(3)
+- file: menger-grey2
+  name: Menger Variation
+  dimension: log(32) / log(4)
+- file: menger-grey3
+  name: Menger Variation 2
+  dimension: log(38) / log(4)
 - file: cross-menger
   name: Jerusalem Cube
   dimension: log(sqrt(7)/6 - 1/3) / log(sqrt(2) - 1)

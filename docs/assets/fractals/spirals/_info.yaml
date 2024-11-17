@@ -2,10 +2,14 @@ fractals:
 - file: rainbow
   name: Rainbow Spiral
   year: 2021
+- file: flatwhite
+  name: Flat White
 - file: vortex
   name: Vortex
 - file: fire
   name: Fire Spiral
+- file: golden
+  name: Golden Spiral
 - file: blossom
   name: Spiral Blossom
 - file: jack

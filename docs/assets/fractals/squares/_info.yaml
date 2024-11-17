@@ -75,6 +75,9 @@ fractals:
 - file: track
   name: Track
   dimension: log(12) / log(4)
+- file: goblet
+  name: Goblet
+  dimension: log(6) / log(3)
 - file: degraded
   name: Degraded Square
   dimension: log(8) / log(3)

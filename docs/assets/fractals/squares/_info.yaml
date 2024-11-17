@@ -8,6 +8,8 @@ fractals:
   links:
   - name: Wikipedia > Sierpiński carpet
     url: https://en.wikipedia.org/wiki/Sierpiński_carpet
+  - name: Larry Riddle > Sierpiński Carpet
+    url: https://larryriddle.agnesscott.org/ifs/carpet/carpet.htm
 - file: gradient
   name: Sierpiński Carpet with colour gradient
 - file: outline

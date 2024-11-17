@@ -6,6 +6,8 @@ fractals:
   links:
   - name: Wikipedia > Koch snowflake
     url: https://en.wikipedia.org/wiki/Koch_snowflake
+  - name: Larry Riddle > Koch Curve
+    url: https://larryriddle.agnesscott.org/ifs/kcurve/kcurve.htm
 - file: square
   name: Koch Curve (square variation)
   year: 2023
@@ -98,12 +100,16 @@ fractals:
   links:
   - name: Wikipedia > Pythagoras tree (fractal)
     url: https://en.wikipedia.org/wiki/Pythagoras_tree_(fractal)
+  - name: Larry Riddle > Pythagorean Tree
+    url: https://larryriddle.agnesscott.org/ifs/pythagorean/pythTree.htm
 - file: levy-c
   name: Lévy C curve
   dimension: 2
   links:
   - name: Wikipedia > Lévy C curve
     url: https://en.wikipedia.org/wiki/Lévy_C_curve
+  - name: Larry Riddle > Lévy Dragon
+    url: https://larryriddle.agnesscott.org/ifs/levy/levy.htm
 - file: levy-c-coloured
   name: Coloured Lévy C curve
 - file: levy-c-345

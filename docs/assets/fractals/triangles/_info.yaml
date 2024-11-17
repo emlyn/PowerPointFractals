@@ -8,6 +8,8 @@ fractals:
   links:
   - name: Wikipedia > Sierpiński triangle
     url: https://en.wikipedia.org/wiki/Sierpiński_triangle
+  - name: Larry Riddle > Sierpiński Gasket
+    url: https://larryriddle.agnesscott.org/ifs/siertri/siertri.htm
 - file: rectangles
   name: Sierpiński Triangle with rectangles
 - file: rotated-rectangles
@@ -56,6 +58,8 @@ fractals:
   links:
   - name: Wikipedia > Koch snowflake
     url: https://en.wikipedia.org/wiki/Koch_snowflake
+  - name: Larry Riddle > Koch Anti-Snowflake
+    url: https://larryriddle.agnesscott.org/ifs/ksnow/kantisnow.htm
 - file: hourglass
   name: Hourglass
   dimension: 1.76665598

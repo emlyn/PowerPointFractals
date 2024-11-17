@@ -21,6 +21,8 @@ fractals:
   links:
   - name: Wikipedia > Koch snowflake
     url: https://en.wikipedia.org/wiki/Koch_snowflake
+  - name: Larry Riddle > Koch Snowflake
+    url: https://larryriddle.agnesscott.org/ifs/ksnow/ksnow.htm
 - file: exploding
   name: Exploding Koch Snowflake
 - file: exploded

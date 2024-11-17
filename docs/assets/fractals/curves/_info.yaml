@@ -32,6 +32,9 @@ fractals:
   links:
   - name: Larry Riddle > Golden Dragon
     url: https://larryriddle.agnesscott.org/ifs/heighway/goldenDragon.htm
+- file: golden2
+  name: Golden
+  tags: [Z1, Monochrome, Variation]
 - file: terdragon
   name: Terdragon
   dimension: 2

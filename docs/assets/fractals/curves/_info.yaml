@@ -3,6 +3,7 @@ fractals:
   name: Koch Curve
   year: 2021
   dimension: log(4) / log(3)
+  tags: [D1, B&W, Known]
   links:
   - name: Wikipedia > Koch snowflake
     url: https://en.wikipedia.org/wiki/Koch_snowflake
@@ -12,10 +13,12 @@ fractals:
   name: Koch Curve (square variation)
   year: 2023
   dimension: log(4) / log(2.82842)
+  tags: [D1, B&W, Known]
 - file: dragon
   name: Heighway Dragon
   year: 2021
   dimension: 2
+  tags: [Z1, Grey, Known]
   links:
   - name: Wikipedia > Heighway dragon
     url: https://en.wikipedia.org/wiki/Dragon_curve#Heighway_dragon
@@ -25,12 +28,14 @@ fractals:
   name: Golden Dragon Curve
   year: 2021
   dimension: phi
+  tags: [Z1, B&W, Known]
   links:
   - name: Larry Riddle > Golden Dragon
     url: https://larryriddle.agnesscott.org/ifs/heighway/goldenDragon.htm
 - file: terdragon
   name: Terdragon
   dimension: 2
+  tags: [Z2, B&W, Known]
   links:
   - name: Wikipedia > Dragon curve > Terdragon
     url: https://en.wikipedia.org/wiki/Dragon_curve#Terdragon
@@ -38,65 +43,80 @@ fractals:
     url: https://larryriddle.agnesscott.org/ifs/heighway/terdragon.htm
 - file: terdragon-island
   name: Terdragon Island
+  tags: [Z2, Colour, Variation]
 - file: terdragon-nebula
   name: Terdragon Nebula
+  tags: [Z1, Colour, Variation]
 - file: cesaro
   name: Cesàro Fractal
   dimension: log(4) / log(2.1838)
+  tags: [D1, B&W, Known]
   links:
   - name: Wikipedia > Koch snowflake > Variants of the Koch curve
     url: https://en.wikipedia.org/wiki/Koch_snowflake#Variants_of_the_Koch_curve
 - file: pentigree
   name: McWorter's Pentigree
   dimension: log(6) / log(2 / (3 - sqrt(5)))
+  tags: [Z1, B&W, Known]
   links:
   - name: Larry Scott > McWorter's Pentigree
     url: https://larryriddle.agnesscott.org/ifs/pentigre/pentigre2.htm
 - file: purple-pentigree
   name: Purple Pentigree
+  tags: [Z1, Monochrome, Variation]
 - file: pentadendrite
   name: Pentadendrite
   dimension: log(6) / log(sqrt(31 / (6 - sqrt(5))))
+  tags: [Z1, B&W, Known]
   links:
   - name: Larry Scott > Pentadendrite
     url: https://larryriddle.agnesscott.org/ifs/pentaden/penta.htm
 - file: pentadendrites
   name: 5 Pentadendrites
+  tags: [Z5, B&W, Known]
   links:
   - name: Larry Scott > Pentadendrite
     url: https://larryriddle.agnesscott.org/ifs/pentaden/penta.htm
 - file: pentadendrites2
   name: 5 Pentadendrites (expanded)
+  tags: [Z5, B&W, Variation]
 - file: htree
   name: H Tree
   dimension: 2
+  tags: [D2, Grey, Known]
   links:
   - name: Wikipedia > H Tree
     url: https://en.wikipedia.org/wiki/H_tree
 - file: coloured-htree
   name: Coloured H Tree
+  tags: [Z1, Colour, Variation]
 - file: redblack
   name: Red-Black H Tree
+  tags: [Z1, Monochrome, Variation]
 - file: mandelbrot-tree
   name: Mandelbrot Tree
   dimension: 1.783102820
+  tags: [D2, B&W, Known]
   links:
   - name: Wikipedia > H Tree > Related sets
     url: https://en.wikipedia.org/wiki/H_tree#Related_sets
 - file: fibonacci
   name: Fibonacci word fractal
   dimension: 3 * log(phi) / log(1 + sqrt(2))
+  tags: [D1, B&W, Known]
   links:
   - name: Wikipedia > Fibonacci word fractal
     url: https://en.wikipedia.org/wiki/Fibonacci_word_fractal
 - file: pythagoras-tree
   name: Pythagoras Tree
+  tags: [D1, Grey, Known]
   links:
   - name: Wikipedia > Pythagoras tree (fractal)
     url: https://en.wikipedia.org/wiki/Pythagoras_tree_(fractal)
 - file: pythagoras-tree-345
   name: 3-4-5 Pythagoras Tree
   year: 2021
+  tags: [Z1, Grey, Known]
   links:
   - name: Wikipedia > Pythagoras tree (fractal)
     url: https://en.wikipedia.org/wiki/Pythagoras_tree_(fractal)
@@ -105,6 +125,7 @@ fractals:
 - file: levy-c
   name: Lévy C curve
   dimension: 2
+  tags: [D1, Grey, Known]
   links:
   - name: Wikipedia > Lévy C curve
     url: https://en.wikipedia.org/wiki/Lévy_C_curve
@@ -112,13 +133,17 @@ fractals:
     url: https://larryriddle.agnesscott.org/ifs/levy/levy.htm
 - file: levy-c-coloured
   name: Coloured Lévy C curve
+  tags: [Z1, Colour, Variation]
 - file: levy-c-345
   name: Lévy C 3-4-5 curve
   year: 2021
   dimension: 2
+  tags: [Z1, Grey, Known]
 - file: tree3-90
   name: 3-branched Tree (90 degrees)
   dimension: log(3) / log(2)
+  tags: [D1, B&W, Known]
 - file: tree3-60
   name: 3-branched Tree (60 degrees)
   dimension: log(3) / log(2)
+  tags: [D1, B&W, Known]

@@ -1,44 +1,59 @@
 fractals:
 - file: canopy
   name: Fractal Canopy
+  tags: [D1, B&W, Known]
   links:
   - name: Wikipedia > Fractal canopy
     url: https://en.wikipedia.org/wiki/Fractal_canopy
 - file: tree
   name: Tree
   year: 2021
+  tags: [Z1, Colour, Variation]
 - file: tree2
   name: Tree 2
+  tags: [Z1, Colour, Variation]
 - file: tree4
   name: 4-branch Tree
+  tags: [Z1, Monochrome, Variation]
 - file: pine
   name: Pine Tree
+  tags: [Z1, Colour, Variation]
 - file: fern
   name: Fern
   year: 2021
+  tags: [Z1, Colour, Known]
 - file: barnsley-fern
   name: Barnsley Fern
+  tags: [Z1, Monochrome, Known]
   links:
   - name: Wikipedia > Barnsley fern
     url: https://en.wikipedia.org/wiki/Barnsley_fern
 - file: thelypteridaceae-fern
   name: Thelypteridaceae Fern
+  tags: [Z1, Monochrome, Known]
   links:
   - name: Wikipedia > Barnsley fern > Mutant varieties
     url: https://en.wikipedia.org/wiki/Barnsley_fern#Mutant_varieties
 - file: leaf-skeleton
   name: Leaf Skeleton
+  tags: [Z1, Grey, Variation]
 - file: cabbage
   name: Cabbage Leaf
   year: 2021
+  tags: [Z1, Colour, Variation]
 - file: flower
   name: Flower
   dimension: 1.75372489
+  tags: [D8, Grey, Variation, Tile]
 - file: flowers
   name: Flowers
+  tags: [D4, Colour, Inspired, Tile]
 - file: bamboo
   name: Bamboo
+  tags: [D2, Monochrome, New]
 - file: mushrooms1
   name: Mushrooms (closed)
+  tags: [D1, Monochrome, New]
 - file: mushrooms2
   name: Mushrooms (open)
+  tags: [D1, Monochrome, New]

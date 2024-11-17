@@ -1,26 +1,37 @@
 fractals:
 - file: barcode
   name: Barcode
+  tags: [D2, Grey, Inspired]
 - file: french-cantor
   name: Cantor Set as French flag
   dimension: log(2) / log(3)
+  tags: [Z1, Colour, Inspired]
 - file: palette
   name: Fractal Colour Palette
+  tags: [Z1, Colour, Inspired]
 - file: powerlines
   name: Power Lines
+  tags: [Z1, Colour, New]
 - file: dots
   name: Dots
+  tags: [D2, Grey, New]
 - file: circles
   name: Circles
   year: 2021
+  tags: [D2, Grey, New]
 - file: bubbles
   name: Bubbles
+  tags: [D2, Monochrome, New]
 - file: shard
   name: Shard
   year: 2021
+  tags: [D2, Grey, New]
 - file: jagged
   name: Jagged
+  tags: [D1, Colour, New]
 - file: metal
   name: Metal
+  tags: [D2, Grey, New]
 - file: ukraine
   name: Slava Ukraini
+  tags: [D1, Colour, New]

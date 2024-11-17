@@ -5,6 +5,7 @@ fractals:
   description: >-
     The classic Sierpiński Gasket (triangle)
   dimension: log(3) / log(2)
+  tags: [D3, B&W, Known, Tile]
   links:
   - name: Wikipedia > Sierpiński triangle
     url: https://en.wikipedia.org/wiki/Sierpiński_triangle
@@ -12,49 +13,66 @@ fractals:
     url: https://larryriddle.agnesscott.org/ifs/siertri/siertri.htm
 - file: rectangles
   name: Sierpiński Triangle with rectangles
+  tags: [D1, Grey, Variation]
 - file: rotated-rectangles
   name: Sierpiński Triangle with rotated rectangles
+  tags: [D3, Grey, Variation]
 - file: coloured-rectangles
   name: Sierpiński Triangle with coloured rectangles
+  tags: [Z1, Colour, Variation]
 - file: shaded
   name: Shaded Sierpiński Triangle
+  tags: [D3, Grey, Variation, Tile]
 - file: rgb
   name: Colour shaded Sierpiński Triangle
+  tags: [Z1, Colour, Variation, Tile]
 - file: circles
   name: Sierpiński Triangle made of circles
+  tags: [D3, Grey, Variation]
 - file: cmy
   name: Sierpiński Triangle made of coloured circles
   year: 2021
+  tags: [Z1, Colour, Variation]
 - file: sierpinski3
   name: Triple Triangle
   description: >-
     Variation on the Sierpiński Triangle,
     dividing it into one-third sized instead of half sized triangles.
   dimension: log(6) / log(3)
+  tags: [D3, B&W, Variation, Tile]
 - file: sierpinski-overlap
   name: Variation on the Sierpiński Triangle
   dimension: 1.587989545
+  tags: [D3, B&W, Variation, Tile]
 - file: sierpinski-asymmetric
   name: Asymmetric variation on the Sierpiński Triangle
   dimension: 1.626475240
+  tags: [D1, B&W, Variation, Tile]
 - file: sierpinski4
   name: Another variation on the Sierpiński Triangle
   dimension: log(13) / log(4)
+  tags: [D3, B&W, Inspired, Tile]
 - file: alternating-sierpinski
   name: Alternating Sierpinski Triangle
   dimension: 2
+  tags: [D3, B&W, Inspired, Tile]
 - file: rotated-sierpinski
   name: Rotated Sierpiński
+  tags: [D3, Grey, Inspired]
 - file: triflake
   name: Triflake
   dimension: log(4) / log(2.5)
+  tags: [D3, B&W, Known]
 - file: triflake-shaded
   name: Shaded Triflake
+  tags: [D3, Grey, Variation, Tile]
 - file: triflake-rotated-shaded
   name: Shaded Rotated Triflake
+  tags: [D3, Grey, Variation, Tile]
 - file: kochanti
   name: Koch antisnowflake
   dimension: log(6) / log(3)
+  tags: [D3, B&W, Known, Tile]
   links:
   - name: Wikipedia > Koch snowflake
     url: https://en.wikipedia.org/wiki/Koch_snowflake
@@ -63,10 +81,14 @@ fractals:
 - file: hourglass
   name: Hourglass
   dimension: 1.76665598
+  tags: [D1, B&W, Inspired]
 - file: lace
   name: Lace
   dimension: log(3) / log(2)
+  tags: [D3, Monochrome, Inspired]
 - file: dust
   name: Fractal Dust
+  tags: [D3, Grey, Inspired]
 - file: lightning
   name: Triangular Lightning
+  tags: [D3, Grey, Inspired]

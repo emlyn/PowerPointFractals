@@ -100,10 +100,18 @@
 (def categories-schema
   (m/schema
    [:map {:closed true}
+    [:tag-groups [:sequential
+            [:map {:closed true}
+             [:group [:or [:string] [:nil]]]
+             [:description [:string]]
+             [:tags [:sequential
+                     [:map {:closed true}
+                      [:name [:string]]
+                      [:description [:string]]]]]]]]
     [:categories [:sequential
                   [:map {:closed true}
-                   [:name string?]
-                   [:description string?]]]]]))
+                   [:name [:string]]
+                   [:description [:string]]]]]]))
 
 (def category-schema
   (m/schema
@@ -117,6 +125,7 @@
                  [:media {:optional true} [:string]]
                  [:description {:optional true} [:string]]
                  [:dimension {:optional true} [:or [:string] [:int] [:double]]]
+                 [:tags {:optional false} [:sequential [:string]]]
                  [:links {:optional true} [:sequential
                                            [:map {:closed true}
                                             [:name [:string]]
@@ -202,18 +211,44 @@
         info (update info :fractals (partial mapv (partial read-fractal (assoc args :category name))))]
     (merge cat info)))
 
+(defn check-info
+  [info]
+  (let [nils (->> info
+                  :tag-groups
+                  (filter (comp nil? :group))
+                  count)
+        tags (->> info
+                  :tag-groups
+                  (mapcat :tags)
+                  (map :name)
+                  frequencies)]
+    (when (> nils 1)
+      (throw (ex-info "There should only be one unnamed tag group" {:num nils})))
+    (when-let [dup-tags (->> tags
+                             (filter #(> (second %) 1))
+                             seq)]
+      (throw (ex-info "Duplicate tags" {:tags dup-tags})))
+    (doseq [frac (:fractals info)
+            :let [bad-tags (seq (remove tags (:tags frac)))]
+            :when bad-tags]
+      (throw (ex-info "Fractal has unknown tags" (assoc (select-keys frac [:name :file :category :tags])
+                                                        :bad-tags bad-tags)))))
+  info)
+
 (defn read-info
   [& {:keys [dir] :as args}]
-  (let [info (read-yaml (str dir "/_info.yaml") categories-schema)
-        info (update info :categories (partial mapv (partial read-category args)))
-        info (assoc info :fractals (mapv (fn [fract id]
-                                           (assoc fract :id id))
-                                         (mapcat :fractals (:categories info))
-                                         (range)))
-        info (update info :categories (partial mapv #(assoc % :fractals
-                                                            (filter (comp (partial = (:name %)) :category)
-                                                                    (:fractals info)))))]
-    info))
+  (as-> dir $
+    (str $ "/_info.yaml")
+    (read-yaml $ categories-schema)
+    (update $ :categories (partial mapv (partial read-category args)))
+    (assoc $ :fractals (mapv (fn [fract id]
+                               (assoc fract :id id))
+                             (mapcat :fractals (:categories $))
+                             (range)))
+    (update $ :categories (partial mapv #(assoc % :fractals
+                                                (filter (comp (partial = (:name %)) :category)
+                                                        (:fractals $)))))
+    (check-info $)))
 
 (defn num?
   [v]

@@ -2,16 +2,23 @@ fractals:
 - file: rainbow
   name: Rainbow Spiral
   year: 2021
+  tags: [Z1, Colour, Variation]
 - file: flatwhite
   name: Flat White
+  tags: [Z1, Monochrome, Variation]
 - file: vortex
   name: Vortex
+  tags: [Z1, Monochrome, Variation]
 - file: fire
   name: Fire Spiral
+  tags: [Z3, Colour, Inspired]
 - file: golden
   name: Golden Spiral
+  tags: [Z1, Colour, Inspired]
 - file: blossom
   name: Spiral Blossom
+  tags: [Z1, Colour, Inspired]
 - file: jack
   name: Jack-in-the-box
   year: 2021
+  tags: [Z2, Colour, New]

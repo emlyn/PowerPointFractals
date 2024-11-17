@@ -1,7 +1,10 @@
 fractals:
 - file: cloud
   name: Cloud
+  tags: [Z1, Grey, Variation]
 - file: centipede
   name: Centipede
+  tags: [Z1, Monochrome, New]
 - file: mountainscape
   name: Mountainscape
+  tags: [Z1, Colour, New]

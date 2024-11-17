@@ -2,6 +2,7 @@ fractals:
 - file: pentaflake
   name: The Pentaflake
   dimension: log(6) / log(1 + phi)
+  tags: [D5, B&W, Known]
   links:
   - name: Wikipedia > N-flake > Pentaflake
     url: https://en.wikipedia.org/wiki/N-flake#Pentaflake
@@ -11,6 +12,7 @@ fractals:
   name: Sierpiński Pentagon
   year: 2021
   dimension: log(5) / log(1 + phi)
+  tags: [D5, B&W, Known]
   links:
   - name: Wikipedia > N-flake > Pentaflake
     url: https://en.wikipedia.org/wiki/N-flake#Pentaflake
@@ -18,15 +20,21 @@ fractals:
     url: https://larryriddle.agnesscott.org/ifs/pentagon/pentagon.htm
 - file: rotated-pentaflake
   name: Rotated Pentaflake
+  tags: [D5, B&W, Known]
 - file: rotated-sierpinski
   name: Rotated Sierpiński Pentagon
   dimension: log(5) / log(1 + phi)
+  tags: [D5, B&W, Known]
 - file: pentaflake-gap
   name: Pentaflake with a gap
   dimension: 1.766692098
+  tags: [D5, Monochrome, Variation]
 - file: star
   name: Sierpiński Pentagon star
+  tags: [D5, Monochrome, Variation]
 - file: twist
   name: Twisted Sierpiński Pentagon
+  tags: [D5, Monochrome, Variation]
 - file: microbe
   name: Sierpiński Pentagon microbe
+  tags: [D5, Monochrome, Inspired]

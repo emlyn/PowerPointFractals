@@ -2,22 +2,28 @@ fractals:
 - file: sierpinski
   name: Sierpiński Hexagon
   dimension: log(6) / log(3)
+  tags: [D6, B&W, Known, Tile]
   links:
   - name: Wikipedia > N-flake > Hexaflake
     url: https://en.wikipedia.org/wiki/N-flake#Hexaflake
 - file: sierpinski-shaded
   name: Shaded Sierpiński Hexagon
+  tags: [D6, Grey, Variation, Tile]
 - file: sierpinski-coloured
   name: Coloured Sierpiński Hexagon
+  tags: [D2, Colour, Variation, Tile]
 - file: sierpinski-rotated
   name: Rotated Sierpinski Hexagon
   dimension: log(6) / log(3.077)
+  tags: [D6, B&W, Known, Tile]
 - file: sierpinski-rotated-shaded
   name: Rotated Shaded Sierpinski Hexagon
+  tags: [D6, Monochrome, Variation, Tile]
 - file: koch
   name: Koch Snowflake
   year: 2021
   dimension: 2
+  tags: [D6, B&W, Known]
   links:
   - name: Wikipedia > Koch snowflake
     url: https://en.wikipedia.org/wiki/Koch_snowflake
@@ -25,29 +31,40 @@ fractals:
     url: https://larryriddle.agnesscott.org/ifs/ksnow/ksnow.htm
 - file: exploding
   name: Exploding Koch Snowflake
+  tags: [D6, B&W, Variation]
 - file: exploded
   name: Exploded Koch Snowflake
+  tags: [D6, B&W, Variation]
 - file: snowflake
   name: Snowflake
   year: 2021
+  tags: [D6, Monochrome, Variation, Tile]
 - file: hexaflake
   name: Hexaflake
   dimension: log(7) / log(3)
+  tags: [D6, B&W, Known, Tile]
   links:
   - name: Wikipedia > N-flake > Hexaflake
     url: https://en.wikipedia.org/wiki/N-flake#Hexaflake
 - file: hexaflake-rotated
   name: Rotated Hexaflake
   dimension: log(7) / log(3)
+  tags: [D6, B&W, Variation]
 - file: hexaflake-shaded
   name: Shaded Hexaflake Hexagon
+  tags: [D6, Grey, Variation, Tile]
 - file: hexaflake-shaded2
   name: Shaded Hexaflake
+  tags: [D6, Grey, Variation]
 - file: hexaflake-shaded3
   name: Purple Hexaflake
+  tags: [D6, Monochrome, Variation]
 - file: hexaflake-coloured
   name: RGB Hexaflake
+  tags: [D2, Colour, Variation, Tile]
 - file: hexaflake-coloured2
   name: Coloured Hexaflake
+  tags: [D3, Colour, Variation, Tile]
 - file: hexaflake-cell
   name: Hexagonal Cell
+  tags: [D6, Monochrome, Inspired]

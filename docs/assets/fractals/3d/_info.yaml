@@ -1,48 +1,58 @@
 fractals:
 - file: menger-fake
   name: Faked Menger Sponge
+  tags: [3D, Grey, Known]
 - file: menger-grey
   name: Menger Sponge (grey)
   dimension: log(20) / log(3)
+  tags: [3D, Grey, Known]
   links:
   - name: Wikipedia > Menger sponge
     url: https://en.wikipedia.org/wiki/Menger_sponge
 - file: menger-rgb
   name: Menger Sponge (RGB)
   dimension: log(20) / log(3)
+  tags: [3D, Colour, Variation]
 - file: menger-grey2
   name: Menger Variation
   dimension: log(32) / log(4)
+  tags: [3D, Grey, Variation]
 - file: menger-grey3
   name: Menger Variation 2
   dimension: log(38) / log(4)
+  tags: [3D, Grey, Variation]
 - file: cross-menger
   name: Jerusalem Cube
   dimension: log(sqrt(7)/6 - 1/3) / log(sqrt(2) - 1)
+  tags: [3D, Monochrome, Known]
   links:
   - name: Wikipedia > Menger sponge > Jerusalem cube
     url: https://en.wikipedia.org/wiki/Menger_sponge#Jerusalem_cube
 - file: tetrix
   name: Sierpiński Tetrahedron (or Tetrix)
   dimension: log(4) / log(2)
+  tags: [3D, Monochrome, Known]
   links:
   - name: Wikipedia > Sierpiński triangle > Analogues in higher dimensions
     url: https://en.wikipedia.org/wiki/Sierpiński_triangle#Analogues_in_higher_dimensions
 - file: pyramid
   name: Sierpiński Pyramid
   dimension: log(5) / log(2)
+  tags: [3D, Grey, Known]
   links:
   - name: Wikipedia > Sierpiński triangle > Analogues in higher dimensions
     url: https://en.wikipedia.org/wiki/Sierpiński_triangle#Analogues_in_higher_dimensions
 - file: mosely-snowflake
   name: Mosely Snowflake
   dimension: log(18) / log(3)
+  tags: [3D, Grey, Known]
   links:
   - name: Wikipedia > Mosely snowflake
     url: https://en.wikipedia.org/wiki/Mosely_snowflake
 - file: sm-snowflake
   name: Sierpiński-Menger Snowflake
   dimension: log(9) / log(3)
+  tags: [3D, Grey, Known]
   links:
   - name: Wikipedia > Menger sponge > Others
     url: https://en.wikipedia.org/wiki/Menger_sponge#Others

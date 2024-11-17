@@ -2,34 +2,45 @@ fractals:
 - file: abstract2
   name: Ominous Bubbles
   year: 2021
+  tags: [D1, Colour, New]
 - file: abstract3
   name: Branching Balls
   year: 2021
+  tags: [Z1, Colour, New]
 - file: abstract4
   name: Angel
   year: 2021
+  tags: [Z1, B&W, New]
 - file: abstract6
   name: Fractal Herd
+  tags: [D1, Monochrome, New]
 - file: cross
   name: Cross
+  tags: [Z4, Colour, Variation]
   links:
   - name: Wikipedia > Minkowski Sausage
     url: https://en.wikipedia.org/wiki/Minkowski_sausage
 - file: heart
   name: Shattered Heart
   dimension: log(6) / log(3)
+  tags: [D1, Monochrome, Inspired]
 - file: transmission
   name: Transmission
   dimension: 1.766655985
+  tags: [D1, Monochrome, Inspired]
 - file: curved-htree
   name: Curved H Tree
+  tags: [D1, Monochrome, Variation]
 - file: pinwheel
   name: Pinwheel Fractal
   dimension: log(4) / log(sqrt(5))
+  tags: [Z1, B&W, Known, Tile]
   links:
   - name: Wikipedia > Pinwheel Tiling > Generalizations
     url: https://en.wikipedia.org/wiki/Pinwheel_tiling#Generalizations
 - file: pinwheel-shaded
   name: Shaded Pinwheel Fractal
+  tags: [Z2, Grey, Variation, Tile]
 - file: temple
   name: Fractal Temple
+  tags: [D1, Grey, Variation]

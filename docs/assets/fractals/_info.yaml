@@ -36,3 +36,65 @@ categories:
 - name: 3D
   description: >-
     Three dimensional fractals
+
+tag-groups:
+- group: null
+  description: Individual tags that don't belong to a group
+  tags:
+  - name: Tile
+    description: A shape that tiles the plane
+- group: Notability
+  description: How well known a fractal is
+  tags:
+  - name: Known
+    description: A well known fractal (probably appears on Wikipedia)
+  - name: Variation
+    description: A variation on a well known fractal
+  - name: Inspired
+    description: A new fractal that was inspired by a well known fractal
+  - name: New
+    description: A new fractal that was not (to the author's knowledge) previously known
+- group: Colour
+  description: How much colour is in the image
+  tags:
+  - name: B&W
+    description: Black & White
+  - name: Grey
+    description: Greyscale
+  - name: Monochrome
+    description: Monochrome (shades of a single colour)
+  - name: Colour
+    description: Multicolour (more than one colour)
+- group: Symmetry
+  description: The symmetry of the fractal depicted in the image
+  tags:
+  - name: Z1
+    description: No reflectional or rotational symmetry
+  - name: D1
+    description: A single axis of reflectional symmetry
+  - name: Z2
+    description: 180° rotational symmetry
+  - name: D2
+    description: Two perpendicular axes of reflectional symmetry
+  - name: Z3
+    description: 3-way rotational symmetry
+  - name: D3
+    description: 3-way rotational and reflective symmetry
+  - name: Z4
+    description: 4-way rotational symmetry
+  - name: D4
+    description: 4-way rotational and reflective symmetry
+  - name: Z5
+    description: 5-way rotational symmetry
+  - name: D5
+    description: 5-way rotational and reflective symmetry
+  - name: Z6
+    description: 6-way rotational symmetry
+  - name: D6
+    description: 6-way rotational and reflective symmetry
+  - name: Z8
+    description: 8-way rotational symmetry
+  - name: D8
+    description: 8-way rotational and reflective symmetry
+  - name: 3D
+    description: 3-dimensional

@@ -35,6 +35,15 @@ fractals:
 - file: golden2
   name: Golden
   tags: [Z1, Monochrome, Variation]
+- file: twindragon
+  name: Twindragon
+  dimension: 2
+  tags: [D2, B&W, Known]
+  links:
+  - name: Wikipedia > Dragon curve > Twindragon
+    url: https://en.wikipedia.org/wiki/Dragon_curve#Twindragon
+  - name: Larry Riddle > Twindragon
+    url: https://www.larryriddle.agnesscott.org/ifs/heighway/twindragon.htm
 - file: terdragon
   name: Terdragon
   dimension: 2
@@ -83,6 +92,12 @@ fractals:
 - file: pentadendrites2
   name: 5 Pentadendrites (expanded)
   tags: [Z5, B&W, Variation]
+- file: tsquare
+  name: T-Square
+  tags: [D4, Grey, Known]
+  links:
+  - name: Wikipedia > T-square (fractal)
+    url: https://en.wikipedia.org/wiki/T-square_(fractal)
 - file: htree
   name: H Tree
   dimension: 2

@@ -41,6 +41,9 @@ fractals:
 - file: pinwheel-shaded
   name: Shaded Pinwheel Fractal
   tags: [Z2, Grey, Variation, Tile]
+- file: filigree
+  name: Silver Filigree
+  tags: [Z1, Grey, New]
 - file: temple
   name: Fractal Temple
   tags: [D1, Grey, Variation]

@@ -9,6 +9,7 @@ function init() {
   slides = document.getElementsByClassName("slide");
   foci = document.getElementsByClassName("focus");
   thumbs = document.querySelectorAll(".thumbnails img");
+  handleLocationChanged();
   showSlide();
 }
 
@@ -22,18 +23,17 @@ function gettab(arg) {
 
 function tab(arg) {
   const [name, button, tab] = gettab(arg);
-  console.log('Tab', name, button, tab);
+  // console.log('Tab', name, button, tab);
 
   for (const el of document.querySelectorAll("div.tab")) {
     el.classList.remove("active");
   }
   tab.classList.add("active");
 
-  for (const el of document.querySelectorAll("button.tab")) {
+  for (const el of document.querySelectorAll("a.tab")) {
     el.classList.remove("active");
   }
   button.classList.add("active");
-
   currentTab = name;
 }
 
@@ -116,6 +116,13 @@ function handleResize() {
   }
 }
 
+function handleLocationChanged() {
+  const hash = location.hash.substring(1);
+  // console.log('Location', hash);
+  tab(hash || 'home');
+}
+
+window.onhashchange = handleLocationChanged;
 addEventListener("keydown", handleKey, { passive: true });
 addEventListener("resize", handleResize, { passive: true });
 addEventListener("DOMContentLoaded", init, { passive: true });

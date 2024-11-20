@@ -29,7 +29,7 @@ a {
     background-color: #eee;
     height: 35px;
 }
-button.tab {
+a.tab {
     background-color: inherit;
     float: left;
     border: none;
@@ -39,11 +39,12 @@ button.tab {
     transition: 0.5s;
     font-size: 100%;
     font-weight: bold;
+    text-decoration: none;
 }
-button.tab:hover {
+a.tab:hover {
     background-color: #ddd;
 }
-button.tab.active {
+a.tab.active {
     background-color: #ccc;
 }
 

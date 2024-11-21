@@ -44,6 +44,9 @@ fractals:
 - file: filigree
   name: Silver Filigree
   tags: [Z1, Grey, New]
+- file: mesh
+  name: Mesh
+  tags: [D4, Grey, New]
 - file: temple
   name: Fractal Temple
   tags: [D1, Grey, Variation]

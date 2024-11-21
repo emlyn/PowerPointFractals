@@ -1,6 +1,6 @@
 fractals:
-- file: sierpinski
-  name: Sierpiński Triangle
+- file: sierpinski-gasket
+  name: Sierpiński Gasket
   year: 2021
   description: >-
     The classic Sierpiński Gasket (triangle)
@@ -26,7 +26,7 @@ fractals:
 - file: rgb
   name: Colour shaded Sierpiński Triangle
   tags: [Z1, Colour, Variation, Tile]
-- file: circles
+- file: circle-triangle
   name: Sierpiński Triangle made of circles
   tags: [D3, Grey, Variation]
 - file: cmy
@@ -56,8 +56,8 @@ fractals:
   name: Alternating Sierpinski Triangle
   dimension: 2
   tags: [D3, B&W, Inspired, Tile]
-- file: rotated-sierpinski
-  name: Rotated Sierpiński
+- file: rotated-triangles
+  name: Rotated Sierpiński Triangle
   tags: [D3, Grey, Inspired]
 - file: triflake
   name: Triflake

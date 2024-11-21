@@ -1,5 +1,5 @@
 fractals:
-- file: sierpinski
+- file: sierpinski-hexagon
   name: Sierpiński Hexagon
   dimension: log(6) / log(3)
   tags: [D6, B&W, Known, Tile]
@@ -19,7 +19,7 @@ fractals:
 - file: sierpinski-rotated-shaded
   name: Rotated Shaded Sierpinski Hexagon
   tags: [D6, Monochrome, Variation, Tile]
-- file: koch
+- file: koch-snowflake
   name: Koch Snowflake
   year: 2021
   dimension: 2

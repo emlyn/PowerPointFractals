@@ -1,5 +1,5 @@
 fractals:
-- file: sierpinski
+- file: sierpinski-carpet
   name: Sierpiński Carpet
   year: 2021
   description: >-
@@ -72,7 +72,7 @@ fractals:
   name: Fractal Castle
   dimension: log(8) / log(3)
   tags: [D1, B&W, Variation]
-- file: cross
+- file: jerusalem-cross
   name: Jerusalem Cross
   dimension: log((sqrt(2) - 1) / 2) / log(sqrt(2) - 1)
   tags: [D4, Monochrome, Known, Tile]
@@ -90,7 +90,7 @@ fractals:
 - file: distorted
   name: Distorted Carpet
   tags: [D2, Monochrome, Variation]
-- file: dots
+- file: coloured-dots
   name: Dots
   tags: [D2, Colour, Inspired, Tile]
 - file: window

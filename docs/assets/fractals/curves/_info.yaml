@@ -1,5 +1,5 @@
 fractals:
-- file: koch
+- file: koch-curve
   name: Koch Curve
   year: 2021
   dimension: log(4) / log(3)
@@ -24,7 +24,7 @@ fractals:
     url: https://en.wikipedia.org/wiki/Dragon_curve#Heighway_dragon
   - name: Larry Scott > Heighway Dragon
     url: https://larryriddle.agnesscott.org/ifs/heighway/heighway.htm
-- file: golden
+- file: golden-dragon
   name: Golden Dragon Curve
   year: 2021
   dimension: phi
@@ -32,7 +32,7 @@ fractals:
   links:
   - name: Larry Riddle > Golden Dragon
     url: https://larryriddle.agnesscott.org/ifs/heighway/goldenDragon.htm
-- file: golden2
+- file: golden
   name: Golden
   tags: [Z1, Monochrome, Variation]
 - file: twindragon

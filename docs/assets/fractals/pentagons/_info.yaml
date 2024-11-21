@@ -8,7 +8,7 @@ fractals:
     url: https://en.wikipedia.org/wiki/N-flake#Pentaflake
   - name: Larry Riddle > Durer's Pentagons
     url: https://larryriddle.agnesscott.org/ifs/pentagon/Durer.htm
-- file: sierpinski
+- file: sierpinski-pentagon
   name: Sierpiński Pentagon
   year: 2021
   dimension: log(5) / log(1 + phi)
@@ -21,7 +21,7 @@ fractals:
 - file: rotated-pentaflake
   name: Rotated Pentaflake
   tags: [D5, B&W, Known]
-- file: rotated-sierpinski
+- file: rotated-pentagons
   name: Rotated Sierpiński Pentagon
   dimension: log(5) / log(1 + phi)
   tags: [D5, B&W, Known]

@@ -12,8 +12,8 @@ fractals:
 - file: powerlines
   name: Power Lines
   tags: [Z1, Colour, New]
-- file: dots
-  name: Dots
+- file: ruler
+  name: Ruler
   tags: [D2, Grey, New]
 - file: circles
   name: Circles

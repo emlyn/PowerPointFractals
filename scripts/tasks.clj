@@ -221,7 +221,13 @@
                   :tag-groups
                   (mapcat :tags)
                   (map :name)
-                  frequencies)]
+                  frequencies)
+        files (->> info
+                   :fractals
+                   (map #(select-keys % [:file :category :name]))
+                   (group-by :file)
+                   (filter #(> (count (val %)) 1))
+                   seq)]
     (when (> nils 1)
       (throw (ex-info "There should only be one unnamed tag group" {:num nils})))
     (when-let [dup-tags (->> tags
@@ -232,7 +238,9 @@
             :let [bad-tags (seq (remove tags (:tags frac)))]
             :when bad-tags]
       (throw (ex-info "Fractal has unknown tags" (assoc (select-keys frac [:name :file :category :tags])
-                                                        :bad-tags bad-tags)))))
+                                                        :bad-tags bad-tags))))
+    (when files
+      (throw (ex-info "Duplicate filenames" {:files files}))))
   info)
 
 (defn read-info

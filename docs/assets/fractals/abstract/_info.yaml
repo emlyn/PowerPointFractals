@@ -1,20 +1,20 @@
 fractals:
-- file: abstract2
+- file: ominous-bubbles
   name: Ominous Bubbles
   year: 2021
   tags: [D1, Colour, New]
-- file: abstract3
+- file: branching-balls
   name: Branching Balls
   year: 2021
   tags: [Z1, Colour, New]
-- file: abstract4
+- file: angel
   name: Angel
   year: 2021
   tags: [Z1, B&W, New]
-- file: abstract6
+- file: herd
   name: Fractal Herd
   tags: [D1, Monochrome, New]
-- file: cross
+- file: minkowski-cross
   name: Cross
   tags: [Z4, Colour, Variation]
   links:

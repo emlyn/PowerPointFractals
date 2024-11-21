@@ -12,7 +12,7 @@ fractals:
 - file: fire
   name: Fire Spiral
   tags: [Z3, Colour, Inspired]
-- file: golden
+- file: golden-spiral
   name: Golden Spiral
   tags: [Z1, Colour, Inspired]
 - file: blossom

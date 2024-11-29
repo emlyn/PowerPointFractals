@@ -128,11 +128,12 @@ img[onclick] {
     background-color: white;
     padding: 1em;
     margin: auto;
-    height: auto;
+    max-height: 90%;
     margin-left: 4em;
     border: 2px solid #888;
     border-radius: 1px;
     width: 40%;
+    overflow-y: scroll;
 }
 
 @media all and (orientation:portrait) {
@@ -149,6 +150,10 @@ img[onclick] {
         margin: auto;
         overflow-y: scroll;
     }
+}
+
+#index-tab img {
+    max-height: 10vw;
 }
 
 .info-container {

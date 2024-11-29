@@ -13,33 +13,9 @@ function init() {
   showSlide();
 }
 
-function gettab(arg) {
-  if (typeof arg == 'string') {
-    return [arg, document.getElementById(arg + '-button'), document.getElementById(arg + '-tab')];
-  } else if (typeof arg == 'object') {
-    return [arg.id.replace(/-button$/, ''), arg, document.getElementById(arg.id.replace(/-button$/, '-tab'))];
-  }
-}
-
-function tab(arg) {
-  const [name, button, tab] = gettab(arg);
-  // console.log('Tab', name, button, tab);
-
-  for (const el of document.querySelectorAll("div.tab")) {
-    el.classList.remove("active");
-  }
-  tab.classList.add("active");
-
-  for (const el of document.querySelectorAll("a.tab")) {
-    el.classList.remove("active");
-  }
-  button.classList.add("active");
-  currentTab = name;
-}
-
 function slide(n, force=false) {
   if (force && currentTab != 'gallery') {
-    tab('gallery');
+    window.location = '#gallery';
   }
   while (n < 0) {
     n += slides.length;
@@ -99,7 +75,7 @@ function handleKey(e) {
       }
       break;
     case "Escape":
-      tab(currentTab == 'index' ? 'gallery' : 'index');
+      window.location = currentTab == 'index' ? '#gallery' : '#index';
       break;
     case " ":
     case "Enter":
@@ -117,9 +93,26 @@ function handleResize() {
 }
 
 function handleLocationChanged() {
-  const hash = location.hash.substring(1);
-  // console.log('Location', hash);
-  tab(hash || 'home');
+  const name = location.hash.substring(1) || 'home';
+  const button = document.getElementById(name + '-button');
+  const tab = document.getElementById(name + '-tab')
+
+  if (!button || !tab) {
+    console.error('Invalid location', name);
+    return;
+  }
+
+  for (const el of document.querySelectorAll("div.tab")) {
+    el.classList.remove("active");
+  }
+  tab.classList.add("active");
+
+  for (const el of document.querySelectorAll("a.tab")) {
+    el.classList.remove("active");
+  }
+  button.classList.add("active");
+  currentTab = name;
+  // console.log('Location', tab);
 }
 
 window.onhashchange = handleLocationChanged;

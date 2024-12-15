@@ -30,7 +30,7 @@ div#controls {
     padding: 10px;
 }
 
-div#canvas {
+div#arena {
     flex: auto;
     width: auto;
     height: 100%;
@@ -38,7 +38,7 @@ div#canvas {
     background-color: #eef;
 }
 
-div#canvas canvas {
+div#arena canvas {
     display: block;
     margin: auto;
     aspect-ratio: 1 / 1;

@@ -6,6 +6,9 @@ fractals:
 - file: flatwhite
   name: Flat White
   tags: [Z1, Monochrome, Variation]
+- file: zebra-spiral
+  name: Zebra Spiral
+  tags: [Z1, B&W, Variation]
 - file: vortex
   name: Vortex
   tags: [Z1, Monochrome, Variation]

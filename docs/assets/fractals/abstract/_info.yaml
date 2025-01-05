@@ -28,9 +28,21 @@ fractals:
   name: Transmission
   dimension: 1.766655985
   tags: [D1, Monochrome, Inspired]
+- file: sheep-head
+  name: Sheep Head
+  tags: [D1, Grey, Variation]
+- file: lichen
+  name: Lichen
+  tags: [Z1, Monochrome, Variation]
+- file: swirls
+  name: Swirls
+  tags: [Z1, Monochrome, Variation]
 - file: curved-htree
   name: Curved H Tree
   tags: [D1, Monochrome, Variation]
+- file: temple
+  name: Fractal Temple
+  tags: [D1, Grey, Variation]
 - file: pinwheel
   name: Pinwheel Fractal
   dimension: log(4) / log(sqrt(5))
@@ -47,6 +59,3 @@ fractals:
 - file: mesh
   name: Mesh
   tags: [D4, Grey, New]
-- file: temple
-  name: Fractal Temple
-  tags: [D1, Grey, Variation]

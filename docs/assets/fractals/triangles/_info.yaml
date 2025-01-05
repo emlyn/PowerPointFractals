@@ -20,25 +20,39 @@ fractals:
 - file: coloured-rectangles
   name: Sierpiński Triangle with coloured rectangles
   tags: [Z1, Colour, Variation]
-- file: shaded
+- file: shaded-triangle
   name: Shaded Sierpiński Triangle
   tags: [D3, Grey, Variation, Tile]
-- file: rgb
+- file: coloured-triangle
   name: Colour shaded Sierpiński Triangle
   tags: [Z1, Colour, Variation, Tile]
 - file: circle-triangle
   name: Sierpiński Triangle made of circles
   tags: [D3, Grey, Variation]
-- file: cmy
+- file: coloured-circle-triangle
   name: Sierpiński Triangle made of coloured circles
   year: 2021
   tags: [Z1, Colour, Variation]
-- file: sierpinski3
-  name: Triple Triangle
+- file: triangle3
+  name: Pascal Triangle Modulo 3
   description: >-
     Variation on the Sierpiński Triangle,
     dividing it into one-third sized instead of half sized triangles.
   dimension: log(6) / log(3)
+  tags: [D3, B&W, Variation, Tile]
+- file: triangle4
+  name: Pascal Triangle Modulo 4
+  description: >-
+    Variation on the Sierpiński Triangle,
+    dividing it into one-quarter sized instead of half sized triangles.
+  dimension: log(10) / log(4)
+  tags: [D3, B&W, Variation, Tile]
+- file: triangle5
+  name: Pascal Triangle Modulo 5
+  description: >-
+    Variation on the Sierpiński Triangle,
+    dividing it into one-fifth sized instead of half sized triangles.
+  dimension: log(15) / log(5)
   tags: [D3, B&W, Variation, Tile]
 - file: sierpinski-overlap
   name: Variation on the Sierpiński Triangle
@@ -48,9 +62,17 @@ fractals:
   name: Asymmetric variation on the Sierpiński Triangle
   dimension: 1.626475240
   tags: [D1, B&W, Variation, Tile]
-- file: sierpinski4
+- file: triangle-variation
   name: Another variation on the Sierpiński Triangle
   dimension: log(13) / log(4)
+  tags: [D3, B&W, Inspired, Tile]
+- file: triangle-variation2
+  name: Another variation on the Sierpiński Triangle
+  dimension: log(13) / log(4)
+  tags: [D3, B&W, Inspired, Tile]
+- file: triangle-variation3
+  name: Another variation on the Sierpiński Triangle
+  dimension: log(12) / log(4)
   tags: [D3, B&W, Inspired, Tile]
 - file: alternating-sierpinski
   name: Alternating Sierpinski Triangle

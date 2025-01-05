@@ -15,6 +15,12 @@
             [infix.core :as infix]
             [infix.macros :refer [from-string]]))
 
+(def INFO_FILE "_info.yaml")
+(def SRC_SUFFIX ".pptx")
+(def DST_SUFFIXES {:small "_600.png"
+                   :medium "_1200.png"
+                   :large "_2400.png"})
+
 (defn- num-str?
   [s]
   (and (string? s)
@@ -47,13 +53,13 @@
       (throw (ex-info "Pre-commit hook already exists, use --overwrite to replace it" {:location dst})))))
 
 (defn- check-file
-  [{:keys [src-suffix dst-suffixes tracked? check-modified verbose]} src-file]
+  [{:keys [tracked? check-modified verbose]} src-file]
   (if (not (tracked? src-file))
     (when verbose (println "Skipping" src-file "(not tracked)"))
     (do (when verbose (println "Checking" src-file))
-        (let [stem (subs src-file 0 (- (count src-file) (count src-suffix)))
+        (let [stem (subs src-file 0 (- (count src-file) (count SRC_SUFFIX)))
               modified (fs/last-modified-time src-file)
-              dst-files (map #(str stem %) (vals dst-suffixes))
+              dst-files (map #(str stem %) (vals DST_SUFFIXES))
               missing (not-empty (filter (complement fs/exists?) dst-files))
               outdated (when check-modified
                          (not-empty (filter #(and (fs/exists? %)
@@ -67,12 +73,12 @@
                  (when untracked (str " untracked " (str/join ", " untracked)))))))))
 
 (defn- check-dir
-  [& {:keys [dir src-suffix verbose] :as args}]
+  [& {:keys [dir verbose] :as args}]
   (when verbose (println "Listing" (str dir)))
   (let [{dirs true files false} (group-by fs/directory? (fs/list-dir dir))
         results (->> files
                      (map str)
-                     (filter #(str/ends-with? % src-suffix))
+                     (filter #(str/ends-with? % SRC_SUFFIX))
                      (sort)
                      (map (partial check-file args))
                      (remove nil?)
@@ -181,7 +187,7 @@
 
 
 (defn read-fractal
-  [{:keys [dir category src-suffix dst-suffixes]}
+  [{:keys [dir category]}
    {:keys [file dimension author year media] :as info}]
   (let [imgs (reduce-kv (fn [m name suffix]
                           (let [[w h] (img-dimensions (str dir "/" category "/" file suffix))]
@@ -189,9 +195,9 @@
                                            :height h
                                            :file (str file suffix)})))
                         {}
-                        dst-suffixes)]
+                        DST_SUFFIXES)]
     (assoc info
-           :source (str file src-suffix)
+           :source (str file SRC_SUFFIX)
            :images imgs
            :aspect (let [{:keys [width height]} (->> imgs vals (sort-by :width) last)]
                      (/ width height))
@@ -207,7 +213,7 @@
 (defn read-category
   [{:keys [dir] :as args}
    {:keys [name] :as cat}]
-  (let [info (read-yaml (str dir "/" name "/_info.yaml") category-schema)
+  (let [info (read-yaml (str dir "/" name "/" INFO_FILE) category-schema)
         info (update info :fractals (partial mapv (partial read-fractal (assoc args :category name))))]
     (merge cat info)))
 
@@ -246,7 +252,7 @@
 (defn read-info
   [& {:keys [dir] :as args}]
   (as-> dir $
-    (str $ "/_info.yaml")
+    (str $ "/" INFO_FILE)
     (read-yaml $ categories-schema)
     (update $ :categories (partial mapv (partial read-category args)))
     (assoc $ :fractals (mapv (fn [fract id]

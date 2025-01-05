@@ -8,10 +8,6 @@
  :tasks {check {:doc "Checks that all PowerPoints have been converted to PNGs"
                 :task (exec 'tasks/check)
                 :exec-args {:dir "docs/assets/fractals"
-                            :src-suffix ".pptx"
-                            :dst-suffixes {:small "_600.png"
-                                           :medium "_1200.png"
-                                           :large"_2400.png"}
                             :tracked-only true
                             :check-modified false}}
          build {:doc "Builds the site (use --show-args to see args passed to template)"
@@ -19,10 +15,6 @@
                 ;; NOTE: :extra-paths must include the :exec-args :templates path
                 :extra-paths ["resources/templates"]
                 :exec-args {:dir "docs/assets/fractals"
-                            :src-suffix ".pptx"
-                            :dst-suffixes {:small "_600.png"
-                                           :medium "_1200.png"
-                                           :large "_2400.png"}
                             :templates "resources/templates"
                             :template-args {:raw-root "assets/fractals"}
                             :output "docs"}}

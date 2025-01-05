@@ -380,6 +380,8 @@
                  (map #(re-find #"^ *- file: +([\w-]+)$" %))
                  (remove nil?)
                  (map second))
+        _ (when (some #{to} all)
+            (throw (ex-info "Target (to) already exists in info" {:from from :to to :all all})))
         _ (let [num (->> all (filter #{name}) count)]
             (if no-info
               (when-not (zero? num)

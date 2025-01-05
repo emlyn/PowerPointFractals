@@ -120,7 +120,7 @@ fractals:
     url: https://en.wikipedia.org/wiki/H_tree#Related_sets
 - file: fibonacci
   name: Fibonacci word fractal
-  dimension: 3 * log(phi) / log(1 + sqrt(2))
+  dimension: (3 * log(phi)) / log(1 + sqrt(2))
   tags: [D1, B&W, Known]
   links:
   - name: Wikipedia > Fibonacci word fractal

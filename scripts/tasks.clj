@@ -348,3 +348,65 @@
                               smap))
             [d res] (solve func dmin dmax)]
         (println (format "Dimension: %s (residual %s)" d res))))))
+
+#_{:clj-kondo/ignore [:clojure-lsp/unused-public-var]}
+(defn rename
+  {:org.babashka/cli {:coerce {:from :string
+                               :to :string
+                               :no-info :boolean
+                               :git-add :boolean}}}
+  [& {:keys [from to no-info git-add]}]
+  (when-not (and from to)
+    (throw (ex-info "Usage: bb rename --from <src-file> --to <new-name>" {:from from :to to})))
+  (let [[_ dir name] (or (re-find #"(.*)/([^/]+)(?:[.]pptx|_[0-9]*[.]png)" from)
+                         (re-find #"(.*)/([^/_.]+)" from))
+        _ (when-not (and dir name)
+            (throw (ex-info "Invalid from file" {:from from})))
+        _ (when (some (set "[](){}.+*?!|$^\\") name)
+            (throw (ex-info "Invalid name" {:name name})))
+        _ (when-not (fs/directory? dir)
+            (throw (ex-info "Directory doesn't exist" {:dir dir})))
+        filesuf (->> (fs/list-dir dir)
+                     (map fs/file-name)
+                     (map #(let [[_ n suf] (re-find #"([^/]+)([.]pptx|_[0-9]*[.]png)" %)]
+                             (when (and n suf (= n name))
+                               suf)))
+                     (remove nil?))
+        _ (when (not= 4 (count filesuf))
+            (throw (ex-info "Expecting 4 files to rename" {:files (mapv #(str name %) filesuf)})))
+        ;; parsing the yaml messes up the formatting, so just do text replacement
+        info (str/split-lines (slurp (str dir "/" INFO_FILE)))
+        all (->> info
+                 (map #(re-find #"^ *- file: +([\w-]+)$" %))
+                 (remove nil?)
+                 (map second))
+        _ (let [num (->> all (filter #{name}) count)]
+            (if no-info
+              (when-not (zero? num)
+                (throw (ex-info "File found in info, should update it" {:file name :all all :num num})))
+              (when-not (= 1 num)
+                (throw (ex-info "File not found in info" {:file name :all all :num num})))))
+        info (when-not no-info
+               (map #(let [[_ pre n] (re-find #"^( *- file: +)([\w-]+)$" %)]
+                       (if (and pre n (= n name))
+                         (str pre to)
+                         %))
+                    info))]
+    (println (format "Renaming \"%s\" -> \"%s\" in %s" name to dir))
+    (doseq [suf filesuf
+            :let [src (str dir "/" name suf)
+                  dst (str dir "/" to suf)]]
+      (println (format "Renaming %s -> %s" src dst))
+      (fs/move src dst))
+    (if no-info
+      (println "Not updating info file")
+      (do
+        (println (format "Updating info file: %s" (str dir "/" INFO_FILE)))
+        (spit (str dir "/" INFO_FILE)
+              (str (str/join "\n" info) \newline))))
+    (when git-add
+      (println "Adding changes to git")
+      (let [files (reduce into (if no-info [] [(str dir "/" INFO_FILE)])
+                          [(map #(str dir "/" name %) filesuf)
+                           (map #(str dir "/" to %) filesuf)])]
+        (apply proc/sh "git" "add" files)))))

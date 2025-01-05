@@ -31,6 +31,8 @@
                        (require 'tasks)
                        (in-ns 'tasks)
                        (clojure.main/repl))}
+         rename {:doc "Rename a fractal file"
+                 :task (exec 'tasks/rename)}
          pre-commit {:doc "Tasks to run before committing"
                      :depends [check]}
          install-pre-commit {:doc "Installs pre-commit hooks"

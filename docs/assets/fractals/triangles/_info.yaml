@@ -56,12 +56,12 @@ fractals:
   tags: [D3, B&W, Variation, Tile]
 - file: sierpinski-overlap
   name: Variation on the Sierpiński Triangle
-  dimension: 1.587989545
+  dimension: log(13) / log(5)
   tags: [D3, B&W, Variation, Tile]
-- file: sierpinski-asymmetric
-  name: Asymmetric variation on the Sierpiński Triangle
-  dimension: 1.626475240
-  tags: [D1, B&W, Variation, Tile]
+- file: sierpinski-hole
+  name: Variation on the Sierpiński Triangle
+  dimension: log(12) / log(5)
+  tags: [D3, B&W, Variation, Tile]
 - file: triangle-variation
   name: Another variation on the Sierpiński Triangle
   dimension: log(13) / log(4)
@@ -78,6 +78,14 @@ fractals:
   name: Alternating Sierpinski Triangle
   dimension: 2
   tags: [D3, B&W, Inspired, Tile]
+- file: sierpinski-asymmetric
+  name: Asymmetric variation on the Sierpiński Triangle
+  dimension: 1.626475240
+  tags: [D1, B&W, Variation, Tile]
+- file: hourglass
+  name: Hourglass
+  dimension: 1.76665598
+  tags: [D1, B&W, Inspired]
 - file: rotated-triangles
   name: Rotated Sierpiński Triangle
   tags: [D3, Grey, Inspired]
@@ -100,10 +108,6 @@ fractals:
     url: https://en.wikipedia.org/wiki/Koch_snowflake
   - name: Larry Riddle > Koch Anti-Snowflake
     url: https://larryriddle.agnesscott.org/ifs/ksnow/kantisnow.htm
-- file: hourglass
-  name: Hourglass
-  dimension: 1.76665598
-  tags: [D1, B&W, Inspired]
 - file: lace
   name: Lace
   dimension: log(3) / log(2)

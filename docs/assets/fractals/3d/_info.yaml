@@ -13,6 +13,10 @@ fractals:
   name: Menger Sponge (RGB)
   dimension: log(20) / log(3)
   tags: [3D, Colour, Variation]
+- file: isomenger
+  name: Menger Sponge (ISO projection)
+  year: 2025
+  tags: [3D, Grey, Known]
 - file: menger-grey2
   name: Menger Variation
   dimension: log(32) / log(4)

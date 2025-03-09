@@ -139,3 +139,7 @@ fractals:
   name: Rings
   dimension: 1.496840082
   tags: [D4, Monochrome, Inspired, Tile]
+- file: pyramid-texture
+  name: Pyramid Texture
+  year: 2025
+  tags: [D2, Grey, Inspired]

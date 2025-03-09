@@ -1,10 +1,13 @@
 fractals:
 - file: cloud
   name: Cloud
+  year: 2024
   tags: [Z1, Grey, Variation]
 - file: centipede
   name: Centipede
+  year: 2024
   tags: [Z1, Monochrome, New]
 - file: mountainscape
   name: Mountainscape
+  year: 2024
   tags: [Z1, Colour, New]

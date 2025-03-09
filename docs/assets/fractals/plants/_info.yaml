@@ -1,6 +1,7 @@
 fractals:
 - file: canopy
   name: Fractal Canopy
+  year: 2024
   tags: [D1, B&W, Known]
   links:
   - name: Wikipedia > Fractal canopy
@@ -11,12 +12,15 @@ fractals:
   tags: [Z1, Colour, Variation]
 - file: tree2
   name: Tree 2
+  year: 2024
   tags: [Z1, Colour, Variation]
 - file: tree4
   name: 4-branch Tree
+  year: 2024
   tags: [Z1, Monochrome, Variation]
 - file: pine
   name: Pine Tree
+  year: 2024
   tags: [Z1, Colour, Variation]
 - file: fern
   name: Fern
@@ -24,18 +28,21 @@ fractals:
   tags: [Z1, Colour, Known]
 - file: barnsley-fern
   name: Barnsley Fern
+  year: 2024
   tags: [Z1, Monochrome, Known]
   links:
   - name: Wikipedia > Barnsley fern
     url: https://en.wikipedia.org/wiki/Barnsley_fern
 - file: thelypteridaceae-fern
   name: Thelypteridaceae Fern
+  year: 2024
   tags: [Z1, Monochrome, Known]
   links:
   - name: Wikipedia > Barnsley fern > Mutant varieties
     url: https://en.wikipedia.org/wiki/Barnsley_fern#Mutant_varieties
 - file: leaf-skeleton
   name: Leaf Skeleton
+  year: 2024
   tags: [Z1, Grey, Variation]
 - file: cabbage
   name: Cabbage Leaf
@@ -43,17 +50,22 @@ fractals:
   tags: [Z1, Colour, Variation]
 - file: flower
   name: Flower
+  year: 2024
   dimension: 1.75372489
   tags: [D8, Grey, Variation, Tile]
 - file: flowers
   name: Flowers
+  year: 2024
   tags: [D4, Colour, Inspired, Tile]
 - file: bamboo
   name: Bamboo
+  year: 2024
   tags: [D2, Monochrome, New]
 - file: mushrooms1
   name: Mushrooms (closed)
+  year: 2024
   tags: [D1, Monochrome, New]
 - file: mushrooms2
   name: Mushrooms (open)
+  year: 2024
   tags: [D1, Monochrome, New]

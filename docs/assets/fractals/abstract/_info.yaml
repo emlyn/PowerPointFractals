@@ -13,38 +13,48 @@ fractals:
   tags: [Z1, B&W, New]
 - file: herd
   name: Fractal Herd
+  year: 2024
   tags: [D1, Monochrome, New]
 - file: minkowski-cross
   name: Cross
+  year: 2024
   tags: [Z4, Colour, Variation]
   links:
   - name: Wikipedia > Minkowski Sausage
     url: https://en.wikipedia.org/wiki/Minkowski_sausage
 - file: heart
   name: Shattered Heart
+  year: 2024
   dimension: log(6) / log(3)
   tags: [D1, Monochrome, Inspired]
 - file: transmission
   name: Transmission
+  year: 2024
   dimension: 1.766655985
   tags: [D1, Monochrome, Inspired]
 - file: sheep-head
   name: Sheep Head
+  year: 2024
   tags: [D1, Grey, Variation]
 - file: lichen
   name: Lichen
+  year: 2024
   tags: [Z1, Monochrome, Variation]
 - file: swirls
   name: Swirls
+  year: 2024
   tags: [Z1, Monochrome, Variation]
 - file: curved-htree
   name: Curved H Tree
+  year: 2024
   tags: [D1, Monochrome, Variation]
 - file: temple
   name: Fractal Temple
+  year: 2024
   tags: [D1, Grey, Variation]
 - file: pinwheel
   name: Pinwheel Fractal
+  year: 2024
   dimension: log(4) / log(sqrt(5))
   tags: [Z1, B&W, Known, Tile]
   links:
@@ -52,10 +62,13 @@ fractals:
     url: https://en.wikipedia.org/wiki/Pinwheel_tiling#Generalizations
 - file: pinwheel-shaded
   name: Shaded Pinwheel Fractal
+  year: 2024
   tags: [Z2, Grey, Variation, Tile]
 - file: filigree
   name: Silver Filigree
+  year: 2024
   tags: [Z1, Grey, New]
 - file: mesh
   name: Mesh
+  year: 2024
   tags: [D4, Grey, New]

@@ -13,38 +13,49 @@ fractals:
     url: https://larryriddle.agnesscott.org/ifs/carpet/carpet.htm
 - file: gradient
   name: Sierpiński Carpet with colour gradient
+  year: 2024
   tags: [D1, Colour, Variation, Tile]
 - file: outline
   name: Sierpiński Carpet with outline
+  year: 2024
   tags: [D4, Grey, Variation, Tile]
 - file: coloured-outline
   name: Sierpiński Carpet with coloured outline
+  year: 2024
   tags: [D2, Colour, Variation, Tile]
 - file: diagonals
   name: Sierpiński Carpet with diagonals
+  year: 2024
   tags: [D4, Grey, Variation, Tile]
 - file: coloured-diagonals
   name: Sierpiński Carpet with coloured diagonals
+  year: 2024
   tags: [D2, Colour, Variation, Tile]
 - file: inverted
   name: Inverted Sierpiński Carpet
+  year: 2024
   tags: [D4, Grey, Variation, Tile]
 - file: carpet2
   name: Variation on the Sierpiński Carpet
+  year: 2024
   dimension: log(12) / log(4)
   tags: [D4, B&W, Variation, Tile]
 - file: carpet3
   name: Another variation on the Sierpiński Carpet
+  year: 2024
   dimension: log(13) / log(4)
   tags: [D4, B&W, Variation, Tile]
 - file: carpet4
   name: Grey carpet
+  year: 2024
   tags: [D4, Grey, Inspired, Tile]
 - file: carpet4-coloured
   name: Coloured carpet
+  year: 2024
   tags: [D4, Colour, Inspired, Tile]
 - file: vicsek
   name: Vicsek fractal
+  year: 2024
   dimension: log(5) / log(3)
   tags: [D4, B&W, Known]
   links:
@@ -52,91 +63,115 @@ fractals:
     url: https://en.wikipedia.org/wiki/Vicsek_fractal
 - file: vicsek-coloured
   name: Coloured Vicsek Fractal
+  year: 2024
   tags: [D2, Colour, Variation]
 - file: vicsek-circle
   name: Vicsek of Circles
+  year: 2024
   tags: [D4, Monochrome, Variation]
 - file: vicsek-diagonal
   name: Diagonal Vicsek Fractal
+  year: 2024
   dimension: log(5) / log(3)
   tags: [D4, B&W, Known]
 - file: h
   name: Fractal H-I de Rivera
+  year: 2024
   dimension: log(7) / log(3)
   tags: [D2, B&W, Known]
 - file: hcarpet
   name: H / Carpet
+  year: 2024
   dimension: log(8) / log(3)
   tags: [D2, B&W, Variation]
 - file: castle
   name: Fractal Castle
+  year: 2024
   dimension: log(8) / log(3)
   tags: [D1, B&W, Variation]
 - file: jerusalem-cross
   name: Jerusalem Cross
+  year: 2024
   dimension: log((sqrt(2) - 1) / 2) / log(sqrt(2) - 1)
   tags: [D4, Monochrome, Known, Tile]
 - file: swiss
   name: Swiss Fractal
+  year: 2024
   dimension: log(4) / log(110 / 43)
   tags: [D4, Monochrome, Variation, Tile]
 - file: forest
   name: Forest
+  year: 2024
   dimension: log(5) / log(3)
   tags: [D2, Monochrome, Variation]
 - file: copper
   name: Copper Sheet
+  year: 2024
   tags: [D1, Colour, Variation, Tile]
 - file: distorted
   name: Distorted Carpet
+  year: 2024
   tags: [D2, Monochrome, Variation]
 - file: coloured-dots
   name: Dots
+  year: 2024
   tags: [D2, Colour, Inspired, Tile]
 - file: window
   name: Fractal Window
+  year: 2024
   dimension: log(4) / log(12 / 5)
   tags: [D4, B&W, Known]
 - file: windows
   name: Fractal Windows
+  year: 2024
   tags: [Z1, Colour, Variation, Tile]
 - file: track
   name: Track
+  year: 2024
   dimension: log(12) / log(4)
   tags: [D1, Monochrome, Variation]
 - file: goblet
   name: Goblet
+  year: 2024
   dimension: log(6) / log(3)
   tags: [D1, B&W, Variation]
 - file: degraded
   name: Degraded Square
+  year: 2024
   dimension: log(8) / log(3)
   tags: [D1, Grey, Variation]
 - file: mould
   name: Fractal mould
+  year: 2024
   dimension: log(8) / log(3)
   tags: [D1, B&W, Variation]
 - file: corner
   name: Corner
+  year: 2024
   tags: [D1, Monochrome, Inspired]
 - file: footprint
   name: Footprint
+  year: 2024
   dimension: log(10) / log(4)
   tags: [D2, B&W, Inspired]
 - file: porcelain
   name: Porcelain Tile
+  year: 2024
   dimension: log(12) / log(4)
   tags: [D4, Monochrome, Inspired, Tile]
 - file: porcelain2
   name: Porcelain Tile 2
+  year: 2024
   dimension: 1.663665848
   tags: [D4, Monochrome, Inspired, Tile]
 - file: intricate-cross
   name: Intricate Cross
+  year: 2024
   dimension: log(8) / log(4)
   tags: [D4, Monochrome, Inspired, Tile]
 - file: rings
   name: Rings
+  year: 2024
   dimension: 1.496840082
   tags: [D4, Monochrome, Inspired, Tile]
 - file: pyramid-texture

@@ -1,19 +1,24 @@
 fractals:
 - file: barcode
   name: Barcode
+  year: 2024
   tags: [D2, Grey, Inspired]
 - file: french-cantor
   name: Cantor Set as French flag
+  year: 2024
   dimension: log(2) / log(3)
   tags: [Z1, Colour, Inspired]
 - file: palette
   name: Fractal Colour Palette
+  year: 2024
   tags: [Z1, Colour, Inspired]
 - file: powerlines
   name: Power Lines
+  year: 2024
   tags: [Z1, Colour, New]
 - file: ruler
   name: Ruler
+  year: 2024
   tags: [D2, Grey, New]
 - file: circles
   name: Circles
@@ -21,6 +26,7 @@ fractals:
   tags: [D2, Grey, New]
 - file: bubbles
   name: Bubbles
+  year: 2024
   tags: [D2, Monochrome, New]
 - file: shard
   name: Shard
@@ -28,10 +34,13 @@ fractals:
   tags: [D2, Grey, New]
 - file: jagged
   name: Jagged
+  year: 2024
   tags: [D1, Colour, New]
 - file: metal
   name: Metal
+  year: 2024
   tags: [D2, Grey, New]
 - file: ukraine
   name: Slava Ukraini
+  year: 2024
   tags: [D1, Colour, New]

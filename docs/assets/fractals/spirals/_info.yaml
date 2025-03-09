@@ -5,21 +5,27 @@ fractals:
   tags: [Z1, Colour, Variation]
 - file: flatwhite
   name: Flat White
+  year: 2024
   tags: [Z1, Monochrome, Variation]
 - file: zebra-spiral
   name: Zebra Spiral
+  year: 2024
   tags: [Z1, B&W, Variation]
 - file: vortex
   name: Vortex
+  year: 2024
   tags: [Z1, Monochrome, Variation]
 - file: fire
   name: Fire Spiral
+  year: 2024
   tags: [Z3, Colour, Inspired]
 - file: golden-spiral
   name: Golden Spiral
+  year: 2024
   tags: [Z1, Colour, Inspired]
 - file: blossom
   name: Spiral Blossom
+  year: 2024
   tags: [Z1, Colour, Inspired]
 - file: jack
   name: Jack-in-the-box

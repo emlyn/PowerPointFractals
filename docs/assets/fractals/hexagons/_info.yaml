@@ -1,6 +1,7 @@
 fractals:
 - file: sierpinski-hexagon
   name: Sierpiński Hexagon
+  year: 2024
   dimension: log(6) / log(3)
   tags: [D6, B&W, Known, Tile]
   links:
@@ -8,16 +9,20 @@ fractals:
     url: https://en.wikipedia.org/wiki/N-flake#Hexaflake
 - file: sierpinski-shaded
   name: Shaded Sierpiński Hexagon
+  year: 2024
   tags: [D6, Grey, Variation, Tile]
 - file: sierpinski-coloured
   name: Coloured Sierpiński Hexagon
+  year: 2024
   tags: [D2, Colour, Variation, Tile]
 - file: sierpinski-rotated
   name: Rotated Sierpinski Hexagon
+  year: 2024
   dimension: log(6) / log(3.077)
   tags: [D6, B&W, Known, Tile]
 - file: sierpinski-rotated-shaded
   name: Rotated Shaded Sierpinski Hexagon
+  year: 2024
   tags: [D6, Monochrome, Variation, Tile]
 - file: koch-snowflake
   name: Koch Snowflake
@@ -31,9 +36,11 @@ fractals:
     url: https://larryriddle.agnesscott.org/ifs/ksnow/ksnow.htm
 - file: exploding
   name: Exploding Koch Snowflake
+  year: 2024
   tags: [D6, B&W, Variation]
 - file: exploded
   name: Exploded Koch Snowflake
+  year: 2024
   tags: [D6, B&W, Variation]
 - file: snowflake
   name: Snowflake
@@ -41,6 +48,7 @@ fractals:
   tags: [D6, Monochrome, Variation, Tile]
 - file: hexaflake
   name: Hexaflake
+  year: 2024
   dimension: log(7) / log(3)
   tags: [D6, B&W, Known, Tile]
   links:
@@ -48,23 +56,30 @@ fractals:
     url: https://en.wikipedia.org/wiki/N-flake#Hexaflake
 - file: hexaflake-rotated
   name: Rotated Hexaflake
+  year: 2024
   dimension: log(7) / log(3)
   tags: [D6, B&W, Variation]
 - file: hexaflake-shaded
   name: Shaded Hexaflake Hexagon
+  year: 2024
   tags: [D6, Grey, Variation, Tile]
 - file: hexaflake-shaded2
   name: Shaded Hexaflake
+  year: 2024
   tags: [D6, Grey, Variation]
 - file: hexaflake-shaded3
   name: Purple Hexaflake
+  year: 2024
   tags: [D6, Monochrome, Variation]
 - file: hexaflake-coloured
   name: RGB Hexaflake
+  year: 2024
   tags: [D2, Colour, Variation, Tile]
 - file: hexaflake-coloured2
   name: Coloured Hexaflake
+  year: 2024
   tags: [D3, Colour, Variation, Tile]
 - file: hexaflake-cell
   name: Hexagonal Cell
+  year: 2024
   tags: [D6, Monochrome, Inspired]

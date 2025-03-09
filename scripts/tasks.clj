@@ -127,7 +127,7 @@
                  [:file [:string]]
                  [:name [:string]]
                  [:author {:optional true} [:string]]
-                 [:year {:optional true} [:int]]
+                 [:year [:int]]
                  [:media {:optional true} [:string]]
                  [:description {:optional true} [:string]]
                  [:dimension {:optional true} [:or [:string] [:int] [:double]]]
@@ -203,7 +203,7 @@
                      (/ width height))
            :category category
            :author (or author "Emlyn Corrin")
-           :year (or year 2024)
+           :year year
            :media (or media "Digital media (Microsoft PowerPoint)")
            :dimension (fixup-expression dimension)
            :dimension_val (when (and (string? dimension)

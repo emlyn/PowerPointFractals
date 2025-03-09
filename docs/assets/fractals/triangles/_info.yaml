@@ -13,21 +13,27 @@ fractals:
     url: https://larryriddle.agnesscott.org/ifs/siertri/siertri.htm
 - file: rectangles
   name: Sierpiński Triangle with rectangles
+  year: 2024
   tags: [D1, Grey, Variation]
 - file: rotated-rectangles
   name: Sierpiński Triangle with rotated rectangles
+  year: 2024
   tags: [D3, Grey, Variation]
 - file: coloured-rectangles
   name: Sierpiński Triangle with coloured rectangles
+  year: 2024
   tags: [Z1, Colour, Variation]
 - file: shaded-triangle
   name: Shaded Sierpiński Triangle
+  year: 2024
   tags: [D3, Grey, Variation, Tile]
 - file: coloured-triangle
   name: Colour shaded Sierpiński Triangle
+  year: 2024
   tags: [Z1, Colour, Variation, Tile]
 - file: circle-triangle
   name: Sierpiński Triangle made of circles
+  year: 2024
   tags: [D3, Grey, Variation]
 - file: coloured-circle-triangle
   name: Sierpiński Triangle made of coloured circles
@@ -35,6 +41,7 @@ fractals:
   tags: [Z1, Colour, Variation]
 - file: triangle3
   name: Pascal Triangle Modulo 3
+  year: 2024
   description: >-
     Variation on the Sierpiński Triangle,
     dividing it into one-third sized instead of half sized triangles.
@@ -42,6 +49,7 @@ fractals:
   tags: [D3, B&W, Variation, Tile]
 - file: triangle4
   name: Pascal Triangle Modulo 4
+  year: 2024
   description: >-
     Variation on the Sierpiński Triangle,
     dividing it into one-quarter sized instead of half sized triangles.
@@ -49,6 +57,7 @@ fractals:
   tags: [D3, B&W, Variation, Tile]
 - file: triangle5
   name: Pascal Triangle Modulo 5
+  year: 2024
   description: >-
     Variation on the Sierpiński Triangle,
     dividing it into one-fifth sized instead of half sized triangles.
@@ -56,51 +65,64 @@ fractals:
   tags: [D3, B&W, Variation, Tile]
 - file: sierpinski-overlap
   name: Variation on the Sierpiński Triangle
+  year: 2024
   dimension: log(13) / log(5)
   tags: [D3, B&W, Variation, Tile]
 - file: sierpinski-hole
   name: Variation on the Sierpiński Triangle
+  year: 2024
   dimension: log(12) / log(5)
   tags: [D3, B&W, Variation, Tile]
 - file: triangle-variation
   name: Another variation on the Sierpiński Triangle
+  year: 2024
   dimension: log(13) / log(4)
   tags: [D3, B&W, Inspired, Tile]
 - file: triangle-variation2
   name: Another variation on the Sierpiński Triangle
+  year: 2024
   dimension: log(13) / log(4)
   tags: [D3, B&W, Inspired, Tile]
 - file: triangle-variation3
   name: Another variation on the Sierpiński Triangle
+  year: 2024
   dimension: log(12) / log(4)
   tags: [D3, B&W, Inspired, Tile]
 - file: alternating-sierpinski
   name: Alternating Sierpinski Triangle
+  year: 2024
   dimension: 2
   tags: [D3, B&W, Inspired, Tile]
 - file: sierpinski-asymmetric
   name: Asymmetric variation on the Sierpiński Triangle
+  year: 2024
   dimension: 1.626475240
   tags: [D1, B&W, Variation, Tile]
 - file: hourglass
   name: Hourglass
+  year: 2024
   dimension: 1.76665598
   tags: [D1, B&W, Inspired]
 - file: rotated-triangles
   name: Rotated Sierpiński Triangle
+  year: 2024
   tags: [D3, Grey, Inspired]
 - file: triflake
   name: Triflake
+  year: 2024
   dimension: log(4) / log(2.5)
   tags: [D3, B&W, Known]
 - file: triflake-shaded
   name: Shaded Triflake
+  year: 2024
   tags: [D3, Grey, Variation, Tile]
 - file: triflake-rotated-shaded
   name: Shaded Rotated Triflake
+  year: 2024
   tags: [D3, Grey, Variation, Tile]
 - file: kochanti
   name: Koch antisnowflake
+  year: 2024
   dimension: log(6) / log(3)
   tags: [D3, B&W, Known, Tile]
   links:
@@ -110,11 +132,14 @@ fractals:
     url: https://larryriddle.agnesscott.org/ifs/ksnow/kantisnow.htm
 - file: lace
   name: Lace
+  year: 2024
   dimension: log(3) / log(2)
   tags: [D3, Monochrome, Inspired]
 - file: dust
   name: Fractal Dust
+  year: 2024
   tags: [D3, Grey, Inspired]
 - file: lightning
   name: Triangular Lightning
+  year: 2024
   tags: [D3, Grey, Inspired]

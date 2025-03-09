@@ -34,9 +34,11 @@ fractals:
     url: https://larryriddle.agnesscott.org/ifs/heighway/goldenDragon.htm
 - file: golden
   name: Golden
+  year: 2024
   tags: [Z1, Monochrome, Variation]
 - file: twindragon
   name: Twindragon
+  year: 2024
   dimension: 2
   tags: [D2, B&W, Known]
   links:
@@ -46,6 +48,7 @@ fractals:
     url: https://www.larryriddle.agnesscott.org/ifs/heighway/twindragon.htm
 - file: terdragon
   name: Terdragon
+  year: 2024
   dimension: 2
   tags: [Z2, B&W, Known]
   links:
@@ -55,12 +58,15 @@ fractals:
     url: https://larryriddle.agnesscott.org/ifs/heighway/terdragon.htm
 - file: terdragon-island
   name: Terdragon Island
+  year: 2024
   tags: [Z2, Colour, Variation]
 - file: terdragon-nebula
   name: Terdragon Nebula
+  year: 2024
   tags: [Z1, Colour, Variation]
 - file: cesaro
   name: Cesàro Fractal
+  year: 2024
   dimension: log(4) / log(2.1838)
   tags: [D1, B&W, Known]
   links:
@@ -68,6 +74,7 @@ fractals:
     url: https://en.wikipedia.org/wiki/Koch_snowflake#Variants_of_the_Koch_curve
 - file: pentigree
   name: McWorter's Pentigree
+  year: 2024
   dimension: log(6) / log(2 / (3 - sqrt(5)))
   tags: [Z1, B&W, Known]
   links:
@@ -75,9 +82,11 @@ fractals:
     url: https://larryriddle.agnesscott.org/ifs/pentigre/pentigre2.htm
 - file: purple-pentigree
   name: Purple Pentigree
+  year: 2024
   tags: [Z1, Monochrome, Variation]
 - file: pentadendrite
   name: Pentadendrite
+  year: 2024
   dimension: log(6) / log(sqrt(31 / (6 - sqrt(5))))
   tags: [Z1, B&W, Known]
   links:
@@ -85,21 +94,25 @@ fractals:
     url: https://larryriddle.agnesscott.org/ifs/pentaden/penta.htm
 - file: pentadendrites
   name: 5 Pentadendrites
+  year: 2024
   tags: [Z5, B&W, Known]
   links:
   - name: Larry Scott > Pentadendrite
     url: https://larryriddle.agnesscott.org/ifs/pentaden/penta.htm
 - file: pentadendrites2
   name: 5 Pentadendrites (expanded)
+  year: 2024
   tags: [Z5, B&W, Variation]
 - file: tsquare
   name: T-Square
+  year: 2024
   tags: [D4, Grey, Known]
   links:
   - name: Wikipedia > T-square (fractal)
     url: https://en.wikipedia.org/wiki/T-square_(fractal)
 - file: htree
   name: H Tree
+  year: 2024
   dimension: 2
   tags: [D2, Grey, Known]
   links:
@@ -107,12 +120,15 @@ fractals:
     url: https://en.wikipedia.org/wiki/H_tree
 - file: coloured-htree
   name: Coloured H Tree
+  year: 2024
   tags: [Z1, Colour, Variation]
 - file: redblack
   name: Red-Black H Tree
+  year: 2024
   tags: [Z1, Monochrome, Variation]
 - file: mandelbrot-tree
   name: Mandelbrot Tree
+  year: 2024
   dimension: 1.783102820
   tags: [D2, B&W, Known]
   links:
@@ -120,6 +136,7 @@ fractals:
     url: https://en.wikipedia.org/wiki/H_tree#Related_sets
 - file: fibonacci
   name: Fibonacci word fractal
+  year: 2024
   dimension: (3 * log(phi)) / log(1 + sqrt(2))
   tags: [D1, B&W, Known]
   links:
@@ -127,6 +144,7 @@ fractals:
     url: https://en.wikipedia.org/wiki/Fibonacci_word_fractal
 - file: pythagoras-tree
   name: Pythagoras Tree
+  year: 2024
   tags: [D1, Grey, Known]
   links:
   - name: Wikipedia > Pythagoras tree (fractal)
@@ -142,6 +160,7 @@ fractals:
     url: https://larryriddle.agnesscott.org/ifs/pythagorean/pythTree.htm
 - file: levy-c
   name: Lévy C curve
+  year: 2024
   dimension: 2
   tags: [D1, Grey, Known]
   links:
@@ -151,6 +170,7 @@ fractals:
     url: https://larryriddle.agnesscott.org/ifs/levy/levy.htm
 - file: levy-c-coloured
   name: Coloured Lévy C curve
+  year: 2024
   tags: [Z1, Colour, Variation]
 - file: levy-c-345
   name: Lévy C 3-4-5 curve
@@ -159,9 +179,11 @@ fractals:
   tags: [Z1, Grey, Known]
 - file: tree3-90
   name: 3-branched Tree (90 degrees)
+  year: 2024
   dimension: log(3) / log(2)
   tags: [D1, B&W, Known]
 - file: tree3-60
   name: 3-branched Tree (60 degrees)
+  year: 2024
   dimension: log(3) / log(2)
   tags: [D1, B&W, Known]

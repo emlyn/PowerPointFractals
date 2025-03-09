@@ -1,9 +1,11 @@
 fractals:
 - file: menger-fake
   name: Faked Menger Sponge
+  year: 2024
   tags: [3D, Grey, Known]
 - file: menger-grey
   name: Menger Sponge (grey)
+  year: 2024
   dimension: log(20) / log(3)
   tags: [3D, Grey, Known]
   links:
@@ -11,6 +13,7 @@ fractals:
     url: https://en.wikipedia.org/wiki/Menger_sponge
 - file: menger-rgb
   name: Menger Sponge (RGB)
+  year: 2024
   dimension: log(20) / log(3)
   tags: [3D, Colour, Variation]
 - file: isomenger
@@ -19,14 +22,17 @@ fractals:
   tags: [3D, Grey, Known]
 - file: menger-grey2
   name: Menger Variation
+  year: 2024
   dimension: log(32) / log(4)
   tags: [3D, Grey, Variation]
 - file: menger-grey3
   name: Menger Variation 2
+  year: 2024
   dimension: log(38) / log(4)
   tags: [3D, Grey, Variation]
 - file: cross-menger
   name: Jerusalem Cube
+  year: 2024
   dimension: log(sqrt(7)/6 - 1/3) / log(sqrt(2) - 1)
   tags: [3D, Monochrome, Known]
   links:
@@ -34,6 +40,7 @@ fractals:
     url: https://en.wikipedia.org/wiki/Menger_sponge#Jerusalem_cube
 - file: tetrix
   name: Sierpiński Tetrahedron (or Tetrix)
+  year: 2024
   dimension: log(4) / log(2)
   tags: [3D, Monochrome, Known]
   links:
@@ -41,6 +48,7 @@ fractals:
     url: https://en.wikipedia.org/wiki/Sierpiński_triangle#Analogues_in_higher_dimensions
 - file: pyramid
   name: Sierpiński Pyramid
+  year: 2024
   dimension: log(5) / log(2)
   tags: [3D, Grey, Known]
   links:
@@ -48,6 +56,7 @@ fractals:
     url: https://en.wikipedia.org/wiki/Sierpiński_triangle#Analogues_in_higher_dimensions
 - file: mosely-snowflake
   name: Mosely Snowflake
+  year: 2024
   dimension: log(18) / log(3)
   tags: [3D, Grey, Known]
   links:
@@ -55,6 +64,7 @@ fractals:
     url: https://en.wikipedia.org/wiki/Mosely_snowflake
 - file: sm-snowflake
   name: Sierpiński-Menger Snowflake
+  year: 2024
   dimension: log(9) / log(3)
   tags: [3D, Grey, Known]
   links:

@@ -10,6 +10,9 @@
                 :exec-args {:dir "docs/assets/fractals"
                             :tracked-only true
                             :check-modified false}}
+         outdated {:doc "Check for outdated dependencies"
+                   :task (exec 'outdated/check-outdated)
+                   :exec-args {:deps-file "bb.edn"}}
          build {:doc "Builds the site (use --show-args to see args passed to template)"
                 :task (exec 'tasks/build-site)
                 ;; NOTE: :extra-paths must include the :exec-args :templates path

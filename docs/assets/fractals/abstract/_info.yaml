@@ -72,3 +72,11 @@ fractals:
   name: Mesh
   year: 2024
   tags: [D4, Grey, New]
+- file: "42"
+  name: "42"
+  year: 2025
+  tags: [Z1, Colour, New]
+- file: font
+  name: Font
+  year: 2025
+  tags: [Z1, Colour, New]

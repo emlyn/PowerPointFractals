@@ -44,3 +44,11 @@ fractals:
   name: Slava Ukraini
   year: 2024
   tags: [D1, Colour, New]
+- file: equal
+  name: Equal
+  year: 2025
+  tags: [D1, Grey, New]
+- file: equal2
+  name: Equal 2
+  year: 2025
+  tags: [D1, Grey, New]

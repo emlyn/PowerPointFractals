@@ -26,7 +26,6 @@
   (and (string? s)
        (re-matches #"[0-9]+(?:\.[0-9]*)?" s)))
 
-#_{:clj-kondo/ignore [:clojure-lsp/unused-public-var]}
 (defn install-pre-commit
   [& {:keys [overwrite]}]
   (let [src "scripts/pre-commit"
@@ -86,7 +85,6 @@
     (reduce into results (map #(check-dir (assoc args :dir %))
                               (sort dirs)))))
 
-#_{:clj-kondo/ignore [:clojure-lsp/unused-public-var]}
 (defn check
   {:org.babashka/cli {:coerce {:check-modified :boolean
                                :tracked-only :boolean
@@ -160,7 +158,6 @@
                          s)]
       (f))))
 
-#_{:clj-kondo/ignore [:clojure-lsp/unused-public-var]}
 (defn eval-string
   [& {}]
   (let [expr (str/join " " *command-line-args*)]
@@ -268,7 +265,6 @@
   [v]
   (or (number? v) (num-str? v)))
 
-#_{:clj-kondo/ignore [:clojure-lsp/unused-public-var]}
 (defn build-site
   [& {:keys [templates output template-args show-args] :as args}]
   (filters/add-filter! :isnum num?)
@@ -324,7 +320,6 @@
                                                :xmax xmax :fmax fmax
                                                :x x :f f}))))))
 
-#_{:clj-kondo/ignore [:clojure-lsp/unused-public-var]}
 (defn calc-dimension
   {:org.babashka/cli {:coerce {:size :double
                                :sizes [:string]}
@@ -349,7 +344,6 @@
             [d res] (solve func dmin dmax)]
         (println (format "Dimension: %s (residual %s)" d res))))))
 
-#_{:clj-kondo/ignore [:clojure-lsp/unused-public-var]}
 (defn rename
   {:org.babashka/cli {:coerce {:from :string
                                :to :string

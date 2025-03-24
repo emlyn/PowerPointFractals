@@ -4,7 +4,8 @@
 
 {:paths ["./scripts/"]
  :deps {metosin/malli {:mvn/version "0.17.0"}
-        rm-hull/infix {:mvn/version "0.4.4"}}
+        rm-hull/infix {:mvn/version "0.4.4"}
+        org.babashka/http-server {:mvn/version "0.1.13"}}
  :tasks {check {:doc "Checks that all PowerPoints have been converted to PNGs"
                 :task (exec 'tasks/check)
                 :exec-args {:dir "docs/assets/fractals"
@@ -21,6 +22,9 @@
                             :templates "resources/templates"
                             :template-args {:raw-root "assets/fractals"}
                             :output "docs"}}
+         serve {:doc "Serve website locally"
+                :requires ([babashka.http-server :as server])
+                :task (server/exec {:port 8000 :dir "docs"})}
          dim {:doc "Calculate the fractal dimension of an image"
               :task (exec 'tasks/calc-dimension)
               :exec-args {:size 1
